@@ -12,10 +12,12 @@
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -36,6 +38,7 @@ class AppController extends Controller
      * e.g. `$this->loadComponent('Security');`
      *
      * @return void
+     * @throws \Exception
      */
     public function initialize()
     {
@@ -45,6 +48,7 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
+        $this->loadComponent('Cookie');
 
         /*
          * Enable the following component for recommended CakePHP security settings.
@@ -52,4 +56,22 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        if($this->Cookie->check('lang')){
+            $lang = $this->Cookie->read('lang');
+            if($lang) {
+                I18n::setLocale($lang);
+            }
+        }
+    }
+
+    public function changeLang($lang = 'en_US')
+    {
+        $this->Cookie->write('lang', $lang);
+        return $this->redirect($this->request->referer());
+    }
+
 }

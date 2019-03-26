@@ -1,0 +1,4 @@
+
+
+msgid "Hello, my name is {0}, I'm {1} years old"
+msgstr "Hallo, ich heiße {0} und bin {1} Jahre alt"

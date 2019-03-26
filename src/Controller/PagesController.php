@@ -1,69 +1,106 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link      https://cakephp.org CakePHP(tm) Project
- * @since     0.2.9
- * @license   https://opensource.org/licenses/mit-license.php MIT License
- */
+
 namespace App\Controller;
 
-use Cake\Core\Configure;
-use Cake\Http\Exception\ForbiddenException;
-use Cake\Http\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
-
-/**
- * Static content controller
- *
- * This controller will render views from Template/Pages/
- *
- * @link https://book.cakephp.org/3.0/en/controllers/pages-controller.html
- */
 class PagesController extends AppController
 {
-
-    /**
-     * Displays a view
-     *
-     * @param array ...$path Path segments.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Http\Exception\ForbiddenException When a directory traversal attempt.
-     * @throws \Cake\Http\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
-     */
     public function display(...$path)
     {
+        # src/Template/Layout/public.ctp
+        $this->viewBuilder()->setLayout('public');
+
         $count = count($path);
         if (!$count) {
-            return $this->redirect('/');
+            # src/Template/Pages/public/index.ctp
+            $this->viewBuilder()->setTemplate('public/index');
         }
-        if (in_array('..', $path, true) || in_array('.', $path, true)) {
-            throw new ForbiddenException();
-        }
-        $page = $subpage = null;
+        /*
+         *  if (in_array('..', $path, true) || in_array('.', $path, true)) {
+         *   throw new ForbiddenException();
+         *   }
+         *   $page = $subpage = null;
+         *
+         *   if (!empty($path[0])) {
+         *       $page = $path[0];
+         *   }
+         *   if (!empty($path[1])) {
+         *       $subpage = $path[1];
+         *   }
+         *   $this->set(compact('page', 'subpage'));
+         *
+         *   try {
+         *       $this->render(implode('/', $path));
+         *   } catch (MissingTemplateException $exception) {
+         *       if (Configure::read('debug')) {
+         *           throw $exception;
+         *       }
+         *       throw new NotFoundException();
+         *   }
+         */
+    }
 
-        if (!empty($path[0])) {
-            $page = $path[0];
-        }
-        if (!empty($path[1])) {
-            $subpage = $path[1];
-        }
-        $this->set(compact('page', 'subpage'));
+    public function index()
+    {
+        $this->loadComponent('Paginator');
+        $pages = $this->Paginator->paginate($this->Pages->find());
+        $this->set(compact('pages'));
+    }
 
-        try {
-            $this->render(implode('/', $path));
-        } catch (MissingTemplateException $exception) {
-            if (Configure::read('debug')) {
-                throw $exception;
+    public function view($slug = null)
+    {
+        $page = $this->Pages->findBySlug($slug)->firstOrFail();
+        $this->set(compact('page'));
+    }
+
+    public function add()
+    {
+        $page = $this->Pages->newEntity();
+        if ($this->request->is('post')) {
+            $page = $this->Pages->patchEntity($page, $this->request->getData());
+
+            // Hardcoding the user_id is temporary, and will be removed later
+            // when we build authentication out.
+            $page->user_id = 1;
+
+            if ($this->Pages->save($page)) {
+                $this->Flash->success(__('Your page has been saved.'));
+                return $this->redirect(['action' => 'index']);
             }
-            throw new NotFoundException();
+            $this->Flash->error(__('Unable to add your page.'));
+        }
+        // Get a list of tags.
+        $tags = $this->Pages->Tags->find('list');
+
+        // Set tags to the view context
+        $this->set('tags', $tags);
+
+        $this->set('page', $page);
+    }
+
+    public function edit($slug)
+    {
+        $page = $this->Pages->findBySlug($slug)->firstOrFail();
+        if ($this->request->is(['post', 'put'])) {
+            $this->Pages->patchEntity($page, $this->request->getData());
+            if ($this->Pages->save($page)) {
+                $this->Flash->success(__('Your page has been updated.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Unable to update your page.'));
+        }
+
+        $this->set('page', $page);
+    }
+
+    public function delete($slug)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+
+        $page = $this->Pages->findBySlug($slug)->firstOrFail();
+        if ($this->Pages->delete($page)) {
+            $this->Flash->success(__('The {0} page has been deleted.', $page->title));
+            return $this->redirect(['action' => 'index']);
         }
     }
+
 }

@@ -192,6 +192,19 @@ Type::build('datetime')
 Type::build('timestamp')
     ->useImmutable();
 
+
+Configure::write('locale.options',[
+    'en' => ['label'=> 'English', 'flag' => 'US'],
+    'fr' => ['label'=> 'Français', 'flag' => 'FR'],
+    'de' => ['label'=> 'Deutsch', 'flag' => 'DE'],
+    'it' => ['label'=> 'Italiano', 'flag' => 'IT'],
+    'es' => ['label'=> 'Español', 'flag' => 'ES'],
+    'pt_BR' => ['label'=> 'Português', 'flag' => 'BR'],
+    'ko' => ['label'=> '한국어', 'flag' => 'KR']
+    # 'jp' => '日本'
+]);
+
+
 /*
  * Custom Inflector rules, can be set to correctly pluralize or singularize
  * table, model, controller names or whatever other string is passed to the
