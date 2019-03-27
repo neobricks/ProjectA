@@ -8232,7 +8232,7 @@ button.bg-dark:focus {
     color: #ffffff !important; }
 
 .text-primary {
-    color: #00a8ff !important; }
+    color: #f8991d !important; }
 
 a.text-primary:hover, a.text-primary:focus {
     color: #0086cc !important; }
@@ -13780,7 +13780,7 @@ button.close:focus {
     border-bottom: 5px solid !important; }
 
 .border-primary {
-    border-color: #00a8ff !important; }
+    border-color: #f8991d !important; }
 
 .border-secondary {
     border-color: #3a4048 !important; }
@@ -19239,7 +19239,7 @@ body.preloader .preloaderWrapper {
     left: -0.5rem;
     border-radius: 1rem;
     border: 0.125rem solid #ffc107;
-    background-color: #0F131E;
+    background-color: #242424;
     margin-left: -0.0625rem; }
 
 .timeline-centered {
@@ -20097,7 +20097,7 @@ ul.list-style-square {
     opacity: 1; }
 
 .text-primary .nav-link {
-    color: #00a8ff !important; }
+    color: #f8991d !important; }
 
 .text-secondary .nav-link {
     color: #3a4048 !important; }

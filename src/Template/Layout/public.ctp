@@ -15,15 +15,11 @@ $locale_options = Configure::read('locale.options');
 <head>
     <?= $this->Html->charset() ?>
 
-    <?= $this->Html->meta('icon') ?>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->fetch('meta') ?>
 
-    <title>
-        <?= $this->fetch('title') ?>
-    </title>
+    <title><?= $this->fetch('title') ?></title>
 
 
     <!-- Icons -->
@@ -46,8 +42,17 @@ $locale_options = Configure::read('locale.options');
     <?= $this->fetch('css') ?>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= $this->Url->build('/public/assets/favicon/apple-touch-icon.png'); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= $this->Url->build('/public/assets/favicon/favicon-32x32.png ')?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $this->Url->build('/public/assets/favicon/favicon-16x16.png')?>">
+    <link rel="manifest" href="<?= $this->Url->build('/public/assets/favicon/site.webmanifest')?>">
+    <link rel="mask-icon" href="<?= $this->Url->build('/public/assets/favicon/safari-pinned-tab.svg')?>" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
     <!-- Fonts -->
 
     <!--[if lt IE 9]>
@@ -200,6 +205,8 @@ $locale_options = Configure::read('locale.options');
                                href="#"><?= __('Facebook') ?></a>
                             <a class="nav-link"
                                href="#"><?= __('Help Center') ?></a>
+                            <a class="nav-link"
+                               href="/privacy-policy"><?= __('Privacy Policy') ?></a>
                         </div>
                     </div>
                 </div>

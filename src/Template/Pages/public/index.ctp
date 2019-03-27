@@ -32,7 +32,7 @@
         <div class="carousel-inner a-cont">
             <!-- carousel-item -->
             <div class="carousel-item active">
-                <div class="h-fullscreen__page bs-c br-n ow-h"
+                <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
                      style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.png);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
@@ -428,7 +428,7 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
                     <h2 class="mb-4 text-dark"><?= __('Sign-up reward'); ?></h2>
-                    <span class="d-block text-uppercase ls-3 mb-6 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. </span>
+                    <span class="d-block mb-6" style="color:#9e9e9e;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. </span>
 
                 </div>
             </div>
@@ -479,7 +479,7 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto text-left text-dark">
                     <h3 class="mb-4 text-dark"><?= __('Become a Partner today'); ?></h3>
-                    <p class="d-block text-uppercase mb-7">
+                    <p class="d-block mb-7">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Proin pharetra elit arcu, vitae malesuada erat dictum
                         at.
