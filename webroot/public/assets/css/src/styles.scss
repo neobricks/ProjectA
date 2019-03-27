@@ -1350,5 +1350,51 @@ nav.navbar {
   }
 }
 
+#becomePartnerFlow{
+  box-shadow: unset;
+
+  ul.nav-tabs.step-anchor {
+
+    border-bottom: 3px solid #e9ecef;
+
+    li.nav-item {
+
+      a {
+
+        &::after {
+          height: 4px;
+          bottom: -2px;
+        }
+      }
+
+      &.active {
+        background: $white;
+
+        a {
+          color:#000 !important;
+          &::after {
+            background: $primary;
+          }
+        }
+      }
+
+      &.done {
+        a {
+          color: $white !important;
+        }
+      }
+
+    }
+  }
+
+  .sw-toolbar-bottom{
+    background: transparent;
+  }
+
+
+
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */

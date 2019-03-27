@@ -34,7 +34,7 @@ $locale_options = Configure::read('locale.options');
 
     <!-- CSS Plugins -->
     <?php echo $this->Html->css('/plugins/owl.carousel/owl.carousel.min.css'); ?>
-
+    <?php echo $this->Html->css('/plugins/smart_wizard/css/smart_wizard.min.css'); ?>
     <!-- CSS main -->
     <?php echo $this->Html->css('/public/assets/css/dist/main.css'); ?>
     <?php echo $this->Html->css('/public/assets/css/dist/styles.min.css'); ?>
@@ -42,15 +42,19 @@ $locale_options = Configure::read('locale.options');
     <?= $this->fetch('css') ?>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= $this->Url->build('/public/assets/favicon/apple-touch-icon.png'); ?>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= $this->Url->build('/public/assets/favicon/favicon-32x32.png ')?>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= $this->Url->build('/public/assets/favicon/favicon-16x16.png')?>">
-    <link rel="manifest" href="<?= $this->Url->build('/public/assets/favicon/site.webmanifest')?>">
-    <link rel="mask-icon" href="<?= $this->Url->build('/public/assets/favicon/safari-pinned-tab.svg')?>" color="#000000">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="<?= $this->Url->build('/public/assets/favicon/apple-touch-icon.png'); ?>">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="<?= $this->Url->build('/public/assets/favicon/favicon-32x32.png ') ?>">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="<?= $this->Url->build('/public/assets/favicon/favicon-16x16.png') ?>">
+    <link rel="manifest"
+          href="<?= $this->Url->build('/public/assets/favicon/site.webmanifest') ?>">
+    <link rel="mask-icon"
+          href="<?= $this->Url->build('/public/assets/favicon/safari-pinned-tab.svg') ?>"
+          color="#000000">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
-
-
 
 
     <!-- Fonts -->
@@ -125,7 +129,8 @@ $locale_options = Configure::read('locale.options');
         <div class="collapse navbar-collapse" id="collapsingNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item pr-5">
-                    <a class="nav-link pl-lg-0" href="javascript:void(0);">
+                    <a class="nav-link pl-lg-0" href="javascript:void(0);"
+                       data-toggle="modal" data-target="#becomePartnerModal">
                         <?= __('Become a partner') ?>
                     </a>
                 </li>
@@ -219,13 +224,160 @@ $locale_options = Configure::read('locale.options');
 <!-- /.footer -->
 
 
+<!-- sign in/up -->
+<div class="modal fade" id="userLogin" tabindex="-1" role="dialog"
+     aria-labelledby="userLoginTitle" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="userLoginTitle">Log in</h5>
+                <button type="button" class="close text-light"
+                        data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="text-center my-6">
+                        <a class="btn btn-circle btn-sm btn-google mr-2"
+                           href=""><i class="fab fa-google fa-2x"></i></a>
+                        <a class="btn btn-circle btn-sm btn-facebook mr-2"
+                           href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a class="btn btn-circle btn-sm btn-twitter" href=""><i
+                                    class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                    <span class="hr-text small my-6">Or</span>
+                </div>
+                <form class="input-transparent">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-secondary"
+                               name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password"
+                               class="form-control border-secondary"
+                               name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input"
+                                   checked="" id="rememberMeCheck">
+                            <label class="custom-control-label"
+                                   for="rememberMeCheck">Remember me</label>
+                        </div>
+                        <a class="small-3" href="#">Forgot password?</a>
+                    </div>
+                    <div class="form-group mt-6">
+                        <button class="btn btn-block btn-warning" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                <span class="small">Don't have an account? <a href="#">Create an account</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /sign in/up  -->
+
+
+<!-- Become a partner flow -->
+<div class="modal fade" id="becomePartnerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="userLoginTitle">Become a
+                    partner</h5>
+                <button type="button" class="close text-light"
+                        data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Become a partner flow -->
+                <div id="becomePartnerFlow" class="sw-main input-transparent">
+                    <ul class="nav nav-tabs step-anchor">
+                        <li class="nav-item active">
+                            <a href="#becomePartnerFlow-step-1" class="nav-link">
+                                ACCOUNT
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#becomePartnerFlow-step-2" class="nav-link">
+                                CHOOSE YOUR SKILLS(S)
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#becomePartnerFlow-step-3" class="nav-link">
+                                CONTENT CREATORS
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#becomePartnerFlow-step-4" class="nav-link">
+                                TERMS
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sw-container tab-content">
+                        <div id="becomePartnerFlow-step-1" class="tab-pane step-content bg-dark py-5">
+
+                            <div class="row">
+                                <div class="col-12 col-lg-9 mx-auto">
+                                    <div class="form-group">
+                                        <input type="text"
+                                               class="form-control border-secondary"
+                                               name="email" placeholder="<?= __('Email') ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password"
+                                               class="form-control border-secondary"
+                                               name="password" placeholder="<?= __('Password') ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password"
+                                               class="form-control border-secondary"
+                                               name="confirm_password" placeholder="<?= __('Confirm Password') ?>">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div id="becomePartnerFlow-step-2" class="tab-pane step-content bg-dark">
+                            Step Content
+                        </div>
+                        <div id="becomePartnerFlow-step-3" class="tab-pane step-content bg-dark">
+                            Step Content
+                        </div>
+                        <div id="becomePartnerFlow-step-4" class="tab-pane step-content bg-dark">
+                            Step Content
+                        </div>
+                    </div>
+                </div>
+                <!-- /Become a partner flow -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Become a partner modal  -->
+
+
 <!-- bottom Scripts -->
 
 <!-- jQuery -->
 <script src="assets/js/jquery.min.js"></script>
 <?php echo $this->Html->script('/public/assets/js/jquery.min.js'); ?>
 <?php echo $this->Html->script('/public/assets/js/bootstrap.min.js'); ?>
+
+<!-- plugins -->
 <?php echo $this->Html->script('/plugins/owl.carousel/owl.carousel.min.js'); ?>
+<?php echo $this->Html->script('/plugins/smart_wizard/js/jquery.smartWizard.min.js'); ?>
+
+
 <?php echo $this->Html->script('/public/assets/js/scripts.js'); ?>
 <?php echo $this->Html->script('/public/assets/js/main.js', [
     'id' => '_mainJS',
