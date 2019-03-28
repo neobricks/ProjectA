@@ -1169,6 +1169,25 @@ function initMap() {
     }
 
     //----------------------- Become a partner flow --------------------------
+
+    var btnBecomePartnerFlowFinish = $('<button></button>').text('Submit')
+        .addClass('btn btn-primary btn-finish d-none')
+        .on('click', function(){
+            if( !$(this).hasClass('disabled')){
+                var elmForm = $("#becomePartnerFlow");
+                if(elmForm){
+                    elmForm.validator('validate');
+                    var elmErr = elmForm.find('.has-error');
+                    if(elmErr && elmErr.length > 0){
+                        return false;
+                    }else{
+                        elmForm.submit();
+                        return false;
+                    }
+                }
+            }
+        });
+
     $('#becomePartnerFlow').smartWizard({
         selected: 0,  // Initial selected step, 0 = first step
         keyNavigation: false, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
@@ -1185,7 +1204,9 @@ function initMap() {
             toolbarButtonPosition: 'right', // left, right
             showNextButton: true, // show/hide a Next button
             showPreviousButton: true, // show/hide a Previous button
-            toolbarExtraButtons: [ ]
+            toolbarExtraButtons: [
+                btnBecomePartnerFlowFinish
+            ]
         },
         anchorSettings: {
             anchorClickable: false, // Enable/Disable anchor navigation
@@ -1200,6 +1221,32 @@ function initMap() {
         transitionEffect: 'fade', // Effect on navigation, none/slide/fade
         transitionSpeed: '300'
     });
+
+    // previus button starts hidden
+    $('#becomePartnerFlow .sw-btn-prev').addClass('d-none');
+
+    $("#becomePartnerFlow").on("showStep", function(e, anchorObject,
+                                                    stepNumber, stepDirection) {
+
+        if(stepNumber === 0){
+            $('#becomePartnerFlow .sw-btn-prev').addClass('d-none');
+        } else {
+            $('#becomePartnerFlow .sw-btn-prev').removeClass('d-none');
+        }
+
+        // Enable submit button only on the last step
+        if(stepNumber === 3){
+            $('#becomePartnerFlow .sw-btn-next').addClass('d-none');
+            $('#becomePartnerFlow .btn-finish').removeClass('d-none');
+        } else {
+            $('#becomePartnerFlow .sw-btn-next').removeClass('d-none');
+            $('#becomePartnerFlow .btn-finish').addClass('d-none');
+        }
+    });
+
+    //------------------------------------------------------------------------
+
+
 
 })(jQuery);
 

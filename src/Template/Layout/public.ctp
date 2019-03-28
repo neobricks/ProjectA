@@ -178,13 +178,18 @@ $locale_options = Configure::read('locale.options');
                 </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/contact-us">
                             <?= __('Contact NeoBricks'); ?>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <?= __('Terms & Conditions'); ?>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/privacy-policy">
+                            <?= __('Privacy Policy') ?>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -210,8 +215,7 @@ $locale_options = Configure::read('locale.options');
                                href="#"><?= __('Facebook') ?></a>
                             <a class="nav-link"
                                href="#"><?= __('Help Center') ?></a>
-                            <a class="nav-link"
-                               href="/privacy-policy"><?= __('Privacy Policy') ?></a>
+
                         </div>
                     </div>
                 </div>
@@ -284,7 +288,7 @@ $locale_options = Configure::read('locale.options');
 <!-- Become a partner flow -->
 <div class="modal fade" id="becomePartnerModal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content bg-dark text-light">
+        <div class="modal-content bg-dark">
             <div class="modal-header border-secondary">
                 <h5 class="modal-title" id="userLoginTitle">Become a
                     partner</h5>
@@ -309,7 +313,7 @@ $locale_options = Configure::read('locale.options');
                         </li>
                         <li class="nav-item ">
                             <a href="#becomePartnerFlow-step-3" class="nav-link">
-                                CONTENT CREATORS
+                                Information
                             </a>
                         </li>
                         <li class="nav-item ">
@@ -320,39 +324,95 @@ $locale_options = Configure::read('locale.options');
                     </ul>
                     <div class="sw-container tab-content">
                         <div id="becomePartnerFlow-step-1" class="tab-pane step-content bg-dark py-5">
-
-                            <div class="row">
-                                <div class="col-12 col-lg-9 mx-auto">
-                                    <div class="form-group">
-                                        <input type="text"
-                                               class="form-control border-secondary"
-                                               name="email" placeholder="<?= __('Email') ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password"
-                                               class="form-control border-secondary"
-                                               name="password" placeholder="<?= __('Password') ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password"
-                                               class="form-control border-secondary"
-                                               name="confirm_password" placeholder="<?= __('Confirm Password') ?>">
-                                    </div>
+                            <div class="form-group row">
+                                <label class="col-3 text-primary">
+                                    <?= __('Email') ?>
+                                </label>
+                                <div class="col-9">
+                                    <input name="email" type="email"
+                                           class="form-control"
+                                           value=""/>
                                 </div>
                             </div>
-
-
-
-
-
-
+                            <div class="form-group row">
+                                <label class="col-3 text-primary">
+                                    <?= __('Password') ?>
+                                </label>
+                                <div class="col-9">
+                                    <input name="password" type="password"
+                                           class="form-control"
+                                           value=""/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 text-primary">
+                                    <?= __('Confirm Password') ?>
+                                </label>
+                                <div class="col-9">
+                                    <input name="confirm_password" type="password"
+                                           class="form-control"
+                                           value=""/>
+                                </div>
+                            </div>
                         </div>
-                        <div id="becomePartnerFlow-step-2" class="tab-pane step-content bg-dark">
-                            Step Content
+
+                        <div id="becomePartnerFlow-step-2" class="tab-pane step-content bg-dark py-5">
+
+                            <?php
+                                $skills_dummyData = [
+                                    [
+                                        'code' => 'content_creators',
+                                        'title' => 'Content Creators',
+                                        'description' => 'You are an Influencer, Artist, Youtuber or streamer. You create awesome content for games you play!',
+                                        'img_path' => '/public/assets/img/skill_1'
+                                    ],
+                                    [
+                                        'code' => 'moderators',
+                                        'title' => 'Moderators',
+                                        'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+
+                                ]
+                            ?>
+                            <h5 class="text-primary">Select your skill(s). You can choose more than one.</h5>
+                            <?php foreach($skills_dummyData as $skill): ?>
+                            <div class="row py-2">
+                                <div class="col-12">
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <?= $this->Html->image($skill['img_path'], [
+                                                'class' => 'w-100 img-fluid',
+                                            ]) ?>
+                                        </div>
+                                        <div class="col-7">
+                                            <h3 class="text-primary"><?= $skill['title'];?></h3>
+                                            <p><?= $skill['description'];?></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <label class="checkbox-wrapper">
+                                                <input class="checkbox" type="checkbox" name="skill" value="<?= $skill['code'];?>" />
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
                         </div>
+
+                        <!-- become partner flow: step 3 --->
                         <div id="becomePartnerFlow-step-3" class="tab-pane step-content bg-dark">
-                            Step Content
+
+                            <!--Content Creators -->
+                            <?= $this->element('becomePartnerForm/step3_contentcreators'); ?>
+
                         </div>
+                        <!-- /become partner flow: step 3 --->
+
+
                         <div id="becomePartnerFlow-step-4" class="tab-pane step-content bg-dark">
                             Step Content
                         </div>
