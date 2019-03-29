@@ -36,6 +36,11 @@
       You can freely change them or add new ones.
 
 /*---------------------------------------------------------------------- */
+
+
+
+/*# sourceMappingURL=styles.css.map */
+
 // Variables
 @import "variables";
 @import "components/shape";
@@ -1481,6 +1486,6 @@ nav.navbar {
   border: 2px solid #333;
 }
 
-
-
-/*# sourceMappingURL=styles.css.map */
+label {
+  font-size: 1rem;
+}

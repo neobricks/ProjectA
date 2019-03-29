@@ -83,11 +83,12 @@ $locale_options = Configure::read('locale.options');
             <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6 ml-auto text-right">
                 <a class="btn btn-sm btn-light text-secondary rounded-0"
                    href="javascript:void(0)"
-                   data-toggle="modal" data-target="#userLogin">
+                   data-toggle="modal" data-target="#modalSignIn">
                     <?= __('Sign in'); ?>
                 </a>
                 <a class="btn btn-sm text-light d-none d-sm-inline-block"
-                   href="#">
+                   href="javascript:void(0)"
+                   data-toggle="modal" data-target="#modalSignUp">
                     <?= __('Sign up'); ?>
                 </a>
                 <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row m-0 p-0">
@@ -228,62 +229,19 @@ $locale_options = Configure::read('locale.options');
 <!-- /.footer -->
 
 
-<!-- sign in/up -->
-<div class="modal fade" id="userLogin" tabindex="-1" role="dialog"
-     aria-labelledby="userLoginTitle" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-        <div class="modal-content bg-dark text-light">
-            <div class="modal-header border-secondary">
-                <h5 class="modal-title" id="userLoginTitle">Log in</h5>
-                <button type="button" class="close text-light"
-                        data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <div class="text-center my-6">
-                        <a class="btn btn-circle btn-sm btn-google mr-2"
-                           href=""><i class="fab fa-google fa-2x"></i></a>
-                        <a class="btn btn-circle btn-sm btn-facebook mr-2"
-                           href=""><i class="fab fa-facebook-f fa-2x"></i></a>
-                        <a class="btn btn-circle btn-sm btn-twitter" href=""><i
-                                    class="fab fa-twitter fa-2x"></i></a>
-                    </div>
-                    <span class="hr-text small my-6">Or</span>
-                </div>
-                <form class="input-transparent">
-                    <div class="form-group">
-                        <input type="text" class="form-control border-secondary"
-                               name="username" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <input type="password"
-                               class="form-control border-secondary"
-                               name="password" placeholder="Password">
-                    </div>
-                    <div class="form-group d-flex justify-content-between">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"
-                                   checked="" id="rememberMeCheck">
-                            <label class="custom-control-label"
-                                   for="rememberMeCheck">Remember me</label>
-                        </div>
-                        <a class="small-3" href="#">Forgot password?</a>
-                    </div>
-                    <div class="form-group mt-6">
-                        <button class="btn btn-block btn-warning" type="submit">
-                            Login
-                        </button>
-                    </div>
-                </form>
-                <span class="small">Don't have an account? <a href="#">Create an account</a></span>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /sign in/up  -->
+<!-- Modals -->
 
+<!-- sign in -->
+<?= $this->element('/modals/public/signin'); ?>
+
+<!-- sign up -->
+<?= $this->element('/modals/public/signup'); ?>
+
+<!-- forget password -->
+<?= $this->element('/modals/public/forget_password'); ?>
+
+
+<!-- /Modals -->
 
 <!-- Become a partner flow -->
 <div class="modal fade" id="becomePartnerModal" tabindex="-1" role="dialog">
@@ -302,28 +260,33 @@ $locale_options = Configure::read('locale.options');
                 <div id="becomePartnerFlow" class="sw-main input-transparent">
                     <ul class="nav nav-tabs step-anchor">
                         <li class="nav-item active">
-                            <a href="#becomePartnerFlow-step-1" class="nav-link">
+                            <a href="#becomePartnerFlow-step-1"
+                               class="nav-link">
                                 ACCOUNT
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#becomePartnerFlow-step-2" class="nav-link">
+                            <a href="#becomePartnerFlow-step-2"
+                               class="nav-link">
                                 CHOOSE YOUR SKILLS(S)
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#becomePartnerFlow-step-3" class="nav-link">
+                            <a href="#becomePartnerFlow-step-3"
+                               class="nav-link">
                                 Information
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#becomePartnerFlow-step-4" class="nav-link">
+                            <a href="#becomePartnerFlow-step-4"
+                               class="nav-link">
                                 TERMS
                             </a>
                         </li>
                     </ul>
                     <div class="sw-container tab-content">
-                        <div id="becomePartnerFlow-step-1" class="tab-pane step-content bg-dark py-5">
+                        <div id="becomePartnerFlow-step-1"
+                             class="tab-pane step-content bg-dark py-5">
                             <div class="form-group row">
                                 <label class="col-3 text-primary">
                                     <?= __('Email') ?>
@@ -349,99 +312,105 @@ $locale_options = Configure::read('locale.options');
                                     <?= __('Confirm Password') ?>
                                 </label>
                                 <div class="col-9">
-                                    <input name="confirm_password" type="password"
+                                    <input name="confirm_password"
+                                           type="password"
                                            class="form-control"
                                            value=""/>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="becomePartnerFlow-step-2" class="tab-pane step-content bg-dark py-5">
+                        <div id="becomePartnerFlow-step-2"
+                             class="tab-pane step-content bg-dark py-5">
 
                             <?php
-                                $skills_dummyData = [
-                                    [
-                                        'code' => 'content_creators',
-                                        'title' => 'Content Creators',
-                                        'description' => 'You are an Influencer, Artist, Youtuber or streamer. You create awesome content for games you play!',
-                                        'img_path' => '/public/assets/img/skill_1'
-                                    ],
-                                    [
-                                        'code' => 'moderators',
-                                        'title' => 'Moderators',
-                                        'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'testers',
-                                        'title' => 'Testers',
-                                        'description' => 'Work hard, play hard, test even harder! You are the one who helps games becoming better!',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'pro_gamers',
-                                        'title' => 'Pro-Gamers',
-                                        'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it. ',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'translators',
-                                        'title' => 'Translators',
-                                        'description' => 'You check and translate awesomenesse around the globe – did I wrote it right?',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'casters',
-                                        'title' => 'Casters',
-                                        'description' => 'Your lovely voice brings matches alive! You are the Galvão Bueno of games!',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'companies',
-                                        'title' => 'Companies',
-                                        'description' => 'Good corps partnering up against evil - Let’s join our forces!',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ],
-                                    [
-                                        'code' => 'others',
-                                        'title' => 'Others',
-                                        'description' => 'You have another special skill, so special that you have to explain it to us..',
-                                        'img_path' => '/public/assets/img/skill_2'
-                                    ]
-                                ];
+                            $skills_dummyData = [
+                                [
+                                    'code' => 'content_creators',
+                                    'title' => 'Content Creators',
+                                    'description' => 'You are an Influencer, Artist, Youtuber or streamer. You create awesome content for games you play!',
+                                    'img_path' => '/public/assets/img/skill_1'
+                                ],
+                                [
+                                    'code' => 'moderators',
+                                    'title' => 'Moderators',
+                                    'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'testers',
+                                    'title' => 'Testers',
+                                    'description' => 'Work hard, play hard, test even harder! You are the one who helps games becoming better!',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'pro_gamers',
+                                    'title' => 'Pro-Gamers',
+                                    'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it. ',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'translators',
+                                    'title' => 'Translators',
+                                    'description' => 'You check and translate awesomenesse around the globe – did I wrote it right?',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'casters',
+                                    'title' => 'Casters',
+                                    'description' => 'Your lovely voice brings matches alive! You are the Galvão Bueno of games!',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'companies',
+                                    'title' => 'Companies',
+                                    'description' => 'Good corps partnering up against evil - Let’s join our forces!',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ],
+                                [
+                                    'code' => 'others',
+                                    'title' => 'Others',
+                                    'description' => 'You have another special skill, so special that you have to explain it to us..',
+                                    'img_path' => '/public/assets/img/skill_2'
+                                ]
+                            ];
                             ?>
-                            <h5 class="text-primary">Select your skill(s). You can choose more than one.</h5>
-                            <?php foreach($skills_dummyData as $skill): ?>
-                            <div class="row py-2">
-                                <div class="col-12">
+                            <h5 class="text-primary">Select your skill(s). You
+                                can choose more than one.</h5>
+                            <?php foreach ($skills_dummyData as $skill): ?>
+                                <div class="row py-2">
+                                    <div class="col-12">
 
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <?= $this->Html->image($skill['img_path'], [
-                                                'class' => 'w-100 img-fluid',
-                                            ]) ?>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <?= $this->Html->image($skill['img_path'], [
+                                                    'class' => 'w-100 img-fluid',
+                                                ]) ?>
+                                            </div>
+                                            <div class="col-7">
+                                                <h3 class="text-primary"><?= $skill['title']; ?></h3>
+                                                <p><?= $skill['description']; ?></p>
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="checkbox-wrapper">
+                                                    <input class="checkbox"
+                                                           type="checkbox"
+                                                           name="skill"
+                                                           value="<?= $skill['code']; ?>"
+                                                           autocomplete="off"/>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="col-7">
-                                            <h3 class="text-primary"><?= $skill['title'];?></h3>
-                                            <p><?= $skill['description'];?></p>
-                                        </div>
-                                        <div class="col-2">
-                                            <label class="checkbox-wrapper">
-                                                <input class="checkbox" type="checkbox"
-                                                       name="skill" value="<?= $skill['code'];?>"
-                                                       autocomplete="off" />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
+
                                     </div>
-
                                 </div>
-                            </div>
                             <?php endforeach; ?>
                         </div>
 
                         <!-- become partner flow: step 3 --->
-                        <div id="becomePartnerFlow-step-3" class="tab-pane step-content bg-dark">
+                        <div id="becomePartnerFlow-step-3"
+                             class="tab-pane step-content bg-dark">
 
                             <!--Content Creators -->
                             <?= $this->element('becomePartnerForm/step3_content_creators'); ?>
@@ -472,7 +441,8 @@ $locale_options = Configure::read('locale.options');
                         <!-- /become partner flow: step 3 --->
 
 
-                        <div id="becomePartnerFlow-step-4" class="tab-pane step-content bg-dark">
+                        <div id="becomePartnerFlow-step-4"
+                             class="tab-pane step-content bg-dark">
                             Step Content
                         </div>
                     </div>
