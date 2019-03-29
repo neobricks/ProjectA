@@ -33,7 +33,7 @@
             <!-- carousel-item -->
             <div class="carousel-item active">
                 <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.png);">
+                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
