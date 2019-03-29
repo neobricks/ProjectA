@@ -117,7 +117,7 @@
                 <div class="owl-stage">
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_1', [
+                            <?= $this->Html->image('/public/assets/img/skill_1.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Content
@@ -130,7 +130,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_2', [
+                            <?= $this->Html->image('/public/assets/img/skill_2.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Testers </h4>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_3', [
+                            <?= $this->Html->image('/public/assets/img/skill_3.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Moderators</h4>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_4', [
+                            <?= $this->Html->image('/public/assets/img/skill_4.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Business & Corps</h4>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_1', [
+                            <?= $this->Html->image('/public/assets/img/skill_1.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Content
@@ -176,7 +176,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_2', [
+                            <?= $this->Html->image('/public/assets/img/skill_2.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Testers </h4>
@@ -187,7 +187,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_3', [
+                            <?= $this->Html->image('/public/assets/img/skill_3.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Moderators</h4>
@@ -198,7 +198,7 @@
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_4', [
+                            <?= $this->Html->image('/public/assets/img/skill_4.png', [
                                 'class' => 'img-fluid'
                             ]) ?>
                             <h4 class="text-center text-dark mb-0">Business & Corps</h4>
@@ -233,92 +233,92 @@ $latestQuest_dummyDate = [
     'tests' => [
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
         [
             'title' => 'Hundred Soul',
-            'img_path' => '/public/assets/img/quest_img_4',
+            'img_path' => '/public/assets/img/quest_img_4.png',
         ],
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
     ],
     'translations' => [
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
         [
             'title' => 'Hundred Soul',
-            'img_path' => '/public/assets/img/quest_img_4',
+            'img_path' => '/public/assets/img/quest_img_4.png',
         ],
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
     ],
     'moderators' => [
 
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
         [
             'title' => 'Destiny Child for Europe',
-            'img_path' => '/public/assets/img/quest_img_3',
+            'img_path' => '/public/assets/img/quest_img_3.png',
         ],
         [
             'title' => 'Hundred Soul',
-            'img_path' => '/public/assets/img/quest_img_4',
+            'img_path' => '/public/assets/img/quest_img_4.png',
         ],
         [
             'title' => 'KurtzPel CBT',
-            'img_path' => '/public/assets/img/quest_img_1',
+            'img_path' => '/public/assets/img/quest_img_1.png',
         ],
         [
             'title' => 'Black Squad Spring Patch',
-            'img_path' => '/public/assets/img/quest_img_2',
+            'img_path' => '/public/assets/img/quest_img_2.png',
         ],
     ]
 ];
