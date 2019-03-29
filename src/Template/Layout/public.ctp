@@ -372,8 +372,43 @@ $locale_options = Configure::read('locale.options');
                                         'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
                                         'img_path' => '/public/assets/img/skill_2'
                                     ],
-
-                                ]
+                                    [
+                                        'code' => 'testers',
+                                        'title' => 'Testers',
+                                        'description' => 'Work hard, play hard, test even harder! You are the one who helps games becoming better!',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+                                    [
+                                        'code' => 'pro_gamers',
+                                        'title' => 'Pro-Gamers',
+                                        'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it. ',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+                                    [
+                                        'code' => 'translators',
+                                        'title' => 'Translators',
+                                        'description' => 'You check and translate awesomenesse around the globe – did I wrote it right?',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+                                    [
+                                        'code' => 'casters',
+                                        'title' => 'Casters',
+                                        'description' => 'Your lovely voice brings matches alive! You are the Galvão Bueno of games!',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+                                    [
+                                        'code' => 'companies',
+                                        'title' => 'Companies',
+                                        'description' => 'Good corps partnering up against evil - Let’s join our forces!',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ],
+                                    [
+                                        'code' => 'others',
+                                        'title' => 'Others',
+                                        'description' => 'You have another special skill, so special that you have to explain it to us..',
+                                        'img_path' => '/public/assets/img/skill_2'
+                                    ]
+                                ];
                             ?>
                             <h5 class="text-primary">Select your skill(s). You can choose more than one.</h5>
                             <?php foreach($skills_dummyData as $skill): ?>
@@ -392,7 +427,9 @@ $locale_options = Configure::read('locale.options');
                                         </div>
                                         <div class="col-2">
                                             <label class="checkbox-wrapper">
-                                                <input class="checkbox" type="checkbox" name="skill" value="<?= $skill['code'];?>" />
+                                                <input class="checkbox" type="checkbox"
+                                                       name="skill" value="<?= $skill['code'];?>"
+                                                       autocomplete="off" />
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -407,7 +444,29 @@ $locale_options = Configure::read('locale.options');
                         <div id="becomePartnerFlow-step-3" class="tab-pane step-content bg-dark">
 
                             <!--Content Creators -->
-                            <?= $this->element('becomePartnerForm/step3_contentcreators'); ?>
+                            <?= $this->element('becomePartnerForm/step3_content_creators'); ?>
+
+                            <!--Moderators -->
+                            <?= $this->element('becomePartnerForm/step3_moderators'); ?>
+
+                            <!-- Testers -->
+                            <?= $this->element('becomePartnerForm/step3_testers'); ?>
+
+                            <!-- Pro Gamers -->
+                            <?= $this->element('becomePartnerForm/step3_pro_gamers'); ?>
+
+                            <!-- Translators -->
+                            <?= $this->element('becomePartnerForm/step3_translators'); ?>
+
+                            <!--Casters -->
+                            <?= $this->element('becomePartnerForm/step3_casters'); ?>
+
+                            <!--Companies -->
+                            <?= $this->element('becomePartnerForm/step3_companies'); ?>
+
+                            <!--Others -->
+                            <?= $this->element('becomePartnerForm/step3_others'); ?>
+
 
                         </div>
                         <!-- /become partner flow: step 3 --->

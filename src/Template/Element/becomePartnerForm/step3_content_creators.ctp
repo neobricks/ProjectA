@@ -1,8 +1,8 @@
-<div class="card" id="contentcreators_wrapper">
+<div class="card card-information my-3 d-none" id="content_creators_wrapper">
     <div class="card-body">
         <h5 class="card-title">
-            <span class="text-primary">Content Creator</span>
-            <span class="text-light">information</span>
+            <span class="text-primary"><?= __('Content Creator'); ?></span>
+            <span class="text-light"><?= __('information') ?></span>
         </h5>
 
         <div class="form-group row">
@@ -247,28 +247,30 @@
         </div>
 
         <div class="form-group row">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <label class="col-12 text-primary">
-                        <?= __('What languages do you speak?') ?>*
-                    </label>
-                    <select class="custom-select" multiple>
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                    </select>
-                </div>
+            <label class="col-3 text-primary">
+                <?= __('What languages do you speak?') ?>*
+            </label>
+            <div class="col-9">
+                <select class="custom-select" multiple>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
 
-                <div class="col-12 col-lg-6">
-                    <label class="col-12 text-primary">
-                        <?= __('Proficiency') ?>*
-                    </label>
-                    <select class="custom-select">
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                    </select>
-                </div>
+
+        <div class="form-group row">
+
+            <label class="col-3 text-primary">
+                <?= __('Proficiency') ?>*
+            </label>
+            <div class="col-9">
+                <select class="custom-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
             </div>
         </div>
 
@@ -313,5 +315,7 @@
                 <input type="text" class="form-control "/>
             </div>
         </div>
-    </div>
-</div>
+
+
+    </div> <!-- /card-body -->
+</div> <!-- /card -->

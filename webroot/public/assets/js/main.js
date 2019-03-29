@@ -1225,6 +1225,17 @@ function initMap() {
     // previus button starts hidden
     $('#becomePartnerFlow .sw-btn-prev').addClass('d-none');
 
+
+    $("#becomePartnerFlow").on('change', 'input[name="skill"]', (e) => {
+        let checkbox = e.target;
+        let skill = $(checkbox).attr('value');
+        if(checkbox.checked) {
+            $("#"+skill+"_wrapper").removeClass('d-none');
+        } else {
+            $("#"+skill+"_wrapper").addClass('d-none');
+        }
+    });
+
     $("#becomePartnerFlow").on("showStep", function(e, anchorObject,
                                                     stepNumber, stepDirection) {
 
