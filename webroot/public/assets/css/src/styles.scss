@@ -1484,8 +1484,35 @@ nav.navbar {
 .card-information {
   background: #242424;
   border: 2px solid #333;
+
+  .card-title {
+
+
+    &::after {
+      content: '';
+      width:80px;
+      height:3px;
+      background: $primary;
+      display:block;
+      margin-top: map_get($spacers, 4);
+      margin-bottom: map_get($spacers, 4);
+    }
+  }
+
 }
 
 label {
   font-size: 1rem;
+}
+
+
+.profile-divider {
+  border-bottom: 2px solid #242424;
+  font-weight: bold;
+
+  span {
+    border-bottom: 5px solid #fff;
+    display: inline-block;
+    margin-bottom: -5px;
+  }
 }
