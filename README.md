@@ -1,4 +1,4 @@
-# Treeve Application
+# ProjectA Application
 
 The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
