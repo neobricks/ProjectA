@@ -1258,6 +1258,31 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    let floatButtonVisible = false;
+    $( window ).scroll(function() {
+
+        if ( document.documentElement.scrollTop >= $('section#skills').offset().top &&
+             document.documentElement.scrollTop <= $('footer.footer').offset().top ){
+            if(!floatButtonVisible) {
+                floatButtonVisible = true;
+                $('#float-button').removeClass('d-none').removeClass('fadeOutRight').addClass('fadeInRight');
+            }
+        } else {
+            if(floatButtonVisible) {
+                floatButtonVisible = false;
+                $('#float-button').addClass('fadeOutRight');
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
 
 })(jQuery);
 

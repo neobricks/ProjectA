@@ -508,7 +508,7 @@ $latestQuest_dummyDate = [
 <section class="section gs_features">
     <div class="row no-gutters">
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative"
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
              style="background-image: url('/public/assets/img/bg_cta_1.png'); background-color: #d4d4d4; background-position: top left;">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
@@ -519,7 +519,7 @@ $latestQuest_dummyDate = [
             </div>
         </div>
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative"
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
              style="background-image: url('/public/assets/img/bg_cta_2.png');">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto">
@@ -541,7 +541,7 @@ $latestQuest_dummyDate = [
     </div>
     <div class="row no-gutters">
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative"
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
              style="background-image: url('/public/assets/img/bg_cta_3.png'); background-position: top left;">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
@@ -559,7 +559,7 @@ $latestQuest_dummyDate = [
             </div>
         </div>
 
-        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative"
+        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative feature"
              style="background-image: url('/public/assets/img/bg_cta_4.png'); background-color: #f8991d; background-position: top right;">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto text-left text-dark">

@@ -157,10 +157,29 @@ $locale_options = Configure::read('locale.options');
 <!-- /.navbar -->
 
 
+
+<div id="float-button" class="d-none">
+    <div class="d-flex">
+        <a class="disabled btn btn-lg bg-dark o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
+                    class="d-block text-light">
+                                <?= __('BECOME A PARTNER'); ?>
+                            </span>
+        </a>
+        <a href="#"
+           class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0">
+                                <span class="d-block text-dark"> <i
+                                            class="fas fa-chevron-right"></i> </span>
+        </a>
+    </div>
+</div>
+
+
 <!-- main content -->
 <main class="main-content">
     <?= $this->fetch('content') ?>
 </main>
+
+
 
 <!-- footer -->
 <footer class="footer footer-dark bg-dark pt-5 pb-9">
@@ -204,6 +223,9 @@ $locale_options = Configure::read('locale.options');
             <div class="col-12 col-lg-9 ">
                 <div class="row bg-footer py-5">
                     <div class="col-12 col-lg-3 ml-auto ">
+                        <?= $this->Html->image('/public/assets/img/blacksquad.png', [
+                            'class' => 'game-logo img-fluid py-2'
+                        ]); ?>
                         <h6 class="text-uppercase fw-600 mb-4"><?= __('Community') ?></h6>
                         <div class="nav flex-column">
                             <a class="nav-link"
@@ -247,7 +269,6 @@ $locale_options = Configure::read('locale.options');
 <!-- bottom Scripts -->
 
 <!-- jQuery -->
-<script src="assets/js/jquery.min.js"></script>
 <?php echo $this->Html->script('/public/assets/js/jquery.min.js'); ?>
 <?php echo $this->Html->script('/public/assets/js/bootstrap.min.js'); ?>
 
