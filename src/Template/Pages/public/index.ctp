@@ -476,7 +476,7 @@ $latestQuest_dummyDate = [
                                                     <h4 class="title p-4">
                                                         <?= $quest['title'] ?>
                                                     </h4>
-                                                    <button class="assign btn btn-outline-light ml-4 rounded-0 px-2 p-1 ">
+                                                    <button class="assign btn btn-outline-light btn-lg ml-4 rounded-0 px-2 p-1 ">
                                                         <?= __('ASSIGN'); ?>
                                                     </button>
                                                     <a href="#"
