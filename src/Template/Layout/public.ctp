@@ -203,7 +203,7 @@ $locale_options = Configure::read('locale.options');
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/terms-and-conditions">
                             <?= __('Terms & Conditions'); ?>
                         </a>
                     </li>
