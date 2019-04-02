@@ -1328,6 +1328,33 @@ nav.navbar {
     border-top: 1px solid #4b4b4b;
   }
 
+  .question {
+
+    a {
+      display: inherit;
+
+      .closed {
+        display: none;
+      }
+      .opened {
+        display: block;
+      }
+
+      &.collapsed {
+        .closed {
+          display: block;
+        }
+        .opened {
+          display: none;
+        }
+      }
+
+
+    }
+
+
+  }
+
   .answer {
     color: #aeaeae;
   }

@@ -656,14 +656,17 @@ $latestQuest_dummyDate = [
                 foreach ($FAQ_dummydata as $FAQ_item): ?>
 
                     <div class="card">
-                        <div class="card-header" id="FAQ_question<?= $i ?>">
+                        <div class="card-header p-0" id="FAQ_question<?= $i ?>">
                             <h5 class="mb-0 question">
                                 <a href="javascript:void(0);"
                                    data-toggle="collapse"
                                    data-target="#FAQ_answer<?= $i ?>"
                                    aria-expanded="true"
-                                   aria-controls="collapseOne">
+                                   aria-controls="collapseOne"
+                                   class="px-2 py-4 collapsed">
                                     <?= $FAQ_item['question']; ?>
+                                    <span class="float-right closed"><i class="fas fa-chevron-circle-down"></i></span>
+                                    <span class="float-right opened"><i class="fas fa-chevron-circle-up"></i></span>
                                 </a>
                             </h5>
                         </div>
