@@ -50,16 +50,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            Become a partner
+                                            <?= __("Become a Partner");?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit. Proin
-                                            pharetra elit arcu, vitae malesuada
-                                            erat dictum at. Suspendisse commodo
-                                            ultricies nulla non condimentum. Sed
-                                            vestibulum mauris a lorem ultrices
-                                            auctor. Nulla bibendum posuere orci.
+                                        <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci.");?>
                                         </p>
                                         <div class="d-flex fadeInLeft ad-900ms">
                                             <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
@@ -424,7 +418,7 @@ $latestQuest_dummyDate = [
     <div class="row no-gutters">
 
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative"
-             style="background-image: url('/public/assets/img/bg_cta_1.png'); background-color: #d4d4d4; background-position: top -85px left -265px;">
+             style="background-image: url('/public/assets/img/bg_cta_1.png'); background-color: #d4d4d4; background-position: top left;">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
                     <h2 class="mb-4 text-dark"><?= __('Sign-up reward'); ?></h2>
@@ -457,7 +451,7 @@ $latestQuest_dummyDate = [
     <div class="row no-gutters">
 
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative"
-             style="background-image: url('/public/assets/img/bg_cta_3.png');">
+             style="background-image: url('/public/assets/img/bg_cta_3.png'); background-position: top left;">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
                     <h3 class="mb-4 text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></h3>
