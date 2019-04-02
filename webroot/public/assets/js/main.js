@@ -1274,11 +1274,33 @@ function initMap() {
             }
         }
     });
+    //------------------------------------------------------------------------
 
 
+    //-------------- jQuery smooth scrolling anchor navigation ---------------
+    $(document).ready(function(){
+        $('a').on('click',function (e) {
+            var href = $(this).attr("href");
+            //var hash = href.substr(href.indexOf("#"));
+            var hash = $(this).prop('hash');
+            console.log(href);
+            if(hash) {
+                e.preventDefault();
+                var target = $(hash);
+                if($(target).length){
+                    $('html, body').stop().animate({
+                        'scrollTop':  $(target).offset().top //no need of parseInt here
+                    }, 900, 'swing', function () {
+                        //window.location.hash = hash;
+                    });
+                } else {
+                    window.location = href;
+                }
+            }
 
-
-
+        });
+    });
+    //------------------------------------------------------------------------
 
 
 

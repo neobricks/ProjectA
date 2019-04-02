@@ -136,7 +136,8 @@ $locale_options = Configure::read('locale.options');
                     </a>
                 </li>
                 <li class="nav-item pr-5">
-                    <a class="nav-link pl-lg-0" href="javascript:void(0);">
+                    <a class="nav-link pl-lg-0"
+                       href="/#latestQuests">
                         <?= __('Latest quests') ?>
                     </a>
                 </li>
@@ -146,7 +147,8 @@ $locale_options = Configure::read('locale.options');
                     </a>
                 </li>
                 <li class="nav-item pr-5">
-                    <a class="nav-link  pl-lg-0" href="javascript:void(0);">
+                    <a class="nav-link  pl-lg-0"
+                       href="/#FAQ">
                         <?= __('FAQ') ?>
                     </a>
                 </li>
