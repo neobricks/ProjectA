@@ -387,19 +387,17 @@ $latestQuest_dummyDate = [
 <section class="section gs_features">
     <div class="row no-gutters">
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
-             style="background-image: url('/public/assets/img/bg_cta_1.png'); background-color: #d4d4d4; background-position: top left;">
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-1">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
                     <h2 class="mb-4 text-dark"><?= __('Sign-up reward'); ?></h2>
-                    <span class="d-block mb-6" style="color:#9e9e9e;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. </span>
+                    <span class="d-block text-dark mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. </span>
 
                 </div>
             </div>
         </div>
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
-             style="background-image: url('/public/assets/img/bg_cta_2.png');">
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-2">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto">
                     <h3 class="mb-4 text-light"><?= __('Get giveaways and special content exclusive for Partners'); ?></h3>
@@ -420,8 +418,7 @@ $latestQuest_dummyDate = [
     </div>
     <div class="row no-gutters">
 
-        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature"
-             style="background-image: url('/public/assets/img/bg_cta_3.png'); background-position: top left;">
+        <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-3">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
                     <h3 class="mb-4 text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></h3>
@@ -438,8 +435,8 @@ $latestQuest_dummyDate = [
             </div>
         </div>
 
-        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative feature"
-             style="background-image: url('/public/assets/img/bg_cta_4.png'); background-color: #f8991d; background-position: top right;">
+        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative feature feature-4"
+            >
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto text-left text-dark">
                     <h3 class="mb-4 text-dark"><?= __('Become a Partner today'); ?></h3>

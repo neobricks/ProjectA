@@ -1664,3 +1664,39 @@ label {
   }
 
 }
+
+
+
+
+.feature-1 {
+  background-image: url('/public/assets/img/bg_cta_1m.png');
+  background-position: top left;
+
+  @media screen and (min-width: 767.98px) {
+    background-image: url('/public/assets/img/bg_cta_1.png');
+  }
+}
+.feature-2 {
+  background-image: url('/public/assets/img/bg_cta_2m.png');
+  background-position: top left;
+
+  @media screen and (min-width: 767.98px) {
+    background-image: url('/public/assets/img/bg_cta_2.png');
+  }
+}
+.feature-3 {
+  background-image: url('/public/assets/img/bg_cta_3m.png');
+  background-position: top left;
+
+  @media screen and (min-width: 767.98px) {
+    background-image: url('/public/assets/img/bg_cta_3.png');
+  }
+}
+.feature-4 {
+  background-image: url('/public/assets/img/bg_cta_4m.png');
+  background-position: top right;
+
+  @media screen and (min-width: 767.98px) {
+    background-image: url('/public/assets/img/bg_cta_4.png');
+  }
+}
