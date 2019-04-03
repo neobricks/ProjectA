@@ -1373,7 +1373,7 @@ nav.navbar {
   .faq_bg {
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
+    background-size: auto;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1384,10 +1384,8 @@ nav.navbar {
       left: 0;
       //width: 327px;
       width: 75%;
-      background-size: auto;
       @media (min-width: 768px) {
         width: 30%;
-        background-size: cover;
       }
 
     }
