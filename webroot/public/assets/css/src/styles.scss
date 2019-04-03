@@ -1641,3 +1641,26 @@ label {
   }
 
 }
+
+.bootstrap-tagsinput {
+  border-color: #3a4048;
+  color: #ffffff;
+  background-color: transparent;
+
+  input {
+    color: $white;
+    padding: 4px;
+    width: 100%;
+  }
+
+  .badge{
+    margin-right: 2px;
+    color: $black;
+    font-weight: bold;
+    background-color: $primary;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: 1px solid $primary;
+  }
+
+}

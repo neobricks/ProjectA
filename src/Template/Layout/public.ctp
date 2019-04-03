@@ -35,6 +35,8 @@ $locale_options = Configure::read('locale.options');
     <!-- CSS Plugins -->
     <?php echo $this->Html->css('/plugins/owl.carousel/owl.carousel.min.css'); ?>
     <?php echo $this->Html->css('/plugins/smart_wizard/css/smart_wizard.min.css'); ?>
+    <?php echo $this->Html->css('/plugins/tagsinput/tagsinput.css'); ?>
+
     <!-- CSS main -->
     <?php echo $this->Html->css('/public/assets/css/dist/main.css'); ?>
     <?php echo $this->Html->css('/public/assets/css/dist/styles.min.css'); ?>
@@ -244,8 +246,6 @@ $locale_options = Configure::read('locale.options');
                                        href="#"><?= __('Help Center') ?></a>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -282,7 +282,7 @@ $locale_options = Configure::read('locale.options');
 <!-- plugins -->
 <?php echo $this->Html->script('/plugins/owl.carousel/owl.carousel.min.js'); ?>
 <?php echo $this->Html->script('/plugins/smart_wizard/js/jquery.smartWizard.min.js'); ?>
-
+<?php echo $this->Html->script('/plugins/tagsinput/tagsinput.js'); ?>
 
 <?php echo $this->Html->script('/public/assets/js/scripts.js'); ?>
 <?php echo $this->Html->script('/public/assets/js/main.js', [

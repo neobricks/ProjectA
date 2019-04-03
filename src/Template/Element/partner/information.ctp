@@ -67,12 +67,8 @@
                                             <?= __('Proficiency') ?> *
                                         </label>
                                         <div class="col-3">
-                                            <select class="custom-select">
-                                                <option value="en">English
-                                                </option>
-                                                <option value="fr">Français
-                                                </option>
-                                                <option value="de">Deutsch
+                                            <select class="custom-select" readonly="">
+                                                <option value="native"> Native
                                                 </option>
                                             </select>
                                         </div>
@@ -164,45 +160,32 @@
                                     <?= __('What game or games you like to play') ?>*
                                 </label>
                                 <div class="col-8">
-                                    <?php
-                                    $like_play_games_dummyData = [
-                                        ['value' => 'these_games', 'label' => 'I talk about these games:',
-                                            'inputText' => true, 'placeholder' => 'Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…'],
-                                        ['value' => 'types_of_games', 'label' => 'I talk about these types of games:',
-                                            'inputText' => true, 'placeholder' => 'Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure… ']
-                                    ];
-                                    ?>
-
-                                    <?php foreach ($like_play_games_dummyData as $like_games): ?>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox"
-                                                   name="talk_about_games"
-                                                   value="<?= $like_games['value'] ?>"
-                                                   id="<?= 'like_play_games' . $like_games['value'] ?>"/>
-                                            <label class="form-check-label w-100"
-                                                   for="<?= 'like_play_games' . $like_games['value'] ?>">
-                                                <?php if (!$like_games['inputText']): ?>
-                                                    <?= $like_games['label'] ?>
-                                                <?php else: ?>
-                                                    <span class="row">
-                                                            <span class="col-12">
-                                                                <?= $like_games['label'] ?>
-                                                            </span>
-                                                            <span class="col-12">
-                                                                   <input id="<?= 'like_play_games' . $like_games['value'] ?>_text"
-                                                                          name="<?= 'like_play_games' . $like_games['value'] ?>_text"
-                                                                          type="text"
-                                                                          value=""
-                                                                          placeholder="<?= $like_games['placeholder'] ?>"
-                                                                          class="form-control">
-                                                            </span>
-                                                        </span>
-                                                <?php endif; ?>
-                                            </label>
-                                        </div>
-                                    <?php endforeach; ?>
-
-
+                                    <div class="row  pb-2">
+                                        <span class="col-12 text-warning">
+                                            <?= __('I like to play these games:'); ?>
+                                        </span>
+                                        <span class="col-12">
+                                               <input name="like_games"
+                                                      type="text"
+                                                      data-role="tagsinput"
+                                                      value=""
+                                                      placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
+                                                      class="form-control">
+                                        </span>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <span class="col-12 text-warning">
+                                            <?= __('I like to play these types of games:'); ?>
+                                        </span>
+                                        <span class="col-12">
+                                               <input name="like_type_games"
+                                                      type="text"
+                                                      data-role="tagsinput"
+                                                      value=""
+                                                      placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
+                                                      class="form-control">
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /games you like -->

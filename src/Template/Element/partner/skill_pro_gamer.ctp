@@ -51,45 +51,32 @@
                     <?= __('What game or games you like to play') ?>*
                 </label>
                 <div class="col-8">
-                    <?php
-                    $pro_gamer_at_dummyData = [
-                        ['value' => 'these_games', 'label' => 'I am pro at these games:',
-                            'inputText' => true, 'placeholder' => 'Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…'],
-                        ['value' => 'types_of_games', 'label' => 'I am pro at these types of games:',
-                            'inputText' => true, 'placeholder' => 'Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure… ']
-                    ];
-                    ?>
-
-                    <?php foreach ($pro_gamer_at_dummyData as $game): ?>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox"
-                                   name="talk_about_games"
-                                   value="<?= $game['value'] ?>"
-                                   id="<?= 'like_play_games' . $game['value'] ?>"/>
-                            <label class="form-check-label w-100"
-                                   for="<?= 'like_play_games' . $game['value'] ?>">
-                                <?php if (!$game['inputText']): ?>
-                                    <?= $game['label'] ?>
-                                <?php else: ?>
-                                    <span class="row">
-                                        <span class="col-12">
-                                            <?= $game['label'] ?>
-                                        </span>
-                                        <span class="col-12">
-                                               <input id="<?= 'like_play_games' . $game['value'] ?>_text"
-                                                      name="<?= 'like_play_games' . $game['value'] ?>_text"
-                                                      type="text"
-                                                      value=""
-                                                      placeholder="<?= $game['placeholder'] ?>"
-                                                      class="form-control">
-                                        </span>
-                                    </span>
-                                <?php endif; ?>
-                            </label>
-                        </div>
-                    <?php endforeach; ?>
-
-
+                    <div class="row  pb-2">
+                        <span class="col-12 text-warning">
+                            <?= __('I am pro at these games:'); ?>
+                        </span>
+                        <span class="col-12">
+                           <input name="pro_games"
+                                  type="text"
+                                  data-role="tagsinput"
+                                  value=""
+                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
+                                  class="form-control">
+                        </span>
+                    </div>
+                    <div class="row pb-2">
+                        <span class="col-12 text-warning">
+                            <?= __('I am pro at these types of games:'); ?>
+                        </span>
+                        <span class="col-12">
+                           <input name="pro_type_games"
+                                  type="text"
+                                  data-role="tagsinput"
+                                  value=""
+                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
+                                  class="form-control">
+                        </span>
+                    </div>
                 </div>
             </div>
             <!-- /pro gamer at -->
@@ -126,12 +113,7 @@
             <!-- /games -->
 
 
-
-
-
-
         </form>
-
 
 
     </div> <!-- /card-body -->
