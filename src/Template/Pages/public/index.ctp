@@ -522,49 +522,71 @@ $latestQuest_dummyDate = [
 
 
 <!-- FAQ -->
-<div class="content-section pt-5" id="FAQ">
-    <div class="faq_bg faq_bg_left"></div>
+<section class="section" id="FAQ">
+    <div class="content-section pt-5 pb-8">
+        <div class="faq_bg faq_bg_left"></div>
 
-    <div class="container">
-        <header class="header text-left text-light">
-            <h2 class="mb-6">FAQ</h2>
-        </header>
-        <div class="row">
-            <div class="col-12" id="FaqAccordion">
-                <?php $i = 0;
-                foreach ($FAQ_dummydata as $FAQ_item): ?>
+        <div class="container">
+            <header class="header text-left text-light">
+                <h2 class="mb-6">FAQ</h2>
+            </header>
+            <div class="row">
+                <div class="col-12" id="FaqAccordion">
+                    <?php $i = 0;
+                    foreach ($FAQ_dummydata as $FAQ_item): ?>
 
-                    <div class="card">
-                        <div class="card-header p-0" id="FAQ_question<?= $i ?>">
-                            <h5 class="mb-0 question">
-                                <a href="javascript:void(0);"
-                                   data-toggle="collapse"
-                                   data-target="#FAQ_answer<?= $i ?>"
-                                   aria-expanded="true"
-                                   aria-controls="collapseOne"
-                                   class="px-2 py-4 collapsed">
-                                    <?= $FAQ_item['question']; ?>
-                                    <span class="float-right closed"><i
-                                                class="fas fa-chevron-circle-down"></i></span>
-                                    <span class="float-right opened"><i
-                                                class="fas fa-chevron-circle-up"></i></span>
-                                </a>
-                            </h5>
-                        </div>
+                        <div class="card">
+                            <div class="card-header p-0"
+                                 id="FAQ_question<?= $i ?>">
+                                <h5 class="mb-0 question">
+                                    <a href="javascript:void(0);"
+                                       data-toggle="collapse"
+                                       data-target="#FAQ_answer<?= $i ?>"
+                                       aria-expanded="true"
+                                       aria-controls="collapseOne"
+                                       class="px-2 py-4 collapsed">
+                                        <?= $FAQ_item['question']; ?>
+                                        <span class="float-right closed"><i
+                                                    class="fas fa-chevron-circle-down"></i></span>
+                                        <span class="float-right opened"><i
+                                                    class="fas fa-chevron-circle-up"></i></span>
+                                    </a>
+                                </h5>
+                            </div>
 
-                        <div id="FAQ_answer<?= $i ?>" class="collapse"
-                             data-parent="#FAQ_question<?= $i ?>">
-                            <div class="card-body">
-                                <div class="answer"> <?= $FAQ_item['answer']; ?></div>
+                            <div id="FAQ_answer<?= $i ?>" class="collapse"
+                                 data-parent="#FAQ_question<?= $i ?>">
+                                <div class="card-body">
+                                    <div class="answer"> <?= $FAQ_item['answer']; ?></div>
+                                </div>
                             </div>
                         </div>
+
+                        <?php $i++; endforeach; ?>
+                </div>
+            </div>
+            <div class="row py-7">
+                <div class="col-12">
+
+                    <div class="d-flex btn-become-partner">
+                        <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
+                                    class="d-block text-light">
+                                                       BECOME A PARTNER
+                                                </span>
+                        </a>
+                        <a href="#"
+                           class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0"><span
+                                    class="d-block text-dark"> <i
+                                        class="fas fa-chevron-right"></i> </span>
+                        </a>
                     </div>
 
-                    <?php $i++; endforeach; ?>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="faq_bg faq_bg_right"></div>
 
-</div>
-<!-- / #FAQ -->
+        </div>
+        <div class="faq_bg faq_bg_right"></div>
+
+
+    </div>
+    <!-- / #FAQ -->

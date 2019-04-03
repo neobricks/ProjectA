@@ -1261,9 +1261,9 @@ function initMap() {
     let floatButtonVisible = false;
     $( window ).scroll(function() {
 
-        if($('section#skills').length && $('footer.footer').length){
+        if($('section#skills').length && $('section#FAQ').length){
             if ( document.documentElement.scrollTop >= $('section#skills').offset().top &&
-                document.documentElement.scrollTop <= $('footer.footer').offset().top ){
+                document.documentElement.scrollTop <= $('section#FAQ').offset().top - document.documentElement.clientHeight/2 ){
                 if(!floatButtonVisible) {
                     floatButtonVisible = true;
                     $('#float-button').removeClass('d-none').removeClass('fadeOutDown').addClass('fadeInUp');

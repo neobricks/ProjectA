@@ -1328,6 +1328,13 @@ nav.navbar {
     border-top: 1px solid #4b4b4b;
   }
 
+  .btn-become-partner {
+    justify-content: center;
+    @media screen and (min-width: 767.98px) {
+      transform: scale(1.5);
+    }
+  }
+
   .question {
 
     a {
@@ -1596,7 +1603,5 @@ label {
     }
 
   }
-
-
 }
 
