@@ -36,16 +36,11 @@
       You can freely change them or add new ones.
 
 /*---------------------------------------------------------------------- */
-
-
-
 /*# sourceMappingURL=styles.css.map */
-
 // Variables
 @import "variables";
 @import "components/shape";
 @import "components/mixins/bootstrap_overrides";
-
 // Plugins
 @import "components/plugins/slick-theme";
 
@@ -1320,45 +1315,49 @@ nav.navbar {
 
 
 #FAQ {
-  background-color: #242424;
-  position: relative;
 
-  .card-header {
-    background: transparent;
-    border-top: 1px solid #4b4b4b;
-  }
+  .content-section {
+    background-color: #242424;
+    position: relative;
 
-  .btn-become-partner {
-    justify-content: center;
-    @media screen and (min-width: 767.98px) {
-      transform: scale(1.5);
+    .card-header {
+      background: transparent;
+      border-top: 1px solid #4b4b4b;
     }
-  }
 
-  .question {
-
-    a {
-      display: inherit;
-
-      .closed {
-        display: none;
+    .btn-become-partner {
+      justify-content: center;
+      @media screen and (min-width: 767.98px) {
+        transform: scale(1.5);
       }
-      .opened {
-        display: block;
-      }
+    }
 
-      &.collapsed {
+    .question {
+
+      a {
+        display: inherit;
+
         .closed {
-          display: block;
-        }
-        .opened {
           display: none;
         }
+
+        .opened {
+          display: block;
+        }
+
+        &.collapsed {
+          .closed {
+            display: block;
+          }
+
+          .opened {
+            display: none;
+          }
+        }
+
+
       }
-
-
     }
-
 
   }
 
@@ -1387,7 +1386,7 @@ nav.navbar {
       width: 75%;
       background-size: auto;
       @media (min-width: 768px) {
-        width:30%;
+        width: 30%;
         background-size: cover;
       }
 
@@ -1399,7 +1398,7 @@ nav.navbar {
       //width: 375px;
       display: none;
       @media (min-width: 768px) {
-        display:block;
+        display: block;
       }
     }
 
@@ -1527,7 +1526,7 @@ nav.navbar {
   }
 }
 
-*::placeholder{
+*::placeholder {
   opacity: 0.5 !important;
 }
 
@@ -1540,10 +1539,10 @@ nav.navbar {
 
     &::after {
       content: '';
-      width:80px;
-      height:3px;
+      width: 80px;
+      height: 3px;
       background: $primary;
-      display:block;
+      display: block;
       margin-top: map_get($spacers, 4);
       margin-bottom: map_get($spacers, 4);
     }
@@ -1579,8 +1578,8 @@ label {
 
   bottom: 16px;
   z-index: 99;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
 
   @media screen and (min-width: 767.98px) {
     bottom: 32px;
@@ -1595,9 +1594,10 @@ label {
 
   a.btn {
 
-    &.bg-dark{
+    &.bg-dark {
       box-shadow: 0px 0px 20px #000;
     }
+
     &.bg-primary {
       box-shadow: 0px 0px 20px $primary;
     }

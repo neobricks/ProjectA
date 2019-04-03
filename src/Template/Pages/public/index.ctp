@@ -566,7 +566,7 @@ $latestQuest_dummyDate = [
                 </div>
             </div>
             <div class="row py-7">
-                <div class="col-12">
+                <div class="col-6 mx-auto">
 
                     <div class="d-flex btn-become-partner">
                         <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
