@@ -159,7 +159,6 @@ $locale_options = Configure::read('locale.options');
 <!-- /.navbar -->
 
 
-
 <div id="float-button" class="d-none">
     <div class="d-flex">
         <a class="disabled btn btn-lg bg-dark o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
@@ -182,7 +181,6 @@ $locale_options = Configure::read('locale.options');
 </main>
 
 
-
 <!-- footer -->
 <footer class="footer footer-dark bg-dark pt-5 pb-9">
     <div class="container">
@@ -195,8 +193,8 @@ $locale_options = Configure::read('locale.options');
                         'alt' => 'Neobricks'
                     ]); ?>
                 </a>
-                <p>
-                    <?= __('We are NeoBricks, an experienced game publishing partner based in Germany.') ?>
+                <p class="lh-1">
+                    <small><?= __('We are NeoBricks, an experienced game publishing partner based in Germany.') ?></small>
                 </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -224,22 +222,29 @@ $locale_options = Configure::read('locale.options');
 
             <div class="col-12 col-lg-9 ">
                 <div class="row bg-footer py-5">
-                    <div class="col-12 col-lg-3 ml-auto ">
-                        <?= $this->Html->image('/public/assets/img/blacksquad.png', [
-                            'class' => 'game-logo img-fluid py-2'
-                        ]); ?>
-                        <h6 class="text-uppercase fw-600 mb-4"><?= __('Community') ?></h6>
-                        <div class="nav flex-column">
-                            <a class="nav-link"
-                               href="#"><?= __('Game page') ?></a>
-                            <a class="nav-link"
-                               href="#"><?= __('Steam Discussion') ?></a>
-                            <a class="nav-link"
-                               href="#"><?= __('Discord') ?></a>
-                            <a class="nav-link"
-                               href="#"><?= __('Facebook') ?></a>
-                            <a class="nav-link"
-                               href="#"><?= __('Help Center') ?></a>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <?= $this->Html->image('/public/assets/img/blacksquad.png', [
+                                    'class' => 'game-logo img-fluid py-2'
+                                ]); ?>
+                            </div>
+                            <div class="col-12 col-lg-3 ml-auto ">
+                                <h6 class="text-uppercase fw-600 mb-4"><?= __('Community') ?></h6>
+                                <div class="nav flex-column">
+                                    <a class="nav-link"
+                                       href="#"><?= __('Game page') ?></a>
+                                    <a class="nav-link"
+                                       href="#"><?= __('Steam Discussion') ?></a>
+                                    <a class="nav-link"
+                                       href="#"><?= __('Discord') ?></a>
+                                    <a class="nav-link"
+                                       href="#"><?= __('Facebook') ?></a>
+                                    <a class="nav-link"
+                                       href="#"><?= __('Help Center') ?></a>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
