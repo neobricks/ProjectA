@@ -1318,6 +1318,27 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    //------------- Become Partner | Partner Info | Languages ----------------
+    $(document).ready(function () {
+        var language_input = $(".language-base").html();
+
+
+
+        $('#partner_info_wrapper').on('click', '.btn-add-language', function (e) {
+            e.preventDefault();
+            $(".languages-loop").append(language_input);
+        });
+        $('#partner_info_wrapper').on('click', '.btn-remove-language', function (e) {
+            e.preventDefault();
+            $(this).closest('.language-input').remove();
+        });
+
+
+    });
+    //------------------------------------------------------------------------
+
+
+
 })(jQuery);
 
 

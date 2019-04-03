@@ -52,7 +52,7 @@
                                 </label>
                                 <div class="col-8">
 
-                                    <div class="row mb-1">
+                                    <div class="row mb-1 language-input">
                                         <div class="col-3">
                                             <select class="custom-select">
                                                 <option value="en">English
@@ -74,76 +74,47 @@
                                         </div>
 
                                         <div class="col-3">
-                                            <button class="btn btn-success  btn-block">
+                                            <button class="btn btn-success btn-block btn-add-language">
                                                 Add another
                                             </button>
                                         </div>
                                     </div>
 
-                                    <!-- loop here -->
-                                    <div class="row mb-1">
-                                        <div class="col-3">
-                                            <select class="custom-select">
-                                                <option value="en">English
-                                                </option>
-                                                <option value="fr">Français
-                                                </option>
-                                                <option value="de">Deutsch
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <label class="col-3 text-primary">
-                                            <?= __('Proficiency') ?> *
-                                        </label>
-                                        <div class="col-3">
-                                            <select class="custom-select">
-                                                <option value="en">English
-                                                </option>
-                                                <option value="fr">Français
-                                                </option>
-                                                <option value="de">Deutsch
-                                                </option>
-                                            </select>
-                                        </div>
+                                    <div class="language-base d-none">
+                                        <div class="row mb-1 language-input" >
+                                            <div class="col-3">
+                                                <select class="custom-select">
+                                                    <option value="en">English
+                                                    </option>
+                                                    <option value="fr">Français
+                                                    </option>
+                                                    <option value="de">Deutsch
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <label class="col-3 text-primary">
+                                                <?= __('Proficiency') ?> *
+                                            </label>
+                                            <div class="col-3">
+                                                <select class="custom-select">
+                                                    <option value="basic">Basic
+                                                    </option>
+                                                    <option value="fluent">Fluent
+                                                    </option>
+                                                </select>
+                                            </div>
 
-                                        <div class="col-3">
-                                            <button class="btn btn-danger btn-block">
-                                                Remove
-                                            </button>
+                                            <div class="col-3">
+                                                <button type="button" class="btn btn-danger btn-block btn-remove-language">
+                                                    Remove
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <span class="languages-loop">
 
-                                    <div class="row mb-1">
-                                        <div class="col-3">
-                                            <select class="custom-select">
-                                                <option value="en">English
-                                                </option>
-                                                <option value="fr">Français
-                                                </option>
-                                                <option value="de">Deutsch
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <label class="col-3 text-primary">
-                                            <?= __('Proficiency') ?> *
-                                        </label>
-                                        <div class="col-3">
-                                            <select class="custom-select">
-                                                <option value="en">English
-                                                </option>
-                                                <option value="fr">Français
-                                                </option>
-                                                <option value="de">Deutsch
-                                                </option>
-                                            </select>
-                                        </div>
+                                    </span>
 
-                                        <div class="col-3">
-                                            <button class="btn btn-danger btn-block">
-                                                Remove
-                                            </button>
-                                        </div>
-                                    </div>
 
 
 
