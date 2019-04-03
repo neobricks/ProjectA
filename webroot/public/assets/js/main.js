@@ -1261,8 +1261,8 @@ function initMap() {
     let floatButtonVisible = false;
     $(window).scroll(function () {
 
-        if ($('section#skills').length && $('section#FAQ').length) {
-            if (document.documentElement.scrollTop >= $('section#skills').offset().top &&
+        if ($('section#FAQ').length) {
+            if (document.documentElement.scrollTop >= 100 &&
                 document.documentElement.scrollTop <= $('section#FAQ').offset().top - document.documentElement.clientHeight / 2) {
                 if (!floatButtonVisible) {
                     floatButtonVisible = true;
