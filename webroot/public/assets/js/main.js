@@ -559,49 +559,49 @@ function initMap() {
         // Lib
         if (document.querySelector('[data-animeJS]')) {
             var anime_js = document.createElement("script");
-            anime_js.src = 'assets/plugins/lib/anime/anime.min.js';
+            anime_js.src = '/plugins/lib/anime/anime.min.js';
             document.body.insertBefore(anime_js, _mainJS);
         }
 
         // Slick
         if (document.querySelector('[data-slick]')) {
             var slick_js = document.createElement("script");
-            slick_js.src = 'assets/plugins/slick/slick.min.js';
+            slick_js.src = '/plugins/slick/slick.min.js';
             document.body.insertBefore(slick_js, _mainJS);
         }
 
         // Parallax
         if (document.querySelector('[data-parallax]')) {
             var parallax_js = document.createElement("script");
-            parallax_js.src = 'assets/plugins/parallax/parallax.js';
+            parallax_js.src = '/plugins/parallax/parallax.js';
             document.body.insertBefore(parallax_js, _mainJS);
         }
 
         // Animate on scroll
         if (document.querySelector('[data-aos]')) {
             var aos_js = document.createElement("script");
-            aos_js.src = 'assets/plugins/aos/aos.js';
+            aos_js.src = '/plugins/aos/aos.js';
             document.body.insertBefore(aos_js, _mainJS);
         }
 
         // Countdown
         if (document.querySelector('[data-countdown]')) {
             var countdown_js = document.createElement("script");
-            countdown_js.src = 'assets/plugins/countdown/jquery.countdown.min.js';
+            countdown_js.src = '/plugins/countdown/jquery.countdown.min.js';
             document.body.insertBefore(countdown_js, _mainJS);
         }
 
         // Scrollbar
         if (document.querySelector('[data-scrollbar]')) {
             var nicescroll_js = document.createElement("script");
-            nicescroll_js.src = 'assets/plugins/scrollbar/jquery.nicescroll.min.js';
+            nicescroll_js.src = '/plugins/scrollbar/jquery.nicescroll.min.js';
             document.body.insertBefore(nicescroll_js, _mainJS);
         }
 
         // Carousel
         if ((document.querySelector('[data-carousel="owl-carousel"]')) || (document.getElementsByClassName('owl-carousel'))) {
             var owl_carousel_js = document.createElement("script");
-            owl_carousel_js.src = 'assets/plugins/owl.carousel/owl.carousel.min.js';
+            owl_carousel_js.src = '/plugins/owl.carousel/owl.carousel.min.js';
             document.body.insertBefore(owl_carousel_js, _mainJS);
         }
 
@@ -1261,18 +1261,22 @@ function initMap() {
     let floatButtonVisible = false;
     $( window ).scroll(function() {
 
-        if ( document.documentElement.scrollTop >= $('section#skills').offset().top &&
-             document.documentElement.scrollTop <= $('footer.footer').offset().top ){
-            if(!floatButtonVisible) {
-                floatButtonVisible = true;
-                $('#float-button').removeClass('d-none').removeClass('fadeOutRight').addClass('fadeInRight');
-            }
-        } else {
-            if(floatButtonVisible) {
-                floatButtonVisible = false;
-                $('#float-button').addClass('fadeOutRight');
+        if($('section#skills').length && $('footer.footer').length){
+            if ( document.documentElement.scrollTop >= $('section#skills').offset().top &&
+                document.documentElement.scrollTop <= $('footer.footer').offset().top ){
+                if(!floatButtonVisible) {
+                    floatButtonVisible = true;
+                    $('#float-button').removeClass('d-none').removeClass('fadeOutRight').addClass('fadeInRight');
+                }
+            } else {
+                if(floatButtonVisible) {
+                    floatButtonVisible = false;
+                    $('#float-button').addClass('fadeOutRight');
+                }
             }
         }
+
+
     });
     //------------------------------------------------------------------------
 
@@ -1283,13 +1287,12 @@ function initMap() {
             var href = $(this).attr("href");
             //var hash = href.substr(href.indexOf("#"));
             var hash = $(this).prop('hash');
-            console.log(href);
             if(hash) {
                 e.preventDefault();
                 var target = $(hash);
                 if($(target).length){
                     $('html, body').stop().animate({
-                        'scrollTop':  $(target).offset().top //no need of parseInt here
+                        'scrollTop':  $(target).offset().top
                     }, 900, 'swing', function () {
                         //window.location.hash = hash;
                     });

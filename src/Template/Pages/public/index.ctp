@@ -17,9 +17,12 @@
         <!-- Indicators -->
         <div class="po_carousel__wrapper">
             <ol class="list-unstyled carousel-indicators def po_carousel-indicators">
-                <li data-target="#carousel_main" data-slide-to="0" class=""></li>
-                <li data-target="#carousel_main" data-slide-to="1" class=""></li>
-                <li data-target="#carousel_main" data-slide-to="2" class="active"></li>
+                <li data-target="#carousel_main" data-slide-to="0"
+                    class=""></li>
+                <li data-target="#carousel_main" data-slide-to="1"
+                    class=""></li>
+                <li data-target="#carousel_main" data-slide-to="2"
+                    class="active"></li>
             </ol>
         </div>
         <!-- /Indicators -->
@@ -47,10 +50,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            <?= __("Become a Partner");?>
+                                            <?= __("Become a Partner"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                        <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci.");?>
+                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
                                         <div class="d-flex fadeInLeft ad-900ms">
                                             <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
@@ -93,10 +96,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            <?= __("Become a Partner");?>
+                                            <?= __("Become a Partner"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci.");?>
+                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
                                         <div class="d-flex fadeInLeft ad-900ms">
                                             <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
@@ -139,10 +142,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            <?= __("Become a Partner");?>
+                                            <?= __("Become a Partner"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci.");?>
+                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
                                         <div class="d-flex fadeInLeft ad-900ms">
                                             <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
@@ -164,7 +167,6 @@
                 </div>
             </div>
             <!-- /.carousel-item -->
-
 
 
         </div>
@@ -187,130 +189,7 @@
 </header>
 <!-- /.banner -->
 
-
-<section class="py-5 owl-carousel-spotlight carousel-spotlight ig-carousel"
-         id="skills">
-    <div class="container">
-        <header class="header">
-            <h2 class="text-dark">
-                <?= __('Pick your skill'); ?>
-            </h2>
-        </header>
-
-        <div class="owl-carousel owl-theme owl-loaded owl-drag">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_1.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Content
-                                Creators</h4>
-                            <p class="text-center text-dark h6">
-                                Youtubers, Streamers, Illustrators, the talent
-                                squad!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_2.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Testers </h4>
-                            <p class="text-center text-dark h6">
-                                Work hard, play hard, test even harder
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_3.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Moderators</h4>
-                            <p class="text-center text-dark h6">
-                                Help us keeping communities helpful and friendly
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_4.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Business & Corps</h4>
-                            <p class="text-center text-dark h6">
-                                Good corps partnering up against evil
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_1.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Content
-                                Creators</h4>
-                            <p class="text-center text-dark h6">
-                                Youtubers, Streamers, Illustrators, the talent
-                                squad!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_2.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Testers </h4>
-                            <p class="text-center text-dark h6">
-                                Work hard, play hard, test even harder
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_3.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Moderators</h4>
-                            <p class="text-center text-dark h6">
-                                Help us keeping communities helpful and friendly
-                            </p>
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        <div class="item">
-                            <?= $this->Html->image('/public/assets/img/skill_4.png', [
-                                'class' => 'img-fluid'
-                            ]) ?>
-                            <h4 class="text-center text-dark mb-0">Business & Corps</h4>
-                            <p class="text-center text-dark h6">
-                                Good corps partnering up against evil
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-nav">
-                <button type="button" role="presentation" class="owl-prev"><span
-                            aria-label="Previous">‹</span></button>
-                <button type="button" role="presentation" class="owl-next"><span
-                            aria-label="Next">›</span></button>
-            </div>
-            <div class="owl-dots">
-                <button role="button" class="owl-dot active"><span></span>
-                </button>
-                <button role="button" class="owl-dot"><span></span></button>
-                <button role="button" class="owl-dot"><span></span></button>
-            </div>
-        </div>
-
-
-    </div>
-</section>
+<?php echo $this->element('pages/index/pickYourSkills'); ?>
 
 
 <?php
@@ -665,8 +544,10 @@ $latestQuest_dummyDate = [
                                    aria-controls="collapseOne"
                                    class="px-2 py-4 collapsed">
                                     <?= $FAQ_item['question']; ?>
-                                    <span class="float-right closed"><i class="fas fa-chevron-circle-down"></i></span>
-                                    <span class="float-right opened"><i class="fas fa-chevron-circle-up"></i></span>
+                                    <span class="float-right closed"><i
+                                                class="fas fa-chevron-circle-down"></i></span>
+                                    <span class="float-right opened"><i
+                                                class="fas fa-chevron-circle-up"></i></span>
                                 </a>
                             </h5>
                         </div>
