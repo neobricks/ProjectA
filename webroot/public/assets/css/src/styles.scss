@@ -1569,9 +1569,22 @@ label {
 
 #float-button {
   position: fixed;
-  top: 32px;
-  right: 16px;
+
+  bottom: 16px;
   z-index: 99;
+  left:0;
+  right:0;
+
+  @media screen and (min-width: 767.98px) {
+    bottom: 32px;
+  }
+
+  .d-flex {
+    justify-content: center;
+    @media screen and (min-width: 767.98px) {
+      transform: scale(1.5);
+    }
+  }
 
   a.btn {
 

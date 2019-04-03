@@ -1266,12 +1266,12 @@ function initMap() {
                 document.documentElement.scrollTop <= $('footer.footer').offset().top ){
                 if(!floatButtonVisible) {
                     floatButtonVisible = true;
-                    $('#float-button').removeClass('d-none').removeClass('fadeOutRight').addClass('fadeInRight');
+                    $('#float-button').removeClass('d-none').removeClass('fadeOutDown').addClass('fadeInUp');
                 }
             } else {
                 if(floatButtonVisible) {
                     floatButtonVisible = false;
-                    $('#float-button').addClass('fadeOutRight');
+                    $('#float-button').removeClass('fadeInUp').addClass('fadeOutDown');
                 }
             }
         }
