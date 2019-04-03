@@ -384,7 +384,7 @@ $latestQuest_dummyDate = [
 
 
 <!-- content area -->
-<section class="section gs_features">
+<section  id="callToActions" class="section gs_features">
     <div class="row no-gutters">
 
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-1">
