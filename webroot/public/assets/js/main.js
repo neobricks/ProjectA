@@ -1172,15 +1172,15 @@ function initMap() {
 
     var btnBecomePartnerFlowFinish = $('<button></button>').text('Submit')
         .addClass('btn btn-primary btn-finish d-none')
-        .on('click', function(){
-            if( !$(this).hasClass('disabled')){
+        .on('click', function () {
+            if (!$(this).hasClass('disabled')) {
                 var elmForm = $("#becomePartnerFlow");
-                if(elmForm){
+                if (elmForm) {
                     elmForm.validator('validate');
                     var elmErr = elmForm.find('.has-error');
-                    if(elmErr && elmErr.length > 0){
+                    if (elmErr && elmErr.length > 0) {
                         return false;
-                    }else{
+                    } else {
                         elmForm.submit();
                         return false;
                     }
@@ -1229,24 +1229,24 @@ function initMap() {
     $("#becomePartnerFlow").on('change', 'input[name="skill"]', (e) => {
         let checkbox = e.target;
         let skill = $(checkbox).attr('value');
-        if(checkbox.checked) {
-            $("#"+skill+"_wrapper").removeClass('d-none');
+        if (checkbox.checked) {
+            $("#" + skill + "_wrapper").removeClass('d-none');
         } else {
-            $("#"+skill+"_wrapper").addClass('d-none');
+            $("#" + skill + "_wrapper").addClass('d-none');
         }
     });
 
-    $("#becomePartnerFlow").on("showStep", function(e, anchorObject,
-                                                    stepNumber, stepDirection) {
+    $("#becomePartnerFlow").on("showStep", function (e, anchorObject,
+                                                     stepNumber, stepDirection) {
 
-        if(stepNumber === 0){
+        if (stepNumber === 0) {
             $('#becomePartnerFlow .sw-btn-prev').addClass('d-none');
         } else {
             $('#becomePartnerFlow .sw-btn-prev').removeClass('d-none');
         }
 
         // Enable submit button only on the last step
-        if(stepNumber === 3){
+        if (stepNumber === 3) {
             $('#becomePartnerFlow .sw-btn-next').addClass('d-none');
             $('#becomePartnerFlow .btn-finish').removeClass('d-none');
         } else {
@@ -1259,17 +1259,17 @@ function initMap() {
 
 
     let floatButtonVisible = false;
-    $( window ).scroll(function() {
+    $(window).scroll(function () {
 
-        if($('section#skills').length && $('section#FAQ').length){
-            if ( document.documentElement.scrollTop >= $('section#skills').offset().top &&
-                document.documentElement.scrollTop <= $('section#FAQ').offset().top - document.documentElement.clientHeight/2 ){
-                if(!floatButtonVisible) {
+        if ($('section#skills').length && $('section#FAQ').length) {
+            if (document.documentElement.scrollTop >= $('section#skills').offset().top &&
+                document.documentElement.scrollTop <= $('section#FAQ').offset().top - document.documentElement.clientHeight / 2) {
+                if (!floatButtonVisible) {
                     floatButtonVisible = true;
                     $('#float-button').removeClass('d-none').removeClass('fadeOutDown').addClass('fadeInUp');
                 }
             } else {
-                if(floatButtonVisible) {
+                if (floatButtonVisible) {
                     floatButtonVisible = false;
                     $('#float-button').removeClass('fadeInUp').addClass('fadeOutDown');
                 }
@@ -1282,17 +1282,17 @@ function initMap() {
 
 
     //-------------- jQuery smooth scrolling anchor navigation ---------------
-    $(document).ready(function(){
-        $('a').on('click',function (e) {
+    $(document).ready(function () {
+        $('a').on('click', function (e) {
             var href = $(this).attr("href");
             //var hash = href.substr(href.indexOf("#"));
             var hash = $(this).prop('hash');
-            if(hash) {
+            if (hash) {
                 e.preventDefault();
                 var target = $(hash);
-                if($(target).length){
+                if ($(target).length) {
                     $('html, body').stop().animate({
-                        'scrollTop':  $(target).offset().top
+                        'scrollTop': $(target).offset().top
                     }, 900, 'swing', function () {
                         //window.location.hash = hash;
                     });
@@ -1306,7 +1306,16 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    //-------------------- Skill picker --------------------------------------
+    $(document).ready(function () {
+        $('#partner_skill_wrapper').on('click', '.card.skill', function () {
+            $(this).toggleClass('active')
+            var checkbox = $(this).find('input');
+            checkbox.prop("checked", !checkbox.prop("checked"));
 
+        });
+    });
+    //------------------------------------------------------------------------
 
 
 })(jQuery);

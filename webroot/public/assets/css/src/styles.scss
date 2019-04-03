@@ -1605,3 +1605,39 @@ label {
   }
 }
 
+#partner_skill_wrapper {
+
+  .card.skill {
+    cursor:pointer;
+
+    border: 3px solid $black;
+    .card-body {
+      background: #d4d4d4;
+    }
+
+    p {
+      margin: 16px;
+    }
+
+    &.active {
+      border: 5px solid $primary;
+
+      .card-body {
+        background: #d4d4d4;
+      }
+    }
+
+    .checkbox-wrapper {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      input {
+        pointer-events: none;
+      }
+    }
+
+  }
+
+}

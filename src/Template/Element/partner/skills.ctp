@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card card-information my-3"
-             id="partner_info_wrapper">
+             id="partner_skill_wrapper">
             <div class="card-body">
                 <h4 class="card-title">
                     <span class="text-light">
@@ -65,29 +65,27 @@
                     can choose more than one.</h5>
                 <div class="row py-2">
                 <?php foreach ($skills_dummyData as $skill): ?>
-                    <div class="col-3">
-                        <div class="card">
-                            <div class="card-body">
+                    <div class="col-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
+                        <div class="skill card h-100">
+                            <div class="card-body p-0">
                                 <div class="row">
                                     <div class="col-12">
                                         <?= $this->Html->image($skill['img_path'], [
                                             'class' => 'w-100 img-fluid',
                                         ]) ?>
                                     </div>
-                                    <div class="col-12">
-                                        <h3 class="text-primary"><?= $skill['title']; ?></h3>
-                                        <p><?= $skill['description']; ?></p>
+                                    <div class="col-10 mx-auto">
+                                        <h4 class="text-primary lh-1 text-center py-1"><?= $skill['title']; ?></h4>
+                                        <p class="mx-4 text-dark"><?= $skill['description']; ?></p>
                                     </div>
-                                    <div class="col-2">
-                                        <label class="checkbox-wrapper">
-                                            <input class="checkbox"
-                                                   type="checkbox"
-                                                   name="skill"
-                                                   value="<?= $skill['code']; ?>"
-                                                   autocomplete="off"/>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                    <label class="checkbox-wrapper">
+                                        <input class="checkbox"
+                                               type="checkbox"
+                                               name="skill"
+                                               value="<?= $skill['code']; ?>"
+                                               autocomplete="off"/>
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
