@@ -1418,7 +1418,18 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
+    //------------- Form Validation | Forget Password ------------------------
+    $("#formForgetPassword").validate({
+        rules: {
+            email: {
+                required: true,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            }
+        }
+    });
+    //------------------------------------------------------------------------
 
 
 })(jQuery);

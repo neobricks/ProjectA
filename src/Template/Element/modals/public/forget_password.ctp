@@ -12,7 +12,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="input-transparent">
+
+                <?php echo $this->Form->create(null, [
+                    'id' => 'formForgetPassword',
+                    'url' => ['controller' => 'auth', 'action' => 'register'],
+                    'class' => 'input-transparent',
+                    'type' => 'post'
+                ]); ?>
+
                     <p> <?= __('Enter your email to reset your Password.'); ?></p>
 
                     <!-- Input Email -->
@@ -23,9 +30,9 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="email" type="email"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->email('email', [
+                                'class' => 'form-control',
+                            ]); ?>
                         </div>
                     </div>
                     <!-- /Input Email -->
@@ -49,7 +56,8 @@
                             </p>
                         </div>
                     </div>
-                </form>
+
+                <?= $this->Form->end(); ?>
 
             </div>
         </div>
