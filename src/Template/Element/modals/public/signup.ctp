@@ -14,6 +14,7 @@
             <div class="modal-body">
 
                 <?php echo $this->Form->create(null, [
+                    'id' => 'formSignUp',
                     'url' => ['controller' => 'auth', 'action' => 'register'],
                     'class' => 'input-transparent',
                     'type' => 'post'
@@ -27,9 +28,9 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="email" type="email"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->email('email', [
+                                'class' => 'form-control',
+                            ]); ?>
                         </div>
                     </div>
                     <!-- /input email -->
@@ -42,9 +43,10 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="password" type="password"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->password('password', [
+                                'id' => 'password',
+                                'class' => 'form-control',
+                            ]); ?>
                         </div>
                     </div>
                     <!-- /input password -->
@@ -57,10 +59,9 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="confirm_password"
-                                   type="password"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->password('confirm_password', [
+                                'class' => 'form-control',
+                            ]); ?>
                         </div>
                     </div>
                     <!-- /input confirm password -->
@@ -69,10 +70,22 @@
                     <div class="form-group row">
                         <div class="col-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="signupCheckboxTerms">
+                                <?php echo $this->Form->checkbox('terms', [
+                                    'id' => 'signupCheckboxTerms',
+                                    'class' => 'form-check-input',
+                                    'hiddenField' => false
+                                ]); ?>
                                 <label class="form-check-label" for="signupCheckboxTerms">
                                     <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
                                 </label>
+
+                                <?php /*
+                                <input class="form-check-input" type="checkbox" value="" id="">
+                                <label class="form-check-label" for="signupCheckboxTerms">
+                                    <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
+                                </label>
+                                */ ?>
+
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="signupCheckboxNews">

@@ -1341,8 +1341,6 @@ function initMap() {
     $(document).ready(function () {
         var language_input = $(".language-base").html();
 
-
-
         $('#partner_info_wrapper').on('click', '.btn-add-language', function (e) {
             e.preventDefault();
             $(".languages-loop").append(language_input);
@@ -1356,10 +1354,49 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    //------------- Form Validation | Sign Up --------------------------------
+    $("#formSignUp").validate({
+        rules: {
+            email: {
+                required: true,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+            password: {
+                required: true,
+                minlength: 6,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+            confirm_password: {
+                required: true,
+                equalTo: "#password",
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+            terms: {
+                required: true,
+            }
+        },
+        messages: {
+            terms: " You must accept the Terms & Conditions"
+        },
+        errorPlacement: function(error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                console.log(error, element);
+                $(element.parent().append(error));
+            }
 
-
-
-
+        },
+    });
+    //------------------------------------------------------------------------
 
 
 })(jQuery);
