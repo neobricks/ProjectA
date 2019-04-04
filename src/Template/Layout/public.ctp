@@ -291,6 +291,7 @@ $locale_options = Configure::read('locale.options');
 <?php echo $this->Html->script('/plugins/owl.carousel/owl.carousel.min.js'); ?>
 <?php echo $this->Html->script('/plugins/smart_wizard/js/jquery.smartWizard.min.js'); ?>
 <?php echo $this->Html->script('/plugins/tagsinput/tagsinput.js'); ?>
+<?php echo $this->Html->script('/plugins/jquery-validation-1.19.0/jquery.validate.js'); ?>
 
 <?php echo $this->Html->script('/public/assets/js/scripts.js'); ?>
 <?php echo $this->Html->script('/public/assets/js/main.js', [
