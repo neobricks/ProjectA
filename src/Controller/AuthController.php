@@ -30,9 +30,7 @@ class AuthController extends AppController
             'userTypeID' => 1,
             'password' => $data['password'],
         ];
-
         $response = $this->GameweeveApi->register($params);
-
     }
 
 }

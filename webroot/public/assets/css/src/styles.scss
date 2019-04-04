@@ -1703,3 +1703,48 @@ label.error {
   color: #ff7b7b;
   font-weight: 500;
 }
+
+.card-information {
+
+  .submit-wrapper {
+    display: none;
+  }
+
+  .view {
+
+  }
+
+  .form-input {
+    display: none;
+  }
+
+  &.active {
+    .btn-update {
+      display:none;
+    }
+
+    .view {
+      display: none;
+    }
+
+    .form-input {
+      display: flex;
+    }
+
+    .submit-wrapper {
+      display: flex;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+

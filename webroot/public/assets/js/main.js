@@ -1431,6 +1431,41 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    //------------- Form Validation | Partner | Information ------------------
+    $("#formPartnerInformation").validate({
+        rules: {
+        },
+        submitHandler: function() {
+           // AJAX HERE
+
+           // on success ajax:
+           partnerCardInformationToView("#partner_info_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
+
+    //------------- Form Validation | Partner | Information ------------------
+    $(document).ready(function () {
+        $('.card-information').on('click', '.btn-update', function () {
+            $(this).closest('.card-information').addClass('active');
+        });
+    });
+    //------------------------------------------------------------------------
+
+    function partnerCardInformationToView(cardId) {
+
+
+        var formInputs = $(cardId).find('.form-input');
+
+        $.each(formInputs, function( index, formInput ) {
+            var value = $(formInput).find('input').val();
+            $(formInput).parent().find('.view').html(value);
+            console.log( $(formInput).parent().find('.view'));
+        });
+
+        $(cardId).removeClass('active');
+    }
+
 
 })(jQuery);
 
