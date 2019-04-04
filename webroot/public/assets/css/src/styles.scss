@@ -1713,9 +1713,18 @@ label.error {
 
   .view {
 
+    .checkbox-value {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+
   }
 
-  .edit-text {
+  .edit-text,
+  .edit-checkbox{
     display: none;
   }
 
@@ -1728,7 +1737,8 @@ label.error {
       display: none;
     }
 
-    .edit-text {
+    .edit-text,
+    .edit-checkbox{
       display: flex;
     }
 

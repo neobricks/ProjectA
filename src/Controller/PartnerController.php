@@ -12,8 +12,11 @@ class PartnerController extends AppController
         $this->loadComponent('GameweeveApi');
 
         $session = $this->getRequest()->getSession();
-        $user = $session->read('User');
+        $session->write('User', [
+            'name' => 'Dan'
+        ]);
 
+        $user = $session->read('User');
         if(empty($user)) {
             $this->redirect($this->referer());
         }

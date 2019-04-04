@@ -218,32 +218,40 @@ $showForm = false;
                                 ];
                                 ?>
                                 <?php foreach ($platforms_dummyData as $platform): ?>
-                                    <div class="form-check">
-                                        <input class="form-check-input"
-                                               type="checkbox"
-                                               name="platform"
-                                               value="<?= $platform['value'] ?>"
-                                               id="<?= 'platform' . $platform['value'] ?>"/>
-                                        <label class="form-check-label w-100"
-                                               for="<?= 'platform' . $platform['value'] ?>">
-                                            <?php if (!$platform['inputText']): ?>
-                                                <?= $platform['label'] ?>
-                                            <?php else: ?>
-                                                <span class="row">
-                                                            <span class="col-12">
-                                                                <?= $platform['label'] ?>
-                                                            </span>
-                                                            <span class="col-12">
-                                                                   <input id="<?= 'platform' . $platform['value'] ?>_text"
-                                                                          name="<?= 'platform' . $platform['value'] ?>_text"
-                                                                          type="text"
-                                                                          value=""
-                                                                          placeholder="<?= $platform['placeholder'] ?>"
-                                                                          class="form-control">
-                                                            </span>
+                                    <div class="view">
+                                        <span class="checkbox-value" data-value="<?= $platform['value'] ?>">
+                                            <?= $platform['label'] ?>
+                                        </span>
+                                    </div>
+                                    <div class="edit-checkbox">
+                                        <div class="form-check">
+                                            <input class="form-check-input"
+                                                   type="checkbox"
+                                                   name="platform"
+                                                   value="<?= $platform['value'] ?>"
+                                                   id="<?= 'platform' . $platform['value'] ?>"/>
+                                            <label class="form-check-label w-100"
+                                                   for="<?= 'platform' . $platform['value'] ?>">
+
+                                                <?php if (!$platform['inputText']): ?>
+                                                    <?= $platform['label'] ?>
+                                                <?php else: ?>
+                                                    <span class="row">
+                                                        <span class="col-12">
+                                                            <?= $platform['label'] ?>
                                                         </span>
-                                            <?php endif; ?>
-                                        </label>
+                                                        <span class="col-12">
+                                                               <input id="<?= 'platform' . $platform['value'] ?>_text"
+                                                                      name="<?= 'platform' . $platform['value'] ?>_text"
+                                                                      type="text"
+                                                                      value=""
+                                                                      placeholder="<?= $platform['placeholder'] ?>"
+                                                                      class="form-control">
+                                                        </span>
+                                                    </span>
+                                                <?php endif; ?>
+                                            </label>
+                                        </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>

@@ -1457,12 +1457,28 @@ function initMap() {
         noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
         var editTexts = $(cardId).find('.edit-text');
-
         $.each(editTexts, function( index, editText ) {
             var value = $(editText).find('input').val();
             if(value === "") value = noInformedHtmlBase.clone();
             $(editText).parent().find('.view').html(value);
         });
+
+        var editCheckboxes = $(cardId).find('.edit-checkbox');
+        $.each(editCheckboxes, function( index, editCheckbox ) {
+            var value = $(editCheckbox).find('input').val();
+            var isChecked = $(editCheckbox).find('input').prop('checked');
+
+             if(isChecked){
+                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="'+value+'"]').addClass('active');
+            } else {
+                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="'+value+'"]').removeClass('active');
+            }
+
+
+            //
+        });
+
+
 
         $(cardId).removeClass('active');
     }
