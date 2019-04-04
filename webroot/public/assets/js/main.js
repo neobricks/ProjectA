@@ -1281,6 +1281,25 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    //
+    //-------------- Become a Partner CTA -------------------- ---------------
+    /**
+     * if the User is not logged in go the the Partner Information page
+     * otherwise, show the modal Sign Up
+     */
+    $(document).ready(function () {
+        $('body').on('click', '.GoBecomePartner', function (e) {
+            if( $('body').hasClass('logged-in')) {
+                window.location = '/partner-information';
+            } else {
+                $('#modalSignUp').modal('show');
+            }
+        });
+    });
+    //------------------------------------------------------------------------
+
+
+
     //-------------- jQuery smooth scrolling anchor navigation ---------------
     $(document).ready(function () {
         $('a').on('click', function (e) {
@@ -1336,6 +1355,10 @@ function initMap() {
 
     });
     //------------------------------------------------------------------------
+
+
+
+
 
 
 

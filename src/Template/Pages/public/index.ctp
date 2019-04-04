@@ -55,18 +55,9 @@
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
                                             <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
-                                        <div class="d-flex fadeInLeft ad-900ms">
-                                            <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                                                        class="d-block text-light">
-                                                       BECOME A PARTNER
-                                                </span>
-                                            </a>
-                                            <a href="#"
-                                               class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0"><span
-                                                        class="d-block text-dark"> <i
-                                                            class="fas fa-chevron-right"></i> </span>
-                                            </a>
-                                        </div>
+                                        <?= $this->element('/pages/index/btnBecomeAPartner', [
+                                            'wrapper_class' => 'fadeInLeft ad-900ms'
+                                        ]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -101,18 +92,9 @@
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
                                             <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
-                                        <div class="d-flex fadeInLeft ad-900ms">
-                                            <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                                                        class="d-block text-light">
-                                                       BECOME A PARTNER
-                                                </span>
-                                            </a>
-                                            <a href="#"
-                                               class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0"><span
-                                                        class="d-block text-dark"> <i
-                                                            class="fas fa-chevron-right"></i> </span>
-                                            </a>
-                                        </div>
+                                        <?= $this->element('/pages/index/btnBecomeAPartner', [
+                                            'wrapper_class' => 'fadeInLeft ad-900ms'
+                                        ]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -147,18 +129,9 @@
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
                                             <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
                                         </p>
-                                        <div class="d-flex fadeInLeft ad-900ms">
-                                            <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                                                        class="d-block text-light">
-                                                       BECOME A PARTNER
-                                                </span>
-                                            </a>
-                                            <a href="#"
-                                               class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0"><span
-                                                        class="d-block text-dark"> <i
-                                                            class="fas fa-chevron-right"></i> </span>
-                                            </a>
-                                        </div>
+                                        <?= $this->element('/pages/index/btnBecomeAPartner', [
+                                            'wrapper_class' => 'fadeInLeft ad-900ms'
+                                        ]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -445,19 +418,9 @@ $latestQuest_dummyDate = [
                         Proin pharetra elit arcu, vitae malesuada erat dictum
                         at.
                     </p>
-
-                    <div class="d-flex fadeInLeft ad-900ms">
-                        <a class="disabled btn btn-lg bg-dark o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                                    class="d-block text-light">
-                            <?= __('BECOME A PARTNER'); ?>
-                        </span>
-                        </a>
-                        <a href="#"
-                           class="btn btn-lg btn-light parallelogram br-round-0tl br-round-0bl un_text mb-0">
-                            <span class="d-block text-dark"> <i
-                                        class="fas fa-chevron-right"></i> </span>
-                        </a>
-                    </div>
+                    <?= $this->element('/pages/index/btnBecomeAPartner', [
+                            'wrapper_class' => 'fadeInLeft ad-900ms'
+                    ]); ?>
                 </div>
             </div>
         </div>
@@ -564,20 +527,9 @@ $latestQuest_dummyDate = [
             </div>
             <div class="row py-7">
                 <div class="col-6 mx-auto">
-
-                    <div class="d-flex btn-become-partner">
-                        <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                                    class="d-block text-light">
-                                                       BECOME A PARTNER
-                                                </span>
-                        </a>
-                        <a href="#"
-                           class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0"><span
-                                    class="d-block text-dark"> <i
-                                        class="fas fa-chevron-right"></i> </span>
-                        </a>
-                    </div>
-
+                    <?= $this->element('/pages/index/btnBecomeAPartner', [
+                        'wrapper_class' => 'btn-become-partner'
+                    ]); ?>
                 </div>
             </div>
 

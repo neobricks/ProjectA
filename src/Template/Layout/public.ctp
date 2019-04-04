@@ -132,7 +132,7 @@ $locale_options = Configure::read('locale.options');
         <div class="collapse navbar-collapse" id="collapsingNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item pr-5">
-                    <a class="nav-link pl-lg-0" href="javascript:void(0);"
+                    <a class="nav-link pl-lg-0 GoBecomePartner" href="javascript:void(0);"
                        data-toggle="modal" data-target="#becomePartnerModal">
                         <?= __('Become a partner') ?>
                     </a>
@@ -163,18 +163,7 @@ $locale_options = Configure::read('locale.options');
 
 
 <div id="float-button" class="d-none">
-    <div class="d-flex">
-        <a class="disabled btn btn-lg bg-dark o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span
-                    class="d-block text-light">
-                                <?= __('BECOME A PARTNER'); ?>
-                            </span>
-        </a>
-        <a href="#"
-           class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0">
-                                <span class="d-block text-dark"> <i
-                                            class="fas fa-chevron-right"></i> </span>
-        </a>
-    </div>
+    <?= $this->element('/pages/index/btnBecomeAPartner'); ?>
 </div>
 
 
