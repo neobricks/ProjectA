@@ -1399,6 +1399,28 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    //------------- Form Validation | Sign In --------------------------------
+    $("#formSignIn").validate({
+        rules: {
+            email: {
+                required: true,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+            password: {
+                required: true,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+        }
+    });
+    //------------------------------------------------------------------------
+
+
+
+
 })(jQuery);
 
 

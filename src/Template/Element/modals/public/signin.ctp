@@ -13,7 +13,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="input-transparent">
+                <?php echo $this->Form->create(null, [
+                    'id' => 'formSignIn',
+                    'url' => ['controller' => 'auth', 'action' => 'login'],
+                    'class' => 'input-transparent',
+                    'type' => 'post'
+                ]); ?>
+
                     <div class="form-group row">
                         <label class="col-4 text-primary">
                             <span class="align-middle">
@@ -21,9 +27,9 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="email" type="email"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->email('email', [
+                                'class' => 'form-control',
+                            ]); ?>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -33,9 +39,10 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <input name="password" type="password"
-                                   class="form-control"
-                                   value=""/>
+                            <?php echo $this->Form->password('password', [
+                                'id' => 'password',
+                                'class' => 'form-control',
+                            ]); ?>
 
                             <small class="mb-0 text-right">
                                 <a class="bold" href="javascript:void(0)"
@@ -66,7 +73,7 @@
                             </p>
                         </div>
                     </div>
-                </form>
+                <?= $this->Form->end(); ?>
             </div>
         </div>
     </div>

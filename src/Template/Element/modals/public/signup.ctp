@@ -119,7 +119,7 @@
                     </div>
                     <!-- /submit button -->
 
-                </form>
+                <?= $this->Form->end(); ?>
 
             </div> <!-- modal-body -->
 
