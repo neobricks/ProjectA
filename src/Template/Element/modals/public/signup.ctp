@@ -12,7 +12,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="input-transparent">
+
+                <?php echo $this->Form->create(null, [
+                    'url' => ['controller' => 'auth', 'action' => 'register'],
+                    'class' => 'input-transparent',
+                    'type' => 'post'
+                ]); ?>
 
                     <!-- input email -->
                     <div class="form-group row">

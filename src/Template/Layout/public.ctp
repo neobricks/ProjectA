@@ -67,7 +67,12 @@ $locale_options = Configure::read('locale.options');
     <![endif]-->
 </head>
 
-<body class="page-body">
+<?php
+    $body_class = '';
+    if(!empty($user)) $body_class = 'logged-in';
+?>
+
+<body class="page-body <?= $body_class; ?>">
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-nav zi-3">
@@ -83,16 +88,29 @@ $locale_options = Configure::read('locale.options');
                 </a>
             </div>
             <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6 ml-auto text-right">
-                <a class="btn btn-sm btn-light text-secondary rounded-0"
-                   href="javascript:void(0)"
-                   data-toggle="modal" data-target="#modalSignIn">
-                    <?= __('Sign in'); ?>
-                </a>
-                <a class="btn btn-sm text-light d-none d-sm-inline-block"
-                   href="javascript:void(0)"
-                   data-toggle="modal" data-target="#modalSignUp">
-                    <?= __('Sign up'); ?>
-                </a>
+
+                <?php if (!empty($user)): ?>
+                    <span class="user-name px-3">
+                        <?= $user['name']; ?>
+                    </span>
+                    <a class="btn btn-sm text-light d-none d-sm-inline-block"
+                       href="javascript:void(0)">
+                        <?= __('Sign out'); ?>
+                    </a>
+                <?php else: ?>
+                    <a class="btn btn-sm btn-light text-secondary rounded-0"
+                       href="javascript:void(0)"
+                       data-toggle="modal" data-target="#modalSignIn">
+                        <?= __('Sign in'); ?>
+                    </a>
+                    <a class="btn btn-sm text-light d-none d-sm-inline-block"
+                       href="javascript:void(0)"
+                       data-toggle="modal" data-target="#modalSignUp">
+                        <?= __('Sign up'); ?>
+                    </a>
+                <?php endif; ?>
+
+
                 <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row m-0 p-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle small p-0" href="#"

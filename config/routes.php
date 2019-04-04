@@ -71,6 +71,10 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/l/*', ['controller'=> 'App', 'action' => 'changeLang']);
 
+    $routes->connect('/auth/:action/*', ['controller' => 'Auth']);
+
+    $routes->connect('/partner-information', ['controller' => 'Partner']);
+
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /**
