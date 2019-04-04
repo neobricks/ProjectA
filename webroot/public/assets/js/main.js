@@ -1453,14 +1453,15 @@ function initMap() {
     //------------------------------------------------------------------------
 
     function partnerCardInformationToView(cardId) {
+        var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
+        noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
+        var editTexts = $(cardId).find('.edit-text');
 
-        var formInputs = $(cardId).find('.form-input');
-
-        $.each(formInputs, function( index, formInput ) {
-            var value = $(formInput).find('input').val();
-            $(formInput).parent().find('.view').html(value);
-            console.log( $(formInput).parent().find('.view'));
+        $.each(editTexts, function( index, editText ) {
+            var value = $(editText).find('input').val();
+            if(value === "") value = noInformedHtmlBase.clone();
+            $(editText).parent().find('.view').html(value);
         });
 
         $(cardId).removeClass('active');

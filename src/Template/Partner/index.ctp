@@ -59,6 +59,11 @@ $firstName = 'Pamella';
     </div> <!-- /content -->
 </div> <!-- /bg -->
 
+<div class="d-none">
+    <i id="noInformedHtmlBase" class='text-light_A-50'>No informed</i>
+</div>
+
+
 
 
 <?php return;

@@ -47,12 +47,11 @@ $showForm = false;
                                         ?>
                                     </p>
                                 </div>
-                                <div class="form-input">
+                                <div class="edit-text">
                                     <?php echo $this->Form->text('name', [
                                         'class' => 'form-control',
                                     ]); ?>
                                 </div>
-
                             </div>
                         </div>
                         <!-- /input name -->
@@ -65,9 +64,20 @@ $showForm = false;
                             </span>
                             </label>
                             <div class="col-8">
-                                <input name="text" type="surname"
-                                       class="form-control"
-                                       value=""/>
+                                <div class="view py-2 px-3">
+                                    <p>
+                                        <?php
+                                        if (!empty($user['surname'])):
+                                            echo $user['surname'];
+                                        endif;
+                                        ?>
+                                    </p>
+                                </div>
+                                <div class="edit-text">
+                                    <?php echo $this->Form->text('surname', [
+                                        'class' => 'form-control',
+                                    ]); ?>
+                                </div>
                             </div>
                         </div>
                         <!-- /input surname -->
@@ -252,8 +262,20 @@ $showForm = false;
                                         <?= __('Black Squad') ?>
                                     </label>
                                     <div class="col-9">
-                                        <input type="text"
-                                               class="form-control "/>
+                                        <div class="view py-2 px-3">
+                                            <p>
+                                                <?php
+                                                if (!empty($user['in_game_nickname']['black_squad'])):
+                                                    echo $user['in_game_nickname']['black_squad'];
+                                                endif;
+                                                ?>
+                                            </p>
+                                        </div>
+                                        <div class="edit-text">
+                                            <?php echo $this->Form->text('in_game_nickname', [
+                                                'class' => 'form-control',
+                                            ]); ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

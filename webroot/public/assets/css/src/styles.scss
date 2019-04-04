@@ -1710,11 +1710,12 @@ label.error {
     display: none;
   }
 
+
   .view {
 
   }
 
-  .form-input {
+  .edit-text {
     display: none;
   }
 
@@ -1727,7 +1728,7 @@ label.error {
       display: none;
     }
 
-    .form-input {
+    .edit-text {
       display: flex;
     }
 
