@@ -174,25 +174,35 @@ $showForm = false;
                                             <?= __('I like to play these games:'); ?>
                                         </span>
                                     <span class="col-12">
-                                               <input name="like_games"
-                                                      type="text"
-                                                      data-role="tagsinput"
-                                                      value=""
-                                                      placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
-                                                      class="form-control">
-                                        </span>
+                                        <div class="view py-2 px-3">
+
+                                        </div>
+                                        <div class="edit-tag-input">
+                                           <input name="like_games"
+                                                  type="text"
+                                                  data-role="tagsinput"
+                                                  value=""
+                                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
+                                                  class="form-control">
+                                        </div>
+                                    </span>
                                 </div>
                                 <div class="row pb-2">
                                         <span class="col-12 text-warning">
                                             <?= __('I like to play these types of games:'); ?>
                                         </span>
                                     <span class="col-12">
-                                               <input name="like_type_games"
-                                                      type="text"
-                                                      data-role="tagsinput"
-                                                      value=""
-                                                      placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
-                                                      class="form-control">
+                                        <div class="view py-2 px-3">
+
+                                        </div>
+                                        <div class="edit-tag-input">
+                                            <input name="like_type_games"
+                                                  type="text"
+                                                  data-role="tagsinput"
+                                                  value=""
+                                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
+                                                  class="form-control">
+                                        </div>
                                         </span>
                                 </div>
                             </div>
