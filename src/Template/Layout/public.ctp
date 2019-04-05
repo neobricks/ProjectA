@@ -223,7 +223,7 @@ $locale_options = Configure::read('locale.options');
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="https://www.facebook.com/NeoBricksGames/">
                             <?= __('NeoBricks on Facebook'); ?>
                         </a>
                     </li>
@@ -243,15 +243,15 @@ $locale_options = Configure::read('locale.options');
                                 <h6 class="text-uppercase fw-600 mb-4"><?= __('Community') ?></h6>
                                 <div class="nav flex-column">
                                     <a class="nav-link"
-                                       href="#"><?= __('Game page') ?></a>
+                                       href="https://store.steampowered.com/app/550650/Black_Squad/"><?= __('Game page') ?></a>
                                     <a class="nav-link"
-                                       href="#"><?= __('Steam Discussion') ?></a>
+                                       href="https://steamcommunity.com/app/550650/discussions/"><?= __('Steam Discussion') ?></a>
                                     <a class="nav-link"
-                                       href="#"><?= __('Discord') ?></a>
+                                       href="https://discordapp.com/invite/blacksquad"><?= __('Discord') ?></a>
                                     <a class="nav-link"
-                                       href="#"><?= __('Facebook') ?></a>
+                                       href="https://www.facebook.com/playblacksquad/"><?= __('Facebook') ?></a>
                                     <a class="nav-link"
-                                       href="#"><?= __('Help Center') ?></a>
+                                       href="http://support.blacksquad.com/"><?= __('Help Center') ?></a>
                                 </div>
                             </div>
                         </div>

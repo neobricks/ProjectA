@@ -53,7 +53,7 @@
                                             <?= __("Become a Partner"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
+                                            <?= __("Whether you are a streamer, artist, cosplayer… you can now partnership with your favorite games and get rewarded! "); ?>
                                         </p>
                                         <?= $this->element('/pages/index/btnBecomeAPartner', [
                                             'wrapper_class' => 'fadeInLeft ad-900ms'
@@ -70,7 +70,7 @@
             <!-- carousel-item -->
             <div class="carousel-item">
                 <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.jpg);">
+                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_2.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
@@ -87,10 +87,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            <?= __("Become a Partner"); ?>
+                                            <?= __("Support your favorite games"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
+                                            <?= __("The more you engage and contribute, the greater are your chances to receive special rewards and contribute to the success of the games you love"); ?>
                                         </p>
                                         <?= $this->element('/pages/index/btnBecomeAPartner', [
                                             'wrapper_class' => 'fadeInLeft ad-900ms'
@@ -107,7 +107,7 @@
             <!-- carousel-item -->
             <div class="carousel-item">
                 <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.jpg);">
+                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_3.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
@@ -124,10 +124,10 @@
                                 <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                                     <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
                                         <h2 class="carousel__heading text-light fadeInDown ad-500ms">
-                                            <?= __("Become a Partner"); ?>
+                                            <?= __("Get closer to the games you love"); ?>
                                         </h2>
                                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">
-                                            <?= __("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. Suspendisse commodo ultricies nulla non condimentum. Sed vestibulum mauris a lorem ultrices auctor. Nulla bibendum posuere orci."); ?>
+                                            <?= __("Become a Partner and get access to special opportunities directly from the development team!"); ?>
                                         </p>
                                         <?= $this->element('/pages/index/btnBecomeAPartner', [
                                             'wrapper_class' => 'fadeInLeft ad-900ms'
@@ -364,8 +364,7 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
                     <h2 class="mb-4 text-dark"><?= __('Sign-up reward'); ?></h2>
-                    <span class="d-block text-dark mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra elit arcu, vitae malesuada erat dictum at. </span>
-
+                    <span class="d-block text-dark mb-6"><?= __('Become a Partner today and get a welcome reward'); ?></span>
                 </div>
             </div>
         </div>
@@ -374,14 +373,7 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto">
                     <h3 class="mb-4 text-light"><?= __('Get giveaways and special content exclusive for Partners'); ?></h3>
-                    <p class="d-block text-light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin pharetra elit arcu, vitae malesuada erat dictum
-                        at. Suspendisse commodo ultricies nulla non condimentum.
-                        Sed vestibulum mauris a lorem ultrices auctor. Nulla
-                        bibendum posuere orci. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                    </p>
+                    <p class="d-block text-light"><?= __('Sign up and receive information before so you have time to create awesome videos and more!'); ?></p>
                     <br><br>
                 </div>
             </div>
@@ -395,14 +387,7 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
                     <h3 class="mb-4 text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></h3>
-                    <p class="d-block text-light text-right">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin pharetra elit arcu, vitae malesuada erat dictum
-                        at. Suspendisse commodo ultricies nulla non condimentum.
-                        Sed vestibulum mauris a lorem ultrices auctor. Nulla
-                        bibendum posuere orci. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                    </p>
+                    <p class="d-block text-light text-right"><?= __('S'); ?></p>
                     <br><br>
                 </div>
             </div>
@@ -431,52 +416,49 @@ $latestQuest_dummyDate = [
 
 <?php $FAQ_dummydata = [
     [
-        'question' => 'How it works?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('How it works?'),
+        'answer' => __('The Partner Program is a way for talented members of our gaming community to support the games they love and get recognized for it. First you fill out a few questions telling us about the skill or skills you master. Once we get an opportunity (Quest) that fits your profile, we contact you. Depending on the skill or skills you apply for, we can give beta test keys, in-game items, special information, etc. It is our mission to support our awesome community by rewarding them for their contributions!
+        If you love games as much as we do, join us!')
     ],
     [
-        'question' => 'What is looked in for Partners?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('What do I need to become a Partner?'),
+        'answer' => __('We accept different types of Partners: Content creators (influencers, artists, etc), moderators, game testers, pro-gamers, translators, casters, companies, and more (cosplayers, modders, anything related to gaming). The aspects we consider are different for each skill but if you are a talented gamer who creates original quality content or just willing to help the games you love, then you are welcome! Register on this website, fill out the form, and wait for us to contact you.')
     ],
     [
-        'question' => 'What do I need to become a Partner?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('What if I don’t meet the requirements?'),
+        'answer' => __('Everyone can register for our Partner Program and fill out the form, however, opportunities (Quests) are not for everyone. For each new Quest we set specific requirements and contact only Partners with suitable profiles. Requirements differ for each Quest, so the greater your skills are, the more likely you will be contacted. If you weren’t assigned to a Quest that you wanted or have any questions in general, you can contact us in partners@neobricks.com.')
     ],
     [
-        'question' => 'What if I don’t meet the requirements?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('How long does it take to be accepted as Partner?'),
+        'answer' => __('Registration is completed as soon as you confirm your email and fill out the form. Once you have finished the form, you are already eligible for Quests. Keep your profile updated to make sure you receive the Quests that are right for you.')
     ],
     [
-        'question' => 'How long does it take to be accepted as Partner?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('What do I have to do as a Partner?'),
+        'answer' => __('Quest’s details are sent to our Partners. Then you can decide if you would like to participate. The more you engage and contribute, the greater your chances are to receive the Quests’ special rewards. So it is important to hone your skills and continue working to reach the top! Everything in the Partner Program is optional and you can decline any Quest you want without any problems. The Partner Program is an opportunity, not a commitment.')
     ],
     [
-        'question' => 'How will I receive rewards, keys, etc?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('What do I get as a Partner?'),
+        'answer' => __('Each Quest comes with various rewards. They could be in-game items, DLC, special access, features on official channels, or even a gift! You will have to complete a Quest in order to receive your reward. Pay attention to the Quests’ details for more reward information.')
     ],
     [
-        'question' => 'What do I have to do as a Partner?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('What are Quests'),
+        'answer' => __('Quests are opportunities we have available for our Partners. They could range from testing new items, playing closed beta games, writing reviews, translating press releases, making a video… the list goes on! Not everyone is eligible for each Quest – you must apply for them through this website and then the Quest is assigned to Partners with compatible profiles. For example, we will not assign “Translation Quests’ to Content Creators, only for Translators.')
     ],
     [
-        'question' => 'Can I contact developers?',
-        'answer' => '    Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim convallis. Aliquam convallis, nisi in facilisis tincidunt, augue nunc efficitur lectus, ut auctor orci purus sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec vestibulum, odio a sagittis vestibulum, eros nunc consectetur ex, eu tincidunt neque lacus ac lorem. Mauris interdum urna id eros dignissim.
-                    '
+        'question' => __('Am I obligated to accept and fill a Quest?'),
+        'answer' => __('No. Like side missions in a game, you can choose which Quest to attend and you can also opt out of it at any time. There is no punishment for not attending or concluding a Quest.')
+    ],
+    [
+        'question' => __('Can I choose Quests?'),
+        'answer' => __('Quests suitable with your profile are sent directly to you by email. If you didn’t receive the email for a Quest you want to assign, just send a message to partners@neobricks.com with the Quest you want to join. If possible, we will assign it to you 😊 Remember to keep your profile information updated to receive the best Quests from us.')
+    ],
+    [
+        'question' => __('How will I receive my rewards?'),
+        'answer' => __('Partner Program communication is done by email. Quests are sent with details about their rewards and how to claim them. Usually, we send rewards via email or directly in-game.')
+    ],
+    [
+        'question' => __('Can I contact developers?'),
+        'answer' => __('Once you are a Partner, you have direct contact with us, NeoBricks. We organize and manage communication with the developers so that they can optimize their time with game improvements without losing contact with their amazing community. So, yes! ')
     ]
 ] ?>
 
