@@ -1626,7 +1626,7 @@ label {
     }
 
     .checkbox-wrapper {
-
+      pointer-events: none;
       position: absolute;
       top: 0;
       right: 0;
@@ -1720,13 +1720,24 @@ label.error {
         display: flex;
       }
     }
+  }
 
+  .view-skills {
+
+  }
+
+  .selected-skill {
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 
   .edit-text,
   .edit-checkbox,
   .edit-tag-input,
-  .edit-language-input{
+  .edit-language-input,
+  .edit-skills{
     display: none;
   }
 
@@ -1740,13 +1751,18 @@ label.error {
       display: none;
     }
 
+    .view-skills {
+      display: none;
+    }
+
     .edit-text,
     .edit-checkbox,
     .edit-tag-input {
       display: flex;
     }
 
-    .edit-language-input {
+    .edit-language-input,
+    .edit-skills {
       display: block;
     }
 

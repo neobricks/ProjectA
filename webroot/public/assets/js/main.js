@@ -1429,6 +1429,14 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    //------------- Form | Partner | Update (view/edit switch) ---------------
+    $(document).ready(function () {
+        $('.card-information').on('click', '.btn-update', function () {
+            $(this).closest('.card-information').addClass('active');
+        });
+    });
+    //------------------------------------------------------------------------
+
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {
@@ -1442,13 +1450,43 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-    //------------- Form Validation | Partner | Information ------------------
-    $(document).ready(function () {
-        $('.card-information').on('click', '.btn-update', function () {
-            $(this).closest('.card-information').addClass('active');
-        });
+
+
+
+    //------------- Form Validation | Partner | Skills ---- ------------------
+    $("#formPartnerSkills").validate({
+        rules: {
+        },
+        submitHandler: function () {
+            // AJAX HERE
+
+            // on success ajax:
+
+            $('.selected-skill').removeClass('active');
+            $.each($('.skill-checkbox'), function( index, skillCheckbox) {
+                var value = $(skillCheckbox).val();
+                var isChecked = $(skillCheckbox).prop('checked');
+                console.log(value);
+                if(isChecked) {
+                    $('.selected-skill[data-skill="'+value+'"]').addClass('active');
+                }
+
+            });
+            partnerCardInformationToView("#partner_skill_wrapper");
+        },
     });
     //------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
     var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
     noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
