@@ -1725,9 +1725,11 @@ label.error {
 
   .edit-text,
   .edit-checkbox,
-  .edit-tag-input{
+  .edit-tag-input,
+  .edit-language-input{
     display: none;
   }
+
 
   &.active {
     .btn-update {
@@ -1740,8 +1742,12 @@ label.error {
 
     .edit-text,
     .edit-checkbox,
-    .edit-tag-input{
+    .edit-tag-input {
       display: flex;
+    }
+
+    .edit-language-input {
+      display: block;
     }
 
     .submit-wrapper {
@@ -1749,14 +1755,5 @@ label.error {
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 

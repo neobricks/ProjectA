@@ -1337,20 +1337,18 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+    var language_input_base = $(".language-base").html();
+    $(".language-base").remove();
     //------------- Become Partner | Partner Info | Languages ----------------
     $(document).ready(function () {
-        var language_input = $(".language-base").html();
-
         $('#partner_info_wrapper').on('click', '.btn-add-language', function (e) {
             e.preventDefault();
-            $(".languages-loop").append(language_input);
+            $(".languages-loop").append(language_input_base);
         });
         $('#partner_info_wrapper').on('click', '.btn-remove-language', function (e) {
             e.preventDefault();
             $(this).closest('.language-input').remove();
         });
-
-
     });
     //------------------------------------------------------------------------
 
@@ -1476,7 +1474,6 @@ function initMap() {
             }
         });
 
-
         var editTagInputs = $(cardId).find('.edit-tag-input');
         $.each(editTagInputs, function (index, editTagInput) {
             var items = $(editTagInput).find('input.form-control').tagsinput('items');
@@ -1485,6 +1482,24 @@ function initMap() {
                 value = items.join(", ");
             }
             $(editTagInput).parent().find('.view').html(value);
+        });
+
+        var editLanguageInputs = $(cardId).find('.edit-language-input');
+        $.each(editLanguageInputs, function (index, editLanguageInput) {
+            var language_items = $(editLanguageInput).find('.language-input');
+            var html = "";
+            $.each(language_items, function (index, lang_item) {
+
+               var lang_code =  $(lang_item).find('select.language-code').val();
+               var lang_label =  $(lang_item).find('select.language-code option:selected').text();
+               var prof =  $(lang_item).find('select.language-prof').val();
+               var prof_label =  $(lang_item).find('select.language-prof option:selected').text();
+
+                html += "<p>";
+                html += lang_label +  " : " + prof_label;
+                html += "</p>";
+            });
+            $(editLanguageInput).parent().find('.view').html(html);
         });
 
 
