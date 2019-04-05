@@ -15,9 +15,7 @@ Then visit `http://localhost:8765` to see the welcome page.
 
 ## Update
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+Every new update might have changes on the composer requirements so run `php composer.phar install` this way it will work the new changes
 
 ## Configuration
 

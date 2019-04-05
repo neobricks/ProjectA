@@ -2,3 +2,6 @@
 
 msgid "Hello, my name is {0}, I'm {1} years old"
 msgstr "Hello!!!! my name is {0}, I'm {1} years old"
+
+# AuthController 
+msgid "Password does not match"

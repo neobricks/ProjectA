@@ -93,9 +93,12 @@ class GameweeveApiComponent extends Component
             }
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
+        dump($query_parameters);
         $endpoint = '/registerJson.php';
+        //$endpoint = '/registerJson.php?data='.urlencode(json_encode($query_parameters['data']));
+        dump($endpoint);
         try {
-            return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
+            return $this->callAPI($endpoint, 'POST', $query_parameters );
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
             return false;
         }

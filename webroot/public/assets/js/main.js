@@ -43,7 +43,7 @@
 //------------------- Default options -------------------
 if ((options == undefined) || (options == false)) {
     var options = true,
-        preloader = {enabled: false},
+        preloader = { enabled: false },
         GoogleMapAPI = {
             key: '',
             language: '',
@@ -52,8 +52,8 @@ if ((options == undefined) || (options == false)) {
             markerIcon: '',
             customMapStyle: ''
         },
-        scrollToElement = {scrollSpeed: 700},
-        slider = {interval: 8500};
+        scrollToElement = { scrollSpeed: 700 },
+        slider = { interval: 8500 };
 }
 
 //----------------------- Init Map ------------------------
@@ -460,12 +460,12 @@ function initMap() {
 
         map = new google.maps.Map(el, {
             styles: GM_style,
-            center: {lat: GM_lat, lng: GM_lng},
+            center: { lat: GM_lat, lng: GM_lng },
             zoom: GM_zoom,
             disableDefaultUI: GM_disableDefaultUI
         });
         var marker = new google.maps.Marker({
-            position: {lat: GM_marker_lat, lng: GM_marker_lng},
+            position: { lat: GM_marker_lat, lng: GM_marker_lng },
             map: map,
             animation: GM_marker_animation,
             title: GM_marker_title,
@@ -1020,7 +1020,7 @@ function initMap() {
                 $('.counter').each(function () {
                     var $counter_item = $(this),
                         countTo = $counter_item.attr('data-count'),
-                        animation = {countNum: countTo},
+                        animation = { countNum: countTo },
                         sec = 1000,
                         duration = 4 * sec,
                         EPV = 0.9989,
@@ -1066,7 +1066,7 @@ function initMap() {
 
                     // Easing
                     if ($counter_item.attr('data-easing') == 'false') {
-                        $({countNum: $counter_item.text()}).animate(animation, {
+                        $({ countNum: $counter_item.text() }).animate(animation, {
                             duration: 4000,
                             easing: 'linear',
                             step: function () {
@@ -1081,7 +1081,7 @@ function initMap() {
                             }
                         });
                     } else {
-                        $({countNum: $counter_item.text()}).animate(animation, {
+                        $({ countNum: $counter_item.text() }).animate(animation, {
                             duration: duration,
                             step: function (SD, EP) {
                                 if (decimal > 0 && decimal <= 3) {
@@ -1237,7 +1237,7 @@ function initMap() {
     });
 
     $("#becomePartnerFlow").on("showStep", function (e, anchorObject,
-                                                     stepNumber, stepDirection) {
+        stepNumber, stepDirection) {
 
         if (stepNumber === 0) {
             $('#becomePartnerFlow .sw-btn-prev').addClass('d-none');
@@ -1289,7 +1289,7 @@ function initMap() {
      */
     $(document).ready(function () {
         $('body').on('click', '.GoBecomePartner', function (e) {
-            if( $('body').hasClass('logged-in')) {
+            if ($('body').hasClass('logged-in')) {
                 window.location = '/partner-information';
             } else {
                 $('#modalSignUp').modal('show');
@@ -1372,7 +1372,7 @@ function initMap() {
             },
             confirm_password: {
                 required: true,
-                equalTo: "#password",
+                equalTo: "#signup_password",
                 normalizer: function (value) {
                     return $.trim(value);
                 }
@@ -1384,7 +1384,7 @@ function initMap() {
         messages: {
             terms: " You must accept the Terms & Conditions"
         },
-        errorPlacement: function(error, element) {
+        errorPlacement: function (error, element) {
             if (element.is(":radio")) {
                 error.appendTo(element.parent().next().next());
             } else if (element.is(":checkbox")) {
@@ -1435,11 +1435,11 @@ function initMap() {
     $("#formPartnerInformation").validate({
         rules: {
         },
-        submitHandler: function() {
-           // AJAX HERE
+        submitHandler: function () {
+            // AJAX HERE
 
-           // on success ajax:
-           partnerCardInformationToView("#partner_info_wrapper");
+            // on success ajax:
+            partnerCardInformationToView("#partner_info_wrapper");
         },
     });
     //------------------------------------------------------------------------
@@ -1457,21 +1457,21 @@ function initMap() {
         noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
         var editTexts = $(cardId).find('.edit-text');
-        $.each(editTexts, function( index, editText ) {
+        $.each(editTexts, function (index, editText) {
             var value = $(editText).find('input').val();
-            if(value === "") value = noInformedHtmlBase.clone();
+            if (value === "") value = noInformedHtmlBase.clone();
             $(editText).parent().find('.view').html(value);
         });
 
         var editCheckboxes = $(cardId).find('.edit-checkbox');
-        $.each(editCheckboxes, function( index, editCheckbox ) {
+        $.each(editCheckboxes, function (index, editCheckbox) {
             var value = $(editCheckbox).find('input').val();
             var isChecked = $(editCheckbox).find('input').prop('checked');
 
-             if(isChecked){
-                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="'+value+'"]').addClass('active');
+            if (isChecked) {
+                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="' + value + '"]').addClass('active');
             } else {
-                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="'+value+'"]').removeClass('active');
+                $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="' + value + '"]').removeClass('active');
             }
 
 

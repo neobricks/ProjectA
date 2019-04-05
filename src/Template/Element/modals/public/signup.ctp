@@ -44,7 +44,7 @@
                         </label>
                         <div class="col-8">
                             <?php echo $this->Form->password('password', [
-                                'id' => 'password',
+                                'id' => 'signup_password',
                                 'class' => 'form-control',
                             ]); ?>
                         </div>
