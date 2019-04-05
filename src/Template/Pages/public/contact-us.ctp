@@ -4,22 +4,21 @@
             <div class="col-lg-7">
                 <div class="mb-6">
                     <h1 class="text-primary"><?= __('Contact Us');?></h1>
-                    <p class="lead-1">Morbi aliquet felis nec nisl congue
-                        interdum. Quisque vitae sapien ullamcorper.</p>
+                    <!-- <p class="lead-1"><?= __('');?></p> -->
                 </div>
                 <form data-form="contact_form" action="#"
                       class="input-transparent" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <input class="form-control form-control-lg"
-                                   type="text" name="name"
-                                   placeholder="<?= __('Your name')?>" required>
+                                type="text" name="name"
+                                placeholder="<?= __('Your name')?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <input class="form-control form-control-lg"
-                                   type="email" name="email"
-                                   placeholder="<?= __('Your email address')?>" required>
+                                type="email" name="email"
+                                placeholder="<?= __('Your email address')?>" required>
                         </div>
                     </div>
 
@@ -30,12 +29,9 @@
 
                     <div class="form-group">
                         <textarea class="form-control form-control-lg" rows="4"
-                                  placeholder="<?= __('Your message')?>" name="message"
-                                  required></textarea>
+                                placeholder="<?= __('Your message')?>" name="message" required></textarea>
                     </div>
-                    <button class="btn btn-lg btn-warning" type="submit">Send it
-                        over
-                    </button>
+                    <button class="btn btn-lg btn-warning" type="submit"><?= __('Send message')?></button>
                 </form>
             </div>
             <div class="col-lg-5">
@@ -47,21 +43,27 @@
                                 <li class="d-flex align-items-center">
                                     <i class="fas fa-map-marker-alt mr-3"></i>
                                     Feringastraße 4‬
-                                    85774 Unterföhring, Germany
+                                    85774 Unterföhring, <?= __('Germany'); ?>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <i class="fas fa-phone mr-3"></i>
                                     (818) 555-4709
                                 </li>
-                                <li class="my-3">Maecenas in odio lacus. Nulla
-                                    neque diam, molestie quis fringilla in,
-                                    tempus eget leo.
-                                </li>
                             </ul>
                         </div>
                         <div>
-                            <h5 class="lead-2 fw-500 text-warning">Follow
-                                Us</h5>
+                            <h5 class="lead-2 fw-500 text-warning"><?= __('Looking for support?'); ?></h5>
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center">
+                                    <a href=""><?= __('Black Squad Support'); ?></a>
+                                </li> 
+                                <li class="d-flex align-items-center">
+                                    <a href=""><?= __('Black Squad Steam Discussions'); ?></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div>
+                            <h5 class="lead-2 fw-500 text-warning"><?= __('Follow Us'); ?></h5>
                             <div class="social-buttons">
                                 <a class="mr-3 unset social-twitter" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -73,7 +75,7 @@
                                 <a class="mr-3 unset social-instagram" href="#"><i
                                             class="fab fa-instagram"></i></a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

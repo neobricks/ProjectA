@@ -50,13 +50,17 @@ class GameweeveApiComponent extends Component
                 'headers' => $headers,
             ]);
 
-            dump($response);
-            echo "<h1> Body: </h1>";
-            dump($response->getBody()->getContents());
-
             if (in_array($response->getStatusCode(), $this->http_status_ok)) {
-
-                return json_decode($response->getBody(), true);
+                try {
+                    return json_decode($response->getBody());
+                } catch (Exception $e) {
+                    dump($response->getBody());
+                    throw new Exception("Error Decoding Json", 1);
+                    
+                }
+            }else{
+                dump($response->getBody());
+                return $response;
             }
 
         } catch (Exception $exception) {
@@ -67,11 +71,7 @@ class GameweeveApiComponent extends Component
         return false;
     }
 
-    /**
-     * Register and Login
-     */
-
-
+   
     /**
      * @param $data
      * @return bool|mixed
@@ -93,17 +93,20 @@ class GameweeveApiComponent extends Component
             }
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
-        dump($query_parameters);
+        //dump($query_parameters);
         $endpoint = '/registerJson.php';
         //$endpoint = '/registerJson.php?data='.urlencode(json_encode($query_parameters['data']));
-        dump($endpoint);
+        //dump($endpoint);
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters );
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
             return false;
         }
     }
-
+      /**
+     * @param $data
+     * @return bool|mixed
+     */
     public function login($data)
     {
         $params = [
@@ -191,6 +194,7 @@ class GameweeveApiComponent extends Component
     public function user_verify($data) {
         $params = [
             'key',
+            'xyz'
         ];
         $request_body = [];
         $query_parameters = [];

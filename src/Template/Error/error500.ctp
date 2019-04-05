@@ -36,8 +36,18 @@ if (Configure::read('debug')) :
     $this->end();
 endif;
 ?>
-<h2><?= __d('cake', 'An Internal Error Has Occurred') ?></h2>
+
 <p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
-    <?= h($message) ?>
+    <a class="navbar-brand logo"
+        href="<?= $this->Url->Build('/'); ?>">
+        <?php echo $this->Html->image('/public/assets/img/logo.png', [
+            'class' => 'd-none d-md-inline mb-6',
+            'alt' => '404'
+        ]); ?>
+    </a>
+
+    <h2 class="display-md-4"><?= __d('cake', 'An Internal Error Has Occurred') ?></h2>
+    <p class="lead">  <?= h($message) ?></p>
+    <br>
+
 </p>

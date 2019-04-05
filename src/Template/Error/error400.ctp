@@ -29,10 +29,23 @@ if (extension_loaded('xdebug')) :
 endif;
 
 $this->end();
+else:
+    $this->assign('templateName', 'error400.ctp');
 endif;
 ?>
-<h2><?= h($message) ?></h2>
+
 <p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
+    <a class="navbar-brand logo"
+        href="<?= $this->Url->Build('/'); ?>">
+        <?php echo $this->Html->image('/public/assets/img/logo.png', [
+            'class' => 'd-none d-md-inline mb-6',
+            'alt' => '404'
+        ]); ?>
+    </a>
+
+    <h2 class="display-md-4"><?= h($message) ?></h2>
+    <p class="lead"><?= __('You may have mistyped the address or the page may have moved.'); ?></p>
+    <br>
+    
     <?= __d('cake', 'The requested address {0} was not found on this server.', "<strong>'{$url}'</strong>") ?>
 </p>
