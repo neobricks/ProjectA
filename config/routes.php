@@ -74,7 +74,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/auth/:action/*', ['controller' => 'Auth']);
 
     $routes->connect('/partner-information', ['controller' => 'Partner']);
-
+    
+    $routes->connect('/verifyJson.php', ['controller' => 'Auth', 'action'=>'verifyEmail']);
+    
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /**

@@ -40,7 +40,8 @@ $locale_options = Configure::read('locale.options');
     <!-- CSS main -->
     <?php echo $this->Html->css('/public/assets/css/dist/main.css'); ?>
     <?php echo $this->Html->css('/public/assets/css/dist/styles.min.css'); ?>
-
+    <?php echo $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css'); ?>
+    
     <?= $this->fetch('css') ?>
 
     <!-- Favicons -->
@@ -76,6 +77,7 @@ $locale_options = Configure::read('locale.options');
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-nav zi-3">
+
     <div class="container">
         <div class="row">
             <div class="col-4 col-sm-3 col-md-2 mr-auto">
@@ -187,6 +189,7 @@ $locale_options = Configure::read('locale.options');
 
 <!-- main content -->
 <main class="main-content">
+    
     <?= $this->fetch('content') ?>
 </main>
 
@@ -288,6 +291,7 @@ $locale_options = Configure::read('locale.options');
 <?php echo $this->Html->script('/public/assets/js/bootstrap.min.js'); ?>
 
 <!-- plugins -->
+<?php echo $this->Html->script('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'); ?>
 <?php echo $this->Html->script('/plugins/owl.carousel/owl.carousel.min.js'); ?>
 <?php echo $this->Html->script('/plugins/smart_wizard/js/jquery.smartWizard.min.js'); ?>
 <?php echo $this->Html->script('/plugins/tagsinput/tagsinput.js'); ?>
@@ -298,5 +302,24 @@ $locale_options = Configure::read('locale.options');
     'id' => '_mainJS',
     'data-plugins' => 'load'
 ]); ?>
+<?php echo $this->Html->scriptBlock( 'toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": true,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}', ['block' => true]);
+?>
+<?= $this->Flash->render() ?>
+<?= $this->fetch('script'); ?>
 </body>
 </html>
