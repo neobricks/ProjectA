@@ -1452,9 +1452,10 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
+    noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
+
     function partnerCardInformationToView(cardId) {
-        var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
-        noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
         var editTexts = $(cardId).find('.edit-text');
         $.each(editTexts, function (index, editText) {
@@ -1473,9 +1474,17 @@ function initMap() {
             } else {
                 $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="' + value + '"]').removeClass('active');
             }
+        });
 
 
-            //
+        var editTagInputs = $(cardId).find('.edit-tag-input');
+        $.each(editTagInputs, function (index, editTagInput) {
+            var items = $(editTagInput).find('input.form-control').tagsinput('items');
+            var value = noInformedHtmlBase;
+            if(items.length > 0) {
+                value = items.join(", ");
+            }
+            $(editTagInput).parent().find('.view').html(value);
         });
 
 
