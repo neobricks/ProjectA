@@ -5,7 +5,7 @@
             <?= __('BECOME A PARTNER'); ?>
         </span>
     </a>
-    <a href="javascript:void(0);" class="btn btn-lg btn-primary parallelogram br-round-0tl br-round-0bl un_text mb-0 GoBecomePartner">
+    <a href="javascript:void(0);" class="btn btn-lg <?= isset($btn_class) ? $btn_class : 'btn-primary' ?> parallelogram br-round-0tl br-round-0bl un_text mb-0 GoBecomePartner">
         <span class="d-block text-dark">
             <i class="fas fa-chevron-right"></i>
         </span>

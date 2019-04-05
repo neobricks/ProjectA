@@ -274,23 +274,24 @@ $latestQuest_dummyDate = [
             <!-- nav tabs -->
             <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap"
                 id="most_popular_products-carousel" role="tablist">
+              
                 <li class="nav-item text-fnwp pg-none relative">
-                    <a class="nav-link active" id="mp-01-tab" data-toggle="tab"
-                       href="#mp-0-c" role="tab" aria-controls="mp-01-c"
+                    <a class="nav-link active no-scroll" id="mp-0-tab" data-toggle="tab"
+                       href="#mp-0-c" role="tab" aria-controls="mp-0-c"
                        aria-selected="true">
                         <?= __('Tests') ?>
                     </a>
                 </li>
                 <li class="nav-item text-fnwp relative">
-                    <a class="nav-link" id="mp-02-tab" data-toggle="tab"
-                       href="#mp-1-c" role="tab" aria-controls="mp-02-c"
+                    <a class="nav-link no-scroll" id="mp-1-tab" data-toggle="tab"
+                       href="#mp-1-c" role="tab" aria-controls="mp-1-c"
                        aria-selected="false">
                         <?= __('Translations') ?>
                     </a>
                 </li>
                 <li class="nav-item text-fnwp relative">
-                    <a class="nav-link" id="mp-03-tab" data-toggle="tab"
-                       href="#mp-2-c" role="tab" aria-controls="mp-03-c"
+                    <a class="nav-link no-scroll" id="mp-2-tab" data-toggle="tab"
+                       href="#mp-2-c" role="tab" aria-controls="mp-2-c"
                        aria-selected="false">
                         <?= __('Moderators') ?>
                     </a>
@@ -404,6 +405,7 @@ $latestQuest_dummyDate = [
                         at.
                     </p>
                     <?= $this->element('/pages/index/btnBecomeAPartner', [
+                            'btn_class' => 'btn-light',
                             'wrapper_class' => 'fadeInLeft ad-900ms'
                     ]); ?>
                 </div>

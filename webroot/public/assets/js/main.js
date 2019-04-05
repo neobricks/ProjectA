@@ -1303,6 +1303,7 @@ function initMap() {
     //-------------- jQuery smooth scrolling anchor navigation ---------------
     $(document).ready(function () {
         $('a').on('click', function (e) {
+            if ((this).hasClass('no-scroll')) return;
             var href = $(this).attr("href");
             //var hash = href.substr(href.indexOf("#"));
             var hash = $(this).prop('hash');
@@ -1516,7 +1517,7 @@ function initMap() {
         $.each(editTagInputs, function (index, editTagInput) {
             var items = $(editTagInput).find('input.form-control').tagsinput('items');
             var value = noInformedHtmlBase;
-            if(items.length > 0) {
+            if (items.length > 0) {
                 value = items.join(", ");
             }
             $(editTagInput).parent().find('.view').html(value);

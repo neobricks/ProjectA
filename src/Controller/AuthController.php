@@ -30,7 +30,7 @@ class AuthController extends AppController
                 $this->Flash->success(__('Your email has been verified thank you'));
                 //TODO: If User not Logged we should redirect to Login?
             }else{
-                $this->Flash->error(__('We found an error validation validating your email: {0}',$response->result));
+                $this->Flash->error(__('We found an error validating your email: {0}',$response->result));
             }
         }else{
             $this->Flash->error(__('Missing key parameter'));
