@@ -29,4 +29,31 @@ class PartnerController extends AppController
         $this->viewBuilder()->setLayout('public');
     }
 
+
+    public function ajaxUpdatePartner()
+    {
+        $this->autoRender = false;
+        
+        $form_data = $this->request->getData();
+
+
+        echo json_encode($form_data);
+// 
+//     die();
+// 
+//     foreach( $form_data as $key => $value){
+//         //$data[$key] = 'test'; //[$value['value']];
+//     }
+//     
+// 
+//     $response = [];
+// 
+// 
+//     $response = $data;
+// 
+// 
+//     echo json_encode($response);
+
+    }
+
 }

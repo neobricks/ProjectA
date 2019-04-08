@@ -72,7 +72,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/l/*', ['controller'=> 'App', 'action' => 'changeLang']);
 
     $routes->connect('/auth/:action/*', ['controller' => 'Auth']);
-
+    
+    $routes->connect('/partner/:action', ['controller' => 'Partner', 'action' => ':action']);
     $routes->connect('/partner-information', ['controller' => 'Partner']);
     
     $routes->connect('/verifyJson.php', ['controller' => 'Auth', 'action'=>'verifyEmail']);

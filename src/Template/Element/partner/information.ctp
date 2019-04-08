@@ -48,7 +48,7 @@ $showForm = false;
                                     </p>
                                 </div>
                                 <div class="edit-text">
-                                    <?php echo $this->Form->text('name', [
+                                    <?php echo $this->Form->text('partner[name]', [
                                         'class' => 'form-control',
                                     ]); ?>
                                 </div>
@@ -74,7 +74,7 @@ $showForm = false;
                                     </p>
                                 </div>
                                 <div class="edit-text">
-                                    <?php echo $this->Form->text('surname', [
+                                    <?php echo $this->Form->text('partner[surname]', [
                                         'class' => 'form-control',
                                     ]); ?>
                                 </div>
@@ -107,12 +107,14 @@ $showForm = false;
                                 <div class="edit-language-input w-100">
 
                                     <div class="row mb-1 language-input">
+                                        <input type="hidden" />
                                         <div class="col-3">
                                             <select class="custom-select language-code">
                                                 <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                     <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
                                                 <?php endforeach; ?>
                                             </select>
+                                            
                                         </div>
                                         <label class="col-3 text-primary">
                                             <?= __('Proficiency') ?> *
@@ -133,13 +135,16 @@ $showForm = false;
                                     </div>
 
                                     <div class="language-base d-none">
+
                                         <div class="row mb-1 language-input">
+                                            <input type="hidden" />
                                             <div class="col-3">
-                                                <select class="custom-select language-code">
+                                                <select  class="custom-select language-code">
                                                     <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                         <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
+                                                
                                             </div>
                                             <label class="col-3 text-primary">
                                                 <?= __('Proficiency') ?> *
@@ -245,10 +250,9 @@ $showForm = false;
                                     </div>
                                     <div class="edit-checkbox">
                                         <div class="form-check">
+                                            <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" />
                                             <input class="form-check-input"
                                                    type="checkbox"
-                                                   name="platform"
-                                                   value="<?= $platform['value'] ?>"
                                                    id="<?= 'platform' . $platform['value'] ?>"/>
                                             <label class="form-check-label w-100"
                                                    for="<?= 'platform' . $platform['value'] ?>">
@@ -262,7 +266,7 @@ $showForm = false;
                                                         </span>
                                                         <span class="col-12">
                                                                <input id="<?= 'platform' . $platform['value'] ?>_text"
-                                                                      name="<?= 'platform' . $platform['value'] ?>_text"
+                                                                      name="partner[platforms][][<?= $platform['value'] ?>_text]"
                                                                       type="text"
                                                                       value=""
                                                                       placeholder="<?= $platform['placeholder'] ?>"
@@ -300,7 +304,7 @@ $showForm = false;
                                             </p>
                                         </div>
                                         <div class="edit-text">
-                                            <?php echo $this->Form->text('in_game_nickname', [
+                                            <?php echo $this->Form->text('partner[nicknames][][black_squad]', [
                                                 'class' => 'form-control',
                                             ]); ?>
                                         </div>

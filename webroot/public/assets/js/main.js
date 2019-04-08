@@ -1236,6 +1236,30 @@ function initMap() {
         }
     });
 
+    function updateLanguageInputHidden(languageInput) {
+        var lang = $(languageInput).find('.language-code').val();
+        var prof = $(languageInput).find('.language-prof').val();
+        
+        $(languageInput).find('input[type="hidden"]').attr('name', 'partner[languages][]['+lang+']');
+        $(languageInput).find('input[type="hidden"]').val(prof);
+    }
+
+    $("body").on('change', '.language-code', (e) => {
+        updateLanguageInputHidden($(e.currentTarget).closest('.language-input'));
+    });
+
+    $("body").on('change', '.language-prof', (e) => {
+        updateLanguageInputHidden($(e.currentTarget).closest('.language-input'));
+    });
+
+    $("body").on('change', '.form-check-input', function() {
+        var checked = 0;
+        if(this.checked) {
+            checked = 1;
+        }
+        $(this).closest('.form-check').find('input[type="hidden"]').val(checked);
+    });
+
     $("#becomePartnerFlow").on("showStep", function (e, anchorObject,
         stepNumber, stepDirection) {
 
@@ -1438,20 +1462,34 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+
+    function ajaxUpdatePartner(data, cardId) {
+        $.ajax({
+            url: '/partner/ajaxUpdatePartner',
+            data: data,
+            type: 'POST',
+            error: function(error) {
+                console.log(error);
+            },
+            success: function(data) {
+                partnerCardInformationToView(cardId);
+                console.log(data);
+            },
+        });
+
+
+    }
+   
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {
         },
-        submitHandler: function () {
-            // AJAX HERE
-
-            // on success ajax:
-            partnerCardInformationToView("#partner_info_wrapper");
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#partner_info_wrapper");
         },
     });
     //------------------------------------------------------------------------
-
-
 
 
     //------------- Form Validation | Partner | Skills ---- ------------------
@@ -1467,9 +1505,11 @@ function initMap() {
             $.each($('.skill-checkbox'), function( index, skillCheckbox) {
                 var value = $(skillCheckbox).val();
                 var isChecked = $(skillCheckbox).prop('checked');
-                console.log(value);
                 if(isChecked) {
                     $('.selected-skill[data-skill="'+value+'"]').addClass('active');
+                    $("#"+ value + "_wrapper").removeClass('d-none');
+                } else {
+                    $("#"+ value + "_wrapper").addClass('d-none');
                 }
 
             });
@@ -1516,7 +1556,7 @@ function initMap() {
         var editTagInputs = $(cardId).find('.edit-tag-input');
         $.each(editTagInputs, function (index, editTagInput) {
             var items = $(editTagInput).find('input.form-control').tagsinput('items');
-            var value = noInformedHtmlBase;
+            var value = noInformedHtmlBase.clone();
             if (items.length > 0) {
                 value = items.join(", ");
             }
