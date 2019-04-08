@@ -1632,10 +1632,21 @@ function initMap() {
     //------------- Form Validation | Partner | Tester ------------------
     $("#formPartnerTester").validate({
         rules: {
+            'testers[type_of_tester]': { required: true},  
+            'testers[testerExperient]': { required: true},  
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#testers_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------

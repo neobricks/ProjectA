@@ -24,11 +24,11 @@
                     <?= __('Do you have previous experience as a tester?') ?> *
                 </label>
                 <div class="col-8">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline flex-column">
                         <input class="form-check-input" type="radio" name="testers[testerExperient]" id="testerExperientYes" value="1">
                         <label class="form-check-label" for="testerExperientYes"><?= __('Yes'); ?></label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline  flex-column">
                         <input class="form-check-input" type="radio" name="testers[testerExperient]" id="testerExperientNo" value="0">
                         <label class="form-check-label" for="testerExperientNo"><?= __('No') ?></label>
                     </div>
@@ -51,7 +51,7 @@
 
                     <?php foreach ($games_dummyData as $game): ?>
                         <div class="form-check form-check">
-                            <input class="form-check-input" type="radio"
+                            <input class="form-check-input  flex-column" type="radio"
                                    name="testers[type_of_tester]"
                                    value="<?= $game['value'] ?>"
                                    id="<?= 'game' . $game['value'] ?>"/>
