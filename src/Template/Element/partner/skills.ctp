@@ -98,7 +98,8 @@
                         'class' => 'input-transparent',
                         'type' => 'post'
                     ]); ?>
-                    <div class="row py-2">
+                    <div class="skills-wrapper row py-2">
+                        
                         <?php foreach ($skills_dummyData as $skill): ?>
                             <div class="col-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
                                 <div class="skill card h-100">
@@ -117,6 +118,7 @@
                                                 <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="0" />
                                                 <input class="checkbox skill-checkbox"
                                                        type="checkbox"
+                                                       name="skills[]"
                                                        value="<?= $skill['code']; ?>"
                                                        autocomplete="off"/>
                                                 <span class="checkmark"></span>
@@ -125,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?>                        
                     </div>
                     <!-- submit -->
                     <div class="form-group row mt-6 mb-0 submit-wrapper">
@@ -134,7 +136,7 @@
                             <?php echo $this->Form->submit(__('Submit'), [
                                 'class' => 'btn btn-block btn-warning',
                             ]); ?>
-
+                            <div class='error-wrapper'></div>
                         </div>
                     </div>
                     <!-- /submit -->

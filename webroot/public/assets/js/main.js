@@ -1521,7 +1521,6 @@ function initMap() {
             } else {
                 $(element.parent().append(error));
             }
-
         },
     });
     //------------------------------------------------------------------------
@@ -1530,9 +1529,16 @@ function initMap() {
     //------------- Form Validation | Partner | Skills ---- ------------------
     $("#formPartnerSkills").validate({
         rules: {
+            'skills[]': {
+                required: true,
+            },
+        },
+        messages: {
+            'skills[]': {
+                required: 'Select at least one'
+            }
         },
         submitHandler: function (form) {
-            console.log( $(form).serializeArray());
             $.ajax({
                 url: '/partner/ajaxUpdatePartner',
                 data:  $(form).serializeArray(),
@@ -1557,6 +1563,9 @@ function initMap() {
                     partnerCardInformationToView("#partner_skill_wrapper");
                 },
             });
+        },
+        errorPlacement: function (error, element) {
+            error.appendTo($("#partner_skill_wrapper .error-wrapper"));
         },
     });
     //------------------------------------------------------------------------
