@@ -23,10 +23,6 @@ class AuthController extends AppController
         if(isset($data['key']) && isset($data['xyz'])){
             $response = $this->GameweeveApi->user_verify($data);
             if($response->result >= 0){
-                $params = [
-                    'email' => $data['email'],
-                    'pw' => $data['confirm_password'],
-                ];
                 $this->Flash->success(__('Your email has been verified thank you'));
                 //TODO: If User not Logged we should redirect to Login?
             }else{
@@ -55,8 +51,7 @@ class AuthController extends AppController
                 'userTypeID' => "1",
             ];
             $response = $this->GameweeveApi->register($params);
-            //dump($response);
-            if($response->result >= 0 && $response->token){
+            if($response->result >= 0 && $response->verifyToken){
                 $this->Flash->success(__('Your account has been created, you will now receive a confirmation email!'));    
                 //TODO: Now we log the user?
             }else{
@@ -77,14 +72,20 @@ class AuthController extends AppController
         $this->request->trustProxy = true;
         $data = $this->request->getData();
         
-        if(isset($data['email']) && isset($data['password']) ){
+        if(isset($data['email']) && isset($data['pw']) ){
             $response = $this->GameweeveApi->login($data);
-            if($response->result >= 0 && $response->token){
-                $this->Flash->success(__('Welcome Back'));    
-                //TODO: Now we log the user!
-            }else{
-                $this->Flash->error(__('Login Error: {0}',$response->result));
+            dump($response);
+            if(isset($response->result)){
+                if($response->result >= 0 && $response->verifyToken){
+                    $this->Flash->success(__('Welcome Back'));    
+                    //TODO: Now we log the user!
+                }else{
+                    $this->Flash->error(__('Login Error: {0}',$response->result));
+                }
+            } else {
+                $this->Flash->error(__('You have entered an invalid username or password'));
             }
+            
             
         }else{
             $this->Flash->error(__('Missing Email or Password'));

@@ -111,7 +111,7 @@ class GameweeveApiComponent extends Component
     {
         $params = [
             'email',
-            'password',
+            'pw',
         ];
         $request_body = [];
         $query_parameters = [];
@@ -120,6 +120,10 @@ class GameweeveApiComponent extends Component
                 $query_parameters['data'][$param] = $data[$param];
             }
         }
+        $query_parameters['data']['token'] = false;
+        
+        dump($query_parameters);
+
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/user_login.php';
         try {

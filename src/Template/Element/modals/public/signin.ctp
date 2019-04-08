@@ -39,7 +39,7 @@
                             </span>
                         </label>
                         <div class="col-8">
-                            <?php echo $this->Form->password('password', [
+                            <?php echo $this->Form->password('pw', [
                                 'id' => 'password',
                                 'class' => 'form-control',
                             ]); ?>
