@@ -29,7 +29,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('moderators[username]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -65,11 +65,11 @@
                     <?= __('Do you have previous experience as a moderator?') ?> *
                 </label>
                 <div class="col-8">
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline flex-column">
                         <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientYes" value="1">
                         <label class="form-check-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline flex-column">
                         <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientNo" value="0">
                         <label class="form-check-label" for="moderatorExperientNo"><?= __('No') ?></label>
                     </div>

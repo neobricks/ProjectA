@@ -1610,10 +1610,21 @@ function initMap() {
     //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({
         rules: {
+            'moderators[username]': { required: true}, 
+            'moderators[moderatorExperient]': { required: true},  
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#moderators_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------
