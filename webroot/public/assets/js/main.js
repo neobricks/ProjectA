@@ -1354,9 +1354,15 @@ function initMap() {
     $(document).ready(function () {
         $('#partner_skill_wrapper').on('click', '.card.skill', function () {
             $(this).toggleClass('active')
-            var checkbox = $(this).find('input');
+            var checkbox = $(this).find('input[type="checkbox"]');
             checkbox.prop("checked", !checkbox.prop("checked"));
+            var hidden = $(this).find('input[type="hidden"]');
 
+            var checked = 0;
+            if(checkbox.prop("checked")) {
+                checked = 1;
+            }
+            $(hidden).val(checked);
         });
     });
     //------------------------------------------------------------------------
@@ -1496,29 +1502,49 @@ function initMap() {
     $("#formPartnerSkills").validate({
         rules: {
         },
-        submitHandler: function () {
-            // AJAX HERE
+        submitHandler: function (form) {
+            console.log( $(form).serializeArray());
+            $.ajax({
+                url: '/partner/ajaxUpdatePartner',
+                data:  $(form).serializeArray(),
+                type: 'POST',
+                error: function(error) {
+                    console.log(error);
+                },
+                success: function(data) {
+                    console.log(data);
+                    $('.selected-skill').removeClass('active');
+                    $.each($('.skill-checkbox'), function( index, skillCheckbox) {
+                        var value = $(skillCheckbox).val();
+                        var isChecked = $(skillCheckbox).prop('checked');
+                        if(isChecked) {
+                            $('.selected-skill[data-skill="'+value+'"]').addClass('active');
+                            $("#"+ value + "_wrapper").removeClass('d-none').addClass('active');
+                        } else {
+                            $("#"+ value + "_wrapper").addClass('d-none').removeClass('active');
+                        }
 
-            // on success ajax:
-
-            $('.selected-skill').removeClass('active');
-            $.each($('.skill-checkbox'), function( index, skillCheckbox) {
-                var value = $(skillCheckbox).val();
-                var isChecked = $(skillCheckbox).prop('checked');
-                if(isChecked) {
-                    $('.selected-skill[data-skill="'+value+'"]').addClass('active');
-                    $("#"+ value + "_wrapper").removeClass('d-none');
-                } else {
-                    $("#"+ value + "_wrapper").addClass('d-none');
-                }
-
+                    });
+                    partnerCardInformationToView("#partner_skill_wrapper");
+                },
             });
-            partnerCardInformationToView("#partner_skill_wrapper");
         },
     });
     //------------------------------------------------------------------------
 
 
+
+
+    //------------- Form Validation | Partner | Information ------------------
+    $("#formPartnerModerator").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#moderators_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
 
 
 

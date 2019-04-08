@@ -1,11 +1,22 @@
-<div class="card card-information my-3" id="moderators_wrapper">
+<div class="card card-information my-3  d-none" id="moderators_wrapper">
     <div class="card-body">
         <h4 class="card-title">
             <span class="text-primary"><?= __('Moderator') ?></span>
             <span class="text-light">information</span>
+            <span class="float-right">
+                <button type="button"
+                        class="btn btn-sm text-dark btn-primary btn-update">
+                    <?= __('Update'); ?>
+                </button>
+            </span>
         </h4>
 
-        <form class="input-transparent">
+        <?php echo $this->Form->create(null, [
+                        'id' => 'formPartnerModerator',
+                        'url' => ['controller' => 'partner', 'action' => 'information'],
+                        'class' => 'input-transparent',
+                        'type' => 'post'
+                    ]); ?>
 
             <!-- username -->
             <div class="form-group row">
@@ -13,9 +24,16 @@
                     <?= __('How you want to be called') ?>
                 </label>
                 <div class="col-8">
-                    <input name="username" type="text"
-                           class="form-control"
-                           value=""/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('moderators[username]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /username -->
@@ -26,9 +44,17 @@
                     <?= __('Discord') ?>
                 </label>
                 <div class="col-8">
-                    <input name="discord" type="text"
-                           class="form-control"
-                           value="" placeholder="discord  ID"/>
+                <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('moderators[discord]', [
+                            'class' => 'form-control',
+                            'placeholder' => 'Discord ID'
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /discord -->
@@ -40,18 +66,18 @@
                 </label>
                 <div class="col-8">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="moderatorExperient" id="moderatorExperientYes" value="yes">
+                        <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientYes" value="1">
                         <label class="form-check-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="moderatorExperient" id="moderatorExperientNo" value="no">
+                        <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientNo" value="0">
                         <label class="form-check-label" for="moderatorExperientNo"><?= __('No') ?></label>
                     </div>
                 </div>
             </div>
             <!-- /have previous experience -->
 
-            <!-- games -->
+            <!-- partner games -->
             <div class="form-group row">
                 <label class="col-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
@@ -60,18 +86,15 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'asd', 'label' => 'Game 2'],
                     ];
                     ?>
-
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check form-check">
+                        <div class="form-check">
+                            <input type='hidden' name="moderators[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input" type="checkbox"
-                                   name="game"
-                                   value="<?= $game['value'] ?>"
-                                   id="<?= 'game' . $game['value'] ?>"/>
+                                id="<?= 'moderators_' . $game['value'] ?>"/>
                             <label class="form-check-label"
-                                   for="<?= 'game' . $game['value'] ?>">
+                                for="<?= 'moderators_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
@@ -80,9 +103,20 @@
 
                 </div>
             </div>
-            <!-- /games -->
+            <!-- /partner games -->
 
-        </form>
+            <!-- submit -->
+            <div class="form-group row mt-6 mb-0 submit-wrapper">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-block btn-warning',
+                    ]); ?>
+                </div>
+            </div>
+            <!-- /submit -->
+
+        <?= $this->Form->end(); ?>
 
     </div> <!-- /card-body -->
 </div> <!-- /card -->
