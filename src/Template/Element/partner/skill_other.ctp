@@ -1,19 +1,37 @@
-<div class="card card-information my-3" id="others_wrapper">
+<div class="card card-information my-3  d-none" id="others_wrapper">
     <div class="card-body">
         <h4 class="card-title">
             <span class="text-primary"><?= __('Other') ?></span>
             <span class="text-light"><?= __('information') ?></span>
+            <span class="float-right">
+                <button type="button"
+                        class="btn btn-sm text-dark btn-primary btn-update">
+                    <?= __('Update'); ?>
+                </button>
+            </span>
         </h4>
 
-        <form class="input-transparent">
+        <?php echo $this->Form->create(null, [
+                        'id' => 'formPartnerOther',
+                        'url' => ['controller' => 'partner', 'action' => 'information'],
+                        'class' => 'input-transparent',
+                        'type' => 'post'
+                    ]); ?>
+
             <!-- special skill -->
             <div class="form-group row">
                 <label class="col-4 text-primary">
                     <?= __('What is your special skill or experience?') ?>
                 </label>
                 <div class="col-8">
-                    <input name="special_skill" type="text"
-                           class="form-control"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <div class="edit-textarea">
+                        <textarea name="others[special_skill_text]" class="form-control"></textarea>
+                    </div>                    
                 </div>
             </div>
             <!-- /special skill -->
@@ -26,13 +44,20 @@
                             </span>
                 </label>
                 <div class="col-8">
-                    <textarea class="form-control" name="kind_of_opportunities"></textarea>
+                    <div class="view py-2 px-3">
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <div class="edit-textarea">
+                        <textarea name="others[opportunities_text]" class="form-control"></textarea>
+                    </div>                    
                 </div>
             </div>
             <!-- /how do you translate -->
 
-            <!-- games -->
-            <div class="form-group row">
+             <!-- partner games -->
+             <div class="form-group row">
                 <label class="col-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
                 </label>
@@ -40,18 +65,15 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'asd', 'label' => 'Game 2'],
                     ];
                     ?>
-
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check form-check">
+                        <div class="form-check">
+                            <input type='hidden' name="others[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input" type="checkbox"
-                                   name="game"
-                                   value="<?= $game['value'] ?>"
-                                   id="<?= 'game' . $game['value'] ?>"/>
+                                id="<?= 'others_' . $game['value'] ?>"/>
                             <label class="form-check-label"
-                                   for="<?= 'game' . $game['value'] ?>">
+                                for="<?= 'others_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
@@ -60,10 +82,21 @@
 
                 </div>
             </div>
-            <!-- /games -->
+            <!-- /partner games -->
+            
+            <!-- submit -->
+            <div class="form-group row mt-6 mb-0 submit-wrapper">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-block btn-warning',
+                    ]); ?>
+                </div>
+            </div>
+            <!-- /submit --> 
 
 
-        </form>
+        <?= $this->Form->end(); ?>
 
     </div> <!-- /card-body -->
 </div> <!-- /card -->

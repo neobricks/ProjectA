@@ -1601,6 +1601,17 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    //------------- Form Validation | Partner | Other ------------------
+    $("#formPartnerOther").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#others_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
+
 
     var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
     noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
