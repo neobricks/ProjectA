@@ -1,11 +1,22 @@
-<div class="card card-information my-3" id="companies_wrapper">
+<div class="card card-information my-3  d-none" id="companies_wrapper">
     <div class="card-body">
         <h4 class="card-title">
             <span class="text-primary"><?= __('Company'); ?></span>
             <span class="text-light"><?= __('information') ?></span>
+            <span class="float-right">
+                <button type="button"
+                        class="btn btn-sm text-dark btn-primary btn-update">
+                    <?= __('Update'); ?>
+                </button>
+            </span>
         </h4>
 
-        <form class="input-transparent">
+        <?php echo $this->Form->create(null, [
+                        'id' => 'formPartnerCompany',
+                        'url' => ['controller' => 'partner', 'action' => 'information'],
+                        'class' => 'input-transparent',
+                        'type' => 'post'
+                    ]); ?>
 
             <!-- company name -->
             <div class="form-group row">
@@ -13,9 +24,16 @@
                     <?= __('Name of your company:') ?>
                 </label>
                 <div class="col-8">
-                    <input name="username" type="text"
-                           class="form-control"
-                           value=""/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('companies[name]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /company name -->
@@ -26,9 +44,16 @@
                     <?= __('What your company do or sale?') ?>
                 </label>
                 <div class="col-8">
-                    <input name="username" type="text"
-                           class="form-control"
-                           value=""/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('companies[name]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /what company do/sale -->
@@ -45,7 +70,16 @@
                             Email
                         </label>
                         <div class="col-9">
-                            <input type="text" class="form-control "/>
+                            <div class="view py-2 px-3">
+                                <p>
+                                
+                                </p>
+                            </div>
+                            <div class="edit-text">
+                                <?php echo $this->Form->text('companies[contact][][email]', [
+                                    'class' => 'form-control',
+                                ]); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -53,7 +87,16 @@
                             Phone
                         </label>
                         <div class="col-9">
-                            <input type="text" class="form-control "/>
+                            <div class="view py-2 px-3">
+                                <p>
+                                
+                                </p>
+                            </div>
+                            <div class="edit-text">
+                                <?php echo $this->Form->text('companies[contact][][phone]', [
+                                    'class' => 'form-control',
+                                ]); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -61,7 +104,16 @@
                             Skype
                         </label>
                         <div class="col-9">
-                            <input type="text" class="form-control "/>
+                            <div class="view py-2 px-3">
+                                <p>
+                                
+                                </p>
+                            </div>
+                            <div class="edit-text">
+                                <?php echo $this->Form->text('companies[contact][][skype]', [
+                                    'class' => 'form-control',
+                                ]); ?>
+                            </div>
                         </div>
                     </div>
 
@@ -76,8 +128,14 @@
                     <?= __('What kind of opportunities are you looking for?') ?>
                 </label>
                 <div class="col-8">
-                    <textarea name="kind_of_opportunities"
-                              class="form-control"></textarea>
+                    <div class="view py-2 px-3">
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <div class="edit-textarea">
+                        <textarea name="companies[kind_of_opportunities]" class="form-control"></textarea>
+                    </div>                    
                 </div>
             </div>
             <!-- /what company do/sale -->
@@ -101,7 +159,7 @@
             </div>
             <!-- /country list -->
 
-            <!-- games -->
+            <!-- partner games -->
             <div class="form-group row">
                 <label class="col-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
@@ -110,18 +168,15 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'asd', 'label' => 'Game 2'],
                     ];
                     ?>
-
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check form-check">
+                        <div class="form-check">
+                            <input type='hidden' name="companies[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input" type="checkbox"
-                                   name="game"
-                                   value="<?= $game['value'] ?>"
-                                   id="<?= 'game' . $game['value'] ?>"/>
+                                id="<?= 'companies_' . $game['value'] ?>"/>
                             <label class="form-check-label"
-                                   for="<?= 'game' . $game['value'] ?>">
+                                for="<?= 'companies_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
@@ -130,9 +185,21 @@
 
                 </div>
             </div>
-            <!-- /games -->
+            <!-- /partner games -->
+            
+            <!-- submit -->
+            <div class="form-group row mt-6 mb-0 submit-wrapper">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-block btn-warning',
+                    ]); ?>
+                </div>
+            </div>
+            <!-- /submit --> 
 
-        </form>
+
+        <?= $this->Form->end(); ?>
 
 
     </div> <!-- /card-body -->

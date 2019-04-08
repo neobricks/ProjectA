@@ -1590,7 +1590,16 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
+    //------------- Form Validation | Partner | Company ------------------
+    $("#formPartnerCompany").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#companies_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
 
 
     var noInformedHtmlBase = $("#noInformedHtmlBase").clone(); //
