@@ -47,7 +47,7 @@ $showForm = false;
                                         ?>
                                     </p>
                                 </div>
-                                <div class="edit-text">
+                                <div class="edit-text flex-column">
                                     <?php echo $this->Form->text('partner[name]', [
                                         'class' => 'form-control',
                                     ]); ?>
@@ -73,7 +73,7 @@ $showForm = false;
                                         ?>
                                     </p>
                                 </div>
-                                <div class="edit-text">
+                                <div class="edit-text flex-column">
                                     <?php echo $this->Form->text('partner[surname]', [
                                         'class' => 'form-control',
                                     ]); ?>
@@ -192,8 +192,8 @@ $showForm = false;
                                         <div class="view py-2 px-3">
 
                                         </div>
-                                        <div class="edit-tag-input">
-                                           <input name="like_games"
+                                        <div class="edit-tag-input flex-column">
+                                           <input name="partner[like_games]"
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value=""
@@ -210,8 +210,8 @@ $showForm = false;
                                         <div class="view py-2 px-3">
 
                                         </div>
-                                        <div class="edit-tag-input">
-                                            <input name="like_type_games"
+                                        <div class="edit-tag-input flex-column">
+                                            <input name="partner[like_type_games]"
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value=""
@@ -248,11 +248,12 @@ $showForm = false;
                                             <?= $platform['label'] ?>
                                         </span>
                                     </div>
-                                    <div class="edit-checkbox">
-                                        <div class="form-check">
+                                    <div class="edit-checkbox ">
+                                        <div class="form-check flex-row">
                                             <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" />
                                             <input class="form-check-input"
                                                    type="checkbox"
+                                                   name="partner[platforms][]"
                                                    id="<?= 'platform' . $platform['value'] ?>"/>
                                             <label class="form-check-label w-100"
                                                    for="<?= 'platform' . $platform['value'] ?>">

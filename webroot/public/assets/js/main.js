@@ -1419,7 +1419,6 @@ function initMap() {
             } else if (element.is(":checkbox")) {
                 error.appendTo(element.next());
             } else {
-                console.log(error, element);
                 $(element.parent().append(error));
             }
 
@@ -1489,10 +1488,40 @@ function initMap() {
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {
+            'partner[name]': {
+                required: true,
+            },
+            'partner[surname]': {
+                required: true
+            },
+            'partner[like_games]': {
+                required: true
+            },
+            'partner[like_type_games]': {
+                required: true
+            },
+            'partner[platforms][]': {
+                required: true
+            }
+        },
+        messages: {
+            'partner[platforms][]': {
+                required: 'Select at least one'
+            }
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#partner_info_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
+
         },
     });
     //------------------------------------------------------------------------
