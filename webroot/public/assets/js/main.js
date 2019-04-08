@@ -1535,7 +1535,7 @@ function initMap() {
 
 
 
-    //------------- Form Validation | Partner | Information ------------------
+    //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({
         rules: {
         },
@@ -1546,7 +1546,16 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
+    //------------- Form Validation | Partner | Tester ------------------
+    $("#formPartnerTester").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#testers_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
 
 
 
