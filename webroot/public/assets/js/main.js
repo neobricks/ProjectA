@@ -1568,7 +1568,16 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
+    //------------- Form Validation | Partner | Gamer ------------------
+    $("#formPartnerTranslator").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#translators_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
 
 
 
