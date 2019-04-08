@@ -29,7 +29,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('casters[username]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -92,7 +92,7 @@
                             <div class="view py-2 px-3">
 
                             </div>
-                            <div class="edit-tag-input">
+                            <div class="edit-tag-input flex-column">
                                 <input name="casters[cast_games]"
                                         type="text"
                                         data-role="tagsinput"
@@ -110,7 +110,7 @@
                             <div class="view py-2 px-3">
 
                             </div>
-                            <div class="edit-tag-input">
+                            <div class="edit-tag-input flex-column">
                                 <input  name="casters[cast_type_games]"
                                         type="text"
                                         data-role="tagsinput"

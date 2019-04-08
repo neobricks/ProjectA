@@ -1691,6 +1691,9 @@ function initMap() {
      //------------- Form Validation | Partner | Caster ------------------
      $("#formPartnerCaster").validate({
         rules: {
+            'casters[username]': { required: true},  
+            'casters[cast_games]': { required: true},
+            'casters[cast_type_games]': { required: true},
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
