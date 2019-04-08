@@ -1662,16 +1662,28 @@ function initMap() {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#pro_gamers_wrapper");
         },
+        
     });
     //------------------------------------------------------------------------
 
     //------------- Form Validation | Partner | Translator ------------------------
     $("#formPartnerTranslator").validate({
         rules: {
+            'translators[translatorExperient]': { required: true}, 
+            'translators[translate_example]': { required: true}, 
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#translators_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------

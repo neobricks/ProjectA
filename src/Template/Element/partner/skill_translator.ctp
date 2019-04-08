@@ -54,7 +54,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-textarea">
+                    <div class="edit-textarea flex-column">
                         <textarea class="form-control" name="translators[translate_example]"></textarea>
                     </div>                    
                 </div>
