@@ -114,9 +114,9 @@
                                                 <p class="mx-4 text-dark"><?= $skill['description']; ?></p>
                                             </div>
                                             <label class="checkbox-wrapper">
+                                                <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="0" />
                                                 <input class="checkbox skill-checkbox"
                                                        type="checkbox"
-                                                       name="skill"
                                                        value="<?= $skill['code']; ?>"
                                                        autocomplete="off"/>
                                                 <span class="checkmark"></span>
