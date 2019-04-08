@@ -1574,10 +1574,35 @@ function initMap() {
     //------------- Form Validation | Partner | Content Creator --------------
     $("#formPartnerContentCreator").validate({
         rules: {
+            'content_creators[username]': { required: true}, 
+            //'content_creators[youtube]': { required: true}, 
+            //'content_creators[twitch]': { required: true}, 
+            //'content_creators[twitter]': { required: true}, 
+            //'content_creators[discord]': { required: true}, 
+            //'content_creators[instagram]': { required: true}, 
+            'content_creators[type_of_content_gameplay][]': {required: true},
+            'content_creators[channel_about][]': {required: true}            
+        },
+        messages: {
+            'content_creators[type_of_content_gameplay][]': {
+                required: 'Select at least one'
+            },
+            'content_creators[channel_about][]': {
+                required: 'Select at least one'
+            }
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#content_creators_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------

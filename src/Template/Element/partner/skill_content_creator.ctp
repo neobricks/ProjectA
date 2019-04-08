@@ -29,7 +29,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[username]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -50,7 +50,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[youtube]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -67,7 +67,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[twitch]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -88,7 +88,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[twitter]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -105,7 +105,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[discord]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -122,7 +122,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[instagram]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -139,7 +139,7 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creators[other]', [
                             'class' => 'form-control',
                         ]); ?>
@@ -177,10 +177,11 @@
                             </span>
                         </div>
                         <div class="edit-checkbox">
-                            <div class="form-check">
+                            <div class="form-check flex-column">
                                 <input type='hidden' name="content_creators[type_of_content_gameplay][][<?= $type_of_content['value'] ?>]" value="0" />
                                 <input class="form-check-input"
                                         type="checkbox"
+                                        name="content_creators[type_of_content_gameplay][]"
                                         id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
                                 <label class="form-check-label w-100"
                                         for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
@@ -215,10 +216,11 @@
                             </span>
                         </div>
                         <div class="edit-checkbox">
-                            <div class="form-check">
+                            <div class="form-check flex-column">
                                 <input type='hidden' name="content_creators[channel_about][][<?= $channel_about['value'] ?>]" value="0" />
                                 <input class="form-check-input"
                                         type="checkbox"
+                                        name="content_creators[channel_about][]"
                                         id="<?= 'channel_about_' . $channel_about['value'] ?>"/>
                                 <label class="form-check-label w-100"
                                         for="<?= 'channel_about_' . $channel_about['value'] ?>">
