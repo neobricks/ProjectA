@@ -1654,6 +1654,9 @@ function initMap() {
     //------------- Form Validation | Partner | Gamer ------------------
     $("#formPartnerGamer").validate({
         rules: {
+            'pro_gamers[username]': { required: true},  
+            'pro_gamers[pro_games]': { required: true},
+            'pro_gamers[pro_type_games]': { required: true},
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
