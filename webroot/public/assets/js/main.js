@@ -1532,8 +1532,17 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
-
+    
+    //------------- Form Validation | Partner | Content Creator --------------
+    $("#formPartnerContentCreator").validate({
+        rules: {
+        },
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            ajaxUpdatePartner(data, "#content_creators_wrapper");
+        },
+    });
+    //------------------------------------------------------------------------
 
     //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({

@@ -1,11 +1,22 @@
-<div class="card card-information my-3" id="content_creators_wrapper">
+<div class="card card-information my-3  d-none" id="content_creators_wrapper">
     <div class="card-body">
         <h4 class="card-title">
             <span class="text-primary"><?= __('Content Creator'); ?></span>
             <span class="text-light"><?= __('information') ?></span>
+            <span class="float-right">
+                <button type="button"
+                        class="btn btn-sm text-dark btn-primary btn-update">
+                    <?= __('Update'); ?>
+                </button>
+            </span>
         </h4>
-
-        <form class="input-transparent">
+        
+        <?php echo $this->Form->create(null, [
+                        'id' => 'formPartnerContentCreator',
+                        'url' => ['controller' => 'partner', 'action' => 'information'],
+                        'class' => 'input-transparent',
+                        'type' => 'post'
+                    ]); ?>
 
             <!-- username -->
             <div class="form-group row">
@@ -13,9 +24,16 @@
                     <?= __('How you want to be called') ?>
                 </label>
                 <div class="col-8">
-                    <input name="username" type="text"
-                           class="form-control"
-                           value=""/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[username]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /username -->
@@ -27,9 +45,16 @@
                     <?= __('Youtube') ?>
                 </label>
                 <div class="col-8">
-                    <input name="youtube" type="text"
-                           class="form-control"
-                           placeholder="<?= __(' your username'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[youtube]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
@@ -37,9 +62,16 @@
                     <?= __('Twitch') ?>
                 </label>
                 <div class="col-8">
-                    <input name="twitch" type="text"
-                           class="form-control"
-                           placeholder="<?= __(' your username'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[twitch]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /channels -->
@@ -51,9 +83,16 @@
                     <?= __('Twitter') ?>
                 </label>
                 <div class="col-8">
-                    <input name="twitch" type="text"
-                           class="form-control"
-                           placeholder="<?= __(' your username'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[twitter]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
@@ -61,9 +100,16 @@
                     <?= __('Discord') ?>
                 </label>
                 <div class="col-8">
-                    <input name="discord" type="text"
-                           class="form-control"
-                           placeholder="<?= __(' your username'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[discord]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
@@ -71,9 +117,16 @@
                     <?= __('Instagram') ?>
                 </label>
                 <div class="col-8">
-                    <input name="instagram" type="text"
-                           class="form-control"
-                           placeholder="<?= __(' your username'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[instagram]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
@@ -81,9 +134,16 @@
                     <?= __('Other') ?>
                 </label>
                 <div class="col-8">
-                    <input name="other" type="text"
-                           class="form-control"
-                           placeholder="<?= __('link'); ?>"/>
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text">
+                        <?php echo $this->Form->text('content_creators[other]', [
+                            'class' => 'form-control',
+                        ]); ?>
+                    </div>
                 </div>
             </div>
             <!-- /social networks -->
@@ -111,15 +171,22 @@
                     ?>
 
                     <?php foreach ($type_of_content_dummyData as $type_of_content): ?>
-                        <div class="form-check form-check">
-                            <input class="form-check-input" type="checkbox"
-                                   name="type_of_content"
-                                   value="<?= $type_of_content['value'] ?>"
-                                   id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
-                            <label class="form-check-label"
-                                   for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $type_of_content['value'] ?>">
                                 <?= $type_of_content['label'] ?>
-                            </label>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox">
+                            <div class="form-check">
+                                <input type='hidden' name="content_creators[type_of_content_gameplay][][<?= $type_of_content['value'] ?>]" value="0" />
+                                <input class="form-check-input"
+                                        type="checkbox"
+                                        id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
+                                <label class="form-check-label w-100"
+                                        for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
+                                        <?= $type_of_content['label'] ?>
+                                </label>
+                            </div>
                         </div>
                     <?php endforeach; ?>
 
@@ -137,20 +204,27 @@
                         ['value' => 'games', 'label' => 'Games'],
                         ['value' => 'technology', 'label' => 'Technology'],
                         ['value' => 'nerd_geek', 'label' => 'Nerd/Geek'],
-                        ['value' => 'other', 'label' => 'Others']
+                        ['value' => 'other', 'label' => 'Other']
                     ];
                     ?>
 
                     <?php foreach ($channel_about_dummyData as $channel_about): ?>
-                        <div class="form-check form-check">
-                            <input class="form-check-input" type="checkbox"
-                                   name="channel_about"
-                                   value="<?= $channel_about['value'] ?>"
-                                   id="<?= 'channel_about' . $channel_about['value'] ?>"/>
-                            <label class="form-check-label"
-                                   for="<?= 'channel_about' . $channel_about['value'] ?>">
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $channel_about['value'] ?>">
                                 <?= $channel_about['label'] ?>
-                            </label>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox">
+                            <div class="form-check">
+                                <input type='hidden' name="content_creators[channel_about][][<?= $channel_about['value'] ?>]" value="0" />
+                                <input class="form-check-input"
+                                        type="checkbox"
+                                        id="<?= 'channel_about_' . $channel_about['value'] ?>"/>
+                                <label class="form-check-label w-100"
+                                        for="<?= 'channel_about_' . $channel_about['value'] ?>">
+                                        <?= $channel_about['label'] ?>
+                                </label>
+                            </div>
                         </div>
                     <?php endforeach; ?>
 
@@ -206,13 +280,17 @@
                 </div>
             </div>
 */ ?>
-
-
-
-
-
-        </form>
-
-
+            <!-- submit -->
+            <div class="form-group row mt-6 mb-0 submit-wrapper">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-block btn-warning',
+                    ]); ?>
+                </div>
+            </div>
+            <!-- /submit --> 
+                    
+        <?= $this->Form->end(); ?>
     </div> <!-- /card-body -->
 </div> <!-- /card -->
