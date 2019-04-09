@@ -74,9 +74,18 @@ class AuthController extends AppController
         
         if(isset($data['email']) && isset($data['pw']) ){
             $response = $this->GameweeveApi->login($data);
-            //dump($response);
             if(isset($response->result)){
                 if($response->result >= 0 && $response->token){
+                    
+                    $session = $this->getRequest()->getSession();
+
+                    $user = [
+                        'email' => $response->email,
+                        'token' => $response->token,
+                        'partner' => []
+                    ];
+                    $session->write('User', $user);
+
                     $this->Flash->success(__('Welcome Back'));    
                     //TODO: Now we log the user!
                 }else{
@@ -99,18 +108,27 @@ class AuthController extends AppController
     {
         $this->autoRender = false;
         $this->request->trustProxy = true;
-        $data = $this->request->getData();
         
-        if(isset($data['email']) && isset($data['password']) ){
+        $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
+       
+        if(isset($user['email']) && isset($user['token']) ){
+            $data = [
+                'email' => $user['email'],
+                'token' => $user['token']
+            ];
             $response = $this->GameweeveApi->logout($data);
-            if($response->result >= 0){
-                // Remove Session
-            }else{
-                $this->Flash->error(__('Logout Error: {0}',$response->result));
+            if(isset($response->result)){
+                if($response->result >= 0){
+                    
+                }else{
+                    //$this->Flash->error(__('Logout Error: {0}',$response->result));
+                }
             }
         }else{
-            $this->Flash->error(__('Missing Email or Password'));
+            
         }
+        $session->delete('User');
         return $this->redirect($this->referer());
     }
 

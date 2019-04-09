@@ -93,10 +93,14 @@ $locale_options = Configure::read('locale.options');
 
                 <?php if (!empty($user)): ?>
                     <span class="user-name px-3">
-                        <?= $user['name']; ?>
+                        <?php if (!empty($user['partner'])) {
+                            echo $user['partner']['name'];
+                        } else {
+                            echo $user['email'];
+                        } ?>
                     </span>
                     <a class="btn btn-sm text-light d-none d-sm-inline-block"
-                       href="javascript:void(0)">
+                       href="<?= $this->Url->Build(['controller'=> 'auth', 'action'=>'logout']); ?>">
                         <?= __('Sign out'); ?>
                     </a>
                 <?php else: ?>

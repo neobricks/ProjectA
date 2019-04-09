@@ -12,11 +12,8 @@ class PartnerController extends AppController
         $this->loadComponent('GameweeveApi');
 
         $session = $this->getRequest()->getSession();
-        $session->write('User', [
-            'name' => 'Dan'
-        ]);
-
         $user = $session->read('User');
+        
         if(empty($user)) {
             $this->redirect($this->referer());
         }
@@ -33,27 +30,40 @@ class PartnerController extends AppController
     public function ajaxUpdatePartner()
     {
         $this->autoRender = false;
-        
+        $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
+
         $form_data = $this->request->getData();
+        
+        $form_data['email'] = $user['email'];
+        $form_data['token'] = $user['token'];
+        
+        $partnerProgram = [];
+        if($session->check('PartnerProgram')) {
+            $partnerProgram = $session->read('PartnerProgram');
+        }
+
+        $partnerProgram = array_merge($partnerProgram, $form_data);
+
+        $session->write('PartnerProgram', $partnerProgram);
+
+        echo json_encode([]);
+        //$response = $this->GameweeveApi->user_update($form_data);
+    }
 
 
-        echo json_encode($form_data);
-// 
-//     die();
-// 
-//     foreach( $form_data as $key => $value){
-//         //$data[$key] = 'test'; //[$value['value']];
-//     }
-//     
-// 
-//     $response = [];
-// 
-// 
-//     $response = $data;
-// 
-// 
-//     echo json_encode($response);
+    public function testPartnerProgram()
+    {
+        $this->autoRender = false;
+        $session = $this->getRequest()->getSession();
+        $partnerProgram = [];
+        if($session->check('PartnerProgram')) {
+            $partnerProgram = $session->read('PartnerProgram');
+        }
+        dump($partnerProgram);
 
+        $response = $this->GameweeveApi->user_update($partnerProgram);
+        dump($response);
     }
 
 }

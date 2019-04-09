@@ -50,9 +50,8 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Cookie');
 
-        //$session = $this->getRequest()->getSession();
-        //$session->write('User', ['name' => 'Dan']);
-        //$user = $session->read('User');
+        $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
 
 
 
@@ -62,7 +61,7 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
 
-        //$this->set('user', $user);
+        $this->set('user', $user);
     }
 
     public function beforeFilter(Event $event)

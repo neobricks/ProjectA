@@ -1417,7 +1417,7 @@ function initMap() {
             if (element.is(":radio")) {
                 error.appendTo(element.parent().next().next());
             } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
+                error.appendTo(element.parent());
             } else {
                 $(element.parent().append(error));
             }

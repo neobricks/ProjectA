@@ -1,9 +1,11 @@
 <?php
-/**
- * Dummy Data:
- */
+$firstName = '';
+$firstTime = true;
+if(!empty($user['partner'])) {
+    $firstName = $user['partner']['name'];
+    $firstTime = false;
+}
 
-$firstName = 'Pamella';
 ?>
 
 
@@ -15,7 +17,7 @@ $firstName = 'Pamella';
                 <h5 class="py-6 text-gray"> <?= __('Partner Program'); ?> </h5>
 
                 <h2 class="card-title">
-                    <span class="text-light"><?= __('Welcome,'); ?></span>
+                    <span class="text-light"><?= __('Welcome') ?><?= empty($firstName) ? "!" : ',' ?></span>
                     <span class="text-primary"><?= $firstName; ?></span>
                 </h2>
 
@@ -24,34 +26,34 @@ $firstName = 'Pamella';
                 </div>
 
                 <!-- Partner information -->
-                <?= $this->element('/partner/information'); ?>
+                <?= $this->element('/partner/information', [$firstTime]); ?>
 
                 <!-- Skills -->
-                <?= $this->element('/partner/skills'); ?>
+                <?= $this->element('/partner/skills', [$firstTime]); ?>
 
                 <!--Content Creator -->
-                <?= $this->element('partner/skill_content_creator'); ?>
+                <?= $this->element('partner/skill_content_creator', [$firstTime]); ?>
 
                 <!--Moderator -->
-                <?= $this->element('partner/skill_moderator'); ?>
+                <?= $this->element('partner/skill_moderator', [$firstTime]); ?>
 
                 <!-- Tester -->
-                <?= $this->element('partner/skill_tester'); ?>
+                <?= $this->element('partner/skill_tester', [$firstTime]); ?>
 
                 <!-- Pro Gamer -->
-                <?= $this->element('partner/skill_pro_gamer'); ?>
+                <?= $this->element('partner/skill_pro_gamer', [$firstTime]); ?>
 
                 <!-- Translator -->
-                <?= $this->element('partner/skill_translator'); ?>
+                <?= $this->element('partner/skill_translator', [$firstTime]); ?>
 
                 <!--Caster -->
-                <?= $this->element('partner/skill_caster'); ?>
+                <?= $this->element('partner/skill_caster', [$firstTime]); ?>
 
                 <!--Company -->
-                <?= $this->element('partner/skill_company'); ?>
+                <?= $this->element('partner/skill_company', [$firstTime]); ?>
 
                 <!--Other -->
-                <?= $this->element('partner/skill_other'); ?>
+                <?= $this->element('partner/skill_other', [$firstTime]); ?>
 
 
             </div> <!-- /col-12 -->

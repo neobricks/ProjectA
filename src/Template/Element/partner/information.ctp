@@ -250,7 +250,7 @@ $showForm = false;
                                     </div>
                                     <div class="edit-checkbox ">
                                         <div class="form-check flex-row">
-                                            <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" />
+                                            <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" value="0" />
                                             <input class="form-check-input"
                                                    type="checkbox"
                                                    name="partner[platforms][]"
