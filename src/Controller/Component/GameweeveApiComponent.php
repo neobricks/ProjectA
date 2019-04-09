@@ -43,32 +43,29 @@ class GameweeveApiComponent extends Component
     {
         $headers = $this->http_default_headers;
 
-        try {
-            $response = $this->client->request($type, $endpoint, [
-                'form_params' => $request_body,
-                'query' => $query_parameters,
-                'headers' => $headers,
-            ]);
-
-            if (in_array($response->getStatusCode(), $this->http_status_ok)) {
-                try {
-                    return json_decode($response->getBody());
-                } catch (Exception $e) {
-                    dump($response->getBody());
-                    throw new Exception("Error Decoding Json", 1);
-                    
-                }
-            }else{
+        //echo "HERERERE";
+        $response = $this->client->request($type, $endpoint, [
+            'form_params' => $request_body,
+            'query' => $query_parameters,
+            'headers' => $headers,
+        ]);
+        //echo "WTF???";
+        //dump($response);
+        if (in_array($response->getStatusCode(), $this->http_status_ok)) {
+            try {
+          //      dump($response->getBody());
+                return json_decode($response->getBody());
+            } catch (Exception $e) {
                 dump($response->getBody());
-                return $response;
+                throw new Exception("Error Decoding Json", 1);
+                
             }
-
-        } catch (Exception $exception) {
-            dump($exception);
+        }else{
+            dump($response->getBody());
+            return $response;
         }
 
-
-        return false;
+        //return false;
     }
 
    
@@ -93,13 +90,11 @@ class GameweeveApiComponent extends Component
             }
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
-        //dump($query_parameters);
         $endpoint = '/registerJson.php';
-        //$endpoint = '/registerJson.php?data='.urlencode(json_encode($query_parameters['data']));
-        //dump($endpoint);
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters );
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
+            
             return false;
         }
     }
@@ -120,12 +115,12 @@ class GameweeveApiComponent extends Component
                 $query_parameters['data'][$param] = $data[$param];
             }
         }
-        $query_parameters['data']['token'] = false;
+        $query_parameters['data']['token'] = 'yyyy';
         
-        dump($query_parameters);
+        //dump($query_parameters);
 
         $query_parameters['data'] = json_encode($query_parameters['data']);
-        $endpoint = '/user_login.php';
+        $endpoint = '/loginJson.php';
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {

@@ -74,9 +74,9 @@ class AuthController extends AppController
         
         if(isset($data['email']) && isset($data['pw']) ){
             $response = $this->GameweeveApi->login($data);
-            dump($response);
+            //dump($response);
             if(isset($response->result)){
-                if($response->result >= 0 && $response->verifyToken){
+                if($response->result >= 0 && $response->token){
                     $this->Flash->success(__('Welcome Back'));    
                     //TODO: Now we log the user!
                 }else{
