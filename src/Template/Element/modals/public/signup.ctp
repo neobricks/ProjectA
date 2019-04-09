@@ -1,6 +1,6 @@
 <div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog"
      aria-labelledby="modalSignUp" aria-hidden="true">
-    <div class="modal-dialog modal-dm modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-sm  modal-dialog-centered" role="document">
         <div class="modal-content bg-dark">
             <div class="modal-header border-secondary">
                 <h5 class="modal-title text-warning">
@@ -22,14 +22,10 @@
 
                     <!-- input email -->
                     <div class="form-group row">
-                        <label class="col-4 text-primary">
-                            <span class="align-middle">
-                                <?= __('Email') ?>
-                            </span>
-                        </label>
-                        <div class="col-8">
+                        <div class="col-12">
                             <?php echo $this->Form->email('email', [
                                 'class' => 'form-control',
+                                'placeholder' => __("Email")
                             ]); ?>
                         </div>
                     </div>
@@ -37,15 +33,11 @@
 
                     <!-- input password -->
                     <div class="form-group row">
-                        <label class="col-4 text-primary">
-                            <span class="align-middle">
-                                <?= __('Password') ?>
-                            </span>
-                        </label>
-                        <div class="col-8">
+                        <div class="col-12">
                             <?php echo $this->Form->password('password', [
                                 'id' => 'signup_password',
                                 'class' => 'form-control',
+                                'placeholder' => __("Password")
                             ]); ?>
                         </div>
                     </div>
@@ -53,14 +45,10 @@
 
                     <!-- input confirm password -->
                     <div class="form-group row">
-                        <label class="col-4 text-primary">
-                            <span class="align-middle">
-                                <?= __('Confirm Password') ?>
-                            </span>
-                        </label>
-                        <div class="col-8">
+                        <div class="col-12">
                             <?php echo $this->Form->password('confirm_password', [
                                 'class' => 'form-control',
+                                'placeholder' => __("Confirm Password")
                             ]); ?>
                         </div>
                     </div>
@@ -69,44 +57,55 @@
                     <!-- checkboxes terms -->
                     <div class="form-group row">
                         <div class="col-12">
-                            <div class="form-check">
-                                <?php echo $this->Form->checkbox('terms', [
-                                    'id' => 'signupCheckboxTerms',
-                                    'class' => 'form-check-input',
-                                    'hiddenField' => false
-                                ]); ?>
-                                <label class="form-check-label" for="signupCheckboxTerms">
-                                    <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
-                                </label>
-
-                                <?php /*
-                                <input class="form-check-input" type="checkbox" value="" id="">
-                                <label class="form-check-label" for="signupCheckboxTerms">
-                                    <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
-                                </label>
-                                */ ?>
-
+                            <div class="form-check d-flex mb-4">
+                                <div class="custom-control custom-checkbox row">
+                                    <div class="col-12 pl-0">
+                                        <?php echo $this->Form->checkbox('terms', [
+                                            'id' => 'signupCheckboxTerms',
+                                            'class' => 'custom-control-input px-4',
+                                            'hiddenField' => false
+                                        ]); ?>
+                                        <label class="custom-control-label form-check-label lh-3" for="signupCheckboxTerms">
+                                            <small>
+                                                <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
+                                            </small>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="signupCheckboxNews">
-                                <label class="form-check-label" for="signupCheckboxNews">
-                                    <?= __('NeoBricks can send me newsletters with offers and news from games not related to the Partner Program'); ?>
-                                </label>
+
+                            <div class="form-check d-flex mb-4">
+                                <div class="custom-control custom-checkbox row">
+                                    <div class="col-12 pl-0">
+                                        <input type="checkbox" class="custom-control-input px-4"  id="signupCheckboxNews">
+                                        <label class="custom-control-label form-check-label lh-3" for="signupCheckboxNews">
+                                            <small>
+                                            <?= __('NeoBricks can send me newsletters with offers and news from games not related to the Partner Program'); ?>
+                                            </small>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
+                    <style>
+                        #formSignUp .custom-checkbox .custom-control-input ~ .custom-control-label::before{
+                            min-width: 20px;
+                            height: 20px;
+                        }
+                    </style>
                     <!-- /checkboxes terms -->
 
 
                     <!-- submit button -->
                     <div class="form-group row mt-6 mb-0">
-                        <div class="col-4"></div>
-                        <div class="col-8">
-                            <button class="btn btn-block btn-warning"
+                        <div class="col-12">
+                            <button class="btn btn-block btn-warning text-uppercase"
                                     type="submit">
                                 <?= __('Register') ?>
                             </button>
-                            <p class="small text-center py-2 mb-0">
+                            <p class="small text-left py-2 mb-0">
                                 <?= __('Already have an account?') ?>
                                 <a class="bold" href="javascript:void(0)"
                                    data-dismiss="modal"
