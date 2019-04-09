@@ -1442,7 +1442,17 @@ function initMap() {
                     return $.trim(value);
                 }
             },
-        }
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.parent());
+            } else {
+                $(element.parent().append(error));
+            }
+
+        },
     });
     //------------------------------------------------------------------------
 

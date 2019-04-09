@@ -16,34 +16,28 @@
                 <?php echo $this->Form->create(null, [
                     'id' => 'formSignIn',
                     'url' => ['controller' => 'auth', 'action' => 'login'],
-                    'class' => 'input-transparent',
+                    'class' => 'input-transparent material',
                     'type' => 'post'
                 ]); ?>
 
-                    <div class="form-group">
-                        <?php echo $this->Form->email('email', [
-                            'class' => 'form-control',
-                            'placeholder' => __("Email")
+                    <div class="group">      
+                         <?php echo $this->Form->text('email', [
+                            'required' => true,
+                            
                         ]); ?>
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Email") ?></label>
                     </div>
 
-                    <div class="form-group">
-                        <?php echo $this->Form->password('pw', [
-                            'class' => 'form-control',
-                            'placeholder' => __("Password")
+                    <div class="group">      
+                         <?php echo $this->Form->password('pw', [
+                            'required' => true,
+                            
                         ]); ?>
-
-                        <small class="mb-0 py-4 text-right">
-                            <a class="bold" href="javascript:void(0)"
-                                data-dismiss="modal"
-                                data-toggle="modal"
-                                data-target="#modalForgetPassword">
-                                <?= __('Forget your password?'); ?>
-                            </a>
-                        </small>
-
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Password") ?></label>
                     </div>
-                   
+
                     <div class="form-group row mt-6 mb-0">
                         <div class="col-12">
                             <button class="btn btn-block btn-warning"
@@ -66,3 +60,4 @@
         </div>
     </div>
 </div>
+

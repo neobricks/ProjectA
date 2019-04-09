@@ -182,9 +182,6 @@ class GameweeveApiComponent extends Component
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/user_update.php';
-
-        dump($query_parameters);
-        die();
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
@@ -209,8 +206,7 @@ class GameweeveApiComponent extends Component
         $endpoint = '/verifyJson.php';
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
-        } catch (GuzzleHttp\Exception\GuzzleException $e) {
-            return $e;
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {      
             return false;
         }
     }

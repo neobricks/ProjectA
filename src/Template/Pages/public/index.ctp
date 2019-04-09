@@ -388,7 +388,6 @@ $latestQuest_dummyDate = [
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
                     <h3 class="mb-4 text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></h3>
-                    <p class="d-block text-light text-right"><?= __('S'); ?></p>
                     <br><br>
                 </div>
             </div>

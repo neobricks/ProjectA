@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Layout for public website
@@ -66,6 +67,109 @@ $locale_options = Configure::read('locale.options');
     <?php echo $this->Html->script('https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js'); ?>
     <?php echo $this->Html->script('https://oss.maxcdn.com/respond/1.4.2/respond.min.js'); ?>
     <![endif]-->
+
+    
+<style>
+    
+    
+    .material .group 			  { 
+    position:relative; 
+    margin-bottom:10px; 
+    }
+    .material input 				{
+        font-size:16px;
+        padding:5px 10px;
+        padding-top:20px;
+        display:block;
+        width:100%;
+        border:1px solid #757575;
+        background: transparent;
+        color:#fff;
+    }
+    input:focus 		{ outline:none; }
+
+    /* LABEL ======================================= */
+    .material label.mat				 {
+    color:#fff; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left: 10px;
+    top: 10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+
+    }
+
+    /* active state */
+    .material input:focus ~ label.mat, 
+    .material input:valid ~ label.mat {
+    top:0px;
+    font-size:14px;
+    color:#f8991d;
+    }
+
+    /* BOTTOM BARS ================================= */
+    .material .bar 	{ position:relative; display:block; width:300px; }
+    .material .bar:before, 
+    .material .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#f8991d; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+    }
+    .material .bar:before {
+    left:50%;
+    }
+    .material .bar:after {
+    right:50%; 
+    }
+
+    /* active state */
+    .material input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+    }
+
+    /* HIGHLIGHTER ================================== */
+    .material .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+    }
+
+    /* active state */
+    .material input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+    }
+
+    /* ANIMATIONS ================ */
+    @-webkit-keyframes inputHighlighter {
+        from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+    }
+    @-moz-keyframes inputHighlighter {
+        from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+    }
+    @keyframes inputHighlighter {
+        from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+    }
+    </style>
+
 </head>
 
 <?php

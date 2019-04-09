@@ -16,43 +16,36 @@
                 <?php echo $this->Form->create(null, [
                     'id' => 'formSignUp',
                     'url' => ['controller' => 'auth', 'action' => 'register'],
-                    'class' => 'input-transparent',
+                    'class' => 'input-transparent material',
                     'type' => 'post'
                 ]); ?>
 
-                    <!-- input email -->
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <?php echo $this->Form->email('email', [
-                                'class' => 'form-control',
-                                'placeholder' => __("Email")
-                            ]); ?>
-                        </div>
+                    <div class="group">      
+                         <?php echo $this->Form->text('email', [
+                            'required' => true,
+                            
+                        ]); ?>
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Email") ?></label>
                     </div>
-                    <!-- /input email -->
 
-                    <!-- input password -->
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <?php echo $this->Form->password('password', [
-                                'id' => 'signup_password',
-                                'class' => 'form-control',
-                                'placeholder' => __("Password")
-                            ]); ?>
-                        </div>
+                    <div class="group">      
+                         <?php echo $this->Form->password('password', [
+                            'required' => true,
+                            'id' => 'signup_password'
+                        ]); ?>
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Password") ?></label>
                     </div>
-                    <!-- /input password -->
 
-                    <!-- input confirm password -->
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <?php echo $this->Form->password('confirm_password', [
-                                'class' => 'form-control',
-                                'placeholder' => __("Confirm Password")
-                            ]); ?>
-                        </div>
+                    <div class="group">      
+                         <?php echo $this->Form->password('confirm_password', [
+                            'required' => true,
+                            
+                        ]); ?>
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Confirm Password") ?></label>
                     </div>
-                    <!-- /input confirm password -->
 
                     <!-- checkboxes terms -->
                     <div class="form-group row">
