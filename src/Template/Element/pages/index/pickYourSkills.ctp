@@ -1,44 +1,44 @@
 <?php
 $pickYourSkills_dummyDate = [
     [
-        'title' => 'Content Creators',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => 'Youtubers, Streamers, Illustrators, the talent squad!'
+        'title' => __('Content Creators'),
+        'img_path' => '/public/assets/img/part-contentcreator.png',
+        'description' => __('Wether you are an Artist or Influencer, you create awesome content for games you play!')
     ],
     [
-        'title' => 'Testers',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => 'Work hard, play hard, test even harder'
+        'title' => __('Testers'),
+        'img_path' => '/public/assets/img/part-tester.png',
+        'description' => __('Work hard, play hard, test even harder! You are the one who helps games becoming better!')
     ],
     [
-        'title' => 'Moderators',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => 'Help us keeping communities helpful and friendly'
+        'title' => __('Moderators'),
+        'img_path' => '/public/assets/img/part-mod.png',
+        'description' => __('Angels from the sky, you bring peace and order to selvage game communities.')
     ],
     [
-        'title' => 'Business & Corps',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => 'Good corps partnering up against evil'
+        'title' => __('Business & Corps'),
+        'img_path' => '/public/assets/img/part-corp.png',
+        'description' => __('Good corps partnering up against evil - Let’s join our forces!')
     ],
     [
-        'title' => '..................',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => '....................'
+        'title' => __('Pro-Gamers'),
+        'img_path' => '/public/assets/img/part-pro.png',
+        'description' => __('You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it.')
     ],
     [
-        'title' => '..................',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => '....................'
+        'title' => __('Casters'),
+        'img_path' => '/public/assets/img/part-caster.png',
+        'description' => __('Your lovely voice brings matches alive!')
     ],
     [
-        'title' => '..................',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => '....................'
+        'title' => __('Translators'),
+        'img_path' => '/public/assets/img/part-translator.png',
+        'description' => __('You check and translate awesomenesse around the globe – did I wrote it right?')
     ],
     [
-        'title' => '..................',
-        'img_path' => '/public/assets/img/skill_1.png',
-        'description' => '....................'
+        'title' => __('Others'),
+        'img_path' => '/public/assets/img/part-others.png',
+        'description' => __('You have another special skill, so special that you have to explain it to us.')
     ],
 ];
 

@@ -84,25 +84,25 @@ if(!empty($user['partner'])) {
     <li class="nav-item active">
         <a href="#becomePartnerFlow-step-1"
            class="nav-link">
-            ACCOUNT
+           <?= __('ACCOUNT') ?>
         </a>
     </li>
     <li class="nav-item ">
         <a href="#becomePartnerFlow-step-2"
            class="nav-link">
-            CHOOSE YOUR SKILLS(S)
+           <?= __('CHOOSE YOUR SKILL(S)') ?>
         </a>
     </li>
     <li class="nav-item ">
         <a href="#becomePartnerFlow-step-3"
            class="nav-link">
-            Information
+           <?= __('INFORMATION') ?>
         </a>
     </li>
     <li class="nav-item ">
         <a href="#becomePartnerFlow-step-4"
            class="nav-link">
-            TERMS
+           <?= __('TERMS') ?>
         </a>
     </li>
 </ul>
