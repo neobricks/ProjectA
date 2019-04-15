@@ -268,7 +268,7 @@ $latestQuest_dummyDate = [
         id="latestQuests">
     <div class="container">
         <header class="header">
-            <h2>Latest Quests</h2>
+            <h2><?= __('Latest Quests') ?></h2>
         </header>
         <div class="position-relative">
             <!-- nav tabs -->
@@ -334,7 +334,7 @@ $latestQuest_dummyDate = [
                                                     </button>
                                                     <a href="#"
                                                        class="more-info ml-4 h6">
-                                                        More info
+                                                       <?= __('More info'); ?>
                                                     </a>
                                                 </div>
                                             </div>
@@ -364,8 +364,8 @@ $latestQuest_dummyDate = [
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-1">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto text-md-right">
-                    <h2 class="mb-4 text-dark"><?= __('Sign-up reward'); ?></h2>
-                    <span class="d-block text-dark mb-6"><?= __('Become a Partner today and get a welcome reward'); ?></span>
+                    <h2 class="mb-4 text-dark"><?= __('Sign up reward'); ?></h2>
+                    <span class="d-block text-dark mb-6"><?= __('Become a Partner today and get a welcome gift'); ?></span>
                 </div>
             </div>
         </div>
@@ -373,8 +373,8 @@ $latestQuest_dummyDate = [
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-2">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto">
-                    <h3 class="mb-4 text-light"><?= __('Get giveaways and special content exclusive for Partners'); ?></h3>
-                    <p class="d-block text-light"><?= __('Sign up and receive information before so you have time to create awesome videos and more!'); ?></p>
+                <h3 class="mb-4 text-light"><?= __('Special for you'); ?></h3>
+                    <p class="d-block text-light"><?= __('Sign up and receive information ahead of time so you can create awesome videos and more!'); ?></p>
                     <br><br>
                 </div>
             </div>
@@ -387,8 +387,8 @@ $latestQuest_dummyDate = [
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-3">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto">
-                    <h3 class="mb-4 text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></h3>
-                    <br><br>
+                    <h3 class="mb-4 text-light text-right"><?= __('Grow your channel'); ?></h3>
+                    <span class="d-block text-light text-right"><?= __('Access to closed betas, events and keys for your subscribers'); ?></span>
                 </div>
             </div>
         </div>
@@ -442,7 +442,7 @@ $latestQuest_dummyDate = [
         'answer' => __('Each Quest comes with various rewards. They could be in-game items, DLC, special access, features on official channels, or even a gift! You will have to complete a Quest in order to receive your reward. Pay attention to the Quests’ details for more reward information.')
     ],
     [
-        'question' => __('What are Quests'),
+        'question' => __('What are Quests?'),
         'answer' => __('Quests are opportunities we have available for our Partners. They could range from testing new items, playing closed beta games, writing reviews, translating press releases, making a video… the list goes on! Not everyone is eligible for each Quest – you must apply for them through this website and then the Quest is assigned to Partners with compatible profiles. For example, we will not assign “Translation Quests’ to Content Creators, only for Translators.')
     ],
     [
@@ -459,7 +459,7 @@ $latestQuest_dummyDate = [
     ],
     [
         'question' => __('Can I contact developers?'),
-        'answer' => __('Once you are a Partner, you have direct contact with us, NeoBricks. We organize and manage communication with the developers so that they can optimize their time with game improvements without losing contact with their amazing community. So, yes! ')
+        'answer' => __('Once you are a Partner, you have direct contact with us, NeoBricks. We organize and manage communication with the developers so that they can optimize their time with game improvements without losing contact with their amazing community. So, yes!')
     ]
 ] ?>
 
@@ -471,7 +471,7 @@ $latestQuest_dummyDate = [
 
         <div class="container">
             <header class="header text-left text-light">
-                <h2 class="mb-6">FAQ</h2>
+                <h2 class="mb-6"><?= __('FAQ') ?></h2>
             </header>
             <div class="row">
                 <div class="col-12" id="FaqAccordion">
