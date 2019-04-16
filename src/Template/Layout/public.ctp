@@ -178,6 +178,13 @@ $locale_options = Configure::read('locale.options');
         from { background:#5264AE; }
     to 	{ width:0; background:transparent; }
     }
+
+    .footer a.nav-link:hover {
+        color: #f8991d !important;
+        text-decoration: underline;
+    }
+
+
     </style>
 
 </head>
