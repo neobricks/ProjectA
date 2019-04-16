@@ -128,7 +128,7 @@ $showForm = false;
                                         </div>
 
                                         <div class="col-3">
-                                            <button class="btn btn-success btn-block btn-add-language">
+                                            <button class="btn btn-link btn-add-language text-light pt-3">
                                                 Add another
                                             </button>
                                         </div>
@@ -161,7 +161,7 @@ $showForm = false;
 
                                             <div class="col-3">
                                                 <button type="button"
-                                                        class="btn btn-danger btn-block btn-remove-language">
+                                                        class="btn btn-link text-danger  btn-remove-language pt-3">
                                                     Remove
                                                 </button>
                                             </div>

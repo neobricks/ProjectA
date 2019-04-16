@@ -185,6 +185,14 @@ $locale_options = Configure::read('locale.options');
     }
 
 
+    select.custom-select::-ms-expand {	display: none; }
+    select.custom-select{
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+
+
     </style>
 
 </head>
