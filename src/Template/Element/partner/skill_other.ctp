@@ -20,10 +20,10 @@
 
             <!-- special skill -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What is your special skill or experience?') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                         
@@ -38,12 +38,12 @@
 
             <!-- What kind of opportunities -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                             <span class="align-middle">
                                 <?= __('What kind of opportunities are you looking for?');?> *
                             </span>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                         
@@ -58,10 +58,10 @@
 
             <!-- partner games -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
