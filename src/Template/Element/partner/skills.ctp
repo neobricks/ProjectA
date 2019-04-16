@@ -21,49 +21,49 @@
                         'code' => 'content_creators',
                         'title' => 'Content Creators',
                         'description' => 'You are an Influencer, Artist, Youtuber or streamer. You create awesome content for games you play!',
-                        'img_path' => '/public/assets/img/skill_1'
+                        'img_path' => '/public/assets/img/part-contentcreator.png'
                     ],
                     [
                         'code' => 'moderators',
                         'title' => 'Moderators',
                         'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-mod.png'
                     ],
                     [
                         'code' => 'testers',
                         'title' => 'Testers',
                         'description' => 'Work hard, play hard, test even harder! You are the one who helps games becoming better!',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-tester.png'
                     ],
                     [
                         'code' => 'pro_gamers',
                         'title' => 'Pro-Gamers',
                         'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it. ',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-pro.png'
                     ],
                     [
                         'code' => 'translators',
                         'title' => 'Translators',
                         'description' => 'You check and translate awesomenesse around the globe – did I wrote it right?',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-translator.png'
                     ],
                     [
                         'code' => 'casters',
                         'title' => 'Casters',
                         'description' => 'Your lovely voice brings matches alive! You are the Galvão Bueno of games!',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-caster.png'
                     ],
                     [
                         'code' => 'companies',
                         'title' => 'Companies',
                         'description' => 'Good corps partnering up against evil - Let’s join our forces!',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-corp.png'
                     ],
                     [
                         'code' => 'others',
                         'title' => 'Others',
                         'description' => 'You have another special skill, so special that you have to explain it to us..',
-                        'img_path' => '/public/assets/img/skill_2'
+                        'img_path' => '/public/assets/img/part-others.png'
                     ]
                 ];
                 ?>
@@ -98,21 +98,22 @@
                         'class' => 'input-transparent',
                         'type' => 'post'
                     ]); ?>
+
+
                     <div class="skills-wrapper row py-2">
                         
                         <?php foreach ($skills_dummyData as $skill): ?>
                             <div class="col-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
                                 <div class="skill card h-100">
                                     <div class="card-body p-0">
-                                        <div class="row">
+                                        <div class="row" data-toggle="tooltip" data-placement="bottom" title="<?= $skill['description']; ?>">
                                             <div class="col-12">
                                                 <?= $this->Html->image($skill['img_path'], [
                                                     'class' => 'w-100 img-fluid',
                                                 ]) ?>
                                             </div>
                                             <div class="col-10 mx-auto">
-                                                <h4 class="text-primary lh-1 text-center py-1"><?= $skill['title']; ?></h4>
-                                                <p class="mx-4 text-dark"><?= $skill['description']; ?></p>
+                                                <h5 class="lh-1 text-center py-1 m-0"><?= $skill['title']; ?></h5>
                                             </div>
                                             <label class="checkbox-wrapper">
                                                 <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="0" />

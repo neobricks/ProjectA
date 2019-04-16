@@ -214,6 +214,23 @@ $locale_options = Configure::read('locale.options');
     }
 
 
+    .checkbox-wrapper .checkmark {
+        background: transparent;
+    }
+
+    .tooltip {
+        font-size: 16px;
+        line-height:22px;
+        z-index:99;
+    }
+    .tooltip-inner {
+        padding: 15px 10px;
+        color: #fff;
+        text-align: left;
+        background-color: #000;
+        border-radius: 4px;
+    }
+
     </style>
 
 </head>

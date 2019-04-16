@@ -1477,6 +1477,9 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 
     function ajaxUpdatePartner(data, cardId) {
         $.ajax({
