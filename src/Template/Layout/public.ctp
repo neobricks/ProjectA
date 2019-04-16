@@ -191,6 +191,18 @@ $locale_options = Configure::read('locale.options');
         appearance: none;
     }
 
+    .custom-control-input:disabled ~ .custom-control-label {
+        color: #fff;
+    }
+
+    .custom-control-input:disabled ~ .custom-control-label::before {
+        background-color: transparent;
+    }
+
+    .custom-checkbox label.error {
+       padding: 0px 10px;
+       margin: 0px;
+    }
 
 
     </style>
