@@ -2,7 +2,7 @@
      aria-labelledby="modalSignUp" aria-hidden="true">
     <div class="modal-dialog modal-sm  modal-dialog-centered" role="document">
         <div class="modal-content bg-dark">
-            <div class="modal-header border-secondary">
+            <div class="modal-header border-secondary py-2">
                 <h5 class="modal-title text-warning">
                     <?= __('Sign Up') ?>
                 </h5>
@@ -86,6 +86,11 @@
                         #formSignUp .custom-checkbox .custom-control-input ~ .custom-control-label::before{
                             min-width: 20px;
                             height: 20px;
+                            align-self: flex-start;
+                        }
+
+                        #formSignUp .custom-checkbox .custom-control-input ~ .custom-control-label::after{
+                           top:3px;
                         }
                     </style>
                     <!-- /checkboxes terms -->
@@ -98,7 +103,7 @@
                                     type="submit">
                                 <?= __('Register') ?>
                             </button>
-                            <p class="small text-left py-2 mb-0">
+                            <p class="small text-left mt-2 py-4 mb-0">
                                 <?= __('Already have an account?') ?>
                                 <a class="bold" href="javascript:void(0)"
                                    data-dismiss="modal"

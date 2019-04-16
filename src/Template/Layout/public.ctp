@@ -76,6 +76,11 @@ $locale_options = Configure::read('locale.options');
         position:relative; 
         margin-bottom:20px; 
     }
+
+    .material a{
+        text-decoration: underline;
+    }
+
     .material input 				{
         font-size:16px;
         padding:5px 10px;
