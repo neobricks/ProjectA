@@ -177,13 +177,13 @@
                             </span>
                         </div>
                         <div class="edit-checkbox">
-                            <div class="form-check flex-column">
+                            <div class="form-check custom-control custom-checkbox ">
                                 <input type='hidden' name="content_creators[type_of_content_gameplay][][<?= $type_of_content['value'] ?>]" value="0" />
-                                <input class="form-check-input"
+                                <input class="form-check-input custom-control-input"
                                         type="checkbox"
                                         name="content_creators[type_of_content_gameplay][]"
                                         id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
-                                <label class="form-check-label w-100"
+                                <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
                                         <?= $type_of_content['label'] ?>
                                 </label>
@@ -216,13 +216,13 @@
                             </span>
                         </div>
                         <div class="edit-checkbox">
-                            <div class="form-check flex-column">
+                            <div class="form-check custom-control custom-checkbox">
                                 <input type='hidden' name="content_creators[channel_about][][<?= $channel_about['value'] ?>]" value="0" />
-                                <input class="form-check-input"
+                                <input class="form-check-input custom-control-input "
                                         type="checkbox"
                                         name="content_creators[channel_about][]"
                                         id="<?= 'channel_about_' . $channel_about['value'] ?>"/>
-                                <label class="form-check-label w-100"
+                                <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'channel_about_' . $channel_about['value'] ?>">
                                         <?= $channel_about['label'] ?>
                                 </label>
@@ -233,61 +233,17 @@
 
                 </div>
             </div>
-<?php /*
-            <div class="form-group row">
-                <label class="col-12 text-primary">
-                    <?= __('What game or games you talk about?') ?>*
-                </label>
-                <div class="col-12">
-                    <?php
-                    $talk_about_games_dummyData = [
-                        ['value' => '', 'label' => 'I talk about all kind of games', 'inputText' => false],
-                        ['value' => 'these_games', 'label' => 'I talk about these games:',
-                            'inputText' => true, 'placeholder' => 'Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…'],
-                        ['value' => 'types_of_games', 'label' => 'I talk about these types of games:',
-                            'inputText' => true, 'placeholder' => 'Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure… ']
-                    ];
-                    ?>
 
-                    <?php foreach ($talk_about_games_dummyData as $talk_about_games): ?>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox"
-                                   name="talk_about_games"
-                                   value="<?= $talk_about_games['value'] ?>"
-                                   id="<?= 'talk_about_games' . $talk_about_games['value'] ?>"/>
-                            <label class="form-check-label w-100"
-                                   for="<?= 'talk_about_games' . $talk_about_games['value'] ?>">
-                                <?php if (!$talk_about_games['inputText']): ?>
-                                    <?= $talk_about_games['label'] ?>
-                                <?php else: ?>
-                                    <span class="row">
-                                                            <span class="col-12">
-                                                                <?= $talk_about_games['label'] ?>
-                                                            </span>
-                                                            <span class="col-12">
-                                                                   <input id="<?= 'talk_about_games' . $talk_about_games['value'] ?>_text"
-                                                                          name="<?= 'talk_about_games' . $talk_about_games['value'] ?>_text"
-                                                                          type="text"
-                                                                          value=""
-                                                                          placeholder="<?= $talk_about_games['placeholder'] ?>"
-                                                                          class="form-control">
-                                                            </span>
-                                                        </span>
-                                <?php endif; ?>
-                            </label>
-                        </div>
-                    <?php endforeach; ?>
-
-
-                </div>
-            </div>
-*/ ?>
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
                 <div class="col-6"></div>
                 <div class="col-6">
-                    <?php echo $this->Form->submit(__('Submit'), [
-                        'class' => 'btn btn-block btn-warning',
+                   <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-lg btn-primary float-right  mx-2 text-dark',
+                    ]); ?>
+
+                    <?php echo $this->Form->button(__('Cancel'), [
+                        'class' => 'btn btn-lg btn-secondary float-right mx-2',
                     ]); ?>
                 </div>
             </div>
