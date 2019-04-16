@@ -32,12 +32,12 @@ $showForm = false;
 
                         <!-- input name -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-sm-4 text-primary">
                                     <span class="align-middle">
                                       <?= __('Name') ?>
                                     </span>
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <div class="view py-2 px-3">
                                     <p>
                                         <?php
@@ -58,12 +58,12 @@ $showForm = false;
 
                         <!-- input surname -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-sm-4 text-primary">
                             <span class="align-middle">
                                 <?= __('Surname') ?>
                             </span>
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <div class="view py-2 px-3">
                                     <p>
                                         <?php
@@ -96,30 +96,27 @@ $showForm = false;
                         ?>
                         <!-- input languages -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-md-4 text-primary">
                                 <?= __('What languages do you speak?') ?>*
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-md-8">
                                 <div class="view py-2 px-3">
-
 
                                 </div>
                                 <div class="edit-language-input w-100">
-
                                     <div class="row mb-1 language-input">
                                         <input type="hidden" />
-                                        <div class="col-3">
+                                        <div class="col-12 col-md-3  py-1">
                                             <select class="custom-select language-code">
                                                 <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                     <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
                                                 <?php endforeach; ?>
-                                            </select>
-                                            
+                                            </select>                                            
                                         </div>
-                                        <label class="col-3 text-primary">
+                                        <label class="col-12 col-md-3  py-1 text-primary">
                                             <?= __('Proficiency') ?> *
                                         </label>
-                                        <div class="col-3">
+                                        <div class="col-6 col-md-3  py-1">
                                             <select class="custom-select language-prof"
                                                     readonly="">
                                                 <option value="native"> Native
@@ -127,7 +124,7 @@ $showForm = false;
                                             </select>
                                         </div>
 
-                                        <div class="col-3">
+                                        <div class="col-6 col-md-3 py-1">
                                             <button class="btn btn-link btn-add-language text-light pt-3">
                                                 Add another
                                             </button>
@@ -135,10 +132,11 @@ $showForm = false;
                                     </div>
 
                                     <div class="language-base d-none">
-
                                         <div class="row mb-1 language-input">
+                                            
                                             <input type="hidden" />
-                                            <div class="col-3">
+                                            <div class="col-12 col-md-3 py-1">
+                                            <hr class="border-light my-3 my-md-1">
                                                 <select  class="custom-select language-code">
                                                     <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                         <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
@@ -146,10 +144,10 @@ $showForm = false;
                                                 </select>
                                                 
                                             </div>
-                                            <label class="col-3 text-primary">
+                                            <label class="col-6 col-md-3 py-1 text-primary">
                                                 <?= __('Proficiency') ?> *
                                             </label>
-                                            <div class="col-3">
+                                            <div class="col-6 col-md-3 py-1col-12 col-md-3 py-1">
                                                 <select class="custom-select language-prof">
                                                     <?php foreach($language_profiencies as $lang_prof_key => $lang_prof_value): ?>
                                                         <option value="<?= $lang_prof_key ?>">
@@ -159,7 +157,7 @@ $showForm = false;
                                                 </select>
                                             </div>
 
-                                            <div class="col-3">
+                                            <div class="col-12 col-md-3 py-1">
                                                 <button type="button"
                                                         class="btn btn-link text-danger  btn-remove-language pt-3">
                                                     Remove
@@ -179,11 +177,11 @@ $showForm = false;
 
                         <!-- games you like -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-sm-4 text-primary">
                                 <?= __('What game or games you like to play') ?>
                                 *
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <div class="row  pb-2">
                                         <span class="col-12 text-warning">
                                             <?= __('I like to play these games:'); ?>
@@ -226,11 +224,11 @@ $showForm = false;
 
                         <!-- platforms -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-sm-4 text-primary">
                                 <?= __('What game platform(s) do you play?') ?>
                                 *
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <?php
                                 $platforms_dummyData = [
                                     ['value' => 'all_platforms', 'label' => 'All game platforms', 'inputText' => false],
@@ -290,15 +288,15 @@ $showForm = false;
 
                         <!-- nicknames -->
                         <div class="form-group row">
-                            <label class="col-4 text-primary">
+                            <label class="col-12 col-sm-4 text-primary">
                                 <?= __('Do you have an in-game nickname for any of these games?'); ?>
                             </label>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8">
                                 <div class="form-group row">
-                                    <label class="col-3 text-warning">
+                                    <label class="col-12 col-sm-3 text-warning">
                                         <?= __('Black Squad') ?>
                                     </label>
-                                    <div class="col-9">
+                                    <div class="col-12 col-sm-9">
                                         <div class="view py-2 px-3">
                                             <p>
                                                 <?php
