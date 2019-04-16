@@ -132,9 +132,9 @@
                     <!-- submit -->
                     <div class="form-group row mt-6 mb-0 submit-wrapper">
                         <div class="col-6"></div>
-                        <div class="col-6">
+                        <div class="col-6 text-right">
                             <?php echo $this->Form->submit(__('Submit'), [
-                                'class' => 'btn btn-block btn-warning',
+                                'class' => 'btn btn-lg btn-primary text-dark',
                             ]); ?>
                             <div class='error-wrapper'></div>
                         </div>

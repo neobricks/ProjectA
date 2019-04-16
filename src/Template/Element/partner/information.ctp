@@ -324,7 +324,7 @@ $showForm = false;
                             <div class="col-6"></div>
                             <div class="col-6 text-right">
                                 <?php echo $this->Form->submit(__('Submit'), [
-                                    'class' => 'btn btn-lg btn-warning',
+                                    'class' => 'btn btn-lg btn-primary text-dark',
                                 ]); ?>
 
                             </div>

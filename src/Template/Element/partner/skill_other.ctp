@@ -88,8 +88,12 @@
             <div class="form-group row mt-6 mb-0 submit-wrapper">
                 <div class="col-6"></div>
                 <div class="col-6">
-                    <?php echo $this->Form->submit(__('Submit'), [
-                        'class' => 'btn btn-block btn-warning',
+                   <?php echo $this->Form->submit(__('Submit'), [
+                        'class' => 'btn btn-lg btn-primary float-right  mx-2 text-dark',
+                    ]); ?>
+
+                    <?php echo $this->Form->button(__('Cancel'), [
+                        'class' => 'btn btn-lg btn-secondary float-right mx-2',
                     ]); ?>
                 </div>
             </div>
