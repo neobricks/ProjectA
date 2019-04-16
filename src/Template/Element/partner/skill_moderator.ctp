@@ -65,7 +65,6 @@
                     <?= __('Do you have previous experience as a moderator?') ?> *
                 </label>
                 <div class="col-8">
-                    
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
                             type="radio" name="moderators[moderatorExperient]" 
@@ -109,8 +108,6 @@
                             </label>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
             <!-- /partner games -->

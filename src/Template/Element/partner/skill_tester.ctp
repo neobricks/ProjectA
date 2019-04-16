@@ -23,14 +23,22 @@
                 <label class="col-4 text-primary">
                     <?= __('Do you have previous experience as a tester?') ?> *
                 </label>
+
                 <div class="col-8">
-                    <div class="form-check form-check-inline flex-column">
-                        <input class="form-check-input" type="radio" name="testers[testerExperient]" id="testerExperientYes" value="1">
-                        <label class="form-check-label" for="testerExperientYes"><?= __('Yes'); ?></label>
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="testers[testerExperient]" 
+                            id="testerExperientYes"
+                            value="1"/>
+
+                        <label class="form-radio-label custom-control-label" for="testerExperientYes"><?= __('Yes'); ?></label>
                     </div>
-                    <div class="form-check form-check-inline  flex-column">
-                        <input class="form-check-input" type="radio" name="testers[testerExperient]" id="testerExperientNo" value="0">
-                        <label class="form-check-label" for="testerExperientNo"><?= __('No') ?></label>
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="testers[testerExperient]" 
+                            id="testerExperientNo"
+                            value="0"/>
+                        <label class="form-check-label custom-control-label" for="testerExperientNo"><?= __('No') ?></label>
                     </div>
                 </div>
             </div>
@@ -50,12 +58,12 @@
                     ?>
 
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check form-check">
-                            <input class="form-check-input  flex-column" type="radio"
+                        <div class="custom-radio">
+                            <input class="form-check-input flex-column custom-control-input" type="radio"
                                    name="testers[type_of_tester]"
                                    value="<?= $game['value'] ?>"
                                    id="<?= 'game' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                    for="<?= 'game' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
@@ -125,21 +133,21 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'other_games', 'label' => 'Other games'],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check">
+                        <div class="form-check custom-control custom-checkbox">
                             <input type='hidden' name="testers[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input" type="checkbox"
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
                                 id="<?= 'testers_' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                 for="<?= 'testers_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
             <!-- /partner games -->
