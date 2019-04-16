@@ -73,42 +73,47 @@ $locale_options = Configure::read('locale.options');
     
     
     .material .group 			  { 
-    position:relative; 
-    margin-bottom:10px; 
+        position:relative; 
+        margin-bottom:20px; 
     }
     .material input 				{
         font-size:16px;
         padding:5px 10px;
-        padding-top:20px;
+        padding-top:18px;
         display:block;
         width:100%;
         border:1px solid #757575;
         background: transparent;
         color:#fff;
+
+        font-size: 0.9375rem;
+        font-weight: 300;
+        border-color: #3a4048;
+        border-radius: 0.25rem;
+        line-height: 1.9;
     }
     input:focus 		{ outline:none; }
 
     /* LABEL ======================================= */
     .material label.mat				 {
-    color:#fff; 
-    font-size:18px;
-    font-weight:normal;
-    position:absolute;
-    pointer-events:none;
-    left: 10px;
-    top: 10px;
-    transition:0.2s ease all; 
-    -moz-transition:0.2s ease all; 
-    -webkit-transition:0.2s ease all;
-
+        color:#fff; 
+        font-size:14px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left: 10px;
+        top: 10px;
+        transition:0.2s ease all; 
+        -moz-transition:0.2s ease all; 
+        -webkit-transition:0.2s ease all;
     }
 
     /* active state */
     .material input:focus ~ label.mat, 
     .material input:valid ~ label.mat {
-    top:0px;
-    font-size:14px;
-    color:#f8991d;
+        top:0px;
+        font-size:14px;
+        color:#f8991d;
     }
 
     /* BOTTOM BARS ================================= */
