@@ -65,13 +65,21 @@
                     <?= __('Do you have previous experience as a moderator?') ?> *
                 </label>
                 <div class="col-8">
-                    <div class="form-check form-check-inline flex-column">
-                        <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientYes" value="1">
-                        <label class="form-check-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
+                    
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="moderators[moderatorExperient]" 
+                            id="moderatorExperientYes"
+                            value="1"/>
+
+                        <label class="form-radio-label custom-control-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
-                    <div class="form-check form-check-inline flex-column">
-                        <input class="form-check-input" type="radio" name="moderators[moderatorExperient]" id="moderatorExperientNo" value="0">
-                        <label class="form-check-label" for="moderatorExperientNo"><?= __('No') ?></label>
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="moderators[moderatorExperient]" 
+                            id="moderatorExperientNo"
+                            value="0"/>
+                        <label class="form-check-label custom-control-label" for="moderatorExperientNo"><?= __('No') ?></label>
                     </div>
                 </div>
             </div>
@@ -86,14 +94,16 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'other_games', 'label' => 'Other games'],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check">
+                        <div class="form-check custom-control custom-checkbox">
                             <input type='hidden' name="moderators[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input" type="checkbox"
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
                                 id="<?= 'moderators_' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                 for="<?= 'moderators_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>

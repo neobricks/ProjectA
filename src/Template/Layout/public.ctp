@@ -204,6 +204,15 @@ $locale_options = Configure::read('locale.options');
        margin: 0px;
     }
 
+    .custom-radio .custom-control-label::after {
+        width: 0.75rem;
+        height: 0.75rem;
+        top: 0.55rem;
+        left: 0.15rem;
+        background:#f8991d;
+        background-image: unset !important;
+    }
+
 
     </style>
 
