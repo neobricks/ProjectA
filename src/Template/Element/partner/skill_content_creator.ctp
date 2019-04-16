@@ -20,10 +20,10 @@
 
             <!-- username -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('How you want to be called') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -41,10 +41,10 @@
             <!-- channels -->
             <h6 class="text-primary"> Your main channel(s):</h6>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -58,10 +58,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Twitch') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -79,10 +79,10 @@
             <!-- social networls -->
             <h6 class="text-primary"> Your social network:</h6>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Twitter') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -96,10 +96,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Discord') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -113,13 +113,13 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Instagram') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
-                           
+                        
                         </p>
                     </div>
                     <div class="edit-text flex-column">
@@ -130,10 +130,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Other') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -150,10 +150,10 @@
 
 
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What type of content do you create?*') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $type_of_content_dummyData = [
                         ['value' => 'streams', 'label' => 'Streams'],
@@ -196,10 +196,10 @@
             </div>
 
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What is your channel about?') ?>*
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $channel_about_dummyData = [
                         ['value' => 'games', 'label' => 'Games'],
@@ -236,8 +236,8 @@
 
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
-                <div class="col-6"></div>
-                <div class="col-6">
+                <div class="col-12 col-sm-6"></div>
+                <div class="col-12 col-sm-6">
                    <?php echo $this->Form->submit(__('Submit'), [
                         'class' => 'btn btn-lg btn-primary float-right  mx-2 text-dark',
                     ]); ?>
