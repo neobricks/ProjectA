@@ -20,11 +20,11 @@
 
             <!-- have previous experience -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Do you have previous experience as a tester?') ?> *
                 </label>
 
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
                             type="radio" name="testers[testerExperient]" 
@@ -46,10 +46,10 @@
 
             <!-- type of tester -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What type of testing do you prefer?') ?> *
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $games_dummyData = [
                         ['value' => 'quality_assurance', 'label' => 'Quality Assurance (QA)'],
@@ -77,7 +77,7 @@
 
             <!-- type of games -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What game or games you have a lot of experience?') ?>
                 </label>
 
@@ -99,7 +99,7 @@
                     ["label" => "Others", "value" => "others"]
                 ]
                 ?>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php foreach ($type_of_games_dummyData as $type): ?>
                     <div class="row  pb-2">
                         <span class="col-12 text-warning">
@@ -126,10 +126,10 @@
 
             <!-- partner games -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
@@ -154,8 +154,8 @@
             
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
-                <div class="col-6"></div>
-                <div class="col-6">
+                <div class="col-12 col-sm-6"></div>
+                <div class="col-12 col-sm-6">
                    <?php echo $this->Form->submit(__('Submit'), [
                         'class' => 'btn btn-lg btn-primary float-right  mx-2 text-dark',
                     ]); ?>
