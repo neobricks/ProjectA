@@ -168,21 +168,21 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'other_games', 'label' => 'Other games'],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check">
+                        <div class="form-check custom-control custom-checkbox">
                             <input type='hidden' name="companies[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input" type="checkbox"
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
                                 id="<?= 'companies_' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                 for="<?= 'companies_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
             <!-- /partner games -->
