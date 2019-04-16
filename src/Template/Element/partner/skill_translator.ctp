@@ -23,19 +23,26 @@
                 <label class="col-4 text-primary">
                     <?= __('Do you have previous experience as a translator?') ?> *
                 </label>
+
                 <div class="col-8">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="translators[translatorExperient]" id="translatorExperientYes" value="1">
-                        <label class="form-check-label" for="translatorExperientYes"><?= __('Yes'); ?></label>
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="translators[translatorExperient]" 
+                            id="translatorExperientYes"
+                            value="1"/>
+
+                        <label class="form-radio-label custom-control-label" for="translatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="translators[translatorExperient]" id="translatorExperientNo" value="0">
-                        <label class="form-check-label" for="translatorExperientNo"><?= __('No') ?></label>
+                    <div class="form-check custom-radio form-check-inline">
+                        <input class="custom-control-input" 
+                            type="radio" name="translators[translatorExperient]" 
+                            id="translatorExperientNo"
+                            value="0"/>
+                        <label class="form-check-label custom-control-label" for="translatorExperientNo"><?= __('No') ?></label>
                     </div>
                 </div>
             </div>
             <!-- /have previous experience -->
-
 
             <!-- how do you translate -->
             <div class="form-group row">
@@ -55,7 +62,7 @@
                         </p>
                     </div>
                     <div class="edit-textarea flex-column">
-                        <textarea class="form-control" name="translators[translate_example]"></textarea>
+                        <textarea class="form-control" name="translators[translate_example]" rows="5"></textarea>
                     </div>                    
                 </div>
             </div>
@@ -70,14 +77,16 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'other_games', 'label' => 'Other games'],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check">
+                        <div class="form-check custom-control custom-checkbox">
                             <input type='hidden' name="translators[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input" type="checkbox"
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
                                 id="<?= 'translators_' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                 for="<?= 'translators_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
