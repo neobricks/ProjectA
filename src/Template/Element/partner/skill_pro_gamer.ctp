@@ -20,10 +20,10 @@
 
             <!-- username -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('How you want to be called') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -41,10 +41,10 @@
             <!-- channels -->
             <h6 class="text-primary"> Your main channel(s):</h6>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -58,10 +58,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Twitch') ?>
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
                         <p>
                            
@@ -79,11 +79,11 @@
 
             <!-- pro gamer at -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('What game or games you like to play') ?>
                     *
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <div class="row  pb-2">
                             <span class="col-12 text-warning">
                                 <?= __('I am pro at these games:'); ?>
@@ -126,10 +126,10 @@
 
             <!-- partner games -->
             <div class="form-group row">
-                <label class="col-4 text-primary">
+                <label class="col-12 col-sm-4 text-primary">
                     <?= __('Would you like to partner for?') ?> *
                 </label>
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
@@ -154,8 +154,8 @@
 
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
-                <div class="col-6"></div>
-                <div class="col-6">
+                <div class="col-12 col-sm-6"></div>
+                <div class="col-12 col-sm-6">
                    <?php echo $this->Form->submit(__('Submit'), [
                         'class' => 'btn btn-lg btn-primary float-right  mx-2 text-dark',
                     ]); ?>
