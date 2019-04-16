@@ -230,7 +230,18 @@ $locale_options = Configure::read('locale.options');
         background-color: #000;
         border-radius: 4px;
     }
-
+    
+    #partner_skill_wrapper .card.skill .checkbox-wrapper {
+        left:0;
+        right: unset;
+    }
+    @media (min-width: 768px) {
+        #partner_skill_wrapper .card.skill .checkbox-wrapper {
+            right:0;
+            left: unset;
+        }
+    }
+    
     </style>
 
 </head>

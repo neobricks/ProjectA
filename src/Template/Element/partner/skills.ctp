@@ -103,17 +103,19 @@
                     <div class="skills-wrapper row py-2">
                         
                         <?php foreach ($skills_dummyData as $skill): ?>
-                            <div class="col-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
                                 <div class="skill card h-100">
                                     <div class="card-body p-0">
-                                        <div class="row" data-toggle="tooltip" data-placement="bottom" title="<?= $skill['description']; ?>">
+                                        <div class="row" 
+                                            style="min-height:40px;"
+                                            data-toggle="tooltip" data-placement="bottom" title="<?= $skill['description']; ?>">
                                             <div class="col-12">
                                                 <?= $this->Html->image($skill['img_path'], [
-                                                    'class' => 'w-100 img-fluid',
+                                                    'class' => 'w-100 img-fluid d-none d-sm-block',
                                                 ]) ?>
                                             </div>
                                             <div class="col-10 mx-auto">
-                                                <h5 class="lh-1 text-center py-1 m-0"><?= $skill['title']; ?></h5>
+                                                <h5 class="lh-1 text-left text-sm-center pl-5 pl-sm-0 py-1 m-0"><?= $skill['title']; ?></h5>
                                             </div>
                                             <label class="checkbox-wrapper">
                                                 <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="0" />
@@ -127,7 +129,46 @@
                                         </div>
                                     </div>
                                 </div>
+                                <button type="button" class="btn d-block d-sm-none" 
+                                    data-toggle="modal" data-target="#modal<?= $skill['code']; ?>"                
+                                    style="
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        background: transparent;
+                                        box-shadow: unset; ">
+                                    <i class="fas fa-2x fa-question-circle o-50"></i>
+                                </button>
                             </div>
+                            
+                             <!-- modal -->
+                             <div class="modal fade" id="modal<?= $skill['code']; ?>" 
+                                tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="centered-modal modal-dialog" role="document" style="height: 100vh; display: flex; align-items: center;">
+                                    <div class="modal-content" style="background: #d4d4d4;">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <?= $this->Html->image($skill['img_path'], [
+                                                        'class' => 'w-100 img-fluid',
+                                                    ]) ?>
+                                                </div>
+                                                <div class="col-10 mx-auto">
+                                                    <h5 class="lh-1 text-center"><?= $skill['title']; ?></h5>
+                                                    <p class="lh-2 text-dark"> <?= $skill['description']; ?> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                    
+                            <!-- /modal -->
+                           
                         <?php endforeach; ?>                        
                     </div>
                     <!-- submit -->
