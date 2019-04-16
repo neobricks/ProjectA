@@ -66,4 +66,19 @@ class PartnerController extends AppController
         dump($response);
     }
 
+
+    public function testPartnerProgram2()
+    {
+        $this->autoRender = false;
+        $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
+        dump($user);
+
+        $userInfo = $this->GameweeveApi->user_info([
+            'email' => $user['email'],
+            'userNumber' => $user['userNumber']
+        ]);
+        dump($userInfo);
+    }
+
 }

@@ -157,6 +157,28 @@ class GameweeveApiComponent extends Component
      *
      **********************************************************************/
 
+    public function user_info($data) {
+        $params = [
+           'email',
+           'userNumber'
+        ];
+        $request_body = [];
+        $query_parameters = [];
+        foreach ($params as $param) {
+            if (isset($data[$param])) {
+                $query_parameters['data'][$param] = $data[$param];
+            }
+        }
+        $query_parameters['data'] = json_encode($query_parameters['data']);
+        $endpoint = '/getUserInfoJson.php';
+        try {
+            return $this->callAPI($endpoint, 'GET', $query_parameters, $request_body, []);
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {
+            return false;
+        }
+    }
+
+
     public function user_update($data) {
         $params = [
             'email',
@@ -181,7 +203,7 @@ class GameweeveApiComponent extends Component
             }
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
-        $endpoint = '/user_update.php';
+        $endpoint = '/updateUserInfoJson.php';
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {

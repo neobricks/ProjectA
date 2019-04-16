@@ -78,10 +78,10 @@ class AuthController extends AppController
                 if($response->result >= 0 && $response->token){
                     
                     $session = $this->getRequest()->getSession();
-
                     $user = [
                         'email' => $response->email,
                         'token' => $response->token,
+                        'userNumber' => $response->result,
                         'partner' => []
                     ];
                     $session->write('User', $user);
@@ -129,7 +129,7 @@ class AuthController extends AppController
             
         }
         $session->delete('User');
-        return $this->redirect($this->referer());
+        return $this->redirect('/');
     }
 
 
