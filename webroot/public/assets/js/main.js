@@ -1494,6 +1494,30 @@ function initMap() {
 
 
     }
+
+
+    $("#formPartnerInformation").on('change', '.checkbox-platform', function() {
+        var checked = 0;
+        if(this.checked) {
+            checked = 1;
+        }
+        var type_platform = $(this).attr('data-value');
+        if(type_platform === "all_platforms") {
+            if ( checked ) { 
+                $('.checkbox-platform:not([data-value="all_platforms"])').prop('checked', false);
+                $('.checkbox-platform:not([data-value="all_platforms"])').prop('disabled', true);
+            } else {
+                $('.checkbox-platform').prop('disabled', false);
+            }
+        } else if (type_platform === "others") {
+            if ( checked ) { 
+                $('#platform_others_text').removeClass('d-none');
+            } else {
+                $('#platform_others_text').addClass('d-none');
+            } 
+            
+        }
+    });
    
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({

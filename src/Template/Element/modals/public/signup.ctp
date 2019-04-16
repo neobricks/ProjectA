@@ -83,14 +83,15 @@
                         </div>
                     </div>
                     <style>
-                        #formSignUp .custom-checkbox .custom-control-input ~ .custom-control-label::before{
+                        .custom-checkbox .custom-control-input ~ .custom-control-label::before{
                             min-width: 20px;
                             height: 20px;
                             align-self: flex-start;
+                            margin-top: 4px;
                         }
 
-                        #formSignUp .custom-checkbox .custom-control-input ~ .custom-control-label::after{
-                           top:3px;
+                        .custom-checkbox .custom-control-input ~ .custom-control-label::after{
+                           top:7px;
                         }
                     </style>
                     <!-- /checkboxes terms -->

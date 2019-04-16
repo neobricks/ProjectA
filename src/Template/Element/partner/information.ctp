@@ -249,15 +249,18 @@ $showForm = false;
                                         </span>
                                     </div>
                                     <div class="edit-checkbox ">
-                                        <div class="form-check flex-row">
+                                        
+                                        <div class="custom-control custom-checkbox">
                                             <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" value="0" />
-                                            <input class="form-check-input"
+                                            <input class="form-check-input custom-control-input checkbox-platform" 
                                                    type="checkbox"
                                                    name="partner[platforms][]"
-                                                   id="<?= 'platform' . $platform['value'] ?>"/>
-                                            <label class="form-check-label w-100"
+                                                   id="<?= 'platform' . $platform['value'] ?>"
+                                                   data-value="<?=  $platform['value']?>"
+                                                   />
+                                            <label class="form-check-label w-100 custom-control-label"
                                                    for="<?= 'platform' . $platform['value'] ?>">
-
+                                                
                                                 <?php if (!$platform['inputText']): ?>
                                                     <?= $platform['label'] ?>
                                                 <?php else: ?>
@@ -266,17 +269,18 @@ $showForm = false;
                                                             <?= $platform['label'] ?>
                                                         </span>
                                                         <span class="col-12">
-                                                               <input id="<?= 'platform' . $platform['value'] ?>_text"
+                                                               <input id="<?= 'platform_' . $platform['value'] ?>_text"
                                                                       name="partner[platforms][][<?= $platform['value'] ?>_text]"
                                                                       type="text"
                                                                       value=""
                                                                       placeholder="<?= $platform['placeholder'] ?>"
-                                                                      class="form-control">
+                                                                      class="form-control d-none">
                                                         </span>
                                                     </span>
                                                 <?php endif; ?>
                                             </label>
                                         </div>
+
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -318,9 +322,9 @@ $showForm = false;
                         <!-- submit -->
                         <div class="form-group row mt-6 mb-0 submit-wrapper">
                             <div class="col-6"></div>
-                            <div class="col-6">
+                            <div class="col-6 text-right">
                                 <?php echo $this->Form->submit(__('Submit'), [
-                                    'class' => 'btn btn-block btn-warning',
+                                    'class' => 'btn btn-lg btn-warning',
                                 ]); ?>
 
                             </div>
