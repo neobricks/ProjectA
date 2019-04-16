@@ -133,25 +133,25 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'other_games', 'label' => 'Other games'],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check">
+                        <div class="form-check custom-control custom-checkbox">
                             <input type='hidden' name="pro_gamers[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input" type="checkbox"
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
                                 id="<?= 'pro_gamers_' . $game['value'] ?>"/>
-                            <label class="form-check-label"
+                            <label class="form-check-label custom-control-label"
                                 for="<?= 'pro_gamers_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
             <!-- /partner games -->
-            
+
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
                 <div class="col-6"></div>
