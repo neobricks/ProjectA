@@ -1,6 +1,6 @@
 <div class="modal fade" id="modalForgetPassword" tabindex="-1" role="dialog"
      aria-labelledby="modalForgetPassword" aria-hidden="true">
-    <div class="modal-dialog modal-dm modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content bg-dark">
             <div class="modal-header border-secondary">
                 <h5 class="modal-title text-warning">
@@ -16,36 +16,28 @@
                 <?php echo $this->Form->create(null, [
                     'id' => 'formForgetPassword',
                     'url' => ['controller' => 'auth', 'action' => 'register'],
-                    'class' => 'input-transparent',
+                    'class' => 'input-transparent  material pt-4',
                     'type' => 'post'
                 ]); ?>
-
                     <p> <?= __('Enter your email to reset your Password.'); ?></p>
 
                     <!-- Input Email -->
-                    <div class="form-group row">
-                        <label class="col-4 text-primary">
-                            <span class="align-middle">
-                                <?= __('Email') ?>
-                            </span>
-                        </label>
-                        <div class="col-8">
-                            <?php echo $this->Form->email('email', [
-                                'class' => 'form-control',
-                            ]); ?>
-                        </div>
+                    <div class="group">      
+                         <?php echo $this->Form->text('email', [
+                            'required' => true,                            
+                        ]); ?>
+                        <span class="highlight"></span>
+                        <label class="mat"><?= __("Email") ?></label>
                     </div>
                     <!-- /Input Email -->
-
-
+                    
                     <div class="form-group row mt-6 mb-0">
-                        <div class="col-4"></div>
-                        <div class="col-8">
+                        <div class="col-12">
                             <button class="btn btn-block btn-warning"
                                     type="submit">
                                 <?= __('Submit') ?>
                             </button>
-                            <p class="small text-center py-2 mb-0">
+                            <p class="small text-leftmt-2 py-4 mb-0">
                                 <?= __('Did you remember your password?') ?>
                                 <a class="bold" href="javascript:void(0)"
                                    data-dismiss="modal"
@@ -56,7 +48,6 @@
                             </p>
                         </div>
                     </div>
-
                 <?= $this->Form->end(); ?>
 
             </div>
