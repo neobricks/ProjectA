@@ -1,4 +1,8 @@
 <?php
+$this->assign('title', __('Partner Program'));
+//$this->Html->meta('keywords', 'keywords, are, sweet', ['block' => true]);
+//$this->Html->meta('description', 'Become a Partner', ['block' => true]);
+
 $firstName = '';
 $firstTime = true;
 if (!empty($user['partner'])) {

@@ -5,24 +5,22 @@
  * Date: 03/25/19
  * Time: 10:14 AM
  */
+$this->assign('title', __('Get closer to the games you love'));
+//$this->Html->meta('keywords', 'keywords, are, sweet', ['block' => true]);
+//$this->Html->meta('description', 'Become a Partner', ['block' => true]);
 ?>
 
 
 <!-- Banner -->
 <header class="header">
-    <div id="carousel_main"
-         class="carousel carousel-header slide carousel-fade fl-scn"
-         data-ride="carousel">
+    <div id="carousel_main" class="carousel carousel-header slide carousel-fade fl-scn" data-ride="carousel">
 
         <!-- Indicators -->
         <div class="po_carousel__wrapper">
             <ol class="list-unstyled carousel-indicators def po_carousel-indicators">
-                <li data-target="#carousel_main" data-slide-to="0"
-                    class=""></li>
-                <li data-target="#carousel_main" data-slide-to="1"
-                    class=""></li>
-                <li data-target="#carousel_main" data-slide-to="2"
-                    class="active"></li>
+                <li data-target="#carousel_main" data-slide-to="0" class=""></li>
+                <li data-target="#carousel_main" data-slide-to="1" class=""></li>
+                <li data-target="#carousel_main" data-slide-to="2" class="active"></li>
             </ol>
         </div>
         <!-- /Indicators -->
@@ -32,17 +30,14 @@
 
             <!-- carousel-item -->
             <div class="carousel-item active">
-                <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.jpg);">
+                <div class="h-fullscreen__page bs-c br-n ow-h header-banner" style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_1.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
                         <div class="overlay bg-dark_A-50 d-lg-none"></div>
                         <!-- lg-overlay -->
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2"
-                             data-carousel-animation="fade"></div>
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms"
-                             data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2" data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms" data-carousel-animation="fade"></div>
                     </div>
                     <div class="d-flex align-items-center h-100">
                         <div class="container">
@@ -69,17 +64,14 @@
 
             <!-- carousel-item -->
             <div class="carousel-item">
-                <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_2.jpg);">
+                <div class="h-fullscreen__page bs-c br-n ow-h header-banner" style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_2.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
                         <div class="overlay bg-dark_A-50 d-lg-none"></div>
                         <!-- lg-overlay -->
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2"
-                             data-carousel-animation="fade"></div>
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms"
-                             data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2" data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms" data-carousel-animation="fade"></div>
                     </div>
                     <div class="d-flex align-items-center h-100">
                         <div class="container">
@@ -106,17 +98,14 @@
 
             <!-- carousel-item -->
             <div class="carousel-item">
-                <div class="h-fullscreen__page bs-c br-n ow-h header-banner"
-                     style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_3.jpg);">
+                <div class="h-fullscreen__page bs-c br-n ow-h header-banner" style="background-image: url(<?= $this->request->getAttribute("webroot") ?>public/assets/img/banner_3.jpg);">
                     <div class="w-100 d-flex jc-c overlay">
                         <!-- sm-overlay -->
                         <div class="overlay bg-light_A-20 d-lg-none"></div>
                         <div class="overlay bg-dark_A-50 d-lg-none"></div>
                         <!-- lg-overlay -->
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2"
-                             data-carousel-animation="fade"></div>
-                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms"
-                             data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape__light light_A-2" data-carousel-animation="fade"></div>
+                        <div class="d-none d-lg-block position-absolute triangle-bottomleft a-out carousel-shape ad-200ms" data-carousel-animation="fade"></div>
                     </div>
                     <div class="d-flex align-items-center h-100">
                         <div class="container">
@@ -263,36 +252,27 @@ $latestQuest_dummyDate = [
 ?>
 
 
-<section
-        class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light"
-        id="latestQuests">
+<section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" id="latestQuests">
     <div class="container">
         <header class="header">
             <h2><?= __('Latest Quests') ?></h2>
         </header>
         <div class="position-relative">
             <!-- nav tabs -->
-            <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap"
-                id="most_popular_products-carousel" role="tablist">
-              
+            <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap" id="most_popular_products-carousel" role="tablist">
+
                 <li class="nav-item text-fnwp pg-none relative">
-                    <a class="nav-link active no-scroll" id="mp-0-tab" data-toggle="tab"
-                       href="#mp-0-c" role="tab" aria-controls="mp-0-c"
-                       aria-selected="true">
+                    <a class="nav-link active no-scroll" id="mp-0-tab" data-toggle="tab" href="#mp-0-c" role="tab" aria-controls="mp-0-c" aria-selected="true">
                         <?= __('Tests') ?>
                     </a>
                 </li>
                 <li class="nav-item text-fnwp relative">
-                    <a class="nav-link no-scroll" id="mp-1-tab" data-toggle="tab"
-                       href="#mp-1-c" role="tab" aria-controls="mp-1-c"
-                       aria-selected="false">
+                    <a class="nav-link no-scroll" id="mp-1-tab" data-toggle="tab" href="#mp-1-c" role="tab" aria-controls="mp-1-c" aria-selected="false">
                         <?= __('Translations') ?>
                     </a>
                 </li>
                 <li class="nav-item text-fnwp relative">
-                    <a class="nav-link no-scroll" id="mp-2-tab" data-toggle="tab"
-                       href="#mp-2-c" role="tab" aria-controls="mp-2-c"
-                       aria-selected="false">
+                    <a class="nav-link no-scroll" id="mp-2-tab" data-toggle="tab" href="#mp-2-c" role="tab" aria-controls="mp-2-c" aria-selected="false">
                         <?= __('Moderators') ?>
                     </a>
                 </li>
@@ -301,23 +281,18 @@ $latestQuest_dummyDate = [
 
 
             <!-- tab panes -->
-            <div id="color_sel_Carousel-content"
-                 class="tab-content fl-scn relative w-100">
+            <div id="color_sel_Carousel-content" class="tab-content fl-scn relative w-100">
 
                 <?php
                 $i = 0;
-                foreach ($latestQuest_dummyDate as $latestQuestCategory => $quests): ?>
+                foreach ($latestQuest_dummyDate as $latestQuestCategory => $quests) : ?>
                     <!-- tab item -->
-                    <div class="tab-pane fade <?php if ($i === 0) echo "show active" ?>"
-                         id="mp-<?= $i ?>-c" role="tabpanel"
-                         aria-labelledby="mp-<?= $i ?>-tab">
-                        <div class="owl-carousel gs-carousel"
-                             data-carousel-margin="30" data-carousel-nav="true"
-                             data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
+                    <div class="tab-pane fade <?php if ($i === 0) echo "show active" ?>" id="mp-<?= $i ?>-c" role="tabpanel" aria-labelledby="mp-<?= $i ?>-tab">
+                        <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
                             <!-- item -->
                             <?php
                             $j = 0;
-                            foreach ($quests as $quest): ?>
+                            foreach ($quests as $quest) : ?>
                                 <div class="item">
                                     <div class="item-cont">
                                         <figure class="owl_item_review">
@@ -332,9 +307,8 @@ $latestQuest_dummyDate = [
                                                     <button class="assign btn btn-outline-light btn-lg ml-4 rounded-0 px-2 p-1 ">
                                                         <?= __('ASSIGN'); ?>
                                                     </button>
-                                                    <a href="#"
-                                                       class="more-info ml-4 h6">
-                                                       <?= __('More info'); ?>
+                                                    <a href="#" class="more-info ml-4 h6">
+                                                        <?= __('More info'); ?>
                                                     </a>
                                                 </div>
                                             </div>
@@ -342,12 +316,14 @@ $latestQuest_dummyDate = [
                                     </div>
                                 </div>
                                 <!-- /.item -->
-                                <?php $j++; endforeach; ?>
+                                <?php $j++;
+                            endforeach; ?>
                         </div>
                     </div>
                     <!-- /.tab item -->
 
-                    <?php $i++; endforeach; ?>
+                    <?php $i++;
+                endforeach; ?>
 
 
             </div>
@@ -358,7 +334,7 @@ $latestQuest_dummyDate = [
 
 
 <!-- content area -->
-<section  id="callToActions" class="section gs_features">
+<section id="callToActions" class="section gs_features">
     <div class="row no-gutters">
 
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-1">
@@ -373,7 +349,7 @@ $latestQuest_dummyDate = [
         <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c position-relative feature feature-2">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 ml-auto">
-                <h3 class="mb-4 text-light"><?= __('Special for you'); ?></h3>
+                    <h3 class="mb-4 text-light"><?= __('Special for you'); ?></h3>
                     <p class="d-block text-light"><?= __('Sign up and receive information ahead of time so you can create awesome videos and more!'); ?></p>
                     <br><br>
                 </div>
@@ -393,8 +369,7 @@ $latestQuest_dummyDate = [
             </div>
         </div>
 
-        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative feature feature-4"
-            >
+        <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c position-relative feature feature-4">
             <div class="row h-100 align-items-center content">
                 <div class="col-12 col-md-8 mr-auto text-left text-dark">
                     <h3 class="mb-4 text-dark"><?= __('Become a Partner today'); ?></h3>
@@ -404,8 +379,8 @@ $latestQuest_dummyDate = [
                         at.
                     </p>
                     <?= $this->element('/pages/index/btnBecomeAPartner', [
-                            'btn_class' => 'btn-light',
-                            'wrapper_class' => 'fadeInLeft ad-900ms'
+                        'btn_class' => 'btn-light',
+                        'wrapper_class' => 'fadeInLeft ad-900ms'
                     ]); ?>
                 </div>
             </div>
@@ -476,36 +451,28 @@ $latestQuest_dummyDate = [
             <div class="row">
                 <div class="col-12" id="FaqAccordion">
                     <?php $i = 0;
-                    foreach ($FAQ_dummydata as $FAQ_item): ?>
+                    foreach ($FAQ_dummydata as $FAQ_item) : ?>
 
                         <div class="card">
-                            <div class="card-header p-0"
-                                 id="FAQ_question<?= $i ?>">
+                            <div class="card-header p-0" id="FAQ_question<?= $i ?>">
                                 <h5 class="mb-0 question">
-                                    <a href="javascript:void(0);"
-                                       data-toggle="collapse"
-                                       data-target="#FAQ_answer<?= $i ?>"
-                                       aria-expanded="true"
-                                       aria-controls="collapseOne"
-                                       class="px-2 py-4 collapsed">
+                                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#FAQ_answer<?= $i ?>" aria-expanded="true" aria-controls="collapseOne" class="px-2 py-4 collapsed">
                                         <?= $FAQ_item['question']; ?>
-                                        <span class="float-right closed"><i
-                                                    class="fas fa-chevron-circle-down"></i></span>
-                                        <span class="float-right opened"><i
-                                                    class="fas fa-chevron-circle-up"></i></span>
+                                        <span class="float-right closed"><i class="fas fa-chevron-circle-down"></i></span>
+                                        <span class="float-right opened"><i class="fas fa-chevron-circle-up"></i></span>
                                     </a>
                                 </h5>
                             </div>
 
-                            <div id="FAQ_answer<?= $i ?>" class="collapse"
-                                 data-parent="#FAQ_question<?= $i ?>">
+                            <div id="FAQ_answer<?= $i ?>" class="collapse" data-parent="#FAQ_question<?= $i ?>">
                                 <div class="card-body">
                                     <div class="answer"> <?= $FAQ_item['answer']; ?></div>
                                 </div>
                             </div>
                         </div>
 
-                        <?php $i++; endforeach; ?>
+                        <?php $i++;
+                    endforeach; ?>
                 </div>
             </div>
             <div class="row py-7">

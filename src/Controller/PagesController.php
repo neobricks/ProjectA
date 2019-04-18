@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Cake\Core\Configure;
+use Cake\Utility\Inflector;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
@@ -11,9 +12,9 @@ class PagesController extends AppController
 {
     public function display(...$path)
     {
+
         # src/Template/Layout/public.ctp
         $this->viewBuilder()->setLayout('public');
-
         $count = count($path);
         if (!$count) {
             # src/Template/Pages/public/index.ctp
@@ -24,7 +25,7 @@ class PagesController extends AppController
                 throw new ForbiddenException();
             }
             try {
-                $this->render('public/'.implode('/', $path));
+                $this->render('public/' . implode('/', $path));
             } catch (MissingTemplateException $exception) {
                 if (Configure::read('debug')) {
                     throw $exception;
@@ -32,8 +33,6 @@ class PagesController extends AppController
                 throw new NotFoundException();
             }
         }
-
-
     }
 
     public function index()
@@ -99,5 +98,4 @@ class PagesController extends AppController
             return $this->redirect(['action' => 'index']);
         }
     }
-
 }
