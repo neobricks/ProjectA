@@ -118,9 +118,8 @@ class AuthController extends AppController
         if (isset($data['email'])) {
             $response = $this->GameweeveApi->send_reset_pwd($data);
             if (isset($response->result)) {
-                dump($response);
                 // On this case we don't want a spoofer to know if a email exits on the database
-                $this->Flash->success(__('If your email is valid you will receive an email with instructions on how to reset your password!'));
+                $this->Flash->success(__('If this is a valid email, you will receive an email with instructions on how to reset your password!'));
             } else {
                 $this->Flash->error(__('We found an error reseting your password please, try again latter'));
             }
