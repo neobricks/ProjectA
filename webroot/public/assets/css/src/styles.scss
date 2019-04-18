@@ -1551,6 +1551,16 @@ nav.navbar {
   background: #242424;
   border: 2px solid #333;
 
+  .text-required-field {
+    display:none;
+  }
+
+  &.active {
+    .text-required-field {
+      display:block;
+    }
+  }
+
   .card-title {
     &::after {
       content: "";

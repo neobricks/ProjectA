@@ -4,6 +4,9 @@
             <span class="text-primary"><?= __('Caster') ?></span>
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
+                <span class="text-primary fs-3 fw-400 text-required-field">
+                    * Required field
+                </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
                     <?= __('Update'); ?>
