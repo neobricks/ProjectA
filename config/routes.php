@@ -70,7 +70,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 
 
     $routes->connect('/l/*', ['controller'=> 'App', 'action' => 'changeLang']);
-
+    $routes->connect('/app/:action', ['controller'=> 'App', 'action' => ':action']);
+    
     $routes->connect('/auth/:action/*', ['controller' => 'Auth']);
     
     $routes->connect('/partner/:action', ['controller' => 'Partner', 'action' => ':action']);

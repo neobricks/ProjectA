@@ -52,7 +52,11 @@ class AppController extends Controller
 
         $session = $this->getRequest()->getSession();
         $user = $session->read('User');
-
+        $gdpr = false;
+        if($this->Cookie->check('gdpr')){
+            $gdpr = $this->Cookie->read('gdpr');
+        }
+        
         /*
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
@@ -60,6 +64,7 @@ class AppController extends Controller
         //$this->loadComponent('Security');
 
         $this->set('user', $user);
+        $this->set('gdpr', $gdpr);
     }
 
     public function beforeFilter(Event $event)
@@ -77,6 +82,12 @@ class AppController extends Controller
     {
         $this->Cookie->write('lang', $lang);
         return $this->redirect($this->request->referer());
+    }
+
+    public function gdpr() {
+        $this->autoRender = false;
+        $this->Cookie->write('gdpr', json_encode(['accepted' => 1]));
+        echo json_encode([]);
     }
 
 }

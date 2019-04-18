@@ -282,6 +282,8 @@ $locale_options = Configure::read('locale.options');
 <!-- forget password -->
 <?= $this->element('/modals/public/forget_password'); ?>
 
+<!-- cookie GDPR -->
+<?= $this->element('/modals/public/cookie_gcpr'); ?>
 
 <!-- /Modals -->
 
