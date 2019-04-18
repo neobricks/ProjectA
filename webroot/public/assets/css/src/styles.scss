@@ -2166,3 +2166,25 @@ select.custom-select {
     left: unset;
   }
 }
+
+
+#popup_gdpr{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #242424;
+  z-index: 999999;
+  padding: 15px;
+  width: 300px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+
+  a{
+    text-decoration: underline;
+  }
+
+  &.ok{
+    display: none;
+  }
+}

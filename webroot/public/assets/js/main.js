@@ -1837,6 +1837,21 @@ function initMap() {
     }
 
 
+     //------------- Cookie Warning | GCPR ---------------- ------------------
+     $('body').on('click', '.btn-cookie-ok', function (event) {
+        $("#popup_gdpr").addClass('ok');
+        $.ajax({
+            url: '/app/gdpr/',
+            type: 'get',
+            error: function(error) {
+                
+            },
+            success: function(data) {
+            },
+        });
+    });
+    //------------------------------------------------------------------------
+
 })(jQuery);
 
 
