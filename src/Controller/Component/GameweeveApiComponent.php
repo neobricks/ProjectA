@@ -38,29 +38,30 @@ class GameweeveApiComponent extends Component
      * @return bool|mixed
      * @throws GuzzleHttp\Exception\GuzzleException
      */
-    private function callAPI($endpoint = null, $type = 'POST', $query_parameters = [],
-                             $request_body = [], $options = [], $file_path = null)
-    {
+    private function callAPI(
+        $endpoint = null,
+        $type = 'POST',
+        $query_parameters = [],
+        $request_body = [],
+        $options = [],
+        $file_path = null
+    ) {
         $headers = $this->http_default_headers;
 
-        //echo "HERERERE";
         $response = $this->client->request($type, $endpoint, [
             'form_params' => $request_body,
             'query' => $query_parameters,
             'headers' => $headers,
         ]);
-        //echo "WTF???";
         //dump($response);
         if (in_array($response->getStatusCode(), $this->http_status_ok)) {
             try {
-          //      dump($response->getBody());
                 return json_decode($response->getBody());
             } catch (Exception $e) {
                 dump($response->getBody());
                 throw new Exception("Error Decoding Json", 1);
-                
             }
-        }else{
+        } else {
             dump($response->getBody());
             return $response;
         }
@@ -68,7 +69,7 @@ class GameweeveApiComponent extends Component
         //return false;
     }
 
-   
+
     /**
      * @param $data
      * @return bool|mixed
@@ -92,13 +93,13 @@ class GameweeveApiComponent extends Component
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/registerJson.php';
         try {
-            return $this->callAPI($endpoint, 'POST', $query_parameters );
+            return $this->callAPI($endpoint, 'POST', $query_parameters);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
-            
+
             return false;
         }
     }
-      /**
+    /**
      * @param $data
      * @return bool|mixed
      */
@@ -116,7 +117,7 @@ class GameweeveApiComponent extends Component
             }
         }
         $query_parameters['data']['token'] = 'yyyy';
-        
+
         //dump($query_parameters);
 
         $query_parameters['data'] = json_encode($query_parameters['data']);
@@ -149,7 +150,49 @@ class GameweeveApiComponent extends Component
             return false;
         }
     }
+    public function send_reset_pwd($data)
+    {
+        $params = [
+            'email',
+        ];
+        $request_body = [];
+        $query_parameters = [];
+        foreach ($params as $param) {
+            if (isset($data[$param])) {
+                $query_parameters['data'][$param] = $data[$param];
+            }
+        }
+        $query_parameters['data'] = json_encode($query_parameters['data']);
+        $endpoint = '/sendEmailJson.php';
+        try {
+            return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {
+            return false;
+        }
+    }
+    public function change_pwd($data)
+    {
+        $params = [
+            'xyz',
+            'key',
+            'pw',
+        ];
+        $request_body = [];
+        $query_parameters = [];
+        foreach ($params as $param) {
+            if (isset($data[$param])) {
+                $query_parameters['data'][$param] = $data[$param];
+            }
+        }
+        $query_parameters['data'] = json_encode($query_parameters['data']);
+        $endpoint = '/changePWJson.php';
 
+        try {
+            return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {
+            return false;
+        }
+    }
 
     /**********************************************************************
      *
@@ -157,10 +200,11 @@ class GameweeveApiComponent extends Component
      *
      **********************************************************************/
 
-    public function user_info($data) {
+    public function user_info($data)
+    {
         $params = [
-           'email',
-           'userNumber'
+            'email',
+            'userNumber'
         ];
         $request_body = [];
         $query_parameters = [];
@@ -179,7 +223,8 @@ class GameweeveApiComponent extends Component
     }
 
 
-    public function user_update($data) {
+    public function user_update($data)
+    {
         $params = [
             'email',
             'userID',
@@ -212,7 +257,8 @@ class GameweeveApiComponent extends Component
     }
 
 
-    public function user_verify($data) {
+    public function user_verify($data)
+    {
         $params = [
             'key',
             'xyz'
@@ -228,9 +274,8 @@ class GameweeveApiComponent extends Component
         $endpoint = '/verifyJson.php';
         try {
             return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
-        } catch (GuzzleHttp\Exception\GuzzleException $e) {      
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {
             return false;
         }
     }
-
 }

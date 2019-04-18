@@ -77,6 +77,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/partner-information', ['controller' => 'Partner']);
     
     $routes->connect('/verifyJson.php', ['controller' => 'Auth', 'action'=>'verifyEmail']);
+    $routes->connect('/changePwd.php', ['controller' => 'Auth', 'action'=>'reset-password']);
     
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'display']);
 

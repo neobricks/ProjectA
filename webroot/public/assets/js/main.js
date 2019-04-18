@@ -1239,8 +1239,8 @@ function initMap() {
     function updateLanguageInputHidden(languageInput) {
         var lang = $(languageInput).find('.language-code').val();
         var prof = $(languageInput).find('.language-prof').val();
-        
-        $(languageInput).find('input[type="hidden"]').attr('name', 'partner[languages][]['+lang+']');
+
+        $(languageInput).find('input[type="hidden"]').attr('name', 'partner[languages][][' + lang + ']');
         $(languageInput).find('input[type="hidden"]').val(prof);
     }
 
@@ -1252,9 +1252,9 @@ function initMap() {
         updateLanguageInputHidden($(e.currentTarget).closest('.language-input'));
     });
 
-    $("body").on('change', '.form-check-input', function() {
+    $("body").on('change', '.form-check-input', function () {
         var checked = 0;
-        if(this.checked) {
+        if (this.checked) {
             checked = 1;
         }
         $(this).closest('.form-check').find('input[type="hidden"]').val(checked);
@@ -1327,7 +1327,7 @@ function initMap() {
     //-------------- jQuery smooth scrolling anchor navigation ---------------
     $(document).ready(function () {
         $('a').on('click', function (e) {
-            if ((this).hasClass('no-scroll')) return;
+            if ($(this).hasClass('no-scroll')) return;
             var href = $(this).attr("href");
             //var hash = href.substr(href.indexOf("#"));
             var hash = $(this).prop('hash');
@@ -1359,7 +1359,7 @@ function initMap() {
             var hidden = $(this).find('input[type="hidden"]');
 
             var checked = 0;
-            if(checkbox.prop("checked")) {
+            if (checkbox.prop("checked")) {
                 checked = 1;
             }
             $(hidden).val(checked);
@@ -1388,9 +1388,11 @@ function initMap() {
         rules: {
             email: {
                 required: true,
+                email: true,
                 normalizer: function (value) {
                     return $.trim(value);
-                }
+                },
+
             },
             password: {
                 required: true,
@@ -1432,6 +1434,7 @@ function initMap() {
         rules: {
             email: {
                 required: true,
+                email: true,
                 normalizer: function (value) {
                     return $.trim(value);
                 }
@@ -1486,10 +1489,10 @@ function initMap() {
             url: '/partner/ajaxUpdatePartner',
             data: data,
             type: 'POST',
-            error: function(error) {
+            error: function (error) {
                 console.log(error);
             },
-            success: function(data) {
+            success: function (data) {
                 partnerCardInformationToView(cardId);
                 console.log(data);
             },
@@ -1499,29 +1502,29 @@ function initMap() {
     }
 
 
-    $("#formPartnerInformation").on('change', '.checkbox-platform', function() {
+    $("#formPartnerInformation").on('change', '.checkbox-platform', function () {
         var checked = 0;
-        if(this.checked) {
+        if (this.checked) {
             checked = 1;
         }
         var type_platform = $(this).attr('data-value');
-        if(type_platform === "all_platforms") {
-            if ( checked ) { 
+        if (type_platform === "all_platforms") {
+            if (checked) {
                 $('.checkbox-platform:not([data-value="all_platforms"])').prop('checked', false);
                 $('.checkbox-platform:not([data-value="all_platforms"])').prop('disabled', true);
             } else {
                 $('.checkbox-platform').prop('disabled', false);
             }
         } else if (type_platform === "others") {
-            if ( checked ) { 
+            if (checked) {
                 $('#platform_others_text').removeClass('d-none');
             } else {
                 $('#platform_others_text').addClass('d-none');
-            } 
-            
+            }
+
         }
     });
-   
+
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {
@@ -1578,22 +1581,22 @@ function initMap() {
         submitHandler: function (form) {
             $.ajax({
                 url: '/partner/ajaxUpdatePartner',
-                data:  $(form).serializeArray(),
+                data: $(form).serializeArray(),
                 type: 'POST',
-                error: function(error) {
+                error: function (error) {
                     console.log(error);
                 },
-                success: function(data) {
+                success: function (data) {
                     console.log(data);
                     $('.selected-skill').removeClass('active');
-                    $.each($('.skill-checkbox'), function( index, skillCheckbox) {
+                    $.each($('.skill-checkbox'), function (index, skillCheckbox) {
                         var value = $(skillCheckbox).val();
                         var isChecked = $(skillCheckbox).prop('checked');
-                        if(isChecked) {
-                            $('.selected-skill[data-skill="'+value+'"]').addClass('active');
-                            $("#"+ value + "_wrapper").removeClass('d-none').addClass('active');
+                        if (isChecked) {
+                            $('.selected-skill[data-skill="' + value + '"]').addClass('active');
+                            $("#" + value + "_wrapper").removeClass('d-none').addClass('active');
                         } else {
-                            $("#"+ value + "_wrapper").addClass('d-none').removeClass('active');
+                            $("#" + value + "_wrapper").addClass('d-none').removeClass('active');
                         }
 
                     });
@@ -1607,18 +1610,18 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-    
+
     //------------- Form Validation | Partner | Content Creator --------------
     $("#formPartnerContentCreator").validate({
         rules: {
-            'content_creators[username]': { required: true}, 
+            'content_creators[username]': { required: true },
             //'content_creators[youtube]': { required: true}, 
             //'content_creators[twitch]': { required: true}, 
             //'content_creators[twitter]': { required: true}, 
             //'content_creators[discord]': { required: true}, 
             //'content_creators[instagram]': { required: true}, 
-            'content_creators[type_of_content_gameplay][]': {required: true},
-            'content_creators[channel_about][]': {required: true}            
+            'content_creators[type_of_content_gameplay][]': { required: true },
+            'content_creators[channel_about][]': { required: true }
         },
         messages: {
             'content_creators[type_of_content_gameplay][]': {
@@ -1647,8 +1650,8 @@ function initMap() {
     //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({
         rules: {
-            'moderators[username]': { required: true}, 
-            'moderators[moderatorExperient]': { required: true},  
+            'moderators[username]': { required: true },
+            'moderators[moderatorExperient]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
@@ -1669,8 +1672,8 @@ function initMap() {
     //------------- Form Validation | Partner | Tester ------------------
     $("#formPartnerTester").validate({
         rules: {
-            'testers[type_of_tester]': { required: true},  
-            'testers[testerExperient]': { required: true},  
+            'testers[type_of_tester]': { required: true },
+            'testers[testerExperient]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
@@ -1691,23 +1694,23 @@ function initMap() {
     //------------- Form Validation | Partner | Gamer ------------------
     $("#formPartnerGamer").validate({
         rules: {
-            'pro_gamers[username]': { required: true},  
-            'pro_gamers[pro_games]': { required: true},
-            'pro_gamers[pro_type_games]': { required: true},
+            'pro_gamers[username]': { required: true },
+            'pro_gamers[pro_games]': { required: true },
+            'pro_gamers[pro_type_games]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             ajaxUpdatePartner(data, "#pro_gamers_wrapper");
         },
-        
+
     });
     //------------------------------------------------------------------------
 
     //------------- Form Validation | Partner | Translator ------------------------
     $("#formPartnerTranslator").validate({
         rules: {
-            'translators[translatorExperient]': { required: true}, 
-            'translators[translate_example]': { required: true}, 
+            'translators[translatorExperient]': { required: true },
+            'translators[translate_example]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
@@ -1725,12 +1728,12 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-     //------------- Form Validation | Partner | Caster ------------------
-     $("#formPartnerCaster").validate({
+    //------------- Form Validation | Partner | Caster ------------------
+    $("#formPartnerCaster").validate({
         rules: {
-            'casters[username]': { required: true},  
-            'casters[cast_games]': { required: true},
-            'casters[cast_type_games]': { required: true},
+            'casters[username]': { required: true },
+            'casters[cast_games]': { required: true },
+            'casters[cast_type_games]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
@@ -1802,13 +1805,13 @@ function initMap() {
             var html = "";
             $.each(language_items, function (index, lang_item) {
 
-               var lang_code =  $(lang_item).find('select.language-code').val();
-               var lang_label =  $(lang_item).find('select.language-code option:selected').text();
-               var prof =  $(lang_item).find('select.language-prof').val();
-               var prof_label =  $(lang_item).find('select.language-prof option:selected').text();
+                var lang_code = $(lang_item).find('select.language-code').val();
+                var lang_label = $(lang_item).find('select.language-code option:selected').text();
+                var prof = $(lang_item).find('select.language-prof').val();
+                var prof_label = $(lang_item).find('select.language-prof option:selected').text();
 
                 html += "<p>";
-                html += lang_label +  " : " + prof_label;
+                html += lang_label + " : " + prof_label;
                 html += "</p>";
             });
             $(editLanguageInput).parent().find('.view').html(html);
