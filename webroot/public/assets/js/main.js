@@ -1384,6 +1384,13 @@ function initMap() {
     //------------------------------------------------------------------------
 
     //------------- Form Validation | Sign Up --------------------------------
+
+    $.validator.addMethod("one_special", function (value) {
+        return /[\W]/.test(value);
+    });
+    $.validator.addMethod("one_uppercased", function (value) {
+        return /[A-Z]/.test(value);
+    })
     $("#formSignUp").validate({
         rules: {
             email: {
@@ -1396,7 +1403,9 @@ function initMap() {
             },
             password: {
                 required: true,
-                minlength: 6,
+                one_special: true,
+                one_uppercased: true,
+                minlength: 8,
                 normalizer: function (value) {
                     return $.trim(value);
                 }
@@ -1413,7 +1422,11 @@ function initMap() {
             }
         },
         messages: {
-            terms: " You must accept the Terms & Conditions"
+            terms: " You must accept the Terms & Conditions",
+            password: {
+                one_special: "Please enter at least one special character",
+                one_uppercased: "Please enter at least one uppercased character"
+            },
         },
         errorPlacement: function (error, element) {
             if (element.is(":radio")) {
@@ -1464,6 +1477,7 @@ function initMap() {
         rules: {
             email: {
                 required: true,
+                email: true,
                 normalizer: function (value) {
                     return $.trim(value);
                 }
