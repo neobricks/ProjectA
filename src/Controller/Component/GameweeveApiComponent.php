@@ -233,10 +233,4 @@ class GameweeveApiComponent extends Component
         }
     }
 
-
-
-
-
-
-
 }

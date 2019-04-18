@@ -42,7 +42,7 @@
 
     <!-- CSS main -->
     <?php echo $this->Html->css('/public/assets/css/dist/main.css'); ?>
-    <?php echo $this->Html->css('/public/assets/css/dist/styles.min.css'); ?>
+    <?php echo $this->Html->css('/public/assets/css/dist/styles.css'); ?>
     <?php echo $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css'); ?>
     
     <?= $this->fetch('css') ?>

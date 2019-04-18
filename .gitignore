@@ -1,5 +1,6 @@
 # Project folder #
 /project/*
+/node_modules
 
 # CakePHP specific files #
 ##########################
