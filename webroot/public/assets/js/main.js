@@ -1524,10 +1524,11 @@ function initMap() {
         var type_platform = $(this).attr('data-value');
         if (type_platform === "all_platforms") {
             if (checked) {
-                $('.checkbox-platform:not([data-value="all_platforms"])').prop('checked', false);
-                $('.checkbox-platform:not([data-value="all_platforms"])').prop('disabled', true);
+                $('.checkbox-platform:not([data-value="others"])').prop('checked', true);
+                //$('.checkbox-platform([data-value="others"])').prop('checked', true);
             } else {
-                $('.checkbox-platform').prop('disabled', false);
+                $('.checkbox-platform:not([data-value="others"])').prop('checked', false);
+                //$('.checkbox-platform').prop('disabled', false);
             }
         } else if (type_platform === "others") {
             if (checked) {
@@ -1536,6 +1537,10 @@ function initMap() {
                 $('#platform_others_text').addClass('d-none');
             }
 
+        } else {
+            if (!checked) {
+                $('.checkbox-platform[data-value="all_platforms"]').prop('checked', false);
+            }
         }
     });
 
@@ -1837,16 +1842,16 @@ function initMap() {
     }
 
 
-     //------------- Cookie Warning | GCPR ---------------- ------------------
-     $('body').on('click', '.btn-cookie-ok', function (event) {
+    //------------- Cookie Warning | GCPR ---------------- ------------------
+    $('body').on('click', '.btn-cookie-ok', function (event) {
         $("#popup_gdpr").addClass('ok');
         $.ajax({
             url: '/app/gdpr/',
             type: 'get',
-            error: function(error) {
-                
+            error: function (error) {
+
             },
-            success: function(data) {
+            success: function (data) {
             },
         });
     });
