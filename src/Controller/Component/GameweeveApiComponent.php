@@ -215,6 +215,8 @@ class GameweeveApiComponent extends Component
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/getUserInfoJson.php';
+        echo $endpoint;
+        dump($query_parameters);
         try {
             return $this->callAPI($endpoint, 'GET', $query_parameters, $request_body, []);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {

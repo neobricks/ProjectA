@@ -1,7 +1,7 @@
 <?php
 $firstName = '';
 $firstTime = true;
-if(!empty($user['partner'])) {
+if (!empty($user['partner'])) {
     $firstName = $user['partner']['name'];
     $firstTime = false;
 }
@@ -64,104 +64,3 @@ if(!empty($user['partner'])) {
 <div class="d-none">
     <i id="noInformedHtmlBase" class='text-light_A-50'>No informed</i>
 </div>
-
-
-
-
-<?php return;
-/**************************************
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */ ?>
-<ul class="nav nav-tabs step-anchor">
-    <li class="nav-item active">
-        <a href="#becomePartnerFlow-step-1"
-           class="nav-link">
-           <?= __('ACCOUNT') ?>
-        </a>
-    </li>
-    <li class="nav-item ">
-        <a href="#becomePartnerFlow-step-2"
-           class="nav-link">
-           <?= __('CHOOSE YOUR SKILL(S)') ?>
-        </a>
-    </li>
-    <li class="nav-item ">
-        <a href="#becomePartnerFlow-step-3"
-           class="nav-link">
-           <?= __('INFORMATION') ?>
-        </a>
-    </li>
-    <li class="nav-item ">
-        <a href="#becomePartnerFlow-step-4"
-           class="nav-link">
-           <?= __('TERMS') ?>
-        </a>
-    </li>
-</ul>
-<div class="sw-container tab-content">
-    <div id="becomePartnerFlow-step-1"
-         class="tab-pane step-content bg-dark py-5">
-        <div class="form-group row">
-            <label class="col-3 text-primary">
-                <?= __('Email') ?>
-            </label>
-            <div class="col-9">
-                <input name="email" type="email"
-                       class="form-control"
-                       value=""/>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-3 text-primary">
-                <?= __('Password') ?>
-            </label>
-            <div class="col-9">
-                <input name="password" type="password"
-                       class="form-control"
-                       value=""/>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-3 text-primary">
-                <?= __('Confirm Password') ?>
-            </label>
-            <div class="col-9">
-                <input name="confirm_password"
-                       type="password"
-                       class="form-control"
-                       value=""/>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- become partner flow: step 3 --->
-    <div id="becomePartnerFlow-step-3"
-         class="tab-pane step-content bg-dark">
-
-
-    </div>
-    <!-- /become partner flow: step 3 --->
-
-
-    <div id="becomePartnerFlow-step-4"
-         class="tab-pane step-content bg-dark">
-        Step Content
-    </div>
-</div>
-</div>
-<!-- /Become a partner flow -->
-</div>
-</div>
-</div>
-</div>
-<!-- /Become a partner modal  -->

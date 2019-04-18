@@ -13,17 +13,25 @@ class PartnerController extends AppController
 
         $session = $this->getRequest()->getSession();
         $user = $session->read('User');
-        
-        if(empty($user)) {
+
+        if (empty($user)) {
             $this->redirect($this->referer());
         }
-
     }
 
 
     public function index()
     {
         $this->viewBuilder()->setLayout('public');
+        //$session = $this->getRequest()->getSession();
+        //$user = $session->read('User');
+
+        //dump($user);
+        //$userInfo = $this->GameweeveApi->user_info([
+        //    'email' => $user['email'],
+        //    'userNumber' => $user['userNumber']
+        //]);
+        //dump($userInfo);
     }
 
 
@@ -34,12 +42,12 @@ class PartnerController extends AppController
         $user = $session->read('User');
 
         $form_data = $this->request->getData();
-        
+
         $form_data['email'] = $user['email'];
         $form_data['token'] = $user['token'];
-        
+
         $partnerProgram = [];
-        if($session->check('PartnerProgram')) {
+        if ($session->check('PartnerProgram')) {
             $partnerProgram = $session->read('PartnerProgram');
         }
 
@@ -57,7 +65,7 @@ class PartnerController extends AppController
         $this->autoRender = false;
         $session = $this->getRequest()->getSession();
         $partnerProgram = [];
-        if($session->check('PartnerProgram')) {
+        if ($session->check('PartnerProgram')) {
             $partnerProgram = $session->read('PartnerProgram');
         }
         dump($partnerProgram);
@@ -67,18 +75,19 @@ class PartnerController extends AppController
     }
 
 
-    public function testPartnerProgram2()
+    public function testGetPartnerInfo()
     {
         $this->autoRender = false;
         $session = $this->getRequest()->getSession();
         $user = $session->read('User');
+        echo "USER SESSION";
         dump($user);
-
+        echo "GETTING";
         $userInfo = $this->GameweeveApi->user_info([
             'email' => $user['email'],
             'userNumber' => $user['userNumber']
         ]);
+        echo "RESULT";
         dump($userInfo);
     }
-
 }
