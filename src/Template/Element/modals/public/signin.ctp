@@ -40,7 +40,7 @@
 
                     <div class="form-group d-flex justify-content-between">
                         <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" checked="" id="rememberMeCheck">
+                        <input name="rememberme" type="checkbox" class="custom-control-input" checked="" id="rememberMeCheck">
                         <label class="custom-control-label" for="rememberMeCheck">Remember me</label> 
                         </div>
                         <a class="small-3" href="javascript:void(0);"

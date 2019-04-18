@@ -10,6 +10,7 @@ class AuthController extends AppController
     {
         parent::initialize();
         $this->loadComponent('GameweeveApi');
+        $this->loadComponent('Cookie');
     }
     /**
      * This function verify the email send by the api
@@ -85,7 +86,9 @@ class AuthController extends AppController
                         'partner' => []
                     ];
                     $session->write('User', $user);
-
+                    if(!empty($data['rememberme'])) {
+                        $this->Cookie->write('User', $user);
+                    }
                     $this->Flash->success(__('Welcome Back'));    
                     //TODO: Now we log the user!
                 }else{
@@ -110,6 +113,7 @@ class AuthController extends AppController
         $this->request->trustProxy = true;
         
         $session = $this->getRequest()->getSession();
+        $this->Cookie->delete('User');
         $user = $session->read('User');
        
         if(isset($user['email']) && isset($user['token']) ){

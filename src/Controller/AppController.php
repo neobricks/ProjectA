@@ -51,7 +51,14 @@ class AppController extends Controller
         $this->loadComponent('Cookie');
 
         $session = $this->getRequest()->getSession();
-        $user = $session->read('User');
+        if($this->Cookie->check('User')){
+            $user = $this->Cookie->read('User');
+        } else {
+            $user = $session->read('User');
+        }
+        
+        
+        
         $gdpr = false;
         if($this->Cookie->check('gdpr')){
             $gdpr = $this->Cookie->read('gdpr');
