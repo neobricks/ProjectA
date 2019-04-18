@@ -212,9 +212,6 @@ $locale_options = Configure::read('locale.options');
                         'alt' => 'Neobricks'
                     ]); ?>
                 </a>
-                <p class="lh-1">
-                    <small><?= __('We are NeoBricks, an experienced game publishing partner based in Germany.') ?></small>
-                </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/contact-us">
@@ -240,7 +237,7 @@ $locale_options = Configure::read('locale.options');
             </div>
 
             <div class="col-12 col-lg-9 ">
-                <div class="row bg-footer py-5">
+                <div class="row bg-footer py-2">
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12 col-lg-6">
@@ -249,7 +246,6 @@ $locale_options = Configure::read('locale.options');
                                 ]); ?>
                             </div>
                             <div class="col-12 col-lg-3 ml-auto ">
-                                <h6 class="text-uppercase fw-600 mb-4"><?= __('Community') ?></h6>
                                 <div class="nav flex-column">
                                     <a class="nav-link"
                                        href="https://store.steampowered.com/app/550650/Black_Squad/"><?= __('Game page') ?></a>
