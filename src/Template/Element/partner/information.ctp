@@ -26,11 +26,12 @@ $showForm = false;
                 <div class="row">
                     <div class="col-12">
 
-                        <?php echo $this->Form->create(null, [
+                        <?php 
+                        echo $this->Form->create(null, [
                             'id' => 'formPartnerInformation',
                             'url' => ['controller' => 'partner', 'action' => 'information'],
                             'class' => 'input-transparent',
-                            'type' => 'post'
+                            'type' => 'post',
                         ]); ?>
 
                         <!-- input name -->
@@ -43,16 +44,13 @@ $showForm = false;
                             <div class="col-12 col-sm-8">
                                 <div class="view py-2 px-3">
                                     <p>
-                                        <?php
-                                        if (!empty($user['name'])):
-                                            echo $user['name'];
-                                        endif;
-                                        ?>
+                                        
                                     </p>
                                 </div>
                                 <div class="edit-text flex-column">
                                     <?php echo $this->Form->text('partner[name]', [
                                         'class' => 'form-control',
+                                        'value' => !empty($userInfo['partner']['name']) ? $userInfo['partner']['name'] : '',
                                     ]); ?>
                                 </div>
                             </div>
@@ -79,6 +77,7 @@ $showForm = false;
                                 <div class="edit-text flex-column">
                                     <?php echo $this->Form->text('partner[surname]', [
                                         'class' => 'form-control',
+                                        'value' => !empty($userInfo['partner']['surname']) ? $userInfo['partner']['surname'] : '',
                                     ]); ?>
                                 </div>
                             </div>
