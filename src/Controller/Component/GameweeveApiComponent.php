@@ -27,7 +27,6 @@ class GameweeveApiComponent extends Component
         $this->client = new GuzzleHttp\Client(['base_uri' => $this->host]);
     }
 
-
     /**
      * @param null $endpoint
      * @param string $type
@@ -47,25 +46,24 @@ class GameweeveApiComponent extends Component
         $file_path = null
     ) {
         $headers = $this->http_default_headers;
-
+        if(!empty($options['headers'])) {
+            $headers = $options['headers'];            
+        }
         $response = $this->client->request($type, $endpoint, [
             'form_params' => $request_body,
             'query' => $query_parameters,
             'headers' => $headers,
         ]);
-        //dump($response);
         if (in_array($response->getStatusCode(), $this->http_status_ok)) {
             try {
                 return json_decode($response->getBody());
             } catch (Exception $e) {
-                dump($response->getBody());
+                
                 throw new Exception("Error Decoding Json", 1);
             }
         } else {
-            dump($response->getBody());
             return $response;
         }
-
         //return false;
     }
 
@@ -215,8 +213,7 @@ class GameweeveApiComponent extends Component
         }
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/getUserInfoJson.php';
-        echo $endpoint;
-        dump($query_parameters);
+
         try {
             return $this->callAPI($endpoint, 'GET', $query_parameters, $request_body, []);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
@@ -227,10 +224,7 @@ class GameweeveApiComponent extends Component
 
     public function user_update($data)
     {
-        $params = [
-            'email',
-            'userID',
-            'userNumber',
+        $json_params = [
             'partner',
             'skills',
             'content_creator',
@@ -242,17 +236,39 @@ class GameweeveApiComponent extends Component
             'company',
             'other',
         ];
-        $request_body = [];
+
+        $data_params = [
+            "email",
+            "userNumber",
+            "ranXkey",
+        ];
+
         $query_parameters = [];
-        foreach ($params as $param) {
+        $request_body = ['data' => [], 'json' => []];       
+        foreach ($json_params as $param) {
             if (isset($data[$param])) {
-                $query_parameters['data'][$param] = $data[$param];
+                $request_body['json'][$param] = $data[$param];
             }
         }
-        $query_parameters['data'] = json_encode($query_parameters['data']);
+        foreach ($data_params as $param) {
+            if (isset($data[$param])) {
+                $request_body['data'][$param] = $data[$param];
+            }            
+        }
+        $request_body['data']['ranXkey'] = "XXXX"; # !important somehow
+        $request_body['data'] = json_encode($request_body['data']);
+        $request_body['json'] = json_encode($request_body['json']);
+
+        $options = [];
+        $options['headers'] = [
+            'Content-Type' => 'application/x-www-form-urlencoded',
+            //'Content-Type' => 'multipart/form-data',
+            'Accept' => '*/*'
+        ];
+        
         $endpoint = '/updateUserInfoJson.php';
         try {
-            return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, []);
+            return $this->callAPI($endpoint, 'POST', $query_parameters, $request_body, $options);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
             return false;
         }

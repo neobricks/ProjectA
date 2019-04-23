@@ -23,15 +23,19 @@ class PartnerController extends AppController
     public function index()
     {
         $this->viewBuilder()->setLayout('public');
-        //$session = $this->getRequest()->getSession();
-        //$user = $session->read('User');
+        $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
 
-        //dump($user);
-        //$userInfo = $this->GameweeveApi->user_info([
-        //    'email' => $user['email'],
-        //    'userNumber' => $user['userNumber']
-        //]);
-        //dump($userInfo);
+        $response = $this->GameweeveApi->user_info([
+            'email' => $user['email'],
+            'userNumber' => $user['userNumber']
+        ]);
+        $userInfo = [];
+        if (isset($response->result)) {
+            $userInfo = json_decode($response->result, true);
+        }
+
+        $this->set('userInfo', $userInfo);        
     }
 
 
@@ -45,18 +49,17 @@ class PartnerController extends AppController
 
         $form_data['email'] = $user['email'];
         $form_data['token'] = $user['token'];
-
+        $form_data['userNumber'] = $user['userNumber'];
+        
         $partnerProgram = [];
         if ($session->check('PartnerProgram')) {
-            $partnerProgram = $session->read('PartnerProgram');
+           $partnerProgram = $session->read('PartnerProgram');
+        } else {
+            $session->write('PartnerProgram', $form_data);
         }
-
-        $partnerProgram = array_merge($partnerProgram, $form_data);
-
-        $session->write('PartnerProgram', $partnerProgram);
-
-        echo json_encode([]);
-        //$response = $this->GameweeveApi->user_update($form_data);
+        
+        $response = $this->GameweeveApi->user_update($form_data);
+        echo json_encode($response);
     }
 
 
@@ -64,14 +67,17 @@ class PartnerController extends AppController
     {
         $this->autoRender = false;
         $session = $this->getRequest()->getSession();
+        $user = $session->read('User');
+
+        
+
         $partnerProgram = [];
         if ($session->check('PartnerProgram')) {
             $partnerProgram = $session->read('PartnerProgram');
         }
-        dump($partnerProgram);
+        $partnerProgram['userNumber'] = $user['userNumber'];
 
         $response = $this->GameweeveApi->user_update($partnerProgram);
-        dump($response);
     }
 
 
@@ -80,14 +86,15 @@ class PartnerController extends AppController
         $this->autoRender = false;
         $session = $this->getRequest()->getSession();
         $user = $session->read('User');
-        echo "USER SESSION";
+        echo "";
+        echo "<h1>USER SESSION</h1>";
         dump($user);
-        echo "GETTING";
+       
         $userInfo = $this->GameweeveApi->user_info([
             'email' => $user['email'],
             'userNumber' => $user['userNumber']
         ]);
-        echo "RESULT";
+        echo "<h1>RESULT</h1>";
         dump($userInfo);
     }
 }
