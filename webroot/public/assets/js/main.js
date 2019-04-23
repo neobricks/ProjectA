@@ -1511,8 +1511,17 @@ function initMap() {
                 console.log(data);
             },
         });
+    }
 
-
+    function removeCheckedCheckboxOnSerializedArray(data) {
+        $.each(data, function (index, input_data) {
+            if(typeof input_data === 'object'){
+                if(input_data.value == "on") {
+                    data.splice(index, 1);
+                }
+            }
+        });
+        return data;
     }
 
 
@@ -1570,6 +1579,7 @@ function initMap() {
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#partner_info_wrapper");
         },
         errorPlacement: function (error, element) {
