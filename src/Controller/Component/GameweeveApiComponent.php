@@ -239,8 +239,7 @@ class GameweeveApiComponent extends Component
 
         $data_params = [
             "email",
-            "userNumber",
-            "ranXkey",
+            "userNumber"
         ];
 
         $query_parameters = [];
@@ -255,7 +254,7 @@ class GameweeveApiComponent extends Component
                 $request_body['data'][$param] = $data[$param];
             }            
         }
-        $request_body['data']['ranXkey'] = "XXXX"; # !important somehow
+        $request_body['data']['ranXkey'] = md5(uniqid(rand(), true));
         $request_body['data'] = json_encode($request_body['data']);
         $request_body['json'] = json_encode($request_body['json']);
 
