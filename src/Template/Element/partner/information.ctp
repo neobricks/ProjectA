@@ -196,7 +196,7 @@ $showForm = false;
                                            <input name="partner[like_games]"
                                                   type="text"
                                                   data-role="tagsinput"
-                                                  value=""
+                                                  value="<?=!empty($userInfo['partner']['like_games']) ? $userInfo['partner']['like_games'] : '';?>"
                                                   placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
                                                   class="form-control">
                                         </div>
@@ -214,7 +214,7 @@ $showForm = false;
                                             <input name="partner[like_type_games]"
                                                   type="text"
                                                   data-role="tagsinput"
-                                                  value=""
+                                                  value="<?=!empty($userInfo['partner']['like_type_games']) ? $userInfo['partner']['like_type_games'] : '';?>"
                                                   placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
                                                   class="form-control">
                                         </div>
@@ -237,7 +237,6 @@ $showForm = false;
                                     ['value' => 'desktop', 'label' => 'PC/Mac games', 'inputText' => false],
                                     ['value' => 'mobile', 'label' => 'Mobile games', 'inputText' => false],
                                     ['value' => 'console', 'label' => 'Console games', 'inputText' => false],
-
                                     ['value' => 'others', 'label' => 'Others',
                                         'inputText' => true, 'placeholder' => '']
                                 ];
@@ -249,13 +248,30 @@ $showForm = false;
                                         </span>
                                     </div>
                                     <div class="edit-checkbox ">
-                                        
-                                        <div class="custom-control custom-checkbox">
-                                            <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" value="0" />
+                                        <?php
+                                            $checked = 0;
+                                            $platform_text = "";
+                                            if(!empty($userInfo['partner']['platforms'])) {
+                                                foreach($userInfo['partner']['platforms'] as $p) {
+                                                    if(!empty($p[$platform['value']])) {
+                                                        
+                                                        $checked = $p[$platform['value']];
+                                                    }
+                                                    if ($platform['inputText']) {
+                                                        if (!empty($p[$platform['value'].'_text'])){
+                                                            $platform_text = $p[$platform['value'].'_text'];
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ?>
+                                        <div class="custom-control custom-checkbox form-check">
+                                            <input type='hidden' name="partner[platforms][][<?= $platform['value'] ?>]" value="<?= $checked; ?>" />
                                             <input class="form-check-input custom-control-input checkbox-platform" 
                                                    type="checkbox"
                                                    name="partner[platforms][]"
                                                    id="<?= 'platform' . $platform['value'] ?>"
+                                                   <?= $checked ? "checked" : ""  ?>
                                                    data-value="<?=  $platform['value']?>"
                                                    />
                                             <label class="form-check-label w-100 custom-control-label"
@@ -272,9 +288,9 @@ $showForm = false;
                                                                <input id="<?= 'platform_' . $platform['value'] ?>_text"
                                                                       name="partner[platforms][][<?= $platform['value'] ?>_text]"
                                                                       type="text"
-                                                                      value=""
+                                                                      value="<?= $platform_text; ?>"
                                                                       placeholder="<?= $platform['placeholder'] ?>"
-                                                                      class="form-control d-none">
+                                                                      class="form-control <?= $checked ? '' : 'd-none' ?>">
                                                         </span>
                                                     </span>
                                                 <?php endif; ?>
@@ -301,16 +317,19 @@ $showForm = false;
                                     <div class="col-12 col-sm-9">
                                         <div class="view py-2 px-3">
                                             <p>
-                                                <?php
-                                                if (!empty($user['in_game_nickname']['black_squad'])):
-                                                    echo $user['in_game_nickname']['black_squad'];
-                                                endif;
-                                                ?>
+                                               
                                             </p>
                                         </div>
+                                        <?php 
+                                            $nickname_blacksquad = '';
+                                            if(!empty($userInfo['partner']['nicknames'][0]['black_squad'])) {
+                                                $nickname_blacksquad = $userInfo['partner']['nicknames'][0]['black_squad'];
+                                            }
+                                        ?>
                                         <div class="edit-text">
                                             <?php echo $this->Form->text('partner[nicknames][][black_squad]', [
                                                 'class' => 'form-control',
+                                                'value' =>  $nickname_blacksquad
                                             ]); ?>
                                         </div>
                                     </div>
