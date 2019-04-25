@@ -33,8 +33,9 @@
                         </p>
                     </div>
                     <div class="edit-text  flex-column">
-                        <?php echo $this->Form->text('pro_gamers[username]', [
+                        <?php echo $this->Form->text('pro_gamer[username]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['pro_gamer']['username']) ? $userInfo['pro_gamer']['username'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -54,8 +55,9 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('pro_gamers[youtube]', [
+                        <?php echo $this->Form->text('pro_gamer[youtube]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['pro_gamer']['youtube']) ? $userInfo['pro_gamer']['youtube'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -71,8 +73,9 @@
                         </p>
                     </div>
                     <div class="edit-text ">
-                        <?php echo $this->Form->text('pro_gamers[twitch]', [
+                        <?php echo $this->Form->text('pro_gamer[twitch]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['pro_gamer']['twitch']) ? $userInfo['pro_gamer']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -96,10 +99,10 @@
 
                             </div>
                             <div class="edit-tag-input flex-column">
-                                <input name="pro_gamers[pro_games]"
+                                <input name="pro_gamer[pro_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value=""
+                                        value="<?=!empty($userInfo['pro_gamer']['pro_games']) ? $userInfo['pro_gamer']['pro_games'] : ''; ?>"
                                         placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
                                         class="form-control">
                             </div>
@@ -114,10 +117,10 @@
 
                             </div>
                             <div class="edit-tag-input  flex-column">
-                                <input  name="pro_gamers[pro_type_games]"
+                                <input  name="pro_gamer[pro_type_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value=""
+                                        value="<?=!empty($userInfo['pro_gamer']['pro_type_games']) ? $userInfo['pro_gamer']['pro_type_games'] : ''; ?>"
                                         placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
                                         class="form-control">
                             </div>
@@ -140,13 +143,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['pro_gamer']['partner_games'])) {
+                                foreach($userInfo['pro_gamer']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="pro_gamers[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="pro_gamer[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'pro_gamers_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : ""  ?>
+                                id="<?= 'pro_gamer_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'pro_gamers_' . $game['value'] ?>">
+                                for="<?= 'pro_gamer_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
