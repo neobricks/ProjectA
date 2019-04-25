@@ -33,7 +33,9 @@
                         </p>
                     </div>
                     <div class="edit-textarea">
-                        <textarea name="others[special_skill_text]" class="form-control"></textarea>
+                        <textarea name="other[special_skill_text]" class="form-control"><?php if(!empty($userInfo['other']['special_skill_text'])) {
+                                echo $userInfo['other']['special_skill_text'];
+                            } ?></textarea>
                     </div>                    
                 </div>
             </div>
@@ -53,7 +55,9 @@
                         </p>
                     </div>
                     <div class="edit-textarea">
-                        <textarea name="others[opportunities_text]" class="form-control"></textarea>
+                        <textarea name="other[opportunities_text]" class="form-control"><?php if(!empty($userInfo['other']['opportunities_text'])) {
+                                echo $userInfo['other']['opportunities_text'];
+                            } ?></textarea>
                     </div>                    
                 </div>
             </div>
@@ -72,13 +76,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['other']['partner_games'])) {
+                                foreach($userInfo['other']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="others[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="other[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'others_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : "" ?>
+                                id="<?= 'other_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'others_' . $game['value'] ?>">
+                                for="<?= 'other_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
