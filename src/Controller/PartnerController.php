@@ -51,15 +51,30 @@ class PartnerController extends AppController
         $form_data['token'] = $user['token'];
         $form_data['userNumber'] = $user['userNumber'];
         
-        $partnerProgram = [];
-        if ($session->check('PartnerProgram')) {
-           $partnerProgram = $session->read('PartnerProgram');
-        } else {
-            $session->write('PartnerProgram', $form_data);
-        }
+        $userInfo = [];
+        if ($session->check('userInfo')) {
+           $userInfo = $session->read('userInfo');
+        }   
         
-        $response = $this->GameweeveApi->user_update($form_data);
+        $userInfo = array_merge($userInfo, $form_data);
+
+        $response = $this->GameweeveApi->user_update($userInfo);
+        if($response) {
+            $session->write('userInfo', $userInfo);
+        }
         echo json_encode($response);
+    }
+
+    public function showUserInfo()
+    {
+        $this->autoRender = false;
+        $session = $this->getRequest()->getSession();
+        $userInfo = [];
+        if ($session->check('userInfo')) {
+           $userInfo = $session->read('userInfo');
+        }   
+        dump($userInfo);
+         
     }
 
 

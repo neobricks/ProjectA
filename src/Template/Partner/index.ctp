@@ -16,7 +16,7 @@ if (!empty($userInfo['partner'])) {
 
 
 <div class="bg-dark">
-    <div class="container">
+    <div id="PartnerProgramContainer" class="container <?= $firstTime ? 'firstTime' : 'preFilled' ?>">
         <div class="row">
             <div class="col-12">
 

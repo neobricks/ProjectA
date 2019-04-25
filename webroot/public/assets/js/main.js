@@ -1441,7 +1441,7 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
+    
     //------------- Form Validation | Sign In --------------------------------
     $("#formSignIn").validate({
         rules: {
@@ -1485,6 +1485,17 @@ function initMap() {
         }
     });
     //------------------------------------------------------------------------
+
+    
+    $(document).ready(function () {
+        if( $("#PartnerProgramContainer").hasClass('preFilled')) {
+            $( ".card-information" ).each(function( index ) {
+                partnerCardInformationToView('#'+$(this).attr('id'));
+            });
+        }
+    });
+
+    
 
     //------------- Form | Partner | Update (view/edit switch) ---------------
     $(document).ready(function () {
@@ -1608,27 +1619,24 @@ function initMap() {
             }
         },
         submitHandler: function (form) {
+
+            var data = $(form).serializeArray();
+            $.each(data, function (index, input_data) {
+                if(typeof input_data === 'object'){
+                    if(input_data.name == "skills[]") {
+                        data.splice(index, 1);
+                    }
+                }
+            });
             $.ajax({
                 url: '/partner/ajaxUpdatePartner',
-                data: $(form).serializeArray(),
+                data: data,
                 type: 'POST',
                 error: function (error) {
                     console.log(error);
                 },
                 success: function (data) {
-                    console.log(data);
-                    $('.selected-skill').removeClass('active');
-                    $.each($('.skill-checkbox'), function (index, skillCheckbox) {
-                        var value = $(skillCheckbox).val();
-                        var isChecked = $(skillCheckbox).prop('checked');
-                        if (isChecked) {
-                            $('.selected-skill[data-skill="' + value + '"]').addClass('active');
-                            $("#" + value + "_wrapper").removeClass('d-none').addClass('active');
-                        } else {
-                            $("#" + value + "_wrapper").addClass('d-none').removeClass('active');
-                        }
-
-                    });
+                    
                     partnerCardInformationToView("#partner_skill_wrapper");
                 },
             });
@@ -1643,25 +1651,26 @@ function initMap() {
     //------------- Form Validation | Partner | Content Creator --------------
     $("#formPartnerContentCreator").validate({
         rules: {
-            'content_creators[username]': { required: true },
+            'content_creator[username]': { required: true },
             //'content_creators[youtube]': { required: true}, 
             //'content_creators[twitch]': { required: true}, 
             //'content_creators[twitter]': { required: true}, 
             //'content_creators[discord]': { required: true}, 
             //'content_creators[instagram]': { required: true}, 
-            'content_creators[type_of_content_gameplay][]': { required: true },
-            'content_creators[channel_about][]': { required: true }
+            'content_creator[type_of_content_gameplay][]': { required: true },
+            'content_creator[channel_about][]': { required: true }
         },
         messages: {
-            'content_creators[type_of_content_gameplay][]': {
+            'content_creator[type_of_content_gameplay][]': {
                 required: 'Select at least one'
             },
-            'content_creators[channel_about][]': {
+            'content_creator[channel_about][]': {
                 required: 'Select at least one'
             }
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#content_creators_wrapper");
         },
         errorPlacement: function (error, element) {
@@ -1679,11 +1688,12 @@ function initMap() {
     //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({
         rules: {
-            'moderators[username]': { required: true },
-            'moderators[moderatorExperient]': { required: true },
+            'moderator[username]': { required: true },
+            'moderator[moderatorExperient]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#moderators_wrapper");
         },
         errorPlacement: function (error, element) {
@@ -1701,11 +1711,12 @@ function initMap() {
     //------------- Form Validation | Partner | Tester ------------------
     $("#formPartnerTester").validate({
         rules: {
-            'testers[type_of_tester]': { required: true },
-            'testers[testerExperient]': { required: true },
+            'tester[type_of_tester]': { required: true },
+            'tester[testerExperient]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#testers_wrapper");
         },
         errorPlacement: function (error, element) {
@@ -1723,12 +1734,13 @@ function initMap() {
     //------------- Form Validation | Partner | Gamer ------------------
     $("#formPartnerGamer").validate({
         rules: {
-            'pro_gamers[username]': { required: true },
-            'pro_gamers[pro_games]': { required: true },
-            'pro_gamers[pro_type_games]': { required: true },
+            'pro_gamer[username]': { required: true },
+            'pro_gamer[pro_games]': { required: true },
+            'pro_gamer[pro_type_games]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#pro_gamers_wrapper");
         },
 
@@ -1738,11 +1750,12 @@ function initMap() {
     //------------- Form Validation | Partner | Translator ------------------------
     $("#formPartnerTranslator").validate({
         rules: {
-            'translators[translatorExperient]': { required: true },
-            'translators[translate_example]': { required: true },
+            'translator[translatorExperient]': { required: true },
+            'translator[translate_example]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#translators_wrapper");
         },
         errorPlacement: function (error, element) {
@@ -1760,12 +1773,13 @@ function initMap() {
     //------------- Form Validation | Partner | Caster ------------------
     $("#formPartnerCaster").validate({
         rules: {
-            'casters[username]': { required: true },
-            'casters[cast_games]': { required: true },
-            'casters[cast_type_games]': { required: true },
+            'caster[username]': { required: true },
+            'caster[cast_games]': { required: true },
+            'caster[cast_type_games]': { required: true },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#casters_wrapper");
         },
     });
@@ -1777,6 +1791,7 @@ function initMap() {
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#companies_wrapper");
         },
     });
@@ -1788,6 +1803,7 @@ function initMap() {
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#others_wrapper");
         },
     });
@@ -1798,6 +1814,19 @@ function initMap() {
     noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
     function partnerCardInformationToView(cardId) {
+
+        $('.selected-skill').removeClass('active');
+        $.each($('.skill-checkbox'), function (index, skillCheckbox) {
+            var value = $(skillCheckbox).val();
+            var isChecked = $(skillCheckbox).prop('checked');
+            if (isChecked) {
+                $('.selected-skill[data-skill="' + value + '"]').addClass('active');
+                $("#" + value + "_wrapper").removeClass('d-none').addClass('active');
+            } else {
+                $("#" + value + "_wrapper").addClass('d-none').removeClass('active');
+            }
+        });
+
 
         var editTexts = $(cardId).find('.edit-text');
         $.each(editTexts, function (index, editText) {
