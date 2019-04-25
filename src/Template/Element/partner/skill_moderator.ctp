@@ -20,7 +20,6 @@
                         'class' => 'input-transparent',
                         'type' => 'post'
                     ]); ?>
-
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
@@ -33,8 +32,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('moderators[username]', [
+                        <?php echo $this->Form->text('moderator[username]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['moderator']['username']) ? $userInfo['moderator']['username'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('moderators[discord]', [
+                        <?php echo $this->Form->text('moderator[discord]', [
                             'class' => 'form-control',
                             'placeholder' => 'Discord ID'
                         ]); ?>
@@ -63,6 +63,17 @@
             <!-- /discord -->
 
             <!-- have previous experience -->
+            <?php 
+                $ratioYesChecked = false;
+                $ratioNoChecked = false;
+                if(!empty($userInfo['moderator']['moderatorExperient'])){
+                    if($userInfo['moderator']['moderatorExperient'] == 1) {
+                        $ratioYesChecked = true;
+                    } else {
+                        $ratioNoChecked = true;
+                    }
+                } 
+            ?>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Do you have previous experience as a moderator?') ?> *
@@ -70,16 +81,19 @@
                 <div class="col-12 col-sm-8">
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="moderators[moderatorExperient]" 
+                            type="radio" name="moderator[moderatorExperient]" 
                             id="moderatorExperientYes"
-                            value="1"/>
+                            value="1" 
+                            <?= $ratioYesChecked ? "checked" : ""  ?>
+                            />
 
                         <label class="form-radio-label custom-control-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="moderators[moderatorExperient]" 
+                            type="radio" name="moderator[moderatorExperient]" 
                             id="moderatorExperientNo"
+                            <?= $ratioNoChecked ? "checked" : ""  ?>
                             value="0"/>
                         <label class="form-check-label custom-control-label" for="moderatorExperientNo"><?= __('No') ?></label>
                     </div>
@@ -100,13 +114,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['moderator']['partner_games'])) {
+                                foreach($userInfo['moderator']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="moderators[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="moderator[partner_games][][<?= $game['value'] ?>]" value="<?= $checked; ?>" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'moderators_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : ""  ?>
+                                id="<?= 'moderator_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'moderators_' . $game['value'] ?>">
+                                for="<?= 'moderator_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
