@@ -67,7 +67,7 @@
                     ]
                 ];
                 ?>
-
+                
                 <div class="view-skills">
                     <div class="row">
                         <?php foreach ($skills_dummyData as $skill): ?>
@@ -87,7 +87,7 @@
                         <?php endforeach; ?>
                     </div>
                 </div> <!-- /view-skills -->
-
+                                            
                 <div class="edit-skills">
                     <h5 class="text-primary">
                         <?= __('Select your skill(s). You can choose more than one.'); ?>
@@ -99,12 +99,22 @@
                         'type' => 'post'
                     ]); ?>
 
-
                     <div class="skills-wrapper row py-2">
-                        
                         <?php foreach ($skills_dummyData as $skill): ?>
+
+                            <?php
+                                $checked = 0;
+                                if(!empty($userInfo['skills'])) {
+                                    foreach($userInfo['skills'] as $s) {
+                                        if(!empty($s[$skill['code']])) {
+                                            $checked = $s[$skill['code']];
+                                        }
+                                    }
+                                }
+                            ?>
+
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 px-2 py-0 mb-2">
-                                <div class="skill card h-100">
+                                <div class="skill card h-100 <?= $checked ? 'active' : '' ?>">
                                     <div class="card-body p-0">
                                         <div class="row" 
                                             style="min-height:40px;"
@@ -118,11 +128,12 @@
                                                 <h5 class="lh-1 text-left text-sm-center pl-5 pl-sm-0 py-1 m-0"><?= $skill['title']; ?></h5>
                                             </div>
                                             <label class="checkbox-wrapper">
-                                                <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="0" />
+                                                <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="<?= $checked ?>" />
                                                 <input class="checkbox skill-checkbox"
                                                        type="checkbox"
                                                        name="skills[]"
                                                        value="<?= $skill['code']; ?>"
+                                                       <?= $checked ? "checked" : ""  ?>
                                                        autocomplete="off"/>
                                                 <span class="checkmark"></span>
                                             </label>
