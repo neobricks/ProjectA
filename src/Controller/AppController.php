@@ -53,11 +53,10 @@ class AppController extends Controller
         $session = $this->getRequest()->getSession();
         if($this->Cookie->check('User')){
             $user = $this->Cookie->read('User');
+            $session->write('User', $user);
         } else {
             $user = $session->read('User');
         }
-        
-        
         
         $gdpr = false;
         if($this->Cookie->check('gdpr')){
