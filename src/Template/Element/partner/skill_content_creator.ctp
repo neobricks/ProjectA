@@ -13,7 +13,7 @@
                 </button>
             </span>
         </h4>
-        
+
         <?php echo $this->Form->create(null, [
                         'id' => 'formPartnerContentCreator',
                         'url' => ['controller' => 'partner', 'action' => 'information'],
@@ -33,8 +33,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[username]', [
+                        <?php echo $this->Form->text('content_creator[username]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['username']) ? $userInfo['content_creator']['username'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -54,8 +55,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[youtube]', [
+                        <?php echo $this->Form->text('content_creator[youtube]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['youtube']) ? $userInfo['content_creator']['youtube'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -71,8 +73,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[twitch]', [
+                        <?php echo $this->Form->text('content_creator[twitch]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['twitch']) ? $userInfo['content_creator']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -92,8 +95,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[twitter]', [
+                        <?php echo $this->Form->text('content_creator[twitter]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['twitter']) ? $userInfo['content_creator']['twitter'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -109,8 +113,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[discord]', [
+                        <?php echo $this->Form->text('content_creator[discord]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['discord']) ? $userInfo['content_creator']['discord'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -126,8 +131,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[instagram]', [
+                        <?php echo $this->Form->text('content_creator[instagram]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['instagram']) ? $userInfo['content_creator']['instagram'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -143,8 +149,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('content_creators[other]', [
+                        <?php echo $this->Form->text('content_creator[other]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['content_creator']['other']) ? $userInfo['content_creator']['other'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -174,6 +181,17 @@
                     ?>
 
                     <?php foreach ($type_of_content_dummyData as $type_of_content): ?>
+
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['content_creator']['type_of_content_gameplay'])) {
+                                foreach($userInfo['content_creator']['type_of_content_gameplay'] as $c) {
+                                    if(!empty($c[$type_of_content['value']])) {
+                                        $checked = $c[$type_of_content['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="view">
                             <span class="checkbox-value" data-value="<?= $type_of_content['value'] ?>">
                                 <?= $type_of_content['label'] ?>
@@ -181,10 +199,11 @@
                         </div>
                         <div class="edit-checkbox">
                             <div class="form-check custom-control custom-checkbox ">
-                                <input type='hidden' name="content_creators[type_of_content_gameplay][][<?= $type_of_content['value'] ?>]" value="0" />
+                                <input type='hidden' name="content_creator[type_of_content_gameplay][][<?= $type_of_content['value'] ?>]" value="<?= $checked; ?>" />
                                 <input class="form-check-input custom-control-input"
                                         type="checkbox"
-                                        name="content_creators[type_of_content_gameplay][]"
+                                        name="content_creator[type_of_content_gameplay][]"
+                                        <?= $checked ? "checked" : ""  ?>
                                         id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
                                 <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
@@ -193,8 +212,6 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
 
@@ -213,6 +230,18 @@
                     ?>
 
                     <?php foreach ($channel_about_dummyData as $channel_about): ?>
+
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['content_creator']['channel_about'])) {
+                                foreach($userInfo['content_creator']['channel_about'] as $c) {
+                                    if(!empty($c[$channel_about['value']])) {
+                                        $checked = $c[$channel_about['value']];
+                                    }
+                                }
+                            }
+                        ?>
+
                         <div class="view">
                             <span class="checkbox-value" data-value="<?= $channel_about['value'] ?>">
                                 <?= $channel_about['label'] ?>
@@ -220,10 +249,11 @@
                         </div>
                         <div class="edit-checkbox">
                             <div class="form-check custom-control custom-checkbox">
-                                <input type='hidden' name="content_creators[channel_about][][<?= $channel_about['value'] ?>]" value="0" />
+                                <input type='hidden' name="content_creator[channel_about][][<?= $channel_about['value'] ?>]" value="<?= $checked; ?>" />
                                 <input class="form-check-input custom-control-input "
                                         type="checkbox"
-                                        name="content_creators[channel_about][]"
+                                        name="content_creator[channel_about][]"
+                                        <?= $checked ? "checked" : ""  ?>
                                         id="<?= 'channel_about_' . $channel_about['value'] ?>"/>
                                 <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'channel_about_' . $channel_about['value'] ?>">
