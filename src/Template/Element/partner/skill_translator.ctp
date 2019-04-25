@@ -22,6 +22,17 @@
                     ]); ?>
 
             <!-- have previous experience -->
+            <?php 
+                $ratioYesChecked = false;
+                $ratioNoChecked = false;
+                if(!empty($userInfo['translator']['translatorExperient'])){
+                    if($userInfo['translator']['translatorExperient'] == 1) {
+                        $ratioYesChecked = true;
+                    } else {
+                        $ratioNoChecked = true;
+                    }
+                } 
+            ?>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Do you have previous experience as a translator?') ?> *
@@ -30,16 +41,18 @@
                 <div class="col-12 col-sm-8">
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="translators[translatorExperient]" 
+                            type="radio" name="translator[translatorExperient]" 
                             id="translatorExperientYes"
+                            <?= $ratioYesChecked ? "checked" : ""  ?>
                             value="1"/>
 
                         <label class="form-radio-label custom-control-label" for="translatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="translators[translatorExperient]" 
+                            type="radio" name="translator[translatorExperient]" 
                             id="translatorExperientNo"
+                            <?= $ratioNoChecked ? "checked" : ""  ?>
                             value="0"/>
                         <label class="form-check-label custom-control-label" for="translatorExperientNo"><?= __('No') ?></label>
                     </div>
@@ -65,7 +78,10 @@
                         </p>
                     </div>
                     <div class="edit-textarea flex-column">
-                        <textarea class="form-control" name="translators[translate_example]" rows="5"></textarea>
+                        <textarea class="form-control" name="translator[translate_example]" rows="5"><?php if(!empty($userInfo['translator']['translatorExperient'])) {
+                                echo $userInfo['translator']['translate_example'];
+                            } ?></textarea>
+                        
                     </div>                    
                 </div>
             </div>
@@ -84,13 +100,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['translator']['partner_games'])) {
+                                foreach($userInfo['translator']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="translators[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="translator[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'translators_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : ""  ?>
+                                id="<?= 'translator_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'translators_' . $game['value'] ?>">
+                                for="<?= 'translator_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
