@@ -13,7 +13,6 @@
                 </button>
             </span>
         </h4>
-
         <?php echo $this->Form->create(null, [
                         'id' => 'formPartnerTester',
                         'url' => ['controller' => 'partner', 'action' => 'information'],
@@ -22,6 +21,17 @@
                     ]); ?>
 
             <!-- have previous experience -->
+            <?php 
+                $ratioYesChecked = false;
+                $ratioNoChecked = false;
+                if(!empty($userInfo['tester']['testerExperient'])){
+                    if($userInfo['tester']['testerExperient'] == 1) {
+                        $ratioYesChecked = true;
+                    } else {
+                        $ratioNoChecked = true;
+                    }
+                } 
+            ?>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Do you have previous experience as a tester?') ?> *
@@ -30,15 +40,17 @@
                 <div class="col-12 col-sm-8">
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="testers[testerExperient]" 
+                            type="radio" name="tester[testerExperient]" 
                             id="testerExperientYes"
+                            <?= $ratioYesChecked ? "checked" : ""  ?>
                             value="1"/>
 
                         <label class="form-radio-label custom-control-label" for="testerExperientYes"><?= __('Yes'); ?></label>
                     </div>
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
-                            type="radio" name="testers[testerExperient]" 
+                            type="radio" name="tester[testerExperient]" 
+                            <?= $ratioNoChecked ? "checked" : ""  ?>
                             id="testerExperientNo"
                             value="0"/>
                         <label class="form-check-label custom-control-label" for="testerExperientNo"><?= __('No') ?></label>
@@ -48,6 +60,7 @@
             <!-- /have previous experience -->
 
             <!-- type of tester -->
+           
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('What type of testing do you prefer?') ?> *
@@ -61,10 +74,21 @@
                     ?>
 
                     <?php foreach ($games_dummyData as $game): ?>
+
+                        <?php 
+                            $checked = 0;
+                            if(!empty($userInfo['tester']['type_of_tester'])){
+                                if($userInfo['tester']['type_of_tester'] == $game['value']) {
+                                    $checked = 1;
+                                } 
+                            } 
+                        ?>
+
                         <div class="custom-radio">
                             <input class="form-check-input flex-column custom-control-input" type="radio"
-                                   name="testers[type_of_tester]"
+                                   name="tester[type_of_tester]"
                                    value="<?= $game['value'] ?>"
+                                   <?= $checked ? "checked" : ""  ?>
                                    id="<?= 'game' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
                                    for="<?= 'game' . $game['value'] ?>">
@@ -83,7 +107,7 @@
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('What game or games you have a lot of experience?') ?>
                 </label>
-
+                    
                 <?php
                 $type_of_games_dummyData = [
                     ["label" => "Shooter",   "value" => "shooter"],
@@ -113,10 +137,10 @@
 
                             </div>
                             <div class="edit-tag-input">
-                                <input name="testers[game_experience][<?= __($type['value']) ?>]"
+                                <input name="tester[game_experience][<?= $type['value'] ?>]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value=""
+                                        value="<?= !empty($userInfo['tester']['game_experience'][$type['value']]) ? $userInfo['tester']['game_experience'][$type['value']] : ''; ?>"
                                         class="form-control">
                             </div>
                         </span>
@@ -140,13 +164,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['tester']['partner_games'])) {
+                                foreach($userInfo['tester']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="testers[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="tester[partner_games][][<?= $game['value'] ?>]" value="<?= $checked; ?>" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'testers_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : ""  ?>
+                                id="<?= 'tester_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'testers_' . $game['value'] ?>">
+                                for="<?= 'tester_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
