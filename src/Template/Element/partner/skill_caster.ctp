@@ -33,8 +33,9 @@
                         </p>
                     </div>
                     <div class="edit-text flex-column">
-                        <?php echo $this->Form->text('casters[username]', [
+                        <?php echo $this->Form->text('caster[username]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['caster']['username']) ? $userInfo['caster']['username'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -54,8 +55,9 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('casters[youtube]', [
+                        <?php echo $this->Form->text('caster[youtube]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['caster']['youtube']) ? $userInfo['caster']['youtube'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -71,8 +73,9 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('casters[twitch]', [
+                        <?php echo $this->Form->text('caster[twitch]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['caster']['twitch']) ? $userInfo['caster']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -96,10 +99,10 @@
 
                             </div>
                             <div class="edit-tag-input flex-column">
-                                <input name="casters[cast_games]"
+                                <input name="caster[cast_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value=""
+                                        value="<?= !empty($userInfo['caster']['cast_games']) ? $userInfo['caster']['cast_games'] : ''; ?>"
                                         placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
                                         class="form-control">
                             </div>
@@ -114,10 +117,10 @@
 
                             </div>
                             <div class="edit-tag-input flex-column">
-                                <input  name="casters[cast_type_games]"
+                                <input  name="caster[cast_type_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value=""
+                                        value="<?= !empty($userInfo['caster']['cast_type_games']) ? $userInfo['caster']['cast_type_games'] : ''; ?>"
                                         placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
                                         class="form-control">
                             </div>
@@ -141,12 +144,12 @@
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="casters[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="caster[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'casters_' . $game['value'] ?>"/>
+                                id="<?= 'caster_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'casters_' . $game['value'] ?>">
+                                for="<?= 'caster_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
