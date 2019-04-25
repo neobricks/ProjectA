@@ -33,8 +33,9 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('companies[name]', [
+                        <?php echo $this->Form->text('company[name]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['company']['name']) ? $userInfo['company']['name'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -53,8 +54,9 @@
                         </p>
                     </div>
                     <div class="edit-text">
-                        <?php echo $this->Form->text('companies[name]', [
+                        <?php echo $this->Form->text('company[sales]', [
                             'class' => 'form-control',
+                            'value' => !empty($userInfo['company']['sale']) ? $userInfo['company']['sale'] : '',
                         ]); ?>
                     </div>
                 </div>
@@ -63,6 +65,24 @@
             <!-- /what company do/sale -->
 
             <!-- preferred business contact -->
+            <?php
+                # XGH
+                $email = "";
+                $phone = "";
+                $skype = "";
+                if(!empty($userInfo['company']['contact'])) {
+                    foreach($userInfo['company']['contact'] as $c) {
+                        if(!empty($c['email'])) {
+                            $email = $c['email'];
+                        } else if(!empty($c['phone'])) {
+                            $phone = $c['phone'];
+                        } else if(!empty($c['skype'])) {
+                            $skype = $c['skype'];
+                        } 
+                    }
+                }
+            ?>
+
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Preferred business contact') ?>
@@ -80,8 +100,9 @@
                                 </p>
                             </div>
                             <div class="edit-text">
-                                <?php echo $this->Form->text('companies[contact][][email]', [
+                                <?php echo $this->Form->text('company[contact][][email]', [
                                     'class' => 'form-control',
+                                    'value' => $email
                                 ]); ?>
                             </div>
                         </div>
@@ -97,8 +118,9 @@
                                 </p>
                             </div>
                             <div class="edit-text">
-                                <?php echo $this->Form->text('companies[contact][][phone]', [
+                                <?php echo $this->Form->text('company[contact][][phone]', [
                                     'class' => 'form-control',
+                                    'value' => $phone
                                 ]); ?>
                             </div>
                         </div>
@@ -114,8 +136,9 @@
                                 </p>
                             </div>
                             <div class="edit-text">
-                                <?php echo $this->Form->text('companies[contact][][skype]', [
+                                <?php echo $this->Form->text('company[contact][][skype]', [
                                     'class' => 'form-control',
+                                    'value' => $skype
                                 ]); ?>
                             </div>
                         </div>
@@ -138,13 +161,16 @@
                         </p>
                     </div>
                     <div class="edit-textarea">
-                        <textarea name="companies[kind_of_opportunities]" class="form-control"></textarea>
+                        <textarea name="company[kind_of_opportunities]" class="form-control"><?php if(!empty($userInfo['company']['kind_of_opportunities'])) {
+                                echo $userInfo['company']['kind_of_opportunities'];
+                            } ?></textarea>
                     </div>                    
                 </div>
             </div>
             <!-- /what company do/sale -->
 
             <!-- country list -->
+            <!--
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Country(ies) available for partnership:') ?>*
@@ -161,6 +187,7 @@
 
                 </div>
             </div>
+            -->
             <!-- /country list -->
 
             <!-- partner games -->
@@ -176,13 +203,24 @@
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['company']['partner_games'])) {
+                                foreach($userInfo['company']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
                         <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="companies[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input type='hidden' name="company[partner_games][][<?= $game['value'] ?>]" value="0" />
                             <input class="form-check-input custom-control-input"
                                  type="checkbox"
-                                id="<?= 'companies_' . $game['value'] ?>"/>
+                                 <?= $checked ? "checked" : "" ?>
+                                id="<?= 'company_' . $game['value'] ?>"/>
                             <label class="form-check-label custom-control-label"
-                                for="<?= 'companies_' . $game['value'] ?>">
+                                for="<?= 'company_' . $game['value'] ?>">
                                 <?= $game['label'] ?>
                             </label>
                         </div>
