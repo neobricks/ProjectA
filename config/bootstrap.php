@@ -200,7 +200,9 @@ Configure::write('locale.options',[
     'it' => ['label'=> 'Italiano'],
     'es' => ['label'=> 'Español'],
     'pt_BR' => ['label'=> 'Português'],
-    'ko' => ['label'=> '한국어']
+    'ru' => ['label' => 'Русский'],
+    'tr' => ['label' => 'Türkçe']    
+    # 'ko' => ['label'=> '한국어']
     # 'jp' => '日本'
 ]);
 
