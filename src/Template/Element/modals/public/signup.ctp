@@ -60,7 +60,17 @@
                                         ]); ?>
                                         <label class="custom-control-label form-check-label lh-3" for="signupCheckboxTerms">
                                             <small>
-                                                <?= __('I’ve read and accepted the Terms & Conditions and Privacy Policy'); ?>
+                                                <?php 
+                                                    $temsNConditionsLink = $this->Html->link(
+                                                        __('Terms & Conditions'),
+                                                        '/terms-and-conditions'
+                                                    );
+                                                    $privacyPolicysLink =  $this->Html->link(
+                                                        __('Privacy Policy'),
+                                                        '/privacy-policy'
+                                                    );
+                                                ?>
+                                                <?= __('I’ve read and accepted the {0} and {1}', $temsNConditionsLink,  $privacyPolicysLink); ?>
                                             </small>
                                         </label>
                                     </div>
