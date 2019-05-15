@@ -111,9 +111,6 @@ if (!empty($user)) $body_class = 'logged-in';
                     <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row m-0 p-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle small p-0" href="#" id="dropdownLocales" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $this->Html->image('/public/assets/img/flags/' . $locale_options[I18n::getLocale()]['flag'], [
-                                    'class' => 'fluid-image w-15'
-                                ]); ?>
                                 <?php echo $locale_options[I18n::getLocale()]['label'] ?>
                             </a>
                             <div class="dropdown-menu position-absolute">
@@ -121,12 +118,8 @@ if (!empty($user)) $body_class = 'logged-in';
                                     <a href="<?php echo $this->Url->build(
                                                     '/l/' . $locale_key
                                                 ); ?> " class="dropdown-item">
-                                        <?php echo $this->Html->image('/public/assets/img/flags/' . $locale_options[$locale_key]['flag'], [
-                                            'class' => 'fluid-image w-25'
-                                        ]); ?>
                                         <?php echo $locale_options[$locale_key]['label'] ?>
                                     </a>
-
                                 <?php endforeach; ?>
                             </div>
                         </li>

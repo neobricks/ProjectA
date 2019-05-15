@@ -194,13 +194,13 @@ Type::build('timestamp')
 
 
 Configure::write('locale.options',[
-    'en' => ['label'=> 'English', 'flag' => 'US'],
-    'fr' => ['label'=> 'Français', 'flag' => 'FR'],
-    'de' => ['label'=> 'Deutsch', 'flag' => 'DE'],
-    'it' => ['label'=> 'Italiano', 'flag' => 'IT'],
-    'es' => ['label'=> 'Español', 'flag' => 'ES'],
-    'pt_BR' => ['label'=> 'Português', 'flag' => 'BR'],
-    'ko' => ['label'=> '한국어', 'flag' => 'KR']
+    'en' => ['label'=> 'English'],
+    'fr' => ['label'=> 'Français'],
+    'de' => ['label'=> 'Deutsch'],
+    'it' => ['label'=> 'Italiano'],
+    'es' => ['label'=> 'Español'],
+    'pt_BR' => ['label'=> 'Português'],
+    'ko' => ['label'=> '한국어']
     # 'jp' => '日本'
 ]);
 
