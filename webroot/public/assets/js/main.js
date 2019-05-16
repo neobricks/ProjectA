@@ -1806,7 +1806,13 @@ function initMap() {
     $("#formPartnerTranslator").validate({
         rules: {
             'translator[translatorExperient]': { required: true },
-            'translator[translate_example]': { required: true },
+            'translator[translate_example]': { required: true, maxlength: 200},
+            'translator[partner_games][]': { required: true },
+        },
+        messages: {
+            'translator[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
