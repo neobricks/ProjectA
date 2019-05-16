@@ -43,7 +43,7 @@
             <!-- /username -->
 
             <!-- channels -->
-            <h6 class="text-primary"> Your main channel(s):</h6>
+            <h6 class="text-primary"> Your main channel(s): *</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
@@ -54,9 +54,9 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('pro_gamer[youtube]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control pro_gamer_channel',
                             'value' => !empty($userInfo['pro_gamer']['youtube']) ? $userInfo['pro_gamer']['youtube'] : '',
                         ]); ?>
                     </div>
@@ -72,15 +72,87 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text ">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('pro_gamer[twitch]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control pro_gamer_channel',
                             'value' => !empty($userInfo['pro_gamer']['twitch']) ? $userInfo['pro_gamer']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
             </div>
-            <!-- /channels -->
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Twitter') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('pro_gamer[twitter]', [
+                            'class' => 'form-control pro_gamer_channel',
+                            'value' => !empty($userInfo['pro_gamer']['twitter']) ? $userInfo['pro_gamer']['twitter'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Discord') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('pro_gamer[discord]', [
+                            'class' => 'form-control pro_gamer_channel',
+                            'value' => !empty($userInfo['pro_gamer']['discord']) ? $userInfo['pro_gamer']['discord'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Instagram') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('pro_gamer[instagram]', [
+                            'class' => 'form-control pro_gamer_channel',
+                            'value' => !empty($userInfo['pro_gamer']['instagram']) ? $userInfo['pro_gamer']['instagram'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Other') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('pro_gamer[other]', [
+                            'class' => 'form-control pro_gamer_channel',
+                            'value' => !empty($userInfo['pro_gamer']['other']) ? $userInfo['pro_gamer']['other'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <!-- /social networks -->
 
 
             <!-- pro gamer at -->
@@ -139,30 +211,43 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'other_games', 'label' => 'Other games'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <?php
-                            $checked = 0;
-                            if(!empty($userInfo['pro_gamer']['partner_games'])) {
-                                foreach($userInfo['pro_gamer']['partner_games'] as $c) {
-                                    if(!empty($c[$game['value']])) {
-                                        $checked = $c[$game['value']];
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['pro_gamer']['partner_games'])) {
+                                    foreach($userInfo['pro_gamer']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
                                     }
                                 }
-                            }
-                        ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="pro_gamer[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                 <?= $checked ? "checked" : ""  ?>
-                                id="<?= 'pro_gamer_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'pro_gamer_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="pro_gamer[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="pro_gamer[partner_games][]"
+                                        id="pro_gamer_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'pro_gamer_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>

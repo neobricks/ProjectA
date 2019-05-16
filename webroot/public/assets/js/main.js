@@ -1778,8 +1778,20 @@ function initMap() {
     $("#formPartnerGamer").validate({
         rules: {
             'pro_gamer[username]': { required: true,  maxlength: 16 },
+            'pro_gamer[youtube]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+            'pro_gamer[twitch]':    { require_from_group: [1, ".pro_gamer_channel"] }, 
+            'pro_gamer[twitter]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+            'pro_gamer[discord]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+            'pro_gamer[instagram]': { require_from_group: [1, ".pro_gamer_channel"] },
+            'pro_gamer[other]':     { require_from_group: [1, ".pro_gamer_channel"] },
             'pro_gamer[pro_games]': { required: true },
             'pro_gamer[pro_type_games]': { required: true },
+            'pro_gamer[partner_games][]': { required: true },
+        },
+        messages: {
+            'pro_gamer[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
