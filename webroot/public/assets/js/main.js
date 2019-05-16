@@ -1921,11 +1921,27 @@ function initMap() {
     //------------- Form Validation | Partner | Other ------------------
     $("#formPartnerOther").validate({
         rules: {
+            'other[partner_games][]': { required: true },
+            'other[special_skill_text]': {required: true, maxlength: 200}
+        },
+        messages: {
+            'other[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#others_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------
@@ -1954,6 +1970,13 @@ function initMap() {
             var value = $(editText).find('input').val();
             if (value === "") value = noInformedHtmlBase.clone();
             $(editText).parent().find('.view').html(value);
+        });
+
+        var editTextareas = $(cardId).find('.edit-textarea');
+        $.each(editTextareas, function (index, editTextarea) {
+            var value = $(editTextarea).find('textarea').val();
+            if (value === "") value = noInformedHtmlBase.clone();
+            $(editTextarea).parent().find('.view').html(value);
         });
 
         var editCheckboxes = $(cardId).find('.edit-checkbox');

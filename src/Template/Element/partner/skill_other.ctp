@@ -24,7 +24,7 @@
             <!-- special skill -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What is your special skill or experience?') ?>
+                    <?= __('What is your special skill or experience?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -45,7 +45,7 @@
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                             <span class="align-middle">
-                                <?= __('What kind of opportunities are you looking for?');?> *
+                                <?= __('What kind of opportunities are you looking for?');?>
                             </span>
                 </label>
                 <div class="col-12 col-sm-8">
@@ -72,30 +72,43 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'other_games', 'label' => 'Other games'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <?php
-                            $checked = 0;
-                            if(!empty($userInfo['other']['partner_games'])) {
-                                foreach($userInfo['other']['partner_games'] as $c) {
-                                    if(!empty($c[$game['value']])) {
-                                        $checked = $c[$game['value']];
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['other']['partner_games'])) {
+                                    foreach($userInfo['other']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
                                     }
                                 }
-                            }
-                        ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="other[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                 <?= $checked ? "checked" : "" ?>
-                                id="<?= 'other_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'other_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="other[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="other[partner_games][]"
+                                        id="other_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'other_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>

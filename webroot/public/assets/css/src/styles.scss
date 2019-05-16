@@ -1754,6 +1754,7 @@ label.error {
   }
 
   .edit-text,
+  .edit-textarea,
   .edit-checkbox,
   .edit-tag-input,
   .edit-language-input,
@@ -1775,6 +1776,7 @@ label.error {
     }
 
     .edit-text,
+    .edit-textarea,
     .edit-checkbox,
     .edit-tag-input {
       display: flex;
