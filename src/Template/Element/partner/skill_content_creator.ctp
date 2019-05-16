@@ -24,7 +24,7 @@
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('How you want to be called') ?>
+                    <?= __('How you want to be called') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -43,7 +43,7 @@
             <!-- /username -->
 
             <!-- channels -->
-            <h6 class="text-primary"> Your main channel(s):</h6>
+            <h6 class="text-primary"> Your main channel(s): *</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[youtube]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['youtube']) ? $userInfo['content_creator']['youtube'] : '',
                         ]); ?>
                     </div>
@@ -74,16 +74,12 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[twitch]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['twitch']) ? $userInfo['content_creator']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
             </div>
-            <!-- /channels -->
-
-            <!-- social networls -->
-            <h6 class="text-primary"> Your social network:</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Twitter') ?>
@@ -96,7 +92,7 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[twitter]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['twitter']) ? $userInfo['content_creator']['twitter'] : '',
                         ]); ?>
                     </div>
@@ -114,7 +110,7 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[discord]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['discord']) ? $userInfo['content_creator']['discord'] : '',
                         ]); ?>
                     </div>
@@ -132,7 +128,7 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[instagram]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['instagram']) ? $userInfo['content_creator']['instagram'] : '',
                         ]); ?>
                     </div>
@@ -150,7 +146,7 @@
                     </div>
                     <div class="edit-text flex-column">
                         <?php echo $this->Form->text('content_creator[other]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control content_creator_channel',
                             'value' => !empty($userInfo['content_creator']['other']) ? $userInfo['content_creator']['other'] : '',
                         ]); ?>
                     </div>
@@ -161,7 +157,7 @@
 
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What type of content do you create?*') ?>
+                    <?= __('What type of content do you create?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <?php
@@ -218,7 +214,7 @@
 
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What is your channel about?') ?>*
+                    <?= __('What is your channel about?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <?php
