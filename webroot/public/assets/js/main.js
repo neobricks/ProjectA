@@ -1835,8 +1835,20 @@ function initMap() {
     $("#formPartnerCaster").validate({
         rules: {
             'caster[username]': { required: true,  maxlength: 16 },
+            'caster[youtube]':   { require_from_group: [1, ".caster_channel"] }, 
+            'caster[twitch]':    { require_from_group: [1, ".caster_channel"] }, 
+            'caster[twitter]':   { require_from_group: [1, ".caster_channel"] }, 
+            'caster[discord]':   { require_from_group: [1, ".caster_channel"] }, 
+            'caster[instagram]': { require_from_group: [1, ".caster_channel"] },
+            'caster[other]':     { require_from_group: [1, ".caster_channel"] },
             'caster[cast_games]': { required: true },
             'caster[cast_type_games]': { required: true },
+            'caster[partner_games][]': { required: true },
+        },
+        messages: {
+            'caster[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();

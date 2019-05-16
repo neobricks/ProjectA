@@ -24,7 +24,7 @@
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('How you want to be called') ?>
+                    <?= __('How you want to be called') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -43,7 +43,7 @@
             <!-- /username -->
 
             <!-- channels -->
-            <h6 class="text-primary"> Your main channel(s):</h6>
+            <h6 class="text-primary"> Your main channel(s): *</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
@@ -54,9 +54,9 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('caster[youtube]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control caster_channel',
                             'value' => !empty($userInfo['caster']['youtube']) ? $userInfo['caster']['youtube'] : '',
                         ]); ?>
                     </div>
@@ -72,15 +72,87 @@
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('caster[twitch]', [
-                            'class' => 'form-control',
+                            'class' => 'form-control caster_channel',
                             'value' => !empty($userInfo['caster']['twitch']) ? $userInfo['caster']['twitch'] : '',
                         ]); ?>
                     </div>
                 </div>
             </div>
-            <!-- /channels -->
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Twitter') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('caster[twitter]', [
+                            'class' => 'form-control caster_channel',
+                            'value' => !empty($userInfo['caster']['twitter']) ? $userInfo['caster']['twitter'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Discord') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('caster[discord]', [
+                            'class' => 'form-control caster_channel',
+                            'value' => !empty($userInfo['caster']['discord']) ? $userInfo['caster']['discord'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Instagram') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('caster[instagram]', [
+                            'class' => 'form-control caster_channel',
+                            'value' => !empty($userInfo['caster']['instagram']) ? $userInfo['caster']['instagram'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Other') ?>
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="view py-2 px-3">
+                        <p>
+                           
+                        </p>
+                    </div>
+                    <div class="edit-text flex-column">
+                        <?php echo $this->Form->text('caster[other]', [
+                            'class' => 'form-control caster_channel',
+                            'value' => !empty($userInfo['caster']['other']) ? $userInfo['caster']['other'] : '',
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+            <!-- /social networks -->
 
 
             <!-- pro gamer at -->
@@ -129,7 +201,7 @@
                 </div>
             </div>
             <!-- /pro gamer at -->
-
+ 
             <!-- partner games -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
@@ -139,19 +211,43 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'other_games', 'label' => 'Other games'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="caster[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                id="<?= 'caster_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'caster_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['caster']['partner_games'])) {
+                                    foreach($userInfo['caster']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
+                                    }
+                                }
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="caster[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="caster[partner_games][]"
+                                        id="caster_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'caster_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>
