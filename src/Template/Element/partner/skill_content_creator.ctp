@@ -173,6 +173,7 @@
                         ['value' => 'events_coverage', 'label' => 'Events coverage'],
                         ['value' => 'lifestyle', 'label' => 'Lifestyle'],
                         ['value' => 'tutorials', 'label' => 'Tutorials'],
+                        ['value' => 'other', 'label' => 'Other']
                     ];
                     ?>
 
@@ -260,10 +261,175 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
+
+
+            <!-- games you like -->
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('What game or games you talk about') ?>
+                    *
+                </label>
+                <div class="col-12 col-sm-8">
+                    <div class="row  pb-2">
+                            <span class="col-12 text-warning">
+                                <?= __('I like to play these games:'); ?>
+                            </span>
+                        <span class="col-12">
+                            <div class="view py-2 px-3">
+
+                            </div>
+                            <div class="edit-tag-input flex-column">
+                                <input name="content_creator[like_games]"
+                                        type="text"
+                                        data-role="tagsinput"
+                                        value="<?=!empty($userInfo['content_creator']['talk_games']) ? $userInfo['content_creator']['talk_games'] : '';?>"
+                                        placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
+                                        class="form-control">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="row pb-2">
+                            <span class="col-12 text-warning">
+                                <?= __('I like to play these types of games:'); ?>
+                            </span>
+                        <span class="col-12">
+                            <div class="view py-2 px-3">
+
+                            </div>
+                            <div class="edit-tag-input flex-column">
+                                <input name="content_creator[like_type_games]"
+                                        type="text"
+                                        data-role="tagsinput"
+                                        value="<?=!empty($userInfo['content_creator']['talk_type_games']) ? $userInfo['content_creator']['talk_type_games'] : '';?>"
+                                        placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
+                                        class="form-control">
+                            </div>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!-- /games you like -->
+
+
+            <!-- platforms -->
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('What game platform(s) do create content for?') ?> *
+                </label>
+                <div class="col-12 col-sm-8">
+                    <?php
+                    $platforms_dummyData = [
+                        ['value' => 'all_platforms', 'label' => 'All game platforms', 'inputText' => false],
+                        ['value' => 'desktop', 'label' => 'PC/Mac games', 'inputText' => false],
+                        ['value' => 'mobile', 'label' => 'Mobile games', 'inputText' => false],
+                        ['value' => 'console', 'label' => 'Console games', 'inputText' => false],
+                        ['value' => 'others', 'label' => 'Others',
+                            'inputText' => true, 'placeholder' => '']
+                    ];
+                    ?>
+                    <?php foreach ($platforms_dummyData as $platform): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $platform['value'] ?>">
+                                <?= $platform['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $platform_text = "";
+                                if(!empty($userInfo['content_creator']['platforms'])) {
+                                    foreach($userInfo['content_creator']['platforms'] as $p) {
+                                        if(!empty($p[$platform['value']])) {
+                                            
+                                            $checked = $p[$platform['value']];
+                                        }
+                                        if ($platform['inputText']) {
+                                            if (!empty($p[$platform['value'].'_text'])){
+                                                $platform_text = $p[$platform['value'].'_text'];
+                                            }
+                                        }
+                                    }
+                                }
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="content_creator[platforms][][<?= $platform['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-platform" 
+                                        type="checkbox"
+                                        name="content_creator[platforms][]"
+                                        id="<?= 'platform' . $platform['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $platform['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'platform' . $platform['value'] ?>">
+                                    
+                                    <?php if (!$platform['inputText']): ?>
+                                        <?= $platform['label'] ?>
+                                    <?php else: ?>
+                                        <span class="row">
+                                            <span class="col-12">
+                                                <?= $platform['label'] ?>
+                                            </span>
+                                            <span class="col-12">
+                                                    <input id="<?= 'platform_' . $platform['value'] ?>_text"
+                                                            name="content_creator[platforms][][<?= $platform['value'] ?>_text]"
+                                                            type="text"
+                                                            value="<?= $platform_text; ?>"
+                                                            placeholder="<?= $platform['placeholder'] ?>"
+                                                            class="form-control <?= $checked ? '' : 'd-none' ?>">
+                                            </span>
+                                        </span>
+                                    <?php endif; ?>
+                                </label>
+                            </div>
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <!-- /platforms -->
+            
+            <!-- partner games -->
+            <div class="form-group row">
+                <label class="col-12 col-sm-4 text-primary">
+                    <?= __('Would you like to partner for?') ?> *
+                </label>
+                <div class="col-12 col-sm-8">
+                    <?php
+                    $games_dummyData = [
+                        ['value' => 'black_squad', 'label' => 'Black Squad'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
+                    ];
+                    ?>
+                    <?php foreach ($games_dummyData as $game): ?>
+                        <?php
+                            $checked = 0;
+                            if(!empty($userInfo['content_creator']['partner_games'])) {
+                                foreach($userInfo['procontent_creator_gamer']['partner_games'] as $c) {
+                                    if(!empty($c[$game['value']])) {
+                                        $checked = $c[$game['value']];
+                                    }
+                                }
+                            }
+                        ?>
+                        <div class="form-check custom-control custom-checkbox">
+                            <input type='hidden' name="content_creator[partner_games][][<?= $game['value'] ?>]" value="0" />
+                            <input class="form-check-input custom-control-input"
+                                 type="checkbox"
+                                 <?= $checked ? "checked" : ""  ?>
+                                id="<?= 'content_creator_' . $game['value'] ?>"/>
+                            <label class="form-check-label custom-control-label"
+                                for="<?= 'content_creator_' . $game['value'] ?>">
+                                <?= $game['label'] ?>
+                            </label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <!-- /partner games -->
+
 
             <!-- submit -->
             <div class="form-group row mt-6 mb-0 submit-wrapper">
