@@ -1704,6 +1704,12 @@ function initMap() {
         rules: {
             'moderator[username]': { required: true,  maxlength: 16 },
             'moderator[moderatorExperient]': { required: true },
+            'moderator[partner_games][]': { required: true },
+        },
+        messages: {
+            'moderator[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();

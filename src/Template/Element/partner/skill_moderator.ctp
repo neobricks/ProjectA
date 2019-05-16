@@ -23,7 +23,7 @@
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('How you want to be called') ?>
+                    <?= __('How you want to be called') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -110,30 +110,43 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'other_games', 'label' => 'Other games'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <?php
-                            $checked = 0;
-                            if(!empty($userInfo['moderator']['partner_games'])) {
-                                foreach($userInfo['moderator']['partner_games'] as $c) {
-                                    if(!empty($c[$game['value']])) {
-                                        $checked = $c[$game['value']];
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['moderator']['partner_games'])) {
+                                    foreach($userInfo['moderator']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
                                     }
                                 }
-                            }
-                        ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="moderator[partner_games][][<?= $game['value'] ?>]" value="<?= $checked; ?>" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                 <?= $checked ? "checked" : ""  ?>
-                                id="<?= 'moderator_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'moderator_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="moderator[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="moderator[partner_games][]"
+                                        id="moderator_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'moderator_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>
