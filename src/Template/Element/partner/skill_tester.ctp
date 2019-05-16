@@ -59,45 +59,53 @@
             </div>
             <!-- /have previous experience -->
 
-            <!-- type of tester -->
-           
+            <!-- type of tester -->     
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('What type of testing do you prefer?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <?php
-                    $games_dummyData = [
+                    $testerTypes = [
                         ['value' => 'quality_assurance', 'label' => 'Quality Assurance (QA)'],
                         ['value' => 'gameplay_experience', 'label' => 'Gameplay Experience'],
                     ];
                     ?>
+                    <?php foreach ($testerTypes as $testerType): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $testerType['value'] ?>">
+                                <?= $testerType['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $testerType_text = "";
+                                if(!empty($userInfo['tester']['type_of_tester']) && is_array($userInfo['tester']['type_of_tester']) ) {
+                                    foreach($userInfo['tester']['type_of_tester'] as $p) {
+                                        if(!empty($p[$testerType['value']])) {
+                                            $checked = $p[$testerType['value']];
+                                        }
+                                    }
+                                }
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="tester[type_of_tester][][<?= $testerType['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="tester[type_of_tester][]"
+                                        id="type_tester<?= $testerType['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $testerType['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'type_tester' . $testerType['value'] ?>">
+                                    <?= $testerType['label'] ?>
+                                </label>
+                            </div>
 
-                    <?php foreach ($games_dummyData as $game): ?>
-
-                        <?php 
-                            $checked = 0;
-                            if(!empty($userInfo['tester']['type_of_tester'])){
-                                if($userInfo['tester']['type_of_tester'] == $game['value']) {
-                                    $checked = 1;
-                                } 
-                            } 
-                        ?>
-
-                        <div class="custom-radio">
-                            <input class="form-check-input flex-column custom-control-input" type="radio"
-                                   name="tester[type_of_tester]"
-                                   value="<?= $game['value'] ?>"
-                                   <?= $checked ? "checked" : ""  ?>
-                                   id="<?= 'game' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                   for="<?= 'game' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
             <!-- /type of tester -->
@@ -160,30 +168,43 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'other_games', 'label' => 'Other games'],
+                        ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <?php
-                            $checked = 0;
-                            if(!empty($userInfo['tester']['partner_games'])) {
-                                foreach($userInfo['tester']['partner_games'] as $c) {
-                                    if(!empty($c[$game['value']])) {
-                                        $checked = $c[$game['value']];
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['tester']['partner_games'])) {
+                                    foreach($userInfo['tester']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
                                     }
                                 }
-                            }
-                        ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="tester[partner_games][][<?= $game['value'] ?>]" value="<?= $checked; ?>" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                 <?= $checked ? "checked" : ""  ?>
-                                id="<?= 'tester_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'tester_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="tester[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="tester[partner_games][]"
+                                        id="tester_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'tester_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
                 </div>

@@ -1731,8 +1731,31 @@ function initMap() {
     //------------- Form Validation | Partner | Tester ------------------
     $("#formPartnerTester").validate({
         rules: {
-            'tester[type_of_tester]': { required: true,  maxlength: 16 },
+            'tester[type_of_tester][]': { required: true},
             'tester[testerExperient]': { required: true },
+            'tester[partner_games][]': { required: true },
+            //'tester[game_experience][shooter]': { maxlength: 32 }, 
+            //'tester[game_experience][moba]': { maxlength: 32 }, 
+            //'tester[game_experience][rpg]': { maxlength: 32 }, 
+            //'tester[game_experience][mmorpg]': { maxlength: 32 }, 
+            //'tester[game_experience][mobile]': { maxlength: 32 }, 
+            //'tester[game_experience][adventure]': { maxlength: 32 }, 
+            //'tester[game_experience][indie]': { maxlength: 32 }, 
+            //'tester[game_experience][strategy]': { maxlength: 32 }, 
+            //'tester[game_experience][adventure]': { maxlength: 32 }, 
+            //'tester[game_experience][action]': { maxlength: 32 }, 
+            //'tester[game_experience][simulators]': { maxlength: 32 }, 
+            //'tester[game_experience][puzzle]': { maxlength: 32 }, 
+            //'tester[game_experience][browser]': { maxlength: 32 }, 
+            //'tester[game_experience][others]': { maxlength: 32 }, 
+        },
+        messages: {
+            'tester[type_of_tester][]': {
+                required: 'Select at least one'
+            },
+            'tester[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
