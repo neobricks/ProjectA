@@ -1837,9 +1837,9 @@ function initMap() {
 
         var editCheckboxes = $(cardId).find('.edit-checkbox');
         $.each(editCheckboxes, function (index, editCheckbox) {
-            var value = $(editCheckbox).find('input').val();
-            var isChecked = $(editCheckbox).find('input').prop('checked');
-
+            var value = $(editCheckbox).find('input.form-check-input').attr('data-value');
+            var isChecked = $(editCheckbox).find('input.form-check-input').prop('checked');
+            
             if (isChecked) {
                 $(editCheckbox).parent().find('.view').find('.checkbox-value[data-value="' + value + '"]').addClass('active');
             } else {

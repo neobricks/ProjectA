@@ -204,7 +204,8 @@
                                         type="checkbox"
                                         name="content_creator[type_of_content_gameplay][]"
                                         <?= $checked ? "checked" : ""  ?>
-                                        id="<?= 'type_of_content_' . $type_of_content['value'] ?>"/>
+                                        id="<?= 'type_of_content_' . $type_of_content['value'] ?>"
+                                        data-value="<?= $type_of_content['value'] ?>" />
                                 <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'type_of_content_' . $type_of_content['value'] ?>">
                                         <?= $type_of_content['label'] ?>
@@ -254,7 +255,8 @@
                                         type="checkbox"
                                         name="content_creator[channel_about][]"
                                         <?= $checked ? "checked" : ""  ?>
-                                        id="<?= 'channel_about_' . $channel_about['value'] ?>"/>
+                                        id="<?= 'channel_about_' . $channel_about['value'] ?>"
+                                        data-value="<?= $channel_about['value'] ?>" />
                                 <label class="form-check-label w-100 custom-control-label"
                                         for="<?= 'channel_about_' . $channel_about['value'] ?>">
                                         <?= $channel_about['label'] ?>
