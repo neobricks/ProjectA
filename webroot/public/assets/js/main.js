@@ -1368,6 +1368,8 @@ function initMap() {
     //------------------------------------------------------------------------
 
 
+
+
     var language_input_base = $(".language-base").html();
     $(".language-base").remove();
     //------------- Become Partner | Partner Info | Languages ----------------
@@ -1569,9 +1571,11 @@ function initMap() {
         rules: {
             'partner[name]': {
                 required: true,
+                maxlength: 16
             },
             'partner[surname]': {
-                required: true
+                required: true,
+                maxlength: 16
             },
             'partner[like_games]': {
                 required: true
@@ -1647,16 +1651,16 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-
     //------------- Form Validation | Partner | Content Creator --------------
     $("#formPartnerContentCreator").validate({
         rules: {
-            'content_creator[username]': { required: true },
-            //'content_creators[youtube]': { required: true}, 
-            //'content_creators[twitch]': { required: true}, 
-            //'content_creators[twitter]': { required: true}, 
-            //'content_creators[discord]': { required: true}, 
-            //'content_creators[instagram]': { required: true}, 
+            'content_creator[username]': { required: true,  maxlength: 16},
+            'content_creator[youtube]':   { require_from_group: [1, ".content_creator_channel"] }, 
+            'content_creator[twitch]':    { require_from_group: [1, ".content_creator_channel"] }, 
+            'content_creator[twitter]':   { require_from_group: [1, ".content_creator_channel"] }, 
+            'content_creator[discord]':   { require_from_group: [1, ".content_creator_channel"] }, 
+            'content_creator[instagram]': { require_from_group: [1, ".content_creator_channel"] },
+            'content_creator[other]':     { require_from_group: [1, ".content_creator_channel"] },
             'content_creator[type_of_content_gameplay][]': { required: true },
             'content_creator[channel_about][]': { required: true }
         },
@@ -1688,7 +1692,7 @@ function initMap() {
     //------------- Form Validation | Partner | Moderator ------------------
     $("#formPartnerModerator").validate({
         rules: {
-            'moderator[username]': { required: true },
+            'moderator[username]': { required: true,  maxlength: 16 },
             'moderator[moderatorExperient]': { required: true },
         },
         submitHandler: function (form) {
@@ -1711,7 +1715,7 @@ function initMap() {
     //------------- Form Validation | Partner | Tester ------------------
     $("#formPartnerTester").validate({
         rules: {
-            'tester[type_of_tester]': { required: true },
+            'tester[type_of_tester]': { required: true,  maxlength: 16 },
             'tester[testerExperient]': { required: true },
         },
         submitHandler: function (form) {
@@ -1734,7 +1738,7 @@ function initMap() {
     //------------- Form Validation | Partner | Gamer ------------------
     $("#formPartnerGamer").validate({
         rules: {
-            'pro_gamer[username]': { required: true },
+            'pro_gamer[username]': { required: true,  maxlength: 16 },
             'pro_gamer[pro_games]': { required: true },
             'pro_gamer[pro_type_games]': { required: true },
         },
@@ -1773,7 +1777,7 @@ function initMap() {
     //------------- Form Validation | Partner | Caster ------------------
     $("#formPartnerCaster").validate({
         rules: {
-            'caster[username]': { required: true },
+            'caster[username]': { required: true,  maxlength: 16 },
             'caster[cast_games]': { required: true },
             'caster[cast_type_games]': { required: true },
         },
