@@ -1858,14 +1858,62 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
+
+    //function countryListformat(item) {
+    //    if (!item.id) {
+    //      return item.text;
+    //    }
+    //    var url = "https://lipis.github.io/flag-icon-css/flags/4x3/";
+    //    var img = $("<img>", {
+    //      class: "img-flag",
+    //      width: 26,
+    //      src: url + item.element.value.toLowerCase() + ".svg"
+    //    });
+    //    var span = $("<span>", {
+    //      text: " " + item.text
+    //    });
+    //    span.prepend(img);
+    //    return span;
+    //}
+
+    $(document).ready(function() {
+        $("#company_countries_select").select2({
+            width: '100%',
+            //templateResult: function(item) {
+            //    return countryListformat(item);
+            //}
+        });
+    });
+
     //------------- Form Validation | Partner | Company ------------------
     $("#formPartnerCompany").validate({
         rules: {
+            'company[name]': { required: true,  maxlength: 16 },
+            'company[sales]':  { required: true,  maxlength: 64 },
+            'company[contact][][email]':   { require_from_group: [1, ".company_contact"] }, 
+            'company[contact][][phone]':   { require_from_group: [1, ".company_contact"] }, 
+            'company[contact][][skype]':   { require_from_group: [1, ".company_contact"] }, 
+            'company[partner_games][]': { required: true },
+            'company[countries][]': {required: true}
+        },
+        messages: {
+            'company[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
             data = removeCheckedCheckboxOnSerializedArray(data);
             ajaxUpdatePartner(data, "#companies_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().parent());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().parent().append(error));
+            }
         },
     });
     //------------------------------------------------------------------------

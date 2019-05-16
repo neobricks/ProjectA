@@ -42,6 +42,7 @@ $locale_options = Configure::read('locale.options');
     <?php echo $this->Html->css('/public/assets/css/dist/main.css'); ?>
     <?php echo $this->Html->css('/public/assets/css/dist/styles.css'); ?>
     <?php echo $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css'); ?>
+    <?php echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css'); ?>
     <!-- FETCH META -->
 
     <?= $this->fetch('css') ?>
@@ -268,6 +269,7 @@ if (!empty($user)) $body_class = 'logged-in';
     <?php echo $this->Html->script('/plugins/tagsinput/tagsinput.js'); ?>
     <?php echo $this->Html->script('/plugins/jquery-validation-1.19.0/jquery.validate.js'); ?>
     <?php echo $this->Html->script('/plugins/jquery-validation-1.19.0/additional-methods.min.js'); ?>
+    <?php echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js'); ?>
 
     <?php echo $this->Html->script('/public/assets/js/scripts.js'); ?>
     <?php echo $this->Html->script('/public/assets/js/main.js', [
