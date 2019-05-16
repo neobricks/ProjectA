@@ -358,12 +358,12 @@
                                 <input class="form-check-input custom-control-input checkbox-platform" 
                                         type="checkbox"
                                         name="content_creator[platforms][]"
-                                        id="<?= 'platform' . $platform['value'] ?>"
+                                        id="content_creator_platform_<?=  $platform['value'] ?>"
                                         <?= $checked ? "checked" : ""  ?>
                                         data-value="<?=  $platform['value']?>"
                                         />
                                 <label class="form-check-label w-100 custom-control-label"
-                                        for="<?= 'platform' . $platform['value'] ?>">
+                                        for="<?= 'content_creator_platform_' . $platform['value'] ?>">
                                     
                                     <?php if (!$platform['inputText']): ?>
                                         <?= $platform['label'] ?>
@@ -373,12 +373,12 @@
                                                 <?= $platform['label'] ?>
                                             </span>
                                             <span class="col-12">
-                                                    <input id="<?= 'platform_' . $platform['value'] ?>_text"
-                                                            name="content_creator[platforms][][<?= $platform['value'] ?>_text]"
-                                                            type="text"
-                                                            value="<?= $platform_text; ?>"
-                                                            placeholder="<?= $platform['placeholder'] ?>"
-                                                            class="form-control <?= $checked ? '' : 'd-none' ?>">
+                                                <input id="content_creator_platform_<?= $platform['value'] ?>_text"
+                                                        name="content_creator[platforms][][<?= $platform['value'] ?>_text]"
+                                                        type="text"
+                                                        value="<?= $platform_text; ?>"
+                                                        placeholder="<?= $platform['placeholder'] ?>"
+                                                        class="form-control <?= $checked ? '' : 'd-none' ?>">
                                             </span>
                                         </span>
                                     <?php endif; ?>
@@ -403,29 +403,43 @@
                         ['value' => 'all_games', 'label' => 'All Games'],
                     ];
                     ?>
-                    <?php foreach ($games_dummyData as $game): ?>
-                        <?php
-                            $checked = 0;
-                            if(!empty($userInfo['content_creator']['partner_games'])) {
-                                foreach($userInfo['procontent_creator_gamer']['partner_games'] as $c) {
-                                    if(!empty($c[$game['value']])) {
-                                        $checked = $c[$game['value']];
+                    <?php foreach ($games_dummyData as $partner_game): ?>
+                        <div class="view">
+                            <span class="checkbox-value" data-value="<?= $partner_game['value'] ?>">
+                                <?= $partner_game['label'] ?>
+                            </span>
+                        </div>
+                        <div class="edit-checkbox ">
+                            <?php
+                                $checked = 0;
+                                $partner_game_text = "";
+                                if(!empty($userInfo['content_creator']['partner_games'])) {
+                                    foreach($userInfo['content_creator']['partner_games'] as $p) {
+                                        if(!empty($p[$partner_game['value']])) {
+                                            
+                                            $checked = $p[$partner_game['value']];
+                                        }
                                     }
                                 }
-                            }
-                        ?>
-                        <div class="form-check custom-control custom-checkbox">
-                            <input type='hidden' name="content_creator[partner_games][][<?= $game['value'] ?>]" value="0" />
-                            <input class="form-check-input custom-control-input"
-                                 type="checkbox"
-                                 <?= $checked ? "checked" : ""  ?>
-                                id="<?= 'content_creator_' . $game['value'] ?>"/>
-                            <label class="form-check-label custom-control-label"
-                                for="<?= 'content_creator_' . $game['value'] ?>">
-                                <?= $game['label'] ?>
-                            </label>
+                            ?>
+                            <div class="custom-control custom-checkbox form-check">
+                                <input type='hidden' name="content_creator[partner_games][][<?= $partner_game['value'] ?>]" value="<?= $checked; ?>" />
+                                <input class="form-check-input custom-control-input checkbox-partner_game" 
+                                        type="checkbox"
+                                        name="content_creator[partner_games][]"
+                                        id="content_creator_partner_game<?= $partner_game['value'] ?>"
+                                        <?= $checked ? "checked" : ""  ?>
+                                        data-value="<?=  $partner_game['value']?>"
+                                        />
+                                <label class="form-check-label w-100 custom-control-label"
+                                        for="<?= 'content_creator_partner_game' . $partner_game['value'] ?>">
+                                    <?= $partner_game['label'] ?>
+                                </label>
+                            </div>
+
                         </div>
                     <?php endforeach; ?>
+
                 </div>
             </div>
             <!-- /partner games -->

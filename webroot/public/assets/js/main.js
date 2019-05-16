@@ -1662,7 +1662,11 @@ function initMap() {
             'content_creator[instagram]': { require_from_group: [1, ".content_creator_channel"] },
             'content_creator[other]':     { require_from_group: [1, ".content_creator_channel"] },
             'content_creator[type_of_content_gameplay][]': { required: true },
-            'content_creator[channel_about][]': { required: true }
+            'content_creator[channel_about][]': { required: true },
+            'content_creator[like_games]': { required: true },
+            'content_creator[like_type_games]': { required: true },
+            'content_creator[platforms][]': { required: true },
+            'content_creator[partner_games][]': { required: true },
         },
         messages: {
             'content_creator[type_of_content_gameplay][]': {
@@ -1670,7 +1674,13 @@ function initMap() {
             },
             'content_creator[channel_about][]': {
                 required: 'Select at least one'
-            }
+            },
+            'content_creator[platforms][]': {
+                required: 'Select at least one'
+            },
+            'content_creator[partner_games][]': {
+                required: 'Select at least one'
+            },
         },
         submitHandler: function (form) {
             var data = $(form).serializeArray();
