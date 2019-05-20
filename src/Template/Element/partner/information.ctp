@@ -174,8 +174,7 @@ $showForm = false;
                             </div>
 
                         </div>
-                        <!-- /input languages -->
-
+                        <!-- /input languages --> 
 
                         <!-- games you like -->
                         <div class="form-group row">

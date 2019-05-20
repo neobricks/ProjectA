@@ -284,7 +284,7 @@
                                 <input name="content_creator[like_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value="<?=!empty($userInfo['content_creator']['talk_games']) ? $userInfo['content_creator']['talk_games'] : '';?>"
+                                        value="<?=!empty($userInfo['content_creator']['like_games']) ? $userInfo['content_creator']['like_games'] : '';?>"
                                         placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
                                         class="form-control">
                             </div>
@@ -302,7 +302,7 @@
                                 <input name="content_creator[like_type_games]"
                                         type="text"
                                         data-role="tagsinput"
-                                        value="<?=!empty($userInfo['content_creator']['talk_type_games']) ? $userInfo['content_creator']['talk_type_games'] : '';?>"
+                                        value="<?=!empty($userInfo['content_creator']['like_type_games']) ? $userInfo['content_creator']['like_type_games'] : '';?>"
                                         placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
                                         class="form-control">
                             </div>

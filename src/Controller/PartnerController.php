@@ -36,6 +36,7 @@ class PartnerController extends AppController
         }   
         if (isset($response->result)) {
             $userInfo = json_decode($response->result, true);
+            $session->write('userInfo', $userInfo);
         }
 
         $this->set('userInfo', $userInfo);        
