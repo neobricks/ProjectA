@@ -31,6 +31,9 @@ class PartnerController extends AppController
             'userNumber' => $user['userNumber']
         ]);
         $userInfo = [];
+        if ($session->check('userInfo')) {
+            $userInfo = $session->read('userInfo');
+        }   
         if (isset($response->result)) {
             $userInfo = json_decode($response->result, true);
         }
