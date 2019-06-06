@@ -154,7 +154,7 @@ $this->assign('title', __('Get closer to the games you love'));
 <?php echo $this->element('pages/index/pickYourSkills'); ?>
 
 
-<?php
+<!-- <?php
 $latestQuest_dummyDate = [
     'tests' => [
         [
@@ -249,7 +249,7 @@ $latestQuest_dummyDate = [
     ]
 ];
 
-?>
+?> -->
 
 
 <section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" id="latestQuests">
