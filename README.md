@@ -27,3 +27,18 @@ configuration relevant for your application.
 The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
 framework by default. You can, however, replace it with any other library or
 custom styles.
+
+
+## Sending Code to Live
+
+1. Log into the live server via SSH
+2. log as sudo
+`sudo -i`
+3. Go to the root folder of the website on this case 
+`cd /var/www/html/www.treeve.io/`
+4. Now PULL from Git
+`git pull` 
+5. Now Clear all PHP Cahce
+`bin/cake cache clear_all`
+That should be it, all files are on the liver server
+
