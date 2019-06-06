@@ -2251,3 +2251,9 @@ select.custom-select {
   color: #000 !important;
   font-weight: bold !important;
 }
+
+#collapsingNavbar {
+  .navbar-nav {
+    background: #151515;
+  }
+}

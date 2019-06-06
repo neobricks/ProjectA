@@ -1488,17 +1488,7 @@ function initMap() {
     });
     //------------------------------------------------------------------------
 
-    
-    $(document).ready(function () {
-        if( $("#PartnerProgramContainer").hasClass('preFilled')) {
-            $( ".card-information" ).each(function( index ) {
-                partnerCardInformationToView('#'+$(this).attr('id'));
-            });
-        }
-    });
-
-    
-
+ 
     //------------- Form | Partner | Update (view/edit switch) ---------------
     $(document).ready(function () {
         $('.card-information').on('click', '.btn-update', function () {
@@ -1521,7 +1511,6 @@ function initMap() {
             },
             success: function (data) {
                 partnerCardInformationToView(cardId);
-                console.log(data);
             },
         });
     }
@@ -1951,19 +1940,21 @@ function initMap() {
     noInformedHtmlBase = $(noInformedHtmlBase).removeAttr('id');
 
     function partnerCardInformationToView(cardId) {
-
+        
         $('.selected-skill').removeClass('active');
         $.each($('.skill-checkbox'), function (index, skillCheckbox) {
             var value = $(skillCheckbox).val();
             var isChecked = $(skillCheckbox).prop('checked');
             if (isChecked) {
                 $('.selected-skill[data-skill="' + value + '"]').addClass('active');
-                $("#" + value + "_wrapper").removeClass('d-none').addClass('active');
+                $("#" + value + "_wrapper").removeClass('d-none')
+                if(!$("#PartnerProgramContainer").hasClass('preFilled')){
+                    $("#" + value + "_wrapper").addClass('active').addClass('active');
+                }
             } else {
                 $("#" + value + "_wrapper").addClass('d-none').removeClass('active');
             }
         });
-
 
         var editTexts = $(cardId).find('.edit-text');
         $.each(editTexts, function (index, editText) {
@@ -2019,8 +2010,6 @@ function initMap() {
             $(editLanguageInput).parent().find('.view').html(html);
         });
 
-
-
         $(cardId).removeClass('active');
     }
 
@@ -2039,6 +2028,16 @@ function initMap() {
         });
     });
     //------------------------------------------------------------------------
+
+      
+    $(document).ready(function () {
+        if( $("#PartnerProgramContainer").hasClass('preFilled')) {
+            $( ".card-information" ).each(function( index ) {
+                partnerCardInformationToView('#'+$(this).attr('id'));
+            });
+        }
+    });
+
 
 })(jQuery);
 
