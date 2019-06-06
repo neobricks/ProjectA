@@ -154,85 +154,9 @@ $this->assign('title', __('Get closer to the games you love'));
 <?php echo $this->element('pages/index/pickYourSkills'); ?>
 
 
-<section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" id="latestQuests">
-    <div class="container">
-        <header class="header">
-            <h2><?= __('Latest Quests') ?></h2>
-        </header>
-        <div class="position-relative">
-            <!-- nav tabs -->
-            <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap" id="most_popular_products-carousel" role="tablist">
 
-                <li class="nav-item text-fnwp pg-none relative">
-                    <a class="nav-link active no-scroll" id="mp-0-tab" data-toggle="tab" href="#mp-0-c" role="tab" aria-controls="mp-0-c" aria-selected="true">
-                        <?= __('Tests') ?>
-                    </a>
-                </li>
-                <li class="nav-item text-fnwp relative">
-                    <a class="nav-link no-scroll" id="mp-1-tab" data-toggle="tab" href="#mp-1-c" role="tab" aria-controls="mp-1-c" aria-selected="false">
-                        <?= __('Translations') ?>
-                    </a>
-                </li>
-                <li class="nav-item text-fnwp relative">
-                    <a class="nav-link no-scroll" id="mp-2-tab" data-toggle="tab" href="#mp-2-c" role="tab" aria-controls="mp-2-c" aria-selected="false">
-                        <?= __('Moderators') ?>
-                    </a>
-                </li>
-            </ul>
-            <!-- /.nav tabs -->
+<!-- quest area removed -->
 
-
-            <!-- tab panes -->
-            <div id="color_sel_Carousel-content" class="tab-content fl-scn relative w-100">
-
-                <?php
-                $i = 0;
-                foreach ($latestQuest_dummyDate as $latestQuestCategory => $quests) : ?>
-                    <!-- tab item -->
-                    <div class="tab-pane fade <?php if ($i === 0) echo "show active" ?>" id="mp-<?= $i ?>-c" role="tabpanel" aria-labelledby="mp-<?= $i ?>-tab">
-                        <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                            <!-- item -->
-                            <?php
-                            $j = 0;
-                            foreach ($quests as $quest) : ?>
-                                <div class="item">
-                                    <div class="item-cont">
-                                        <figure class="owl_item_review">
-                                            <div>
-                                                <div class="position-relative overflow-hidden">
-                                                    <?= $this->Html->image($quest['img_path'], [
-                                                        'class' => 'm-0-auto'
-                                                    ]) ?>
-                                                    <h4 class="title p-4">
-                                                        <?= $quest['title'] ?>
-                                                    </h4>
-                                                    <button class="assign btn btn-outline-light btn-lg ml-4 rounded-0 px-2 p-1 ">
-                                                        <?= __('ASSIGN'); ?>
-                                                    </button>
-                                                    <a href="#" class="more-info ml-4 h6">
-                                                        <?= __('More info'); ?>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </figure>
-                                    </div>
-                                </div>
-                                <!-- /.item -->
-                                <?php $j++;
-                            endforeach; ?>
-                        </div>
-                    </div>
-                    <!-- /.tab item -->
-
-                    <?php $i++;
-                endforeach; ?>
-
-
-            </div>
-            <!-- /.tab panes -->
-        </div>
-    </div>
-</section>
 
 
 <!-- content area -->
