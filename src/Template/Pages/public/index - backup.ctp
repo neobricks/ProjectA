@@ -154,6 +154,104 @@ $this->assign('title', __('Get closer to the games you love'));
 <?php echo $this->element('pages/index/pickYourSkills'); ?>
 
 
+<!-- <?php
+$latestQuest_dummyDate = [
+    'tests' => [
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+        [
+            'title' => 'Hundred Soul',
+            'img_path' => '/public/assets/img/quest_img_4.png',
+        ],
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+    ],
+    'translations' => [
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+        [
+            'title' => 'Hundred Soul',
+            'img_path' => '/public/assets/img/quest_img_4.png',
+        ],
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+    ],
+    'moderators' => [
+
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+        [
+            'title' => 'Destiny Child for Europe',
+            'img_path' => '/public/assets/img/quest_img_3.png',
+        ],
+        [
+            'title' => 'Hundred Soul',
+            'img_path' => '/public/assets/img/quest_img_4.png',
+        ],
+        [
+            'title' => 'KurtzPel CBT',
+            'img_path' => '/public/assets/img/quest_img_1.png',
+        ],
+        [
+            'title' => 'Black Squad Spring Patch',
+            'img_path' => '/public/assets/img/quest_img_2.png',
+        ],
+    ]
+];
+
+?> -->
+
+
 <section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" id="latestQuests">
     <div class="container">
         <header class="header">
