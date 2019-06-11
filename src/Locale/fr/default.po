@@ -34,31 +34,31 @@ msgstr ""
 
 
 
-msgid "Pick your skill"
+msgid "Choose your skill"
 msgstr ""
 
 msgid "Content Creators"
 msgstr ""
 
-msgid "Wether you are an Artist or Influencer, you create awesome content for games you play!"
+msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!"
 msgstr ""
 
 msgid "Testers"
 msgstr ""
 
-msgid "Work hard, play hard, test even harder! You are the one who helps games becoming better!"
+msgid "Work hard, play hard, test even harder! You are the one who makes games better!"
 msgstr ""
 
 msgid "Moderators"
 msgstr ""
 
-msgid "Angels from the sky, you bring peace and order to selvage game communities"
+msgid "Angels from the sky, you bring peace and order to salvage game communities"
 msgstr ""
 
 msgid "Business & Corps"
 msgstr ""
 
-msgid "Good corps partnering up against evil - Let’s join our forces!"
+msgid "ood corps partnering up against evil - Let’s join forces!"
 msgstr ""
 
 msgid "Pro-Gamers"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Translators"
 msgstr ""
 
-msgid "You check and translate awesomenesse around the globe – did I wrote it right?"
+msgid "You check and translate awesooomenessss around the globe – did I wrote it right?"
 msgstr ""
 
 msgid "Others"
@@ -181,13 +181,13 @@ msgstr ""
 msgid "Sign up reward"
 msgstr ""
 
-msgid "Become a Partner today and get a welcome reward"
+msgid "Become a Partner today and get a welcome gift"
 msgstr ""
 
 msgid "Get giveaways and special content exclusive for Partners"
 msgstr ""
 
-msgid "Sign up and receive information before so you have time to create awesome videos and more!"
+msgid "Sign up and receive information ahead of time so you can create awesome videos and more!"
 msgstr ""
 
 msgid "Access to closed betas, events and keys for your subscribers"

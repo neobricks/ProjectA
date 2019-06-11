@@ -192,6 +192,10 @@
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
 
+.fa.fa-twitch-square {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400; }
+
 .fa.fa-facebook-square {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
@@ -265,6 +269,10 @@
   content: "\f02e"; }
 
 .fa.fa-twitter {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400; }
+
+.fa.fa-twitch {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
 

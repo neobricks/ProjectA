@@ -13501,6 +13501,29 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .btn-twitter:not(:disabled):not(.disabled):active:focus, .btn-twitter:not(:disabled):not(.disabled).active:focus, .show > .btn-twitter.dropdown-toggle:focus {
     box-shadow: 0 0 0 0 rgba(29, 161, 242, 0.5); }
 
+
+.btn-twitch {
+    color: #ffffff;
+    background-color: #6441a5;
+    border-color: #6441a5; }
+.btn-twitch:hover {
+    color: #ffffff;
+    background-color: #563691;
+    border-color: #563691; }
+.btn-twitch:focus, .btn-twitch.focus {
+    box-shadow: 0 0 0 0 rgba(100,65,165,0.5); }
+.btn-twitch.disabled, .btn-twitch:disabled {
+    color: #ffffff;
+    background-color: #6441a5;
+    border-color: #6441a5; }
+.btn-twitch:not(:disabled):not(.disabled):active, .btn-twitch:not(:disabled):not(.disabled).active, .show > .btn-twitch.dropdown-toggle {
+    color: #ffffff;
+    background-color: #563691;
+    border-color: #563691; }
+.btn-twitch:not(:disabled):not(.disabled):active:focus, .btn-twitch:not(:disabled):not(.disabled).active:focus, .show > .btn-twitch.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0 rgba(100,65,165,0.5); }
+
+        
 .btn-linkedin {
     color: #ffffff;
     background-color: #0077B5;
