@@ -40,6 +40,17 @@
 
 "use strict";
 
+var i18n = [];
+
+//----------------------- I18N --------------------------
+$(document).ready(function () {
+    
+    i18n['msg_you-must-accept-the-terms-n-conditions'] = $("#msg_you-must-accept-the-terms-n-conditions").html();
+    i18n['msg_please-enter-at-least-one-special-character'] = $("#msg_please-enter-at-least-one-special-character").html();
+    i18n['msg_please-enter-at-least-one-uppercased-character'] = $("msg_please-enter-at-least-one-uppercased-character").html();
+    i18n['msg_select-at-least-one'] = $("#msg_select-at-least-one").html();
+});
+
 //------------------- Default options -------------------
 if ((options == undefined) || (options == false)) {
     var options = true,
@@ -1168,6 +1179,8 @@ function initMap() {
         });
     }
 
+ 
+
     //----------------------- Become a partner flow --------------------------
 
     var btnBecomePartnerFlowFinish = $('<button></button>').text('Submit')
@@ -1424,10 +1437,12 @@ function initMap() {
             }
         },
         messages: {
-            terms: " You must accept the Terms & Conditions",
+            terms: {
+                required: i18n['msg_you-must-accept-the-terms-n-conditions'],
+            },
             password: {
-                one_special: "Please enter at least one special character",
-                one_uppercased: "Please enter at least one uppercased character"
+                one_special: i18n['msg_please-enter-at-least-one-special-character'],
+                one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character']
             },
         },
         errorPlacement: function (error, element) {
@@ -1578,7 +1593,7 @@ function initMap() {
         },
         messages: {
             'partner[platforms][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             }
         },
         submitHandler: function (form) {
@@ -1608,7 +1623,7 @@ function initMap() {
         },
         messages: {
             'skills[]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             }
         },
         submitHandler: function (form) {
@@ -1659,16 +1674,16 @@ function initMap() {
         },
         messages: {
             'content_creator[type_of_content_gameplay][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'content_creator[channel_about][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'content_creator[platforms][]': {
-                required: 'Select at least one'
+                required:  i18n['msg_select-at-least-one']
             },
             'content_creator[partner_games][]': {
-                required: 'Select at least one'
+                required:  i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1697,7 +1712,7 @@ function initMap() {
         },
         messages: {
             'moderator[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1740,10 +1755,10 @@ function initMap() {
         },
         messages: {
             'tester[type_of_tester][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'tester[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1779,7 +1794,7 @@ function initMap() {
         },
         messages: {
             'pro_gamer[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1800,7 +1815,7 @@ function initMap() {
         },
         messages: {
             'translator[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1836,7 +1851,7 @@ function initMap() {
         },
         messages: {
             'caster[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1887,7 +1902,7 @@ function initMap() {
         },
         messages: {
             'company[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1915,7 +1930,7 @@ function initMap() {
         },
         messages: {
             'other[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {

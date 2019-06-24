@@ -3,5 +3,10 @@
 msgid "Hello, my name is {0}, I'm {1} years old"
 msgstr "Hello!!!! my name is {0}, I'm {1} years old"
 
+
+msgid "You must accept the Terms n Conditions"
+msgstr "You must accept the Terms & Conditions"
+
+
 # AuthController 
 msgid "Password does not match"

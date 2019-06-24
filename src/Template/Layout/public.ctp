@@ -255,6 +255,15 @@ if (!empty($user)) $body_class = 'logged-in';
 
     <!-- /Modals -->
 
+    
+    <div class="hide">
+        <span id="msg_you-must-accept-the-terms-n-conditions"><?= __("You must accept the Terms n Conditions"); ?> </span>
+        <span id="msg_please-enter-at-least-one-special-character"><?= __("Please enter at least one special character"); ?> </span>
+        <span id="msg_please-enter-at-least-one-uppercased-character"><?= __("Please enter at least one uppercased character"); ?> </span>
+        <span id="msg_select-at-least-one"><?= __("Select at least one"); ?> </span>
+        
+    </div>
+
 
     <!-- bottom Scripts -->
 
