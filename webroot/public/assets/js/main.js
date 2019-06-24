@@ -1593,6 +1593,24 @@ function initMap() {
         }
     });
 
+
+    $("#pre_formPartnerInformation").validate({
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
+            ajaxUpdatePartner(data, "#partner_info_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
+        },
+    });
+
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {

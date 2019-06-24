@@ -54,7 +54,7 @@ $showForm = false;
                     <div class="col-12">
                         <?php 
                         echo $this->Form->create(null, [
-                            'id' => 'formPartnerInformation',
+                            'id' => 'pre_formPartnerInformation',
                             'url' => ['controller' => 'partner', 'action' => 'information'],
                             'class' => 'input-transparent',
                             'type' => 'post',
@@ -122,13 +122,12 @@ $showForm = false;
                                     <span class="col-12">
                                         <div class="view py-2 px-3">
                                         </div>
-                                        <div class="edit-tag-input flex-column">
-                                           <input name="partner[like_games]"
-                                                  type="text"
-                                                  data-role="tagsinput"
-                                                  value="<?=!empty($userInfo['partner']['twitch_channel']) ? $userInfo['partner']['twitch_channel'] : '';?>"
-                                                  placeholder="twitch.tv/"
-                                                  class="form-control">
+                                        <div class="edit-text flex-column">
+                                            <?php echo $this->Form->text('partner[twitch_channel]', [
+                                                'class' => 'form-control',
+                                                'placeholder'=>"twitch.tv/",
+                                                'value' => !empty($userInfo['partner']['twitch_channel']) ? $userInfo['partner']['twitch_channel'] : '',
+                                            ]); ?>
                                         </div>
                                     </span>
                                 </div>
@@ -139,15 +138,14 @@ $showForm = false;
                                     <span class="col-12">
                                         <div class="view py-2 px-3">
                                         </div>
-                                        <div class="edit-tag-input flex-column">
-                                            <input name="partner[like_type_games]"
-                                                  type="text"
-                                                  data-role="tagsinput"
-                                                  value="<?=!empty($userInfo['partner']['youtube_channel']) ? $userInfo['partner']['youtube_channel'] : '';?>"
-                                                  placeholder="youtube.com/channel/"
-                                                  class="form-control">
+                                        <div class="edit-text flex-column">
+                                            <?php echo $this->Form->text('partner[youtube_channel]', [
+                                                'class' => 'form-control',
+                                                'placeholder'=>"youtube.com/channel/",
+                                                'value' => !empty($userInfo['partner']['youtube_channel']) ? $userInfo['partner']['youtube_channel'] : '',
+                                            ]); ?>
                                         </div>
-                                        </span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
