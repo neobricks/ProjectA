@@ -1384,6 +1384,8 @@ function initMap() {
 
 
     var language_input_base = $(".language-base").html();
+    var language_pre_data =  JSON.parse($("#languages-data").attr("data-languages"));
+    
     $(".language-base").remove();
     //------------- Become Partner | Partner Info | Languages ----------------
     $(document).ready(function () {
@@ -1395,6 +1397,27 @@ function initMap() {
             e.preventDefault();
             $(this).closest('.language-input').remove();
         });
+
+        if(language_pre_data) {
+            
+            var i = 0;
+            language_pre_data.forEach(function(language) {
+                var lang_code = Object.keys(language)[0];
+                var lang_prof = language[lang_code];
+                if (i == 0) {
+                    $("#language-primary-native").val(lang_code);
+                    updateLanguageInputHidden(  $("#language-primary-native").closest('.language-input') );
+                } else {
+                    var language_input = language_input_base; //.clone();
+                    $(".languages-loop").append(language_input_base);
+                }   
+                $(".languages-loop").find('.language-code').eq((i-1)).val(lang_code);
+                $(".languages-loop").find('.language-prof').eq((i-1)).val(lang_prof); 
+                updateLanguageInputHidden( $(".languages-loop").find('.language-code').eq((i-1)).closest('.language-input'));
+                i++;
+            });
+          
+        }
     });
     //------------------------------------------------------------------------
 

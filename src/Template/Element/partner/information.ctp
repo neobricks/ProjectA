@@ -268,7 +268,7 @@ $showForm = false;
                                     <div class="row mb-1 language-input">
                                         <input type="hidden" />
                                         <div class="col-12 col-md-3  py-1">
-                                            <select class="custom-select language-code">
+                                            <select class="custom-select language-code" id="language-primary-native">
                                                 <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                     <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
                                                 <?php endforeach; ?>
@@ -325,6 +325,15 @@ $showForm = false;
                                     </div>
                                     <span class="languages-loop"></span>
                                 </div> <!-- /edit-language-input -->
+
+                                <?php 
+                                    $languages_data = [];
+                                    $languages_data = !empty($userInfo['partner']['languages']) ? $userInfo['partner']['languages'] : [] ;
+                                    $languages_data = json_encode($languages_data, true);
+                                ?>
+                                <span id="languages-data" data-languages='<?= $languages_data  ?>' ></span>
+
+
                             </div>
                         </div>
                         <!-- /input languages --> 
@@ -347,7 +356,7 @@ $showForm = false;
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value="<?=!empty($userInfo['partner']['like_games']) ? $userInfo['partner']['like_games'] : '';?>"
-                                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
+                                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatchï¿½"
                                                   class="form-control">
                                         </div>
                                     </span>
@@ -364,7 +373,7 @@ $showForm = false;
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value="<?=!empty($userInfo['partner']['like_type_games']) ? $userInfo['partner']['like_type_games'] : '';?>"
-                                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
+                                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventureï¿½"
                                                   class="form-control">
                                         </div>
                                         </span>
