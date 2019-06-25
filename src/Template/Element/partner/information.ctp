@@ -7,6 +7,7 @@ $showForm = false;
     <div class="col-12">
         <div class="card card-information active my-3"
              id="partner_info_wrapper">
+
             <div class="card-body">
                 <h4 class="card-title">
                     <span class="text-light">
@@ -109,7 +110,7 @@ $showForm = false;
                                     <div class="row mb-1 language-input">
                                         <input type="hidden" />
                                         <div class="col-12 col-md-3  py-1">
-                                            <select class="custom-select language-code">
+                                            <select class="custom-select language-code" id="language-primary-native">
                                                 <?php foreach($language_codes as $lang_code_key => $lang_code_value): ?>
                                                     <option value="<?= $lang_code_key ?>"><?= __($lang_code_value); ?></option>
                                                 <?php endforeach; ?>
@@ -168,7 +169,16 @@ $showForm = false;
                                         </div>
                                     </div>
                                     <span class="languages-loop"></span>
-                                </div> <!-- /edit-language-input -->								
+
+                                </div> <!-- /edit-language-input -->
+
+                                <?php 
+                                    $languages_data = [];
+                                    $languages_data = !empty($userInfo['partner']['languages']) ? $userInfo['partner']['languages'] : [] ;
+                                    $languages_data = json_encode($languages_data, true);
+                                ?>
+                                <span id="languages-data" data-languages='<?= $languages_data  ?>' ></span>
+
                             </div>
                         </div>
                         <!-- /input languages --> 

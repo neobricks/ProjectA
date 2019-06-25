@@ -44,7 +44,6 @@ var i18n = [];
 
 //----------------------- I18N --------------------------
 $(document).ready(function () {
-
     i18n['msg_you-must-accept-the-terms-n-conditions'] = $("#msg_you-must-accept-the-terms-n-conditions").html();
     i18n['msg_please-enter-at-least-one-special-character'] = $("#msg_please-enter-at-least-one-special-character").html();
     i18n['msg_please-enter-at-least-one-uppercased-character'] = $("msg_please-enter-at-least-one-uppercased-character").html();
@@ -1182,6 +1181,8 @@ function initMap() {
         });
     }
 
+ 
+
     //----------------------- Become a partner flow --------------------------
 
     var btnBecomePartnerFlowFinish = $('<button></button>').text('Submit')
@@ -1417,7 +1418,6 @@ function initMap() {
                 updateLanguageInputHidden( $(".languages-loop").find('.language-code').eq((i-1)).closest('.language-input'));
                 i++;
             });
-
         }
     });
     //------------------------------------------------------------------------
@@ -1796,7 +1796,7 @@ function initMap() {
         },
         messages: {
             'tester[type_of_tester][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'tester[partner_games][]': {
                 required: i18n['msg_select-at-least-one']
