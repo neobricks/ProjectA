@@ -46,7 +46,7 @@ var i18n = [];
 $(document).ready(function () {
     i18n['msg_you-must-accept-the-terms-n-conditions'] = $("#msg_you-must-accept-the-terms-n-conditions").html();
     i18n['msg_please-enter-at-least-one-special-character'] = $("#msg_please-enter-at-least-one-special-character").html();
-    i18n['msg_please-enter-at-least-one-uppercased-character'] = $("msg_please-enter-at-least-one-uppercased-character").html();
+    i18n['msg_please-enter-at-least-one-uppercased-character'] = $("#msg_please-enter-at-least-one-uppercased-character").html();
     i18n['msg_select-at-least-one'] = $("#msg_select-at-least-one").html();
 });
 
@@ -1386,7 +1386,7 @@ function initMap() {
 
 
     var language_input_base = $(".language-base").html();
-    console.log($("#languages-data").data("languages"))
+    
     if($("#languages-data").data("languages")){
         var language_pre_data =  $("#languages-data").data("languages");
     }
@@ -1468,7 +1468,8 @@ function initMap() {
             },
             password: {
                 one_special: i18n['msg_please-enter-at-least-one-special-character'],
-                one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character']
+                one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character'],
+              
             },
         },
         errorPlacement: function (error, element) {
