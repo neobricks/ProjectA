@@ -1396,6 +1396,7 @@ function initMap() {
         $('#partner_info_wrapper').on('click', '.btn-add-language', function (e) {
             e.preventDefault();
             $(".languages-loop").append(language_input_base);
+            $('.language-code').trigger('change') 
         });
         $('#partner_info_wrapper').on('click', '.btn-remove-language', function (e) {
             e.preventDefault();
@@ -1425,108 +1426,110 @@ function initMap() {
     //------------------------------------------------------------------------
 
     //------------- Form Validation | Sign Up --------------------------------
+    $(document).ready(function () {
+        console.log(i18n)
+        $.validator.addMethod("one_special", function (value) {
+            return /[\W]/.test(value);
+        });
+        $.validator.addMethod("one_uppercased", function (value) {
+            return /[A-Z]/.test(value);
+        })
+        $("#formSignUp").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    },
 
-    $.validator.addMethod("one_special", function (value) {
-        return /[\W]/.test(value);
-    });
-    $.validator.addMethod("one_uppercased", function (value) {
-        return /[A-Z]/.test(value);
-    })
-    $("#formSignUp").validate({
-        rules: {
-            email: {
-                required: true,
-                email: true,
-                normalizer: function (value) {
-                    return $.trim(value);
                 },
+                password: {
+                    required: true,
+                    one_special: true,
+                    one_uppercased: true,
+                    minlength: 8,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    }
+                },
+                confirm_password: {
+                    required: true,
+                    equalTo: "#signup_password",
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    }
+                },
+                terms: {
+                    required: true,
+                }
+            },
+            messages: {
+                terms: {
+                    required: i18n['msg_you-must-accept-the-terms-n-conditions'],
+                },
+                password: {
+                    one_special: i18n['msg_please-enter-at-least-one-special-character'],
+                    one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character'],
+                
+                },
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().next().next());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.parent());
+                } else {
+                    $(element.parent().append(error));
+                }
 
             },
-            password: {
-                required: true,
-                one_special: true,
-                one_uppercased: true,
-                minlength: 8,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
+        });
+        //------------------------------------------------------------------------
+
+        
+        //------------- Form Validation | Sign In --------------------------------
+        $("#formSignIn").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    }
+                },
+                password: {
+                    required: true,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    }
+                },
             },
-            confirm_password: {
-                required: true,
-                equalTo: "#signup_password",
-                normalizer: function (value) {
-                    return $.trim(value);
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().next().next());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.parent());
+                } else {
+                    $(element.parent().append(error));
                 }
+
             },
-            terms: {
-                required: true,
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Forget Password ------------------------
+        $("#formForgetPassword").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                    normalizer: function (value) {
+                        return $.trim(value);
+                    }
+                }
             }
-        },
-        messages: {
-            terms: {
-                required: i18n['msg_you-must-accept-the-terms-n-conditions'],
-            },
-            password: {
-                one_special: i18n['msg_please-enter-at-least-one-special-character'],
-                one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character'],
-              
-            },
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().next().next());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.parent());
-            } else {
-                $(element.parent().append(error));
-            }
-
-        },
-    });
-    //------------------------------------------------------------------------
-
-    
-    //------------- Form Validation | Sign In --------------------------------
-    $("#formSignIn").validate({
-        rules: {
-            email: {
-                required: true,
-                email: true,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
-            },
-            password: {
-                required: true,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
-            },
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().next().next());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.parent());
-            } else {
-                $(element.parent().append(error));
-            }
-
-        },
-    });
-    //------------------------------------------------------------------------
-
-    //------------- Form Validation | Forget Password ------------------------
-    $("#formForgetPassword").validate({
-        rules: {
-            email: {
-                required: true,
-                email: true,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
-            }
-        }
+        });
     });
     //------------------------------------------------------------------------
 
@@ -1568,341 +1571,342 @@ function initMap() {
         return data;
     }
 
-
-    $("#formPartnerInformation").on('change', '.checkbox-platform', function () {
-        var checked = 0;
-        if (this.checked) {
-            checked = 1;
-        }
-        var type_platform = $(this).attr('data-value');
-        if (type_platform === "all_platforms") {
-            if (checked) {
-                $('.checkbox-platform:not([data-value="others"])').prop('checked', true);
-                //$('.checkbox-platform([data-value="others"])').prop('checked', true);
-            } else {
-                $('.checkbox-platform:not([data-value="others"])').prop('checked', false);
-                //$('.checkbox-platform').prop('disabled', false);
+    $(document).ready(function () {
+        $("#formPartnerInformation").on('change', '.checkbox-platform', function () {
+            var checked = 0;
+            if (this.checked) {
+                checked = 1;
             }
-        } else if (type_platform === "others") {
-            if (checked) {
-                $('#platform_others_text').removeClass('d-none');
-            } else {
-                $('#platform_others_text').addClass('d-none');
-            }
-
-        } else {
-            if (!checked) {
-                $('.checkbox-platform[data-value="all_platforms"]').prop('checked', false);
-            }
-        }
-    });
-
-    $("#pre_formPartnerInformation").validate({
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#partner_info_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().next().next());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-
-    //------------- Form Validation | Partner | Information ------------------
-    $("#formPartnerInformation").validate({
-        rules: {
-            'partner[name]': {
-                required: true,
-                maxlength: 16
-            },
-            'partner[surname]': {
-                required: true,
-                maxlength: 16
-            },
-            'partner[like_games]': {
-                required: true
-            },
-            'partner[like_type_games]': {
-                required: true
-            },
-            'partner[platforms][]': {
-                required: true
-            }
-        },
-        messages: {
-            'partner[platforms][]': {
-                required: i18n['msg_select-at-least-one']
-            }
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#partner_info_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().next().next());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-    //------------------------------------------------------------------------
-
-
-    //------------- Form Validation | Partner | Skills ---- ------------------
-    $("#formPartnerSkills").validate({
-        rules: {
-            'skills[]': {
-                required: true,
-            },
-        },
-        messages: {
-            'skills[]': {
-                required: i18n['msg_select-at-least-one']
-            }
-        },
-        submitHandler: function (form) {
-
-            var data = $(form).serializeArray();
-            $.each(data, function (index, input_data) {
-                if(typeof input_data === 'object'){
-                    if(input_data.name == "skills[]") {
-                        data.splice(index, 1);
-                    }
+            var type_platform = $(this).attr('data-value');
+            if (type_platform === "all_platforms") {
+                if (checked) {
+                    $('.checkbox-platform:not([data-value="others"])').prop('checked', true);
+                    //$('.checkbox-platform([data-value="others"])').prop('checked', true);
+                } else {
+                    $('.checkbox-platform:not([data-value="others"])').prop('checked', false);
+                    //$('.checkbox-platform').prop('disabled', false);
                 }
-            });
-            $.ajax({
-                url: '/partner/ajaxUpdatePartner',
-                data: data,
-                type: 'POST',
-                error: function (error) {
-                    console.log(error);
+            } else if (type_platform === "others") {
+                if (checked) {
+                    $('#platform_others_text').removeClass('d-none');
+                } else {
+                    $('#platform_others_text').addClass('d-none');
+                }
+
+            } else {
+                if (!checked) {
+                    $('.checkbox-platform[data-value="all_platforms"]').prop('checked', false);
+                }
+            }
+        });
+
+        $("#pre_formPartnerInformation").validate({
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#partner_info_wrapper");
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().next().next());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+
+        //------------- Form Validation | Partner | Information ------------------
+        $("#formPartnerInformation").validate({
+            rules: {
+                'partner[name]': {
+                    required: true,
+                    maxlength: 16
                 },
-                success: function (data) {
-                    
-                    partnerCardInformationToView("#partner_skill_wrapper");
+                'partner[surname]': {
+                    required: true,
+                    maxlength: 16
                 },
-            });
-        },
-        errorPlacement: function (error, element) {
-            error.appendTo($("#partner_skill_wrapper .error-wrapper"));
-        },
-    });
-    //------------------------------------------------------------------------
+                'partner[like_games]': {
+                    required: true
+                },
+                'partner[like_type_games]': {
+                    required: true
+                },
+                'partner[platforms][]': {
+                    required: true
+                }
+            },
+            messages: {
+                'partner[platforms][]': {
+                    required: i18n['msg_select-at-least-one']
+                }
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#partner_info_wrapper");
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().next().next());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+        //------------------------------------------------------------------------
 
-    //------------- Form Validation | Partner | Content Creator --------------
-    $("#formPartnerContentCreator").validate({
-        rules: {
-            'content_creator[username]': { required: true,  maxlength: 16},
-            'content_creator[youtube]':   { require_from_group: [1, ".content_creator_channel"] }, 
-            'content_creator[twitch]':    { require_from_group: [1, ".content_creator_channel"] }, 
-            'content_creator[twitter]':   { require_from_group: [1, ".content_creator_channel"] }, 
-            'content_creator[discord]':   { require_from_group: [1, ".content_creator_channel"] }, 
-            'content_creator[instagram]': { require_from_group: [1, ".content_creator_channel"] },
-            'content_creator[other]':     { require_from_group: [1, ".content_creator_channel"] },
-            'content_creator[type_of_content_gameplay][]': { required: true },
-            'content_creator[channel_about][]': { required: true },
-            'content_creator[like_games]': { required: true },
-            'content_creator[like_type_games]': { required: true },
-            'content_creator[platforms][]': { required: true },
-            'content_creator[partner_games][]': { required: true },
-        },
-        messages: {
-            'content_creator[type_of_content_gameplay][]': {
-                required: i18n['msg_select-at-least-one']
-            },
-            'content_creator[channel_about][]': {
-                required: i18n['msg_select-at-least-one']
-            },
-            'content_creator[platforms][]': {
-                required: i18n['msg_select-at-least-one']
-            },
-            'content_creator[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
-            },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#content_creators_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().next().next());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-    //------------------------------------------------------------------------
 
-    //------------- Form Validation | Partner | Moderator ------------------
-    $("#formPartnerModerator").validate({
-        rules: {
-            'moderator[username]': { required: true,  maxlength: 16 },
-            'moderator[moderatorExperient]': { required: true },
-            'moderator[partner_games][]': { required: true },
-        },
-        messages: {
-            'moderator[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
+        //------------- Form Validation | Partner | Skills ---- ------------------
+        $("#formPartnerSkills").validate({
+            rules: {
+                'skills[]': {
+                    required: true,
+                },
             },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#moderators_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().parent());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-    //------------------------------------------------------------------------
+            messages: {
+                'skills[]': {
+                    required: i18n['msg_select-at-least-one']
+                }
+            },
+            submitHandler: function (form) {
 
-    //------------- Form Validation | Partner | Tester ------------------
-    $("#formPartnerTester").validate({
-        rules: {
-            'tester[type_of_tester][]': { required: true},
-            'tester[testerExperient]': { required: true },
-            'tester[partner_games][]': { required: true },
-            //'tester[game_experience][shooter]': { maxlength: 32 }, 
-            //'tester[game_experience][moba]': { maxlength: 32 }, 
-            //'tester[game_experience][rpg]': { maxlength: 32 }, 
-            //'tester[game_experience][mmorpg]': { maxlength: 32 }, 
-            //'tester[game_experience][mobile]': { maxlength: 32 }, 
-            //'tester[game_experience][adventure]': { maxlength: 32 }, 
-            //'tester[game_experience][indie]': { maxlength: 32 }, 
-            //'tester[game_experience][strategy]': { maxlength: 32 }, 
-            //'tester[game_experience][adventure]': { maxlength: 32 }, 
-            //'tester[game_experience][action]': { maxlength: 32 }, 
-            //'tester[game_experience][simulators]': { maxlength: 32 }, 
-            //'tester[game_experience][puzzle]': { maxlength: 32 }, 
-            //'tester[game_experience][browser]': { maxlength: 32 }, 
-            //'tester[game_experience][others]': { maxlength: 32 }, 
-        },
-        messages: {
-            'tester[type_of_tester][]': {
-                required: i18n['msg_select-at-least-one']
+                var data = $(form).serializeArray();
+                $.each(data, function (index, input_data) {
+                    if(typeof input_data === 'object'){
+                        if(input_data.name == "skills[]") {
+                            data.splice(index, 1);
+                        }
+                    }
+                });
+                $.ajax({
+                    url: '/partner/ajaxUpdatePartner',
+                    data: data,
+                    type: 'POST',
+                    error: function (error) {
+                        console.log(error);
+                    },
+                    success: function (data) {
+                        
+                        partnerCardInformationToView("#partner_skill_wrapper");
+                    },
+                });
             },
-            'tester[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
+            errorPlacement: function (error, element) {
+                error.appendTo($("#partner_skill_wrapper .error-wrapper"));
             },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#testers_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().parent());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-    //------------------------------------------------------------------------
+        });
+        //------------------------------------------------------------------------
 
-    //------------- Form Validation | Partner | Gamer ------------------
-    $("#formPartnerGamer").validate({
-        rules: {
-            'pro_gamer[username]': { required: true,  maxlength: 16 },
-            'pro_gamer[youtube]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
-            'pro_gamer[twitch]':    { require_from_group: [1, ".pro_gamer_channel"] }, 
-            'pro_gamer[twitter]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
-            'pro_gamer[discord]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
-            'pro_gamer[instagram]': { require_from_group: [1, ".pro_gamer_channel"] },
-            'pro_gamer[other]':     { require_from_group: [1, ".pro_gamer_channel"] },
-            'pro_gamer[pro_games]': { required: true },
-            'pro_gamer[pro_type_games]': { required: true },
-            'pro_gamer[partner_games][]': { required: true },
-        },
-        messages: {
-            'pro_gamer[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
+        //------------- Form Validation | Partner | Content Creator --------------
+        $("#formPartnerContentCreator").validate({
+            rules: {
+                'content_creator[username]': { required: true,  maxlength: 16},
+                'content_creator[youtube]':   { require_from_group: [1, ".content_creator_channel"] }, 
+                'content_creator[twitch]':    { require_from_group: [1, ".content_creator_channel"] }, 
+                'content_creator[twitter]':   { require_from_group: [1, ".content_creator_channel"] }, 
+                'content_creator[discord]':   { require_from_group: [1, ".content_creator_channel"] }, 
+                'content_creator[instagram]': { require_from_group: [1, ".content_creator_channel"] },
+                'content_creator[other]':     { require_from_group: [1, ".content_creator_channel"] },
+                'content_creator[type_of_content_gameplay][]': { required: true },
+                'content_creator[channel_about][]': { required: true },
+                'content_creator[like_games]': { required: true },
+                'content_creator[like_type_games]': { required: true },
+                'content_creator[platforms][]': { required: true },
+                'content_creator[partner_games][]': { required: true },
             },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#pro_gamers_wrapper");
-        },
-
-    });
-    //------------------------------------------------------------------------
-
-    //------------- Form Validation | Partner | Translator ------------------------
-    $("#formPartnerTranslator").validate({
-        rules: {
-            'translator[translatorExperient]': { required: true },
-            'translator[translate_example]': { required: true, maxlength: 200},
-            'translator[partner_games][]': { required: true },
-        },
-        messages: {
-            'translator[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
+            messages: {
+                'content_creator[type_of_content_gameplay][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+                'content_creator[channel_about][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+                'content_creator[platforms][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+                'content_creator[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
             },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#translators_wrapper");
-        },
-        errorPlacement: function (error, element) {
-            if (element.is(":radio")) {
-                error.appendTo(element.parent().parent());
-            } else if (element.is(":checkbox")) {
-                error.appendTo(element.next());
-            } else {
-                $(element.parent().append(error));
-            }
-        },
-    });
-    //------------------------------------------------------------------------
-
-    //------------- Form Validation | Partner | Caster ------------------
-    $("#formPartnerCaster").validate({
-        rules: {
-            'caster[username]': { required: true,  maxlength: 16 },
-            'caster[youtube]':   { require_from_group: [1, ".caster_channel"] }, 
-            'caster[twitch]':    { require_from_group: [1, ".caster_channel"] }, 
-            'caster[twitter]':   { require_from_group: [1, ".caster_channel"] }, 
-            'caster[discord]':   { require_from_group: [1, ".caster_channel"] }, 
-            'caster[instagram]': { require_from_group: [1, ".caster_channel"] },
-            'caster[other]':     { require_from_group: [1, ".caster_channel"] },
-            'caster[cast_games]': { required: true },
-            'caster[cast_type_games]': { required: true },
-            'caster[partner_games][]': { required: true },
-        },
-        messages: {
-            'caster[partner_games][]': {
-                required: i18n['msg_select-at-least-one']
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#content_creators_wrapper");
             },
-        },
-        submitHandler: function (form) {
-            var data = $(form).serializeArray();
-            data = removeCheckedCheckboxOnSerializedArray(data);
-            ajaxUpdatePartner(data, "#casters_wrapper");
-        },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().next().next());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Partner | Moderator ------------------
+        $("#formPartnerModerator").validate({
+            rules: {
+                'moderator[username]': { required: true,  maxlength: 16 },
+                'moderator[moderatorExperient]': { required: true },
+                'moderator[partner_games][]': { required: true },
+            },
+            messages: {
+                'moderator[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#moderators_wrapper");
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().parent());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Partner | Tester ------------------
+        $("#formPartnerTester").validate({
+            rules: {
+                'tester[type_of_tester][]': { required: true},
+                'tester[testerExperient]': { required: true },
+                'tester[partner_games][]': { required: true },
+                //'tester[game_experience][shooter]': { maxlength: 32 }, 
+                //'tester[game_experience][moba]': { maxlength: 32 }, 
+                //'tester[game_experience][rpg]': { maxlength: 32 }, 
+                //'tester[game_experience][mmorpg]': { maxlength: 32 }, 
+                //'tester[game_experience][mobile]': { maxlength: 32 }, 
+                //'tester[game_experience][adventure]': { maxlength: 32 }, 
+                //'tester[game_experience][indie]': { maxlength: 32 }, 
+                //'tester[game_experience][strategy]': { maxlength: 32 }, 
+                //'tester[game_experience][adventure]': { maxlength: 32 }, 
+                //'tester[game_experience][action]': { maxlength: 32 }, 
+                //'tester[game_experience][simulators]': { maxlength: 32 }, 
+                //'tester[game_experience][puzzle]': { maxlength: 32 }, 
+                //'tester[game_experience][browser]': { maxlength: 32 }, 
+                //'tester[game_experience][others]': { maxlength: 32 }, 
+            },
+            messages: {
+                'tester[type_of_tester][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+                'tester[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#testers_wrapper");
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().parent());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Partner | Gamer ------------------
+        $("#formPartnerGamer").validate({
+            rules: {
+                'pro_gamer[username]': { required: true,  maxlength: 16 },
+                'pro_gamer[youtube]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+                'pro_gamer[twitch]':    { require_from_group: [1, ".pro_gamer_channel"] }, 
+                'pro_gamer[twitter]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+                'pro_gamer[discord]':   { require_from_group: [1, ".pro_gamer_channel"] }, 
+                'pro_gamer[instagram]': { require_from_group: [1, ".pro_gamer_channel"] },
+                'pro_gamer[other]':     { require_from_group: [1, ".pro_gamer_channel"] },
+                'pro_gamer[pro_games]': { required: true },
+                'pro_gamer[pro_type_games]': { required: true },
+                'pro_gamer[partner_games][]': { required: true },
+            },
+            messages: {
+                'pro_gamer[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#pro_gamers_wrapper");
+            },
+
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Partner | Translator ------------------------
+        $("#formPartnerTranslator").validate({
+            rules: {
+                'translator[translatorExperient]': { required: true },
+                'translator[translate_example]': { required: true, maxlength: 200},
+                'translator[partner_games][]': { required: true },
+            },
+            messages: {
+                'translator[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#translators_wrapper");
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio")) {
+                    error.appendTo(element.parent().parent());
+                } else if (element.is(":checkbox")) {
+                    error.appendTo(element.next());
+                } else {
+                    $(element.parent().append(error));
+                }
+            },
+        });
+        //------------------------------------------------------------------------
+
+        //------------- Form Validation | Partner | Caster ------------------
+        $("#formPartnerCaster").validate({
+            rules: {
+                'caster[username]': { required: true,  maxlength: 16 },
+                'caster[youtube]':   { require_from_group: [1, ".caster_channel"] }, 
+                'caster[twitch]':    { require_from_group: [1, ".caster_channel"] }, 
+                'caster[twitter]':   { require_from_group: [1, ".caster_channel"] }, 
+                'caster[discord]':   { require_from_group: [1, ".caster_channel"] }, 
+                'caster[instagram]': { require_from_group: [1, ".caster_channel"] },
+                'caster[other]':     { require_from_group: [1, ".caster_channel"] },
+                'caster[cast_games]': { required: true },
+                'caster[cast_type_games]': { required: true },
+                'caster[partner_games][]': { required: true },
+            },
+            messages: {
+                'caster[partner_games][]': {
+                    required: i18n['msg_select-at-least-one']
+                },
+            },
+            submitHandler: function (form) {
+                var data = $(form).serializeArray();
+                data = removeCheckedCheckboxOnSerializedArray(data);
+                ajaxUpdatePartner(data, "#casters_wrapper");
+            },
+        });
     });
     //------------------------------------------------------------------------
 
