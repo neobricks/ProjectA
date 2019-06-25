@@ -283,11 +283,7 @@ if (!empty($user)) $body_class = 'logged-in';
     ?>
 
     <?php echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js'); ?>
-	<?php 
-        if(I18n::getLocale() !== 'en'){
-            echo $this->Html->script('/plugins/jquery-validation-1.19.0/localization/messages_'.I18n::getLocale().'.min.js');
-        }
-    ?>
+
 
     <?php echo $this->Html->script('/public/assets/js/scripts.js'); ?>
     <?php echo $this->Html->script('/public/assets/js/main.js', [

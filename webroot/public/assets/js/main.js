@@ -1386,8 +1386,10 @@ function initMap() {
 
 
     var language_input_base = $(".language-base").html();
-    var language_pre_data =  JSON.parse($("#languages-data").attr("data-languages"));
-
+    console.log($("#languages-data").data("languages"))
+    if($("#languages-data").data("languages")){
+        var language_pre_data =  $("#languages-data").data("languages");
+    }
     $(".language-base").remove();
     //------------- Become Partner | Partner Info | Languages ----------------
     $(document).ready(function () {
