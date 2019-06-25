@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -24,7 +24,7 @@
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('How you want to be called') ?>
+                    <?= __('How do you want to be called') ?>? *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -43,7 +43,7 @@
             <!-- /username -->
 
             <!-- channels -->
-            <h6 class="text-primary"> Your main channel(s): *</h6>
+            <h6 class="text-primary"><?= __('Your main channel(s)') ?>: *</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
@@ -158,8 +158,7 @@
             <!-- pro gamer at -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What game or games you like to play') ?>
-                    *
+                    <?= __('What game or games do you like to play?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="row  pb-2">
@@ -182,7 +181,7 @@
                     </div>
                     <div class="row pb-2">
                             <span class="col-12 text-warning">
-                                <?= __('I am pro at these types of games'); ?>
+                                <?= __('I am pro at these types of games:'); ?>
                             </span>
                         <span class="col-12">
                             <div class="view py-2 px-3">
@@ -211,7 +210,7 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>

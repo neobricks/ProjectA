@@ -62,7 +62,7 @@ class AppController extends Controller
         if($this->Cookie->check('gdpr')){
             $gdpr = $this->Cookie->read('gdpr');
         }
-        
+
         /*
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
@@ -76,6 +76,7 @@ class AppController extends Controller
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
+        // debug($_SESSION); exit;
         if($this->Cookie->check('lang')){
             $lang = $this->Cookie->read('lang');
             if($lang) {
@@ -95,5 +96,4 @@ class AppController extends Controller
         $this->Cookie->write('gdpr', json_encode(['accepted' => 1]));
         echo json_encode([]);
     }
-
 }

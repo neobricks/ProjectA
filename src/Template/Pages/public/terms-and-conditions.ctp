@@ -12,7 +12,7 @@ $this->assign('title', 'Terms and Conditions');
             <p>These terms and conditions outline the rules and regulations for
                 the use of NeoBricks's Website. Last updated: 22/03/2019.</p>
 
-            <p>http://local.treeve.com/terms-and-conditionsBy accessing this
+            <p>By accessing this
                 website, we assume you accept these terms and conditions in
                 full. Do not continue to use NeoBricks's website if you do not
                 accept all of the terms and conditions stated on this page.</p>

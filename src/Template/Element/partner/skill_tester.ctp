@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -113,7 +113,7 @@
             <!-- type of games -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What game or games you have a lot of experience?') ?>
+                    <?= __('What game or games do you have a lot of experience with?') ?>
                 </label>
                     
                 <?php
@@ -126,7 +126,6 @@
                     ["label" => "Adventure", "value" => "adventure"],
                     ["label" => "Indie", "value" => "indie"],
                     ["label" => "Strategy",  "value" => "strategy"],
-                    ["label" => "Adventure", "value" => "adventure"],
                     ["label" => "Action",    "value" => "action"],
                     ["label" => "Simulators",    "value" => "simulators"],
                     ["label" => "Puzzle",    "value" => "puzzle"],
@@ -168,7 +167,7 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>

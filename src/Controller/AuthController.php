@@ -1,7 +1,10 @@
 <?php
 namespace App\Controller;
 
-
+use function Psy\debug;
+use App\Model\Table\UsersTable;
+use App\Model\Table\TblUser;
+use Cake\Datasource\ConnectionManager;
 
 class AuthController extends AppController
 {
@@ -51,10 +54,30 @@ class AuthController extends AppController
                 'ip' => $this->request->clientIp() == '::1' ? '213.61.78.82' : $this->request->clientIp(),
                 'userTypeID' => "1",
             ];
+            
             $response = $this->GameweeveApi->register($params);
+            
             if ($response->result >= 0 && $response->verifyToken) {
                 $this->Flash->success(__('Your account has been created, you will now receive a confirmation email!'));
-                //TODO: Now we log the user?
+                //Insert in Users table as well
+                $connection = ConnectionManager::get('default');
+                $tblUser = new TblUser(['connection' => $connection]);
+                $record = $tblUser->find('all', [
+                    'order' => ['userNumber' => 'DESC']
+                ])->first();
+                
+                $usersTable = new UsersTable(['connection' => $connection]);
+
+                // Create new user account
+                $user = $usersTable->newEntity([
+                    'id' => $record->userNumber,
+                    'username' => $data['email'],
+                    'password' => $data['password'],
+                    'email' => $data['email'],
+                    'first_name' => 'XXX',
+                    'last_name' => NULL,
+                    ]);
+                $user = $usersTable->save($user);
             } else {
                 $this->Flash->error(__('We found a error creating your account: {0}', $response->result));
             }

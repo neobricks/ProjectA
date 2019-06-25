@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -64,11 +64,10 @@
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <span class="align-middle">
-                        <?= __('How would you translate this on your language:');?>
+                        <?= __('How would you translate this in your language?');?>
                         <span class="text-warning">
-                            “You must become a hero in your world, crossing path with other counterparts from other worlds to stop a threat for all worlds”
+                            “You must become a hero in your world, crossing paths with other counterparts from other worlds to stop a threat for all worlds”
                         </span>
-                        ? *
                     </span>
                 </label>
                 <div class="col-12 col-sm-8">
@@ -96,7 +95,7 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>

@@ -7,6 +7,167 @@ $showForm = false;
     <div class="col-12">
         <div class="card card-information active my-3"
              id="partner_info_wrapper">
+			 
+			 <!-- edited code by daniela -->
+			<div class="card-body">
+                <h4 class="card-title">
+                    <span class="text-light">
+                        <?= __('Black Squad Partner Quest'); ?>
+                    </span> 
+					<span class="float-right">
+                        <span class="text-primary fs-3 fw-400 text-required-field">
+                            * Required field
+                        </span>
+                        <button type="button"
+                                class="btn btn-sm text-dark btn-primary btn-update">
+                            <?= __('Update'); ?>
+                        </button>
+                    </span>
+				</h4>
+				<h5 class="text-primary">
+                        <?= __('Requisites: <br>
+							- Be an influencer on Twitch or Youtube <br>
+							- Have at least 1000 followers on the main platform you wish to influence on <br>
+							<br>
+							Quest Rewards:<br>
+							- Become part of a big community of over 100 world-renowned influencers <br>
+							- Have immediate contact with BS Medics and Staff <br>
+							- Exclusive Calling Card, Skins, Packages <br>
+							- Monthly BS Coins <br>
+							- 20 Partner Exclusive Package giveaways per month <br>
+							- 5 M4 Custom Yellow Dragon giveaways per month <br>
+							- 5 SIZ556XI RUS GL XTREME2 giveaways per month <br>
+							<br>
+							Depending on your performance: <br>
+							- Free DLCs <br>
+							- Extra weapons <br>
+							- Extra special calling cards <br>
+							- Extra BS Coins <br>
+							<br>
+							Your duty and missions: <br>
+							- if you stream on Twitch/Youtube: Stream (over 30 minutes), 2 times a week <br>
+							- if you create contents on Youtube: Upload movie (minimum 3 minutes) Once a week <br> 
+
+'); ?>
+                 </h5>
+				<div class="row">
+                    <div class="col-12">
+                        <?php 
+                        echo $this->Form->create(null, [
+                            'id' => 'formPartnerInformation',
+                            'url' => ['controller' => 'partner', 'action' => 'information'],
+                            'class' => 'input-transparent',
+                            'type' => 'post',
+                        ]); ?>
+						
+					<!-- steam -->
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-4 text-primary">
+                                    <span class="align-middle">
+                                      <?= __('Steam ID') ?>
+                                    </span>
+                            </label>
+                            <div class="col-12 col-sm-8">
+                                <div class="view py-2 px-3">
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                                <div class="edit-text flex-column">
+                                    <?php echo $this->Form->text('partner[steam]', [
+                                        'class' => 'form-control',
+                                        'value' => !empty($userInfo['partner']['steam']) ? $userInfo['partner']['steam'] : '',
+                                    ]); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /input steam -->
+
+                        <!-- input Discord -->
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-4 text-primary">
+                            <span class="align-middle">
+                                <?= __('Discord ID') ?>
+                            </span>
+                            </label>
+                            <div class="col-12 col-sm-8">
+                                <div class="view py-2 px-3">
+                                    <p>
+                                        <?php
+                                        if (!empty($user['discord'])):
+                                            echo $user['discord'];
+                                        endif;
+                                        ?>
+                                    </p>
+                                </div>
+                                <div class="edit-text flex-column">
+                                    <?php echo $this->Form->text('partner[discord]', [
+                                        'class' => 'form-control',
+                                        'value' => !empty($userInfo['partner']['discord']) ? $userInfo['partner']['discord'] : '',
+                                    ]); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /input discord -->
+					<div class="form-group row">
+                            <label class="col-12 col-sm-4 text-primary">
+                                <?= __('What are the links to your Youtube or Twitch channels?') ?>
+                                *
+                            </label>
+                            <div class="col-12 col-sm-8">
+                                <div class="row  pb-2">
+                                        <span class="col-12 text-warning">
+                                            <?= __('Twitch channel link'); ?>
+                                        </span>
+                                    <span class="col-12">
+                                        <div class="view py-2 px-3">
+                                        </div>
+                                        <div class="edit-tag-input flex-column">
+                                           <input name="partner[like_games]"
+                                                  type="text"
+                                                  data-role="tagsinput"
+                                                  value="<?=!empty($userInfo['partner']['twitch_channel']) ? $userInfo['partner']['twitch_channel'] : '';?>"
+                                                  placeholder="twitch.tv/"
+                                                  class="form-control">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="row pb-2">
+                                        <span class="col-12 text-warning">
+                                            <?= __('Youtube channel link'); ?>
+                                        </span>
+                                    <span class="col-12">
+                                        <div class="view py-2 px-3">
+                                        </div>
+                                        <div class="edit-tag-input flex-column">
+                                            <input name="partner[like_type_games]"
+                                                  type="text"
+                                                  data-role="tagsinput"
+                                                  value="<?=!empty($userInfo['partner']['youtube_channel']) ? $userInfo['partner']['youtube_channel'] : '';?>"
+                                                  placeholder="youtube.com/channel/"
+                                                  class="form-control">
+                                        </div>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+					<!-- submit -->
+                        <div class="form-group row mt-6 mb-0 submit-wrapper">
+                            <div class="col-6"></div>
+                            <div class="col-6 text-right">
+                                <?php echo $this->Form->submit(__('Submit'), [
+                                    'class' => 'btn btn-lg btn-primary text-dark',
+                                ]); ?>
+                            </div>
+                        </div>
+                        <!-- /submit -->
+                        <?= $this->Form->end(); ?>
+                    </div> <!-- /col-12 -->
+                </div> <!-- /row -->
+            </div> <!-- /card-body -->
+			
+			 <!-- end edited code by daniela -->
+			 
             <div class="card-body">
                 <h4 class="card-title">
                     <span class="text-light">
@@ -22,7 +183,7 @@ $showForm = false;
                         </button>
                     </span>
                 </h4>
-
+				
                 <div class="row">
                     <div class="col-12">
 
@@ -87,7 +248,6 @@ $showForm = false;
                         <?php
                         $language_codes = [
                             'en' => 'English' , 'aa' => 'Afar' , 'ab' => 'Abkhazian' , 'af' => 'Afrikaans' , 'am' => 'Amharic' , 'ar' => 'Arabic' , 'as' => 'Assamese' , 'ay' => 'Aymara' , 'az' => 'Azerbaijani' , 'ba' => 'Bashkir' , 'be' => 'Byelorussian' , 'bg' => 'Bulgarian' , 'bh' => 'Bihari' , 'bi' => 'Bislama' , 'bn' => 'Bengali/Bangla' , 'bo' => 'Tibetan' , 'br' => 'Breton' , 'ca' => 'Catalan' , 'co' => 'Corsican' , 'cs' => 'Czech' , 'cy' => 'Welsh' , 'da' => 'Danish' , 'de' => 'German' , 'dz' => 'Bhutani' , 'el' => 'Greek' , 'eo' => 'Esperanto' , 'es' => 'Spanish' , 'et' => 'Estonian' , 'eu' => 'Basque' , 'fa' => 'Persian' , 'fi' => 'Finnish' , 'fj' => 'Fiji' , 'fo' => 'Faeroese' , 'fr' => 'French' , 'fy' => 'Frisian' , 'ga' => 'Irish' , 'gd' => 'Scots/Gaelic' , 'gl' => 'Galician' , 'gn' => 'Guarani' , 'gu' => 'Gujarati' , 'ha' => 'Hausa' , 'hi' => 'Hindi' , 'hr' => 'Croatian' , 'hu' => 'Hungarian' , 'hy' => 'Armenian' , 'ia' => 'Interlingua' , 'ie' => 'Interlingue' , 'ik' => 'Inupiak' , 'in' => 'Indonesian' , 'is' => 'Icelandic' , 'it' => 'Italian' , 'iw' => 'Hebrew' , 'ja' => 'Japanese' , 'ji' => 'Yiddish' , 'jw' => 'Javanese' , 'ka' => 'Georgian' , 'kk' => 'Kazakh' , 'kl' => 'Greenlandic' , 'km' => 'Cambodian' , 'kn' => 'Kannada' , 'ko' => 'Korean' , 'ks' => 'Kashmiri' , 'ku' => 'Kurdish' , 'ky' => 'Kirghiz' , 'la' => 'Latin' , 'ln' => 'Lingala' , 'lo' => 'Laothian' , 'lt' => 'Lithuanian' , 'lv' => 'Latvian/Lettish' , 'mg' => 'Malagasy' , 'mi' => 'Maori' , 'mk' => 'Macedonian' , 'ml' => 'Malayalam' , 'mn' => 'Mongolian' , 'mo' => 'Moldavian' , 'mr' => 'Marathi' , 'ms' => 'Malay' , 'mt' => 'Maltese' , 'my' => 'Burmese' , 'na' => 'Nauru' , 'ne' => 'Nepali' , 'nl' => 'Dutch' , 'no' => 'Norwegian' , 'oc' => 'Occitan' , 'om' => '(Afan)/Oromoor/Oriya' , 'pa' => 'Punjabi' , 'pl' => 'Polish' , 'ps' => 'Pashto/Pushto' , 'pt' => 'Portuguese' , 'qu' => 'Quechua' , 'rm' => 'Rhaeto-Romance' , 'rn' => 'Kirundi' , 'ro' => 'Romanian' , 'ru' => 'Russian' , 'rw' => 'Kinyarwanda' , 'sa' => 'Sanskrit' , 'sd' => 'Sindhi' , 'sg' => 'Sangro' , 'sh' => 'Serbo-Croatian' , 'si' => 'Singhalese' , 'sk' => 'Slovak' , 'sl' => 'Slovenian' , 'sm' => 'Samoan' , 'sn' => 'Shona' , 'so' => 'Somali' , 'sq' => 'Albanian' , 'sr' => 'Serbian' , 'ss' => 'Siswati' , 'st' => 'Sesotho' , 'su' => 'Sundanese' , 'sv' => 'Swedish' , 'sw' => 'Swahili' , 'ta' => 'Tamil' , 'te' => 'Tegulu' , 'tg' => 'Tajik' , 'th' => 'Thai' , 'ti' => 'Tigrinya' , 'tk' => 'Turkmen' , 'tl' => 'Tagalog' , 'tn' => 'Setswana' , 'to' => 'Tonga' , 'tr' => 'Turkish' , 'ts' => 'Tsonga' , 'tt' => 'Tatar' , 'tw' => 'Twi' , 'uk' => 'Ukrainian' , 'ur' => 'Urdu' , 'uz' => 'Uzbek' , 'vi' => 'Vietnamese' , 'vo' => 'Volapuk' , 'wo' => 'Wolof' , 'xh' => 'Xhosa' , 'yo' => 'Yoruba' , 'zh' => 'Chinese' , 'zu' => 'Zulu'];
-
                         $language_profiencies = [
                             'native' => __('Native'),
                             'basic' => __('Basic'),
@@ -103,7 +263,6 @@ $showForm = false;
                             </label>
                             <div class="col-12 col-md-8">
                                 <div class="view py-2 px-3">
-
                                 </div>
                                 <div class="edit-language-input w-100">
                                     <div class="row mb-1 language-input">
@@ -125,14 +284,12 @@ $showForm = false;
                                                 </option>
                                             </select>
                                         </div>
-
                                         <div class="col-6 col-md-3 py-1">
                                             <button class="btn btn-link btn-add-language text-light pt-3">
                                                 Add another
                                             </button>
                                         </div>
                                     </div>
-
                                     <div class="language-base d-none">
                                         <div class="row mb-1 language-input">
                                             
@@ -158,7 +315,6 @@ $showForm = false;
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
-
                                             <div class="col-12 col-md-3 py-1">
                                                 <button type="button"
                                                         class="btn btn-link text-danger  btn-remove-language pt-3">
@@ -168,14 +324,10 @@ $showForm = false;
                                         </div>
                                     </div>
                                     <span class="languages-loop"></span>
-
                                 </div> <!-- /edit-language-input -->
-
                             </div>
-
                         </div>
                         <!-- /input languages --> 
-
                         <!-- games you like -->
                         <div class="form-group row">
                             <label class="col-12 col-sm-4 text-primary">
@@ -189,14 +341,13 @@ $showForm = false;
                                         </span>
                                     <span class="col-12">
                                         <div class="view py-2 px-3">
-
                                         </div>
                                         <div class="edit-tag-input flex-column">
                                            <input name="partner[like_games]"
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value="<?=!empty($userInfo['partner']['like_games']) ? $userInfo['partner']['like_games'] : '';?>"
-                                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatchâ€¦"
+                                                  placeholder="Black Squad, PUBG, Fortnite, CS:GO, Apex Legends, Overwatch…"
                                                   class="form-control">
                                         </div>
                                     </span>
@@ -207,14 +358,13 @@ $showForm = false;
                                         </span>
                                     <span class="col-12">
                                         <div class="view py-2 px-3">
-
                                         </div>
                                         <div class="edit-tag-input flex-column">
                                             <input name="partner[like_type_games]"
                                                   type="text"
                                                   data-role="tagsinput"
                                                   value="<?=!empty($userInfo['partner']['like_type_games']) ? $userInfo['partner']['like_type_games'] : '';?>"
-                                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventureâ€¦"
+                                                  placeholder="Shooter, RPG, MMORPG, MOBA, Anime style, JRPG, Indie, Strategy, Casual, Free to play, Pay to play, Hardcore games, Games for kids, Adventure…"
                                                   class="form-control">
                                         </div>
                                         </span>
@@ -222,7 +372,6 @@ $showForm = false;
                             </div>
                         </div>
                         <!-- /games you like -->
-
                         <!-- platforms -->
                         <div class="form-group row">
                             <label class="col-12 col-sm-4 text-primary">
@@ -295,14 +444,11 @@ $showForm = false;
                                                 <?php endif; ?>
                                             </label>
                                         </div>
-
                                     </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                         <!-- /platforms -->
-
-
                         <!-- nicknames -->
                         <div class="form-group row">
                             <label class="col-12 col-sm-4 text-primary">
@@ -336,7 +482,6 @@ $showForm = false;
                             </div>
                         </div>
                         <!-- /nicknames -->
-
                         <!-- submit -->
                         <div class="form-group row mt-6 mb-0 submit-wrapper">
                             <div class="col-6"></div>
@@ -344,18 +489,13 @@ $showForm = false;
                                 <?php echo $this->Form->submit(__('Submit'), [
                                     'class' => 'btn btn-lg btn-primary text-dark',
                                 ]); ?>
-
                             </div>
                         </div>
                         <!-- /submit -->
-
                         <?= $this->Form->end(); ?>
-
                     </div> <!-- /col-12 -->
                 </div> <!-- /row -->
-
             </div> <!-- /card-body -->
         </div> <!-- /card -->
-
     </div> <!-- /col-12 -->
 </div> <!-- /row -->

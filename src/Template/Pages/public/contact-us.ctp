@@ -8,17 +8,17 @@ $this->assign('title', __('Contact Us'));
         <div class="row gutters-y">
             <div class="col-lg-7">
                 <div class="mb-6">
-                    <h1 class="text-primary"><?= __('Contact Us'); ?></h1>
+                    <h1 class="text-primary"><?= __('Contact us'); ?></h1>
                     <!-- <p class="lead-1"><?= __(''); ?></p> -->
                 </div>
                 <form data-form="contact_form" action="#" class="input-transparent" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input class="form-control form-control-lg" type="text" name="name" placeholder="<?= __('Your name') ?>" required>
+                            <input class="form-control form-control-lg" type="text" name="name" placeholder="<?= __('Name') ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
-                            <input class="form-control form-control-lg" type="email" name="email" placeholder="<?= __('Your email address') ?>" required>
+                            <input class="form-control form-control-lg" type="email" name="email" placeholder="<?= __('Email address') ?>" required>
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@ $this->assign('title', __('Contact Us'));
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control form-control-lg" rows="4" placeholder="<?= __('Your message') ?>" name="message" required></textarea>
+                        <textarea class="form-control form-control-lg" rows="4" placeholder="<?= __('Message') ?>" name="message" required></textarea>
                     </div>
                     <button class="btn btn-lg btn-warning" type="submit"><?= __('Send message') ?></button>
                 </form>
@@ -43,25 +43,25 @@ $this->assign('title', __('Contact Us'));
                                     Feringastraße 4‬
                                     85774 Unterföhring, <?= __('Germany'); ?>
                                 </li>
-                                <li class="d-flex align-items-center">
+                                <!--  <li class="d-flex align-items-center">
                                     <i class="fas fa-phone mr-3"></i>
-                                    (818) 555-4709
-                                </li>
+                                    (XXX) XXX-XXXX
+                                </li> -->
                             </ul>
                         </div>
                         <div>
                             <h5 class="lead-2 fw-500 text-warning"><?= __('Looking for support?'); ?></h5>
                             <ul class="list-unstyled">
                                 <li class="d-flex align-items-center">
-                                    <a href=""><?= __('Black Squad Support'); ?></a>
+                                    <a href="http://support.blacksquad.com/" target="_blank"><?= __('Black Squad Support'); ?></a>
                                 </li>
                                 <li class="d-flex align-items-center">
-                                    <a href=""><?= __('Black Squad Steam Discussions'); ?></a>
+                                    <a href="https://steamcommunity.com/app/550650/discussions/" target="_blank"><?= __('Black Squad Steam Discussions'); ?></a>
                                 </li>
                             </ul>
                         </div>
                         <!-- <div>
-                            <h5 class="lead-2 fw-500 text-warning"><?= __('Follow Us'); ?></h5>
+                            <h5 class="lead-2 fw-500 text-warning"><?= __('Follow us'); ?></h5>
                             <div class="social-buttons">
                                 <a class="mr-3 unset social-twitter" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -80,9 +80,11 @@ $this->assign('title', __('Contact Us'));
         </div>
     </div>
 </section>
-
+<!--
 <div class="map_box">
     <div class="py-13" data-map="true" data-lat="48.178042" data-lng="11.632208" data-marker-lat="35.61030245" data-marker-lng="140.11365268" data-marker-animation="drop" data-marker-title="Neobricks" data-zoom="15">
 
     </div>
+
+-->
 </div>

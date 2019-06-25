@@ -22,15 +22,38 @@ class PartnerController extends AppController
 
     public function index()
     {
+
+
         $this->viewBuilder()->setLayout('public');
         $session = $this->getRequest()->getSession();
         $user = $session->read('User');
+		
+		$userNumberVar; 
+		if	(isset($user['id']))
+		{
+			$userNumberVar = $user['id']; 
+		}else 
+		{
+			$userNumberVar = $user['userNumber']; 
+		}
 
-        $response = $this->GameweeveApi->user_info([
+
+		$response = $this->GameweeveApi->user_info([
             'email' => $user['email'],
-            'userNumber' => $user['userNumber']
+            'userNumber' => $userNumberVar //,
+		
         ]);
+
+
+        //$response = $this->GameweeveApi->user_info([
+        //    'email' => $user['email'],
+        //    'userNumber' => $user['id'] //,
+		//tempo solution
+        //    'userNumber' => $user['userNumber']
+		//tempo solution
+        //]);
         $userInfo = [];
+
         if ($session->check('userInfo')) {
             $userInfo = $session->read('userInfo');
         }   
@@ -53,8 +76,19 @@ class PartnerController extends AppController
 
         $form_data['email'] = $user['email'];
         $form_data['token'] = $user['token'];
-        $form_data['userNumber'] = $user['userNumber'];
+        //$form_data['userNumber'] = $user['id'];
+		//tempo solution
+       // $form_data['userNumber'] = $user['userNumber'];
         
+
+		if (isset($user['id'])){
+			$form_data['userNumber'] = $user['id'];
+		}
+
+		if (isset($user['userNumber'])){
+			$form_data['userNumber'] = $user['userNumber'];
+		}
+
         $userInfo = [];
         if ($session->check('userInfo')) {
            $userInfo = $session->read('userInfo');

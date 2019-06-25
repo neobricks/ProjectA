@@ -8,7 +8,7 @@ $this->assign('title', __('Reset Password'));
         <div class="col-12 col-md-6 offset-md-3 offset py-9">
             <div class="modal-header border-secondary py-2">
                 <h5 class="modal-title text-warning">
-                    <?= __('Reset Password') ?>
+                    <?= __('Reset password') ?>
                 </h5>
 
             </div>
@@ -26,7 +26,7 @@ $this->assign('title', __('Reset Password'));
                         'id' => 'signup_password'
                     ]); ?>
                     <span class="highlight"></span>
-                    <label class="mat"><?= __("New Password") ?></label>
+                    <label class="mat"><?= __("New password") ?></label>
                 </div>
 
                 <div class="group">
@@ -35,7 +35,7 @@ $this->assign('title', __('Reset Password'));
 
                     ]); ?>
                     <span class="highlight"></span>
-                    <label class="mat"><?= __("Confirm Password") ?></label>
+                    <label class="mat"><?= __("Confirm password") ?></label>
                 </div>
 
 

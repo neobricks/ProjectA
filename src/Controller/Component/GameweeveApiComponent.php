@@ -49,16 +49,17 @@ class GameweeveApiComponent extends Component
         if(!empty($options['headers'])) {
             $headers = $options['headers'];            
         }
+        
         $response = $this->client->request($type, $endpoint, [
             'form_params' => $request_body,
             'query' => $query_parameters,
             'headers' => $headers,
         ]);
+
         if (in_array($response->getStatusCode(), $this->http_status_ok)) {
             try {
                 return json_decode($response->getBody());
             } catch (Exception $e) {
-                
                 throw new Exception("Error Decoding Json", 1);
             }
         } else {
@@ -88,6 +89,7 @@ class GameweeveApiComponent extends Component
                 $query_parameters['data'][$param] = $data[$param];
             }
         }
+        
         $query_parameters['data'] = json_encode($query_parameters['data']);
         $endpoint = '/registerJson.php';
         try {

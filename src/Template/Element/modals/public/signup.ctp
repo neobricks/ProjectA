@@ -13,12 +13,98 @@
             </div>
             <div class="modal-body">
 
+
+<!--------------------------------------------------->
+
+
+<div>
+                <div class="text-center my-6"> 
+                <?php
+                echo $this->Form->postLink('<span class="btn btn-circle btn-sm btn-google mr-2" href=""><i class="fab fa-google"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'google',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                );
+                echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-facebook mr-2" href=""><i class="fab fa-facebook-f"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'facebook',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                ); 
+                /*echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-twitter mr-2" href=""><i class="fab fa-twitter"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'twitter',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                );*/
+
+                echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-twitch" href=""><i class="fab fa-twitch"></i></span></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'twitch',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                ); 
+                ?>
+                </div>
+                <span class="hr-text small my-6"><?= __("Or") ?></span> 
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------->
+
+
+
                 <?php echo $this->Form->create(null, [
                     'id' => 'formSignUp',
                     'url' => ['controller' => 'auth', 'action' => 'register'],
                     'class' => 'input-transparent material',
                     'type' => 'post'
-                ]); ?>
+                ]); 
+				
+
+				?>
 
                     <div class="group">      
                          <?php echo $this->Form->text('email', [
@@ -44,7 +130,7 @@
                             
                         ]); ?>
                         <span class="highlight"></span>
-                        <label class="mat"><?= __("Confirm Password") ?></label>
+                        <label class="mat"><?= __("Confirm password") ?></label>
                     </div>
 
                     <!-- checkboxes terms -->
@@ -70,7 +156,7 @@
                                                         '/privacy-policy'
                                                     );
                                                 ?>
-                                                <?= __('I’ve read and accepted the {0} and {1}', $temsNConditionsLink,  $privacyPolicysLink); ?>
+                                                <?= __('I\'ve read and accepted the {0} and {1}', $temsNConditionsLink,  $privacyPolicysLink); ?>
                                             </small>
                                         </label>
                                     </div>
@@ -112,7 +198,7 @@
                         <div class="col-12">
                             <button class="btn btn-block btn-warning text-uppercase"
                                     type="submit">
-                                <?= __('Register') ?>
+                                <?= __('REGISTER') ?>
                             </button>
                             <p class="small text-left mt-2 py-4 mb-0">
                                 <?= __('Already have an account?') ?>

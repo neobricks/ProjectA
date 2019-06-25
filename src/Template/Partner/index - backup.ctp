@@ -8,7 +8,7 @@ $firstTime = true;
 
 
 if (!empty($userInfo['partner'])) {
-    $firstName = $userInfo['partner']['name'];
+    $firstName = !empty($userInfo['partner']['name']) ? $userInfo['partner']['name'] : '';
     $firstTime = false;
 }
 

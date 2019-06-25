@@ -40,12 +40,23 @@
 
 "use strict";
 
+var i18n = [];
+
+//----------------------- I18N --------------------------
+$(document).ready(function () {
+
+    i18n['msg_you-must-accept-the-terms-n-conditions'] = $("#msg_you-must-accept-the-terms-n-conditions").html();
+    i18n['msg_please-enter-at-least-one-special-character'] = $("#msg_please-enter-at-least-one-special-character").html();
+    i18n['msg_please-enter-at-least-one-uppercased-character'] = $("msg_please-enter-at-least-one-uppercased-character").html();
+    i18n['msg_select-at-least-one'] = $("#msg_select-at-least-one").html();
+});
+
 //------------------- Default options -------------------
 if ((options == undefined) || (options == false)) {
     var options = true,
         preloader = { enabled: false },
         GoogleMapAPI = {
-            key: '',
+            key: 'AIzaSyAuTkfQku29aimVpcyMV8GhuGfMRozLGh4',
             language: '',
             region: '',
             disableDefaultUI: false,
@@ -73,6 +84,8 @@ function initMap() {
             GM_marker_content = '',
             GM_style,
             map;
+
+
 
         if ((el.closest('[data-lat]')) && (el.closest('[data-lng]'))) {
             GM_lat = Number(el.getAttribute('data-lat'));
@@ -624,6 +637,7 @@ function initMap() {
             GM_reg = '&region=' + GM_reg;
         }
         GM_src = GM_api + GM_key + GM_init + GM_lang + GM_reg;
+
         GM_map.src = GM_src;
         document.body.insertBefore(GM_map, _mainJS);
     }
@@ -1371,6 +1385,8 @@ function initMap() {
 
 
     var language_input_base = $(".language-base").html();
+    var language_pre_data =  JSON.parse($("#languages-data").attr("data-languages"));
+
     $(".language-base").remove();
     //------------- Become Partner | Partner Info | Languages ----------------
     $(document).ready(function () {
@@ -1382,6 +1398,27 @@ function initMap() {
             e.preventDefault();
             $(this).closest('.language-input').remove();
         });
+
+        if(language_pre_data) {
+
+            var i = 0;
+            language_pre_data.forEach(function(language) {
+                var lang_code = Object.keys(language)[0];
+                var lang_prof = language[lang_code];
+                if (i == 0) {
+                    $("#language-primary-native").val(lang_code);
+                    updateLanguageInputHidden(  $("#language-primary-native").closest('.language-input') );
+                } else {
+                    var language_input = language_input_base; //.clone();
+                    $(".languages-loop").append(language_input_base);
+                }   
+                $(".languages-loop").find('.language-code').eq((i-1)).val(lang_code);
+                $(".languages-loop").find('.language-prof').eq((i-1)).val(lang_prof); 
+                updateLanguageInputHidden( $(".languages-loop").find('.language-code').eq((i-1)).closest('.language-input'));
+                i++;
+            });
+
+        }
     });
     //------------------------------------------------------------------------
 
@@ -1424,10 +1461,12 @@ function initMap() {
             }
         },
         messages: {
-            terms: " You must accept the Terms & Conditions",
+            terms: {
+                required: i18n['msg_you-must-accept-the-terms-n-conditions'],
+            },
             password: {
-                one_special: "Please enter at least one special character",
-                one_uppercased: "Please enter at least one uppercased character"
+                one_special: i18n['msg_please-enter-at-least-one-special-character'],
+                one_uppercased: i18n['msg_please-enter-at-least-one-uppercased-character']
             },
         },
         errorPlacement: function (error, element) {
@@ -1555,6 +1594,23 @@ function initMap() {
         }
     });
 
+    $("#pre_formPartnerInformation").validate({
+        submitHandler: function (form) {
+            var data = $(form).serializeArray();
+            data = removeCheckedCheckboxOnSerializedArray(data);
+            ajaxUpdatePartner(data, "#partner_info_wrapper");
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parent().next().next());
+            } else if (element.is(":checkbox")) {
+                error.appendTo(element.next());
+            } else {
+                $(element.parent().append(error));
+            }
+        },
+    });
+
     //------------- Form Validation | Partner | Information ------------------
     $("#formPartnerInformation").validate({
         rules: {
@@ -1578,7 +1634,7 @@ function initMap() {
         },
         messages: {
             'partner[platforms][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             }
         },
         submitHandler: function (form) {
@@ -1608,7 +1664,7 @@ function initMap() {
         },
         messages: {
             'skills[]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             }
         },
         submitHandler: function (form) {
@@ -1659,16 +1715,16 @@ function initMap() {
         },
         messages: {
             'content_creator[type_of_content_gameplay][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'content_creator[channel_about][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'content_creator[platforms][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
             'content_creator[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1697,7 +1753,7 @@ function initMap() {
         },
         messages: {
             'moderator[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1743,7 +1799,7 @@ function initMap() {
                 required: 'Select at least one'
             },
             'tester[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1779,7 +1835,7 @@ function initMap() {
         },
         messages: {
             'pro_gamer[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1800,7 +1856,7 @@ function initMap() {
         },
         messages: {
             'translator[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1836,7 +1892,7 @@ function initMap() {
         },
         messages: {
             'caster[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1887,7 +1943,7 @@ function initMap() {
         },
         messages: {
             'company[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {
@@ -1915,7 +1971,7 @@ function initMap() {
         },
         messages: {
             'other[partner_games][]': {
-                required: 'Select at least one'
+                required: i18n['msg_select-at-least-one']
             },
         },
         submitHandler: function (form) {

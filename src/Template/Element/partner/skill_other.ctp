@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -72,7 +72,7 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>

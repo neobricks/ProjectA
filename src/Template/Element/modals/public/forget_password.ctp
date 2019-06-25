@@ -3,7 +3,7 @@
         <div class="modal-content bg-dark">
             <div class="modal-header border-secondary">
                 <h5 class="modal-title text-warning">
-                    <?= __('Forget Password') ?>
+                    <?= __('Forget password') ?>
                 </h5>
                 <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -17,7 +17,7 @@
                     'class' => 'input-transparent  material pt-4',
                     'type' => 'post'
                 ]); ?>
-                <p> <?= __('Enter your email to reset your Password.'); ?></p>
+                <p> <?= __('Enter your email to reset your password.'); ?></p>
 
                 <!-- Input Email -->
                 <div class="group">

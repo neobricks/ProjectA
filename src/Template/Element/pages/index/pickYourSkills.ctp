@@ -8,22 +8,22 @@ $pickYourSkills_dummyDate = [
     [
         'title' => __('Testers'),
         'img_path' => '/public/assets/img/part-tester.png',
-        'description' => __('Work hard, play hard, test even harder! You are the one who makes games better!')
+        'description' => __('Work hard, play hard, test even harder! You are the one who ensures games are top quality!')
     ],
     [
         'title' => __('Moderators'),
         'img_path' => '/public/assets/img/part-mod.png',
-        'description' => __('Angels from the sky, you bring peace and order to salvage game communities')
+        'description' => __('Angels from the sky, you bring peace and order to protect game communities.')
     ],
     [
         'title' => __('Business & Corps'),
         'img_path' => '/public/assets/img/part-corp.png',
-        'description' => __('ood corps partnering up against evil - Let’s join forces!')
+        'description' => __('Good corps partnering against evil - Join our forces!')
     ],
     [
         'title' => __('Pro-Gamers'),
         'img_path' => '/public/assets/img/part-pro.png',
-        'description' => __('You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it')
+        'description' => __('You are the God of First Kill, the Chuck Norris of games, the Daenerys of... you get it.')
     ],
     [
         'title' => __('Casters'),
@@ -33,12 +33,12 @@ $pickYourSkills_dummyDate = [
     [
         'title' => __('Translators'),
         'img_path' => '/public/assets/img/part-translator.png',
-        'description' => __('You check and translate awesooomenessss around the globe – did I wrote it right?')
+        'description' => __('You check and translate awesomenesse around the globe - did I spell that right?')
     ],
     [
         'title' => __('Others'),
         'img_path' => '/public/assets/img/part-others.png',
-        'description' => __('You have another special skill, so special that you have to explain it to us')
+        'description' => __('You have another special skill, so special that you have to explain it to us.')
     ],
 ];
 
@@ -50,7 +50,7 @@ $pickYourSkills_dummyDate = [
     <div class="container">
         <header class="header">
             <h2 class="text-dark">
-                <?= __('Choose your skill'); ?>
+                <?= __('Choose your skills'); ?>
             </h2>
         </header>
         <div class="position-relative">

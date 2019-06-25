@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -24,7 +24,7 @@
             <!-- company name -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('Name of your company:') ?> *
+                    <?= __('Name of your company') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -45,7 +45,7 @@
             <!-- what company do/sale -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What your company do or sale?') ?> *
+                    <?= __('What does your company do or sell?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -91,7 +91,7 @@
 
                     <div class="form-group row">
                         <label class="col-12 col-sm-3 text-warning">
-                            Email
+                            <?= __('Email') ?>
                         </label>
                         <div class="col-12 col-sm-9">
                             <div class="view py-2 px-3">
@@ -109,7 +109,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-12 col-sm-3 text-warning">
-                            Phone
+                            <?= __('Phone') ?>
                         </label>
                         <div class="col-12 col-sm-9">
                             <div class="view py-2 px-3">
@@ -127,7 +127,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-12 col-sm-3 text-warning">
-                            Skype
+                            <?= __('Skype') ?>
                         </label>
                         <div class="col-12 col-sm-9">
                             <div class="view py-2 px-3">
@@ -172,7 +172,7 @@
             <!-- country list -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('Country(ies) available for partnership:') ?> *
+                    <?= __('Country(ies) available for partnership') ?> *
                 </label>
                 <div class="col-12 col-sm-8" id="company_countries_select_wrapper">
 
@@ -465,7 +465,7 @@
                     <?php
                     $games_dummyData = [
                         ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>

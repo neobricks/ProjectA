@@ -1,0 +1,709 @@
+
+msgid "BECOME A PARTNER" 
+msgstr "PARTNER OL"
+
+msgid "LATEST QUESTS" 
+msgstr "EN SON GÖREVLER"
+
+msgid "ADVANTAGES" 
+msgstr "AVANTAJLAR"
+
+msgid "FAQ" 
+msgstr "SSS"
+
+msgid "SIGN IN" 
+msgstr "GİRİŞ YAP"
+
+msgid "SIGN UP" 
+msgstr "KAYIT OL"
+
+msgid "Become a Partner" 
+msgstr "Partner Ol"
+
+msgid "Whether you are a streamer, artist, or cosplayer, you can now partner with your favorite games and get rewarded" 
+msgstr "Yayıncı, artist, cosplayer iseniz, sevdiğiniz oyunlarla partnerlik kurabilir ve ödül alabilirsiniz"
+
+msgid "Support your favorite games" 
+msgstr "Favori oyununu destekle"
+
+msgid "The more you engage and contribute, the greater your chances to receive special rewards and contribute to the success of the games you love" 
+msgstr "Ne kadar etkileşime geçip katkı sağlarsanız, özel ödül şansınız ve sevdiğiniz oyunların başarısına katkınız o derece artar"
+
+msgid "Get closer to the games you love" 
+msgstr "Sevdiğiniz oyunlarla yakınlaşın"
+
+msgid "Become a Partner and get access to special opportunities directly from the development team" 
+msgstr "Partner Olun ve yapım ekibinden direkt olarak size gelen özel fırsatlara erişim kazanın"
+
+msgid "Choose your skills" 
+msgstr "Yeteneklerini seç"
+
+msgid "Content Creators" 
+msgstr "İçerik Üreticiler"
+
+msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!" 
+msgstr "Artist veya Influencer de olsan, oynadığın oyunlara muhteşem içerik oluşturabilirsin!"
+
+msgid "Game Tester" 
+msgstr "Oyun Test Ekibi"
+
+msgid "Testers" 
+msgstr "Test Ekibi"
+
+msgid "Work hard, play hard, test even harder! You are the one who ensures games are top quality!" 
+msgstr "Çok çalışın, çok oynayın, daha çok çalışın! Oyunların en üst seviyede olduğundan siz emin olacaksınız!"
+
+msgid "Moderators" 
+msgstr "Moderatörler"
+
+msgid "Angels from the sky, you bring peace and order to protect game communities." 
+msgstr "Göklerden gelen bir melek olarak oyun topluluklarına huzur ve düzeni siz getireceksiniz."
+
+msgid "Business & Corps" 
+msgstr "İşletmeler & Firmalar"
+
+msgid "Good corps partnering against evil - Join our forces!" 
+msgstr "İyi firmalar kötüye karşı bir araya geliyor - Güçlerimizi birleştirelim!"
+
+msgid "Pro-Gamers" 
+msgstr "Pro-Oyuncular"
+
+msgid "You are the God of First Kill, the Chuck Norris of games, the Daenerys of... you get it." 
+msgstr "Bir maçta ilk kill'i alan, oyunların efendisi, sistemin uz... bence anladınız."
+
+msgid "Casters" 
+msgstr "Yayıncılar"
+
+msgid "Your lovely voice brings matches alive!" 
+msgstr "Maçları, sesinizle birlikte daha canlı kılan siz olacaksınız."
+
+msgid "Translators" 
+msgstr "Çevirmenler"
+
+msgid "You check and translate awesomenesse around the globe - did I spell that right?" 
+msgstr "Dünya'daki muhteşemliği kontrol edip çeviren sizlersiniz - bunu doğru yazdım değil mi?"
+
+msgid "Other" 
+msgstr "Diğer"
+
+msgid "You have another special skill, so special that you have to explain it to us." 
+msgstr "Başka bir özel yeteneğiniz var ve bunu bize açıklamanız gerekecek."
+
+msgid "Latest Quests" 
+msgstr "En Son Görevler"
+
+msgid "TESTS" 
+msgstr "Testler"
+
+msgid "TRANSLATIONS" 
+msgstr "Çeviriler"
+
+msgid "MODERATORS" 
+msgstr "Moderatörler"
+
+msgid "Notice" 
+msgstr "Bilgi"
+
+msgid "Warning" 
+msgstr "Uyarı"
+
+msgid "Grow your channel" 
+msgstr "Kanalınızı Büyütün"
+
+msgid "Get access to closed betas, special events, and Steam Keys for your subscribers!" 
+msgstr "Kapalı betalar, özel etkinlikler ve aboneleriniz için Steam Anahtarları!"
+
+msgid "Lots of perks" 
+msgstr "Çok fazla kazanç"
+
+msgid "You can receive exclusive Partner items, in-game currency, packages, and skins!" 
+msgstr "Özel Partner eşyaları, oyun içi para, paketler ve skin'ler elde edebilirsiniz!"
+
+msgid "Role model soldier" 
+msgstr "Rol model asker"
+
+msgid "If you love Black Squad as much as we do, support fun and safe environments, or like to help out new players... We want you!" 
+msgstr "Eğer Black Squad'ı bizim kadar seviyorsanız, eğlenceye destek olmak veya yeni oyunculara yardım etmek için... Sizi istiyoruz!"
+
+msgid "Sign up reward" 
+msgstr "Kayıt olma ödülü"
+
+msgid "Become a Partner today and receive a Black Squad Welcome Package Steam Key! *Note: Can only be redeemed once." 
+msgstr "Bugün Partner olun ve Black Squad Welcome Package Steam Anahtarı kazanın! *Not: Sadece bir kere kullanılabilir."
+
+msgid "Contact NeoBricks" 
+msgstr "NeoBricks ile İletişime Geç"
+
+msgid "Terms & Conditions" 
+msgstr "Şartlar ve Koşullar"
+
+msgid "Privacy Policy" 
+msgstr "Gizlilik Politikası"
+
+msgid "NeoBricks on Facebook" 
+msgstr "Facebook'ta NeoBricks"
+
+msgid "Game page" 
+msgstr "Oyun Sayfası"
+
+msgid "Steam Discussion" 
+msgstr "Steam Tartışmalar"
+
+msgid "Discord" 
+msgstr "Discord"
+
+msgid "Facebook" 
+msgstr "Facebook"
+
+msgid "Help Center" 
+msgstr "Destek Birimi"
+
+msgid "Email" 
+msgstr "Eposta"
+
+msgid "Password" 
+msgstr "Şifre"
+
+msgid "Confirm password" 
+msgstr "Şifreyi doğrula"
+
+msgid "I've read and accepted the {0} and {1}" 
+msgstr "{1} ve {0} sayfalarını okudum, kabul ediyorum"
+
+msgid "NeoBricks can send me newsletters with offers and news from games not related to the Partner Program" 
+msgstr "NeoBricks bana Partner Programına bağlı olmayan oyunlar hakkında teklif ve yenilikler içeren bültenler gönderebilir"
+
+msgid "REGISTER" 
+msgstr "KAYIT OL"
+
+msgid "Already have an account?" 
+msgstr "Zaten bir hesabınız var mı?"
+
+msgid "Sign In" 
+msgstr "Giriş Yap"
+
+msgid "Sign Out" 
+msgstr "Çıkış Yap"
+
+msgid "Sign out" 
+msgstr "Çıkış yap"
+
+msgid "SIGN OUT" 
+msgstr "ÇIKIŞ YAP"
+
+msgid "Or" 
+msgstr "Veya"
+
+msgid "Remember me" 
+msgstr "Beni hatırla"
+
+msgid "Forgot password?" 
+msgstr "Şifreyi mi unuttun?"
+
+msgid "Don't have an account?" 
+msgstr "Hesabınız yok mu?"
+
+msgid "Create an account" 
+msgstr "Hesap oluşturun"
+
+msgid "Reset password" 
+msgstr "Şifreyi sıfırla"
+
+msgid "New password" 
+msgstr "Yeni şifre"
+
+msgid "RESET PASSWORD" 
+msgstr "ŞİFREYİ SIFIRLA"
+
+msgid "Our website uses cookies and similar technologies to enhance your user experience and measure site traffic. By continuing, you consent to such use." 
+msgstr "Websitemiz çerez ve benzeri teknolojierle kullanıcı deneyimizi geliştirmekte ve site trafiğini hesaplamaktadır. Devam ederek bu kullanımı kabul edersiniz."
+
+msgid "Learn more" 
+msgstr "Daha fazla bilgi"
+
+msgid "Forget password" 
+msgstr "Şifremi unuttum"
+
+msgid "Enter your email to reset your password." 
+msgstr "Şifrenizi sıfırlamak için emailinizi girin."
+
+msgid "Submit" 
+msgstr "Gönder"
+
+msgid "Did you remember your password?" 
+msgstr "Şifrenizi hatırladınız mı?"
+
+msgid "Partner information" 
+msgstr "Partner bilgisi"
+
+msgid "Update" 
+msgstr "Güncelle"
+
+msgid "Name" 
+msgstr "İsim"
+
+msgid "Surname" 
+msgstr "Soyisim"
+
+msgid "Native" 
+msgstr "Ana dil"
+
+msgid "Basic" 
+msgstr "Giriş"
+
+msgid "Intermediate" 
+msgstr "Orta"
+
+msgid "Advanced" 
+msgstr "İleri"
+
+msgid "Fluent" 
+msgstr "Akıcı"
+
+msgid "What languages do you speak?" 
+msgstr "Hangi dilleri konuşuyorsunuz?"
+
+msgid "Proficiency" 
+msgstr "Yeterlilik"
+
+msgid "Add another" 
+msgstr "Başka ekle"
+
+msgid "Remove" 
+msgstr "Kaldır"
+
+msgid "What game or games do you like to play?" 
+msgstr "Hangi oyun veya oyunları oynamayı seviyorsunuz?"
+
+msgid "I like to play these games" 
+msgstr "Şu oyunları oynamayı seviyorum"
+
+msgid "I like to play these types of games" 
+msgstr "Şu tarz oyunları oynamayı severim"
+
+msgid "What game platform(s) do you play?" 
+msgstr "Hangi oyun platform veya platformlarında oynuyorsunuz?"
+
+msgid "Do you have an in-game nickname for any of these games?" 
+msgstr "Bu oyunlardan herhangi biri için oyun içi isminiz bulunuyor mu?"
+
+msgid "Caster" 
+msgstr "Sunucu"
+
+msgid "Information" 
+msgstr "Bilgi"
+
+msgid "information" 
+msgstr "bilgi"
+
+msgid "How do you want to be called" 
+msgstr "Nasıl çağırılmak istersiniz"
+
+msgid "Your main channel(s)" 
+msgstr "Ana kanal(lar)ınız"
+
+msgid "Youtube" 
+msgstr "Youtube"
+
+msgid "Twitch" 
+msgstr "Twitch"
+
+msgid "Twitter" 
+msgstr "Twitter"
+
+msgid "Discord" 
+msgstr "Discord"
+
+msgid "Instagram" 
+msgstr "Instagram"
+
+msgid "Other" 
+msgstr "Diğer"
+
+msgid "What game or games do you like to cast?" 
+msgstr "Hangi oyun veya oyunları yayınlamayı seviyorsunuz?"
+
+msgid "I cast these games:" 
+msgstr "Şu oyunlarda sunuculuk yapıyorum:"
+
+msgid "I cast these types of games:" 
+msgstr "Şu oyun tiplerinde sunuculuk yapıyorum:"
+
+msgid "Would you like to partner for?" 
+msgstr "Hangi sebepten partner olmak istiyorsunuz?"
+
+msgid "All games" 
+msgstr "Bütün oyunlar"
+
+msgid "Cancel" 
+msgstr "Vazgeç"
+
+msgid "Name of your company" 
+msgstr "Şirketinizin ismi"
+
+msgid "What does your company do or sell?" 
+msgstr "Şirketiniz ne yapıyor veya ne satıyor?"
+
+msgid "Preferred business contact" 
+msgstr "Tercih edilen iş kontratı"
+
+msgid "Phone" 
+msgstr "Telefon"
+
+msgid "Skype" 
+msgstr "Skype"
+
+msgid "What kind of opportunities are you looking for?" 
+msgstr "Ne tür bir fırsat arıyorsunuz?"
+
+msgid "Country(ies) available for partnership" 
+msgstr "Partnerliğiniz için uygun ülke(ler)"
+
+msgid "What type of content do you create?" 
+msgstr "Ne tür bir içerik üretiyorsunuz?"
+
+msgid "Streams" 
+msgstr "Yayınlar"
+
+msgid "Gameplay" 
+msgstr "Oynanış"
+
+msgid "Reviews" 
+msgstr "İnceleme"
+
+msgid "Humor" 
+msgstr "Mizahi"
+
+msgid "Unboxing" 
+msgstr "Kutu açılışı"
+
+msgid "Mods" 
+msgstr "Modlar"
+
+msgid "Fanfics" 
+msgstr "Hayran kurgusu"
+
+msgid "Guides/Articles" 
+msgstr "Rehber/Makale"
+
+msgid "Events coverage" 
+msgstr "Etkinlik yorumlama"
+
+msgid "Lifestyle" 
+msgstr "Yaşam tarzı"
+
+msgid "Tutorials" 
+msgstr "Eğitimler"
+
+msgid "Other" 
+msgstr "Diğer"
+
+msgid "What is your channel about?" 
+msgstr "Kanalınız ne hakkında?"
+
+msgid "Games" 
+msgstr "Oyunlar"
+
+msgid "Technology" 
+msgstr "Teknoloji"
+
+msgid "Nerd/Geek" 
+msgstr "Nerd/Geek"
+
+msgid "Other" 
+msgstr "Diğer"
+
+msgid "What game or games do you talk about?" 
+msgstr "Hangi oyun veya oyunlar hakkında konuşuyorsunuz?"
+
+msgid "I talk about these games:" 
+msgstr "Bu oyunlar hakkında konuşuyorum:"
+
+msgid "I talk about these types of games:" 
+msgstr "Bu tip oyunlar hakkında konuşuyorum:"
+
+msgid "What game platform(s) do you create content for?" 
+msgstr "Hangi platform(lar) için içerik üretiyorsunuz?"
+
+msgid "All game platforms" 
+msgstr "Bütün oyun platformları"
+
+msgid "PC/Mac games" 
+msgstr "PC/Mac oyunları"
+
+msgid "Mobile games" 
+msgstr "Mobil oyunlar"
+
+msgid "Console games" 
+msgstr "Konsol oyunları"
+
+msgid "Others" 
+msgstr "Diğerleri"
+
+msgid "Required field" 
+msgstr "Gerekli alan"
+
+msgid "Do you have previous experience as a moderator?" 
+msgstr "Daha önce bir moderatör deneyiminiz oldu mu?"
+
+msgid "Yes" 
+msgstr "Evet"
+
+msgid "No" 
+msgstr "Hayır"
+
+msgid "What is your special skill or experience?" 
+msgstr "Özel yeteneğiniz veya tecrübeniz nedir?"
+
+msgid "What kind of opportunities are you looking for?" 
+msgstr "Nasıl bir fırsat arıyorsunuz?"
+
+msgid "Pro Gamer" 
+msgstr "Profesyonel Oyuncu"
+
+msgid "Moderator" 
+msgstr "Moderatör"
+
+msgid "Content Creator" 
+msgstr "İçerik Üreticisi"
+
+msgid "Company" 
+msgstr "Şirket"
+
+msgid "Tester" 
+msgstr "Test ekibi"
+
+msgid "Translator" 
+msgstr "Çevirmen"
+
+msgid "I am pro at these games:" 
+msgstr "Şu oyunlarda profesyonelim:"
+
+msgid "I am pro at these types of games:" 
+msgstr "Şu tarz oyunlarda profesyonelim:"
+
+msgid "What game or games do you have a lot of experience with?" 
+msgstr "Hangi oyun ve oyunlarda çok deneyimlisiniz?"
+
+msgid "Shooter" 
+msgstr "Nişancı"
+
+msgid "MOBA" 
+msgstr "MOBA"
+
+msgid "RPG" 
+msgstr "RYO"
+
+msgid "MMORPG" 
+msgstr "MMORPG"
+
+msgid "Mobile" 
+msgstr "Mobil"
+
+msgid "Adventure" 
+msgstr "Macera"
+
+msgid "Indie" 
+msgstr "Bağımsız"
+
+msgid "Strategy" 
+msgstr "Strateji"
+
+msgid "Action" 
+msgstr "Aksiyon"
+
+msgid "Simulators" 
+msgstr "Simülatorler"
+
+msgid "Puzzle" 
+msgstr "Bulmaca"
+
+msgid "Browser" 
+msgstr "Tarayıcı oyunları"
+
+msgid "Do you have previous experience as a tester?" 
+msgstr "Daha önce bir oyun test ekibi tecrübeniz oldu mu?"
+
+msgid "What type of testing do you prefer?" 
+msgstr "Ne tür bir test ortamı tercih edersiniz?"
+
+msgid "Quality Assurance (QA)" 
+msgstr "Kalite Kontrol (QA)"
+
+msgid "Gameplay Experience" 
+msgstr "Oynanış Deneyimi"
+
+msgid "Do you have previous experience as a translator?" 
+msgstr "Daha önce bir çevirmen deneyiminiz oldu mu?"
+
+msgid "How would you translate this in your language?" 
+msgstr "Bunu dilinize nasıl çevirirdiniz?"
+
+msgid "Your skills" 
+msgstr "Yetenekleriniz"
+
+msgid "Select your skill(s). You can choose more than one." 
+msgstr "Yeteneklerinizi seçiniz. Birden fazla seçebilirsiniz."
+
+msgid "You may have mistyped the address or the page may have moved." 
+msgstr "Adresi yanlış girmiş olabilirsiniz veya sayfa taşınmış olabilir."
+
+msgid "The requested address {0} was not found on this server." 
+msgstr "İstenilen adres {0}, bu sunucuda bulunamadı."
+
+msgid "An Internal Error Has Occurred" 
+msgstr "Dahili Bir Hata Meydana Geldi"
+
+msgid "Partner Program" 
+msgstr "Partner Programı"
+
+msgid "Welcome" 
+msgstr "Hoşgeldiniz"
+
+msgid "Your profile" 
+msgstr "Profiliniz"
+
+msgid "Germany" 
+msgstr "Almanya"
+
+msgid "Reach us" 
+msgstr "Bize ulaşın"
+
+msgid "Send message" 
+msgstr "Mesaj gönder"
+
+msgid "Your message" 
+msgstr "Sizin mesajınız"
+
+msgid "Subject" 
+msgstr "Konu"
+
+msgid "Looking for support?" 
+msgstr "Desteğe mi ihtiyacınız var?"
+
+msgid "Black Squad Support" 
+msgstr "Black Squad Destek"
+
+msgid "Black Squad Steam Discussions" 
+msgstr "Black Squad Steam Tartışmaları"
+
+msgid "Follow us" 
+msgstr "Bizi takip et"
+
+msgid "Your email address" 
+msgstr "Eposta adresiniz"
+
+msgid "Your name" 
+msgstr "İsminiz"
+
+msgid "Name" 
+msgstr "İsim"
+
+msgid "Email address" 
+msgstr "Eposta adresi"
+
+msgid "Contact us" 
+msgstr "Bizle iletişime geçin"
+
+msgid "Message" 
+msgstr "Mesaj"
+
+msgid "What game or games do you like to cast?" 
+msgstr "Hangi oyun veya oyunları sunmak isterdiniz?"
+
+msgid "Become a partner" 
+msgstr "Partner ol"
+
+msgid "Latest quests" 
+msgstr "En son görevler"
+
+msgid "Advantages" 
+msgstr "Avantajlar"
+
+msgid "Sign in" 
+msgstr "Giriş yap"
+
+msgid "Sign up" 
+msgstr "Kayıt ol"
+
+msgid "FAQ" 
+msgstr "SSS"
+
+msgid "What is the Partner Program?" 
+msgstr "Partner Programı Nedir?"
+
+msgid "The Partner Program allows talented members of our gaming community to support the games they love and get recognized for it. To participate, please fill out a few questions telling us about your skills. Depending on your profile and abilities, we will contact you with a personalised opportunity (Quest). Once you complete a Quest, you can receive beta test keys, in-game items, special information, and much more! It is our mission to support our awesome community by rewarding you for your contributions! If you love games as much as we do, join us!" 
+msgstr "Partner Programı, oyuncu topluluğumuzdaki yetenekli kişilerin sevdikleri oyuna destek vermesi ve tanınmasına olanak sağlar. Katılmak için, yeteneklerinizle ilgili olan birkaç soruyu cevaplamanız gerekmektedir. Profil ve yeteneğinize bağlı olarak, sizinle kişiselleştirilmiş bir fırsat (Görev) için iletişime geçeceğiz. Bir Görevi tamamladığınızda, beta test anahtarları, oyun içi eşyalar, özel bilgi ve daha fazlasına erişim hakkı sağlayabilirsiniz! Sizi, katkılarınız için ödüllendirip muhteşem topluluğumuza destek olmak bizim görevimiz! Eğer oyunları bizim kadar seviyorsanız, bize katılın!"
+
+msgid "What skills do I need to become a Partner?" 
+msgstr "Partner olmak için gereken yetenekler nelerdir?"
+
+msgid "We embrace many different types of Partners: Content Creators (influencers, streamers, artists, etc), Moderators, Game Testers, Professional Gamers, Translators, Casters, Companies, and more (cosplayers, modders, any role related to gaming!). You can even choose multiple skills at once! If you’ve got skills then register on this website, fill out the registration form, and wait for opportunities to pop up." 
+msgstr "Çeşitli türde Partnerleri kapsayan bir programa sahibiz: İçerik üreticiler (influencer, yayıncı, artist vb), Moderatörler, Oyun Test Ekibi, Profesyonel Oyuncular, Çevirmenler, Sunucular, Şirketler ve daha fazlası (cosplayerlar, mod üreticiler, oyunla ilgili herhangi bir rol!). Birden fazla yeteneğiniz varsa aynı anda seçebilirsiniz! Eğer yeteneğiniz varsa, siteye kayıt olun, kayıt formunu doldurun ve fırsatların ortaya çıkmasını bekleyin."
+
+msgid "Are there any requirements to participate?" 
+msgstr "Katılmak için herhangi bir gereklilik var mıdır?"
+
+msgid "Anyone can register to the Partner Program and fill out the form. After the profile has been confirmed and approved, Partners receive personalised opportunities according to your skills. Quests for each game has a specific set of requirements and will only be available to Partners with suitable profiles." 
+msgstr "Partner programına herkes katılabilir ve form doldurabilir. Profil onaylanıp süreci bitirdiğinde, Partnerler yeteneklerine göre kişiselleştirilmiş fırsatlar elde edecekler. Her oyun için görevler farklı gereklilikler gerektirir ve sadece uygun profildeki Partnerler için erişilebilir."
+
+msgid "What are Quests?" 
+msgstr "Görevler Nelerdir?"
+
+msgid "Quests are opportunities we provide to our Partners. They can be sent by email or you can apply for them on the main page. Quests range from creating videos, streaming games, testing new game updates and features, playing closed beta games, writing reviews, translating or proofreading articles… the list goes on! For any questions, send a message to partners@neobricks.com. Remember to keep your profile information updated to receive the most suitable Quests. Accepted Quests are shown in your profile." 
+msgstr "Görevler, bizlerin Partnerlere sunduğu fırsatlardır. Eposta ile gönderilebilir veya ana sayfadan kabul edilebilirler. Görevler, video üretmek, oyun yayını yapmak, oyun güncelleme ve özelliklerini test etmek, kapalı betada oyunu oynamak, inceleme yazmak, makaleleri çevirmek veya çeviri kontrolü yapmak gibi çeşitli alanlarda olabilir! Herhangi bir soru için, partners@neobricks.com'a mail atabilirsiniz. Profil bilginizi güncel tutarak en uygun Görevleri aldığınızdan emin olabilirsiniz. Kabul edilen Görevler profilinizde görünebilir."
+
+msgid "How long does a Quest last?" 
+msgstr "Bir Görev ne kadar sürüyor?"
+
+msgid "Each Quest has its own completion time specified in its details. They can last one week, one month or be periodic. Some Quests are renewable, and can be accepted more than one time. If you wish to obtain its rewards, you have to complete it within the time frame specified in each Quest’s details." 
+msgstr "Her Görevin kendine ait tamamlama süresi detaylarda belirtilir. Bir hafta, bir ay sürebilir veya periyodik olabilirler. Bazı Görevler yenilenebilir ve birden fazla kez kabul edilebilir. Eğer ödülleri kazanmak isterseniz Görevin detaylarında yer alan zaman periyodunda görevi tamamlamanız gerekmektedir."
+
+msgid "What do I get as a Partner? How will I receive my rewards?" 
+msgstr "Partner olarak ne elde edeceğim? Ödüllerimi nasıl kazanacağım?"
+
+msgid "Each Quest comes with various rewards. They range from in-game items, DLC, Official Partner titles/items, special access to features on official channels, unique merchandise and even special gifts! You will have to complete a Quest in order to receive your rewards. Check the Quest details for information about rewards and how to claim them. Usually, rewards are sent via email or directly in-game. Special rewards may require additional information.All communication within the Partner Program is done via email and/ or partner channels." 
+msgstr "Her görev çeşitli ödüllere sahiptir. Oyun içi eşya, DLC, Resmi Partner ismi/eşyası, resmi kanallardaki bazı fonksiyonlara özel erişim, özel ürün ve hatta özel hediyeler bile olabilir! Ödül almak için Görev tamamlamanız gerekmektedir. Görev detaylarını kontrol edin ve ödüllerle ve ödülleri nasıl alacağınızla ilgili bilgi edinin. Genellikle, ödüller eposta veya oyun içinden gönderilir. Özel ödüller ek bilgiler gerektirebilir. Partner Programı'na dahil kişilerle bütün iletişim eposta veya partner kanalları aracılığıyla yapılmaktadır."
+
+msgid "How long does it take to be accepted as a Partner?" 
+msgstr "Partner olarak kabul edilmek ne kadar sürer?"
+
+msgid "Registration is completed as soon as you confirm your email and fill out the form, your profile will then be checked for validation. If approved, you are eligible for personalised Quests. Keep your profile updated to make sure you receive the Quests that are right for you." 
+msgstr "Epostanız onaylandığında ve formu doldurduğunuzda kayıt süreci biter ve profiliniz onay süreci için kontrol edilir. Eğer kabul edilirse, kişiselleştirilmiş Görevler için uygun hale gelirsiniz. Profilinizi güncel tutarak size uygun Görevler edindiğinizden emin olun."
+
+msgid "Are there any rules about being a Partner?" 
+msgstr "Partner olmak için bir kural var mı?"
+
+msgid "We embrace the BNBR policy (Be Nice, Be Respectful!), especially for our content creators. Please take a minute to read our Policy and Terms of Service for more details about the exclusion criteria of our Program." 
+msgstr "Özellikle içerik üreticilerimiz için, BNBR (ing. İyi Olun, Saygılı Olun) politikasını benimseriz. Politikamızı ve Kullanım Şartlarımızı okumanız halinde, Program'dan çıkarılmayla ilgili kriterleri öğrenebilirsiniz."
+
+msgid "You must accept the Terms & Conditions" 
+msgstr "Şartlar ve Koşullar'ı kabul etmelisiniz"
+
+msgid "You must accept the Privacy Policy" 
+msgstr "Gizlilik Politikası'nı kabul etmelisiniz"
+
+msgid "You must accept our Terms & Conditions and Privacy Policy" 
+msgstr "Şartlar ve Koşullar ile Gizlilik Politikası'nı kabul etmelisiniz"
+
+msgid "You must accept our {1} and {2}" 
+msgstr "{1} ve {0} 'yi kabul etmelisiniz"
+
+msgid "Please enter at least one special character" 
+msgstr "Lütfen en az bir özel karakter girin"
+
+msgid "Please enter at least one uppercased character" 
+msgstr "Lütfen en az bir adet büyük harf girin"
+
+msgid "Select at least one" 
+msgstr "En az birini seçin"
+
+msgid "Select at least one option" 
+msgstr "En az bir seçeneği seçin"
+
+msgid "No information" 
+msgstr "Bilgi verilmedi"
+
+msgid "No informed" 
+msgstr "Bilgi verilmedi"
+

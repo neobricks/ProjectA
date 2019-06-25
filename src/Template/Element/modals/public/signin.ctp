@@ -14,6 +14,62 @@
                 <?php endif; ?>
             </div>
             <div class="modal-body">
+                <div>
+                <div class="text-center my-6"> 
+                <?php
+                echo $this->Form->postLink('<span class="btn btn-circle btn-sm btn-google mr-2" href=""><i class="fab fa-google"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'google',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                );
+                echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-facebook mr-2" href=""><i class="fab fa-facebook-f"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'facebook',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                ); 
+                /*echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-twitter mr-2" href=""><i class="fab fa-twitter"></i></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'twitter',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                );*/
+
+                echo $this->Form->postLink(
+                    '<span class="btn btn-circle btn-sm btn-twitch" href=""><i class="fab fa-twitch"></i></span></span>',
+                    [
+                        'prefix' => false,
+                        'plugin' => 'ADmad/SocialAuth',
+                        'controller' => 'Auth',
+                        'action' => 'login',
+                        'provider' => 'twitch',
+                        '?' => ['redirect' => $this->request->getQuery('redirect')]
+                    ],
+                    ['escape' => false]
+                ); 
+                ?>
+                </div>
+                 <span class="hr-text small my-6"><?= __("Or") ?></span> 
+
+                </div>
                 <?php echo $this->Form->create(null, [
                     'id' => 'formSignIn',
                     'url' => ['controller' => 'auth', 'action' => 'login'],
@@ -42,14 +98,14 @@
                 <div class="form-group d-flex justify-content-between">
                     <div class="custom-control custom-checkbox">
                     <input name="rememberme" type="checkbox" class="custom-control-input" checked="" id="rememberMeCheck">
-                    <label class="custom-control-label" for="rememberMeCheck">Remember me</label> 
+                    <label class="custom-control-label" for="rememberMeCheck"><?= __('Remember me') ?></label> 
                     </div>
                     <a class="small-3" href="javascript:void(0);"
                         data-dismiss="modal"
                         data-toggle="modal"
                         data-target="#modalForgetPassword"
                     
-                    >Forgot password?</a>
+                    ><?= __('Forgot password?') ?></a>
                 </div>
 
 

@@ -131,7 +131,7 @@ if (!empty($user)) $body_class = 'logged-in';
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <button class="navbar-toggler navbar-toggler-fixed" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">?
+            <button class="navbar-toggler navbar-toggler-fixed" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">☰
             </button>
             <div class="collapse navbar-collapse" id="collapsingNavbar">
                 <ul class="navbar-nav">
@@ -255,7 +255,15 @@ if (!empty($user)) $body_class = 'logged-in';
 
     <!-- /Modals -->
 	
-	
+	<div class="d-none">
+        <span id="msg_you-must-accept-the-terms-n-conditions"><?= __("You must accept the Terms n Conditions"); ?> </span>
+        <span id="msg_please-enter-at-least-one-special-character"><?= __("Please enter at least one special character"); ?> </span>
+        <span id="msg_please-enter-at-least-one-uppercased-character"><?= __("Please enter at least one uppercased character"); ?> </span>
+        <span id="msg_select-at-least-one"><?= __("Select at least one"); ?> </span>
+
+    </div>
+
+
     <!-- bottom Scripts -->
 
     <!-- jQuery -->

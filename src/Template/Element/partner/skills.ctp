@@ -19,50 +19,50 @@
                 $skills_dummyData = [
                     [
                         'code' => 'content_creators',
-                        'title' => 'Content Creators',
-                        'description' => 'You are an Influencer, Artist, Youtuber or streamer. You create awesome content for games you play!',
+                        'title' => 'Content Creator',
+                        'description' => 'Whether you are an Artist or Influencer, you create awesome content for the games you play!',
                         'img_path' => '/public/assets/img/part-contentcreator.png'
                     ],
                     [
                         'code' => 'moderators',
-                        'title' => 'Moderators',
-                        'description' => 'Angels from the sky, you bring peace and order to selvage game communities.',
+                        'title' => 'Moderator',
+                        'description' => 'Angels from the sky, you bring peace and order to protect game communities.',
                         'img_path' => '/public/assets/img/part-mod.png'
                     ],
                     [
                         'code' => 'testers',
-                        'title' => 'Testers',
-                        'description' => 'Work hard, play hard, test even harder! You are the one who helps games becoming better!',
+                        'title' => 'Tester',
+                        'description' => 'Work hard, play hard, test even harder! You are the one who ensures games are top quality!',
                         'img_path' => '/public/assets/img/part-tester.png'
                     ],
                     [
                         'code' => 'pro_gamers',
-                        'title' => 'Pro-Gamers',
-                        'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it. ',
+                        'title' => 'Pro-Gamer',
+                        'description' => 'You are the God of First Kill, the Chuck Norris of games, the Daenerys of... you get it.',
                         'img_path' => '/public/assets/img/part-pro.png'
                     ],
                     [
                         'code' => 'translators',
-                        'title' => 'Translators',
-                        'description' => 'You check and translate awesomenesse around the globe – did I wrote it right?',
+                        'title' => 'Translator',
+                        'description' => 'You check and translate awesomenesse around the globe - did I spell that right?',
                         'img_path' => '/public/assets/img/part-translator.png'
                     ],
                     [
                         'code' => 'casters',
-                        'title' => 'Casters',
-                        'description' => 'Your lovely voice brings matches alive! You are the Galvão Bueno of games!',
+                        'title' => 'Caster',
+                        'description' => 'Your lovely voice brings matches alive!',
                         'img_path' => '/public/assets/img/part-caster.png'
                     ],
                     [
                         'code' => 'companies',
-                        'title' => 'Companies',
-                        'description' => 'Good corps partnering up against evil - Let’s join our forces!',
+                        'title' => 'Company',
+                        'description' => 'Good corps partnering against evil - Join our forces!',
                         'img_path' => '/public/assets/img/part-corp.png'
                     ],
                     [
                         'code' => 'others',
-                        'title' => 'Others',
-                        'description' => 'You have another special skill, so special that you have to explain it to us..',
+                        'title' => 'Other',
+                        'description' => 'You have another special skill, so special that you have to explain it to us.',
                         'img_path' => '/public/assets/img/part-others.png'
                     ]
                 ];
@@ -79,8 +79,8 @@
                                         ]) ?>
                                     </div>
                                     <div class="col-9">
-                                        <h3 class="text-primary"><?= $skill['title']; ?></h3>
-                                        <p><?= $skill['description']; ?></p>
+                                        <h3 class="text-primary"><?= __($skill['title']); ?></h3>
+                                        <p><?= __($skill['description']); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -118,14 +118,14 @@
                                     <div class="card-body p-0">
                                         <div class="row" 
                                             style="min-height:40px;"
-                                            data-toggle="tooltip" data-placement="bottom" title="<?= $skill['description']; ?>">
+                                            data-toggle="tooltip" data-placement="bottom" title="<?= __($skill['description']); ?>">
                                             <div class="col-12">
                                                 <?= $this->Html->image($skill['img_path'], [
                                                     'class' => 'w-100 img-fluid d-none d-sm-block',
                                                 ]) ?>
                                             </div>
                                             <div class="col-10 mx-auto">
-                                                <h5 class="lh-1 text-left text-sm-center pl-5 pl-sm-0 py-1 m-0"><?= $skill['title']; ?></h5>
+                                                <h5 class="lh-1 text-left text-sm-center pl-5 pl-sm-0 py-1 m-0"><?= __($skill['title']); ?></h5>
                                             </div>
                                             <label class="checkbox-wrapper">
                                                 <input type='hidden' name="skills[][<?= $skill['code']; ?>]" value="<?= $checked ?>" />

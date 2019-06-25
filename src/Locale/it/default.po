@@ -1,153 +1,153 @@
 
 msgid "BECOME A PARTNER" 
-msgstr "WERDE EIN PARTNER"
+msgstr "DIVENTA PARTNER"
 
 msgid "LATEST QUESTS" 
-msgstr "AKTUELLSTE QUESTS"
+msgstr "MISSIONI PIÙ RECENTI"
 
 msgid "ADVANTAGES" 
-msgstr "VORTEILE"
+msgstr "VANTAGGI"
 
 msgid "FAQ" 
 msgstr "FAQ"
 
 msgid "SIGN IN" 
-msgstr "EINLOGGEN"
+msgstr "ACCEDI"
 
 msgid "SIGN UP" 
-msgstr "REGISTRIEREN"
+msgstr "REGISTRATI"
 
 msgid "Become a Partner" 
-msgstr "Werde ein Partner"
+msgstr "Diventa Partner"
 
 msgid "Whether you are a streamer, artist, or cosplayer, you can now partner with your favorite games and get rewarded" 
-msgstr "Egal ob Streamer, Künstler, Cosplayer, werde Partner deines favorisierten Spiels und erhalte Belohnungen"
+msgstr "Che tu sia streamer, artista o cosplayer, ora puoi diventare partner dei tuoi giochi preferiti e ricevere premi"
 
 msgid "Support your favorite games" 
-msgstr "Unterstütze deine favorisierten Spiele"
+msgstr "Sostieni i tuoi giochi preferiti"
 
 msgid "The more you engage and contribute, the greater your chances to receive special rewards and contribute to the success of the games you love" 
-msgstr "Desto mehr du dich beteiligst und einbringst, umso höher sind deine Chance auf große und spezielle Belohnungen! Ebenso trägst du damit zu dem Erfolg des Spieles bei welches dir am Herzen liegt"
+msgstr "Più contribuisci e sei coinvolgente, più chance avrai di ricevere premi speciali e contribuire al successo dei giochi che ami"
 
 msgid "Get closer to the games you love" 
-msgstr "Komme näher and die Spiele die du liebst"
+msgstr "Diventa parte dei giochi che ami"
 
 msgid "Become a Partner and get access to special opportunities directly from the development team" 
-msgstr "Werde ein Partner und erhalte Zugriff auf spezielle Möglichkeiten direkt von dem Entwicklungsteam"
+msgstr "Diventa Partner e guadagna l'accesso a opportunità speciali direttamente dal team degli sviluppatori"
 
 msgid "Choose your skills" 
-msgstr "Wähle deine Skills"
+msgstr "Scegli le tue skill"
 
 msgid "Content Creators" 
-msgstr "Conten Creators"
+msgstr "Creatore di Contenuti"
 
 msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!" 
-msgstr "Egal ob du Künstler oder Influencer bist, du erstellst unglaublichen Content für die Spiele die du spielst!"
+msgstr "Che tu sia un Artista o un Influencer, crea fantastici contenuti per i videogiochi che ami!"
 
 msgid "Game Tester" 
-msgstr "Spieletester"
+msgstr "Tester d videogiochi"
 
 msgid "Testers" 
 msgstr "Tester"
 
 msgid "Work hard, play hard, test even harder! You are the one who ensures games are top quality!" 
-msgstr "Arbeite hart, spiele hart, teste noch härter! Du bist derjenige der sicherstellt die Spiele haben Top-Qualität!"
+msgstr "Lavora duramente, gioca duramente e testa ancora più duramente! Tu sei colui che si assicura che i videogiochi siano di massima qualità!"
 
 msgid "Moderators" 
-msgstr "Moderatoren"
+msgstr "Moderatori"
 
 msgid "Angels from the sky, you bring peace and order to protect game communities." 
-msgstr "Engel aus den Wolken, die für Ruhe und Frieden in der Community sorgen"
+msgstr "Angelo venuto dal cielo, porterai pace e ordine per proteggere le community di gioco."
 
 msgid "Business & Corps" 
-msgstr "Unternehmen & Konzerne"
+msgstr "Business & Aziende"
 
 msgid "Good corps partnering against evil - Join our forces!" 
-msgstr "Gute Konzerne gemeinsam gegen das Böse! - Lasst uns unsere Kräfte kombinieren!"
+msgstr "Le aziende buone che si alleano contro il male - Uniamo le nostre forze!"
 
 msgid "Pro-Gamers" 
 msgstr "Pro-Gamer"
 
 msgid "You are the God of First Kill, the Chuck Norris of games, the Daenerys of... you get it." 
-msgstr "Du bist der Gott der First-Kills, der Chuck Norris der Spiele, der Beherrscher der...du verstehst schon."
+msgstr "Sei il Dio della Prima Uccisione, il Chuck Norris dei videogiochi, la Daenerys del... insomma hai capito."
 
 msgid "Casters" 
 msgstr "Caster"
 
 msgid "Your lovely voice brings matches alive!" 
-msgstr "Deine lieblicher Stimme haucht Matches noch mehr Leben ein!"
+msgstr "La tua dolce voce rende più vivi gli scontri!"
 
 msgid "Translators" 
-msgstr "Übersetzer"
+msgstr "Traduttori"
 
 msgid "You check and translate awesomenesse around the globe - did I spell that right?" 
-msgstr "Du prüftst und übersetzt großartigeses auf der anzen Welt - Ist das richtig geschrieben?"
+msgstr "Controlli e traduci cose fantastike in tutto il mondo - l'ho scritto correttamente?"
 
 msgid "Other" 
-msgstr "Anderes"
+msgstr "Altro"
 
 msgid "You have another special skill, so special that you have to explain it to us." 
-msgstr "Du hast einen anderen besonderen Skill, so besonders das du ihn uns erklären musst"
+msgstr "Hai un altro talento speciale, così speciale che devi spiegarcelo."
 
 msgid "Latest Quests" 
-msgstr "Aktuellste Quest"
+msgstr "Missioni più recenti"
 
 msgid "TESTS" 
 msgstr "Test"
 
 msgid "TRANSLATIONS" 
-msgstr "Übersetzung"
+msgstr "Traduzioni"
 
 msgid "MODERATORS" 
-msgstr "Moderatoren"
+msgstr "Moderatori"
 
 msgid "Notice" 
-msgstr "Info"
+msgstr "Avvisi"
 
 msgid "Warning" 
-msgstr "Warnung"
+msgstr "Attenzione"
 
 msgid "Grow your channel" 
-msgstr "Lasse dein Channel wachsen"
+msgstr "Fai crescere il tuo Canale"
 
 msgid "Get access to closed betas, special events, and Steam Keys for your subscribers!" 
-msgstr "Erhalte Zugang zu Closed Beta, spezielle Events und Steam Keys für deine Abonnenten"
+msgstr "Accedi a beta limitate, eventi speciali e Steam Key per i tuoi iscritti!"
 
 msgid "Lots of perks" 
-msgstr "Viele Vorteile!"
+msgstr "Tanti vantaggi"
 
 msgid "You can receive exclusive Partner items, in-game currency, packages, and skins!" 
-msgstr "Du kannst exklusive Partner Items, In-Game Währung, Pakete und Skins erhalten!"
+msgstr "Puoi ricevere oggetti esclusivi da Partner, valute di gioco, pacchetto e skin!"
 
 msgid "Role model soldier" 
-msgstr "Vorbildlicher Soldat"
+msgstr "Soldato modello"
 
 msgid "If you love Black Squad as much as we do, support fun and safe environments, or like to help out new players... We want you!" 
-msgstr "Wenn du Black Squad so sehr wie wir liebst, teil einer sicheren und lustigen Umgebung werden willst, oder es einfach liebst anderen Spielern zu helfen... Wir suchen dich!"
+msgstr "Se ami Black Squad tanto quanto noi, sostieni un ambiente sicuro e divertente o hai voglia di aiutare i nuovi giocatori... Vogliamo te!"
 
 msgid "Sign up reward" 
-msgstr "Registrierungs-Belohnung"
+msgstr "Ricompensa di iscrizione"
 
 msgid "Become a Partner today and receive a Black Squad Welcome Package Steam Key! *Note: Can only be redeemed once." 
-msgstr "Werde noch heute ein Partner und erhalte ein Black Squad Willkommens-Paket Steam Key! *Hinweis: Kann nur einmalig benutzt werden."
+msgstr "Diventa Partner oggi e ricevi una Steam Key per un Black Squad Welcome Package! *Nota: Può essere riscattato solo una volta."
 
 msgid "Contact NeoBricks" 
-msgstr "Kontaktiere NeoBricks"
+msgstr "Contatta NeoBricks"
 
 msgid "Terms & Conditions" 
-msgstr "Geschäftsbedingung"
+msgstr "Termini & Condizioni"
 
 msgid "Privacy Policy" 
-msgstr "Datenschutzbestimmung"
+msgstr "Regole della Privacy"
 
 msgid "NeoBricks on Facebook" 
-msgstr "NeoBricks auf Facebook"
+msgstr "NeoBricks su Facebook"
 
 msgid "Game page" 
-msgstr "Spielseite"
+msgstr "Pagina del Gioco"
 
 msgid "Steam Discussion" 
-msgstr "Steam Diskussion"
+msgstr "Discussione su Steam"
 
 msgid "Discord" 
 msgstr "Discord"
@@ -156,151 +156,151 @@ msgid "Facebook"
 msgstr "Facebook"
 
 msgid "Help Center" 
-msgstr "Support-Center"
+msgstr "Centro di Supporto"
 
 msgid "Email" 
 msgstr "Email"
 
 msgid "Password" 
-msgstr "Passwort"
+msgstr "Password"
 
 msgid "Confirm password" 
-msgstr "Passwort bestätigen"
+msgstr "Conferma password"
 
 msgid "I've read and accepted the {0} and {1}" 
-msgstr "Ich habe dei {0} und {1} gelesen und akzeptiert"
+msgstr "Ho letto e accetto i {0} e le {1}"
 
 msgid "NeoBricks can send me newsletters with offers and news from games not related to the Partner Program" 
-msgstr "NeoBricks kann mir Newstletter mit Angeboten und Neuigkeiten von Spielen senden die nicht im Bezug zum Partnerprogramm stehen"
+msgstr "NeoBricks può inviarmi newsletter con offerte e novità su giochi non relativi al Programma Partner"
 
 msgid "REGISTER" 
-msgstr "REGISTRIEREN"
+msgstr "REGISTRATI"
 
 msgid "Already have an account?" 
-msgstr "Du bestitzt bereits einen Account?"
+msgstr "Hai già un account?"
 
 msgid "Sign In" 
-msgstr "Einloggen"
+msgstr "Accedi"
 
 msgid "Sign Out" 
-msgstr "Ausloggen"
+msgstr "Esci"
 
 msgid "Sign out" 
-msgstr "Ausloggen"
+msgstr "Esci"
 
 msgid "SIGN OUT" 
-msgstr "AUSLOGGEN"
+msgstr "ESCI"
 
 msgid "Or" 
-msgstr "Oder"
+msgstr "Oppure"
 
 msgid "Remember me" 
-msgstr "Merken"
+msgstr "Ricordami"
 
 msgid "Forgot password?" 
-msgstr "Passwort vergessen?"
+msgstr "Password dimenticata?"
 
 msgid "Don't have an account?" 
-msgstr "Noch keinen Account?"
+msgstr "Non hai un account?"
 
 msgid "Create an account" 
-msgstr "Erstelle dir einen"
+msgstr "Crea un account"
 
 msgid "Reset password" 
-msgstr "Passwort zurücksetzen"
+msgstr "Resetta la password"
 
 msgid "New password" 
-msgstr "Neues Passwort"
+msgstr "Nuova password"
 
 msgid "RESET PASSWORD" 
-msgstr "PASSWORT ZURÜCKSETZEN"
+msgstr "RESETTA LA PASSWORD"
 
 msgid "Our website uses cookies and similar technologies to enhance your user experience and measure site traffic. By continuing, you consent to such use." 
-msgstr "Unsere Website verwendet Cookies und ähnliche Technologien, um die Nutzererfahrung zu verbessern und den Webseiten-Traffic zu messen. Wenn du fortfährst, stimmst du solchen Verwendung zu."
+msgstr "Il nostro sito utilizza cookie e tecnologie simili per migliorare la tua esperienza utente e misurare le statistiche di traffico del sito. Continuando, acconsenti al loro utilizzo."
 
 msgid "Learn more" 
-msgstr "Erfahre mehr"
+msgstr "Per saperne di più"
 
 msgid "Forget password" 
-msgstr "Passwort vergessen?"
+msgstr "Password dimenticata"
 
 msgid "Enter your email to reset your password." 
-msgstr "Gebe deine Emailadresse ein um dein Passwort zurückzusetzen"
+msgstr "Inserisci la tua email per resettare la tua password."
 
 msgid "Submit" 
-msgstr "Absenden"
+msgstr "Invia"
 
 msgid "Did you remember your password?" 
-msgstr "Erinnert du dich an dein Passwort?"
+msgstr "Ti sei ricordato la tua password?"
 
 msgid "Partner information" 
-msgstr "Partner Informationen"
+msgstr "Informazioni Partner"
 
 msgid "Update" 
-msgstr "Update"
+msgstr "Aggiorna"
 
 msgid "Name" 
-msgstr "Name"
+msgstr "Nome"
 
 msgid "Surname" 
-msgstr "Vorname"
+msgstr "Cognome"
 
 msgid "Native" 
-msgstr "Gebürtig"
+msgstr "Nazionalità"
 
 msgid "Basic" 
-msgstr "Basic"
+msgstr "Di base"
 
 msgid "Intermediate" 
-msgstr "Durchschnittlich"
+msgstr "Intermedio"
 
 msgid "Advanced" 
-msgstr "Erweitert"
+msgstr "Avanzato"
 
 msgid "Fluent" 
-msgstr "Flüssig"
+msgstr "Fluente"
 
 msgid "What languages do you speak?" 
-msgstr "Welche Sprachen sprichst du?"
+msgstr "Quali lingue conosci?"
 
 msgid "Proficiency" 
-msgstr "Kompetenz"
+msgstr "Competenza"
 
 msgid "Add another" 
-msgstr "Füge weiter hinzu"
+msgstr "Aggiungi"
 
 msgid "Remove" 
-msgstr "Entfernen"
+msgstr "Rimuovi"
 
 msgid "What game or games do you like to play?" 
-msgstr "Welches Spiel/e spielst du gerne?"
+msgstr "A quale videogioco o videogiochi ti piace giocare?"
 
 msgid "I like to play these games" 
-msgstr "Ich spiele gerne diese Spiele"
+msgstr "Mi piace giocare questi videogiochi"
 
 msgid "I like to play these types of games" 
-msgstr "Ich mag diese Art von Spielen"
+msgstr "Mi piace giocare a questi generi di videogiochi"
 
 msgid "What game platform(s) do you play?" 
-msgstr "Welche Platform(en) bevorzugst du?"
+msgstr "Su che piattaforma/e giochi?"
 
 msgid "Do you have an in-game nickname for any of these games?" 
-msgstr "Hast du einen Ingame Name für eines dieser Spiele?"
+msgstr "Hai dei nickname su qualcuno di questi vidogiochi?"
 
 msgid "Caster" 
 msgstr "Caster"
 
 msgid "Information" 
-msgstr "Informationen"
+msgstr "Informazioni"
 
 msgid "information" 
-msgstr "informationen"
+msgstr "informazioni"
 
 msgid "How do you want to be called" 
-msgstr "Wie möchtest du genannt werden?"
+msgstr "Come vuoi essere chiamato"
 
 msgid "Your main channel(s)" 
-msgstr "Dein/e Haupt Channel"
+msgstr "I tuoi canali principali"
 
 msgid "Youtube" 
 msgstr "Youtube"
@@ -318,181 +318,181 @@ msgid "Instagram"
 msgstr "Instagram"
 
 msgid "Other" 
-msgstr "Anderes"
+msgstr "Altro"
 
 msgid "What game or games do you like to cast?" 
-msgstr "Welches Spiel oder Spiele spielst du gerne?"
+msgstr "A quale videogioco o videogiochi ti piace giocare?"
 
 msgid "I cast these games:" 
-msgstr "Ich caste diese Spiele:"
+msgstr "Io commento questi videogiochi:"
 
 msgid "I cast these types of games:" 
-msgstr "Ich caste diese Art von Spiel:"
+msgstr "Io commento questo genere di videogiochi:"
 
 msgid "Would you like to partner for?" 
-msgstr "Möchtest du eine Partnerschaft eingehen?"
+msgstr "Di cosa vorresti essere partner?"
 
 msgid "All games" 
-msgstr "Alle Spiele"
+msgstr "Tutti i giochi"
 
 msgid "Cancel" 
-msgstr "Abbrechen"
+msgstr "Annulla"
 
 msgid "Name of your company" 
-msgstr "Name deiner Firma"
+msgstr "Nome della tua azienda"
 
 msgid "What does your company do or sell?" 
-msgstr "Was macht / verkauft deine Firma?"
+msgstr "Di cosa si occupa o cosa vende la tua azienda?"
 
 msgid "Preferred business contact" 
-msgstr "Bevorzugter Business-Kontakt:"
+msgstr "Contatto business preferito"
 
 msgid "Phone" 
-msgstr "Telefon"
+msgstr "Telefono"
 
 msgid "Skype" 
 msgstr "Skype"
 
 msgid "What kind of opportunities are you looking for?" 
-msgstr "Nach welcher Art von Möglichkeiten suchst du?"
+msgstr "Che tipo di opportunità stai cercando?"
 
 msgid "Country(ies) available for partnership" 
-msgstr "Land/Länder verfügbar für Partnerschaft"
+msgstr "Paesi in cui è disponibile la partnership"
 
 msgid "What type of content do you create?" 
-msgstr "Welche Art von Content stellst du her?"
+msgstr "Che tipo di contenuti crei?"
 
 msgid "Streams" 
-msgstr "Streams"
+msgstr "Stream"
 
 msgid "Gameplay" 
 msgstr "Gameplay"
 
 msgid "Reviews" 
-msgstr "Reviews"
+msgstr "Recensioni"
 
 msgid "Humor" 
-msgstr "Humor"
+msgstr "Comicità"
 
 msgid "Unboxing" 
 msgstr "Unboxing"
 
 msgid "Mods" 
-msgstr "Mods"
+msgstr "Mod"
 
 msgid "Fanfics" 
-msgstr "Fanfiktion"
+msgstr "Fanfiction"
 
 msgid "Guides/Articles" 
-msgstr "Guides/Artikel"
+msgstr "Guide/Articoli"
 
 msgid "Events coverage" 
-msgstr "Event coverage"
+msgstr "Eventi"
 
 msgid "Lifestyle" 
 msgstr "Lifestyle"
 
 msgid "Tutorials" 
-msgstr "Tutorials"
+msgstr "Tutorial"
 
 msgid "Other" 
-msgstr "Anderes"
+msgstr "Altro"
 
 msgid "What is your channel about?" 
-msgstr "Um was geht es in deinem Channel?"
+msgstr "Di cosa tratta il tuo canale?"
 
 msgid "Games" 
-msgstr "Spiele"
+msgstr "Videogiochi"
 
 msgid "Technology" 
-msgstr "Technologie"
+msgstr "Tecnologia"
 
 msgid "Nerd/Geek" 
 msgstr "Nerd/Geek"
 
 msgid "Other" 
-msgstr "Anderes"
+msgstr "Altro"
 
 msgid "What game or games do you talk about?" 
-msgstr "Über welches Spiel/e redest du?"
+msgstr "Di quale videogioco o videogiochi parli?"
 
 msgid "I talk about these games:" 
-msgstr "Ich rede über diese Spiele:"
+msgstr "Parlo di questi videogiochi:"
 
 msgid "I talk about these types of games:" 
-msgstr "Ich rede über diese Art von Spiel:"
+msgstr "Parlo di questi generi di videogiochi:"
 
 msgid "What game platform(s) do you create content for?" 
-msgstr "Für welches Spiele-Platformen stellst du Content her?"
+msgstr "Per quali piattaforme di videogiochi crei contenuti?"
 
 msgid "All game platforms" 
-msgstr "Alle Platformen"
+msgstr "Tutte le piattaforme di gioco"
 
 msgid "PC/Mac games" 
-msgstr "PC/Mac"
+msgstr "Giochi PC/Mac"
 
 msgid "Mobile games" 
 msgstr "Mobile"
 
 msgid "Console games" 
-msgstr "Console"
+msgstr "Giochi console"
 
 msgid "Others" 
-msgstr "Anderes"
+msgstr "Altro"
 
 msgid "Required field" 
-msgstr "Pflichtfeld"
+msgstr "Campi obbligatori"
 
 msgid "Do you have previous experience as a moderator?" 
-msgstr "Hast du bereits Erfahrung als Moderator?"
+msgstr "Hai esperienza pregressa come moderatore?"
 
 msgid "Yes" 
-msgstr "Ja"
+msgstr "Sì"
 
 msgid "No" 
-msgstr "Nein"
+msgstr "No"
 
 msgid "What is your special skill or experience?" 
-msgstr "Was ist deiner besondere Eigenschaft oder Erfahrung?"
+msgstr "Qual è la tua abilità o esperienza speciale?"
 
 msgid "What kind of opportunities are you looking for?" 
-msgstr "Nach welcher Art von Möglichkeiten suchst du?"
+msgstr "Che tipo di opportunità stai cercando?"
 
 msgid "Pro Gamer" 
 msgstr "Pro Gamer"
 
 msgid "Moderator" 
-msgstr "Moderator"
+msgstr "Moderatore"
 
 msgid "Content Creator" 
-msgstr "Content Creator"
+msgstr "Creatore di Contenuti"
 
 msgid "Company" 
-msgstr "Firma"
+msgstr "Azienda"
 
 msgid "Tester" 
 msgstr "Tester"
 
 msgid "Translator" 
-msgstr "Übersetzer"
+msgstr "Traduttore"
 
 msgid "I am pro at these games:" 
-msgstr "Ich bin Pro in diesen Spielen:"
+msgstr "Sono pro in questi videogiochi:"
 
 msgid "I am pro at these types of games:" 
-msgstr "Ich bin Pro in diesen Art von Spielen:"
+msgstr "Sono pro in questi generi di videogiochi:"
 
 msgid "What game or games do you have a lot of experience with?" 
-msgstr "Mit welchen Spiel/en hast du bereits viel Erfahrungen mit?"
+msgstr "Su quale videogioco o videogiochi hai tantissima esperienza?"
 
 msgid "Shooter" 
-msgstr "Shooter"
+msgstr "Sparatutto"
 
 msgid "MOBA" 
 msgstr "MOBA"
 
 msgid "RPG" 
-msgstr "RPG"
+msgstr "GDR"
 
 msgid "MMORPG" 
 msgstr "MMORPG"
@@ -501,19 +501,19 @@ msgid "Mobile"
 msgstr "Mobile"
 
 msgid "Adventure" 
-msgstr "Adventure"
+msgstr "Avventura"
 
 msgid "Indie" 
 msgstr "Indie"
 
 msgid "Strategy" 
-msgstr "Strategy"
+msgstr "Strategia"
 
 msgid "Action" 
-msgstr "Action"
+msgstr "Azione"
 
 msgid "Simulators" 
-msgstr "Simulators"
+msgstr "Simulatore"
 
 msgid "Puzzle" 
 msgstr "Puzzle"
@@ -522,187 +522,187 @@ msgid "Browser"
 msgstr "Browser"
 
 msgid "Do you have previous experience as a tester?" 
-msgstr "Hast du bereits Erfahrung als Tester?"
+msgstr "Hai esperienza pregressa come tester?"
 
 msgid "What type of testing do you prefer?" 
-msgstr "Welche Art von Testen bevorzugst du?"
+msgstr "Che tipo di testing preferisci?"
 
 msgid "Quality Assurance (QA)" 
-msgstr "Quality Assurance (QA)"
+msgstr "Controllo Qualità (QA)"
 
 msgid "Gameplay Experience" 
-msgstr "Gameplay Experience"
+msgstr "Esperienza di gioco"
 
 msgid "Do you have previous experience as a translator?" 
-msgstr "Hast du bereits Erfahrung als Übersetzer?"
+msgstr "Hai esperienza pregressa come traduttore?"
 
 msgid "How would you translate this in your language?" 
-msgstr "Wie würdest du dies in deine Sprache übersetzen?"
+msgstr "Come tradurresti questo nella tua lingua?"
 
 msgid "Your skills" 
-msgstr "Deine Skills"
+msgstr "Le tue abilità"
 
 msgid "Select your skill(s). You can choose more than one." 
-msgstr "Wähle deine Skill(s). Du kannst mehrere wählen."
+msgstr "Seleziona la/e tua/e abilità. Puoi sceglierne più di una."
 
 msgid "You may have mistyped the address or the page may have moved." 
-msgstr "Du hast dich vielleicht vertippt oder die Seite ist nicht mehr vorhanden"
+msgstr "Potresti aver scritto male l'indirizzo o la pagina potrebbe essere stata spostata."
 
 msgid "The requested address {0} was not found on this server." 
-msgstr "Die angeforderte Adresse {0} wurde auf diesem Server nicht gefunden."
+msgstr "L'indirizzo richiesto {0} non è stato trovato sul server."
 
 msgid "An Internal Error Has Occurred" 
-msgstr "Ein interner Fehler ist aufgetreten"
+msgstr "Si è Verificato Un Errore Interno"
 
 msgid "Partner Program" 
-msgstr "Partnerprogramm"
+msgstr "Programma Partner"
 
 msgid "Welcome" 
-msgstr "Willkommen"
+msgstr "Benvenuto"
 
 msgid "Your profile" 
-msgstr "Dein Profil"
+msgstr "Il tuo profilo"
 
 msgid "Germany" 
-msgstr "Deutschland"
+msgstr "Germania"
 
 msgid "Reach us" 
-msgstr "Erreiche uns"
+msgstr "Contattaci"
 
 msgid "Send message" 
-msgstr "Sende eine Nachricht"
+msgstr "Invia messaggio"
 
 msgid "Your message" 
-msgstr "Deine Nachricht"
+msgstr "Il tuo messaggio"
 
 msgid "Subject" 
-msgstr "Betreff"
+msgstr "Oggetto"
 
 msgid "Looking for support?" 
-msgstr "Brauchst du Support?"
+msgstr "Hai bisogno d'aiuto?"
 
 msgid "Black Squad Support" 
-msgstr "Black Squad Support"
+msgstr "Supporto di Black Squad"
 
 msgid "Black Squad Steam Discussions" 
-msgstr "Black Squad Steam Diskussionen"
+msgstr "Discussione su Steam di Black Squad"
 
 msgid "Follow us" 
-msgstr "Folge uns"
+msgstr "Seguici"
 
 msgid "Your email address" 
-msgstr "Deine Email-Adresse"
+msgstr "Il tuo indirizzo email"
 
 msgid "Your name" 
-msgstr "Dein Name"
+msgstr "Il tuo nome"
 
 msgid "Name" 
-msgstr "Name"
+msgstr "Nome"
 
 msgid "Email address" 
-msgstr "Email-Adresse"
+msgstr "Indirizzo email"
 
 msgid "Contact us" 
-msgstr "Kontaktiere uns"
+msgstr "Contattaci"
 
 msgid "Message" 
-msgstr "Nachricht"
+msgstr "Messaggio"
 
 msgid "What game or games do you like to cast?" 
-msgstr "Welche Art von Spiel würdest du gerne Casten?"
+msgstr "Quale videogioco o videogiochi vorresti commentare?"
 
 msgid "Become a partner" 
-msgstr "Werde ein Partner"
+msgstr "Diventa partner"
 
 msgid "Latest quests" 
-msgstr "Aktuellste Quest"
+msgstr "Missioni più recenti"
 
 msgid "Advantages" 
-msgstr "Vorteile"
+msgstr "Vantaggi"
 
 msgid "Sign in" 
-msgstr "Einloggen"
+msgstr "Accedi"
 
 msgid "Sign up" 
-msgstr "Registrieren"
+msgstr "Registrati"
 
 msgid "FAQ" 
 msgstr "FAQ"
 
 msgid "What is the Partner Program?" 
-msgstr "Was ist das Partnerprogramm?"
+msgstr "Che cos’è il Programma dei Partner?"
 
 msgid "The Partner Program allows talented members of our gaming community to support the games they love and get recognized for it. To participate, please fill out a few questions telling us about your skills. Depending on your profile and abilities, we will contact you with a personalised opportunity (Quest). Once you complete a Quest, you can receive beta test keys, in-game items, special information, and much more! It is our mission to support our awesome community by rewarding you for your contributions! If you love games as much as we do, join us!" 
-msgstr "Das Partnerprogramm erlaubt talentierten Mitgliedern aus der Community die Spiele die sie lieben und mit denen sie sich verbunden fühlen zu unterstützen.Um teilzunehmen fülle ein paar Fragen aus und erzähle uns was deine Stärken sind. Abhängig von deinem Profil und deinen Fähigkeiten werden wir dich mit einem personalisierten Angebot (Quest) kontaktieren. Sobald eine Quest abgeschlossen wurde kannst du Belohnungen erhalten, diese umfassen Dinge wie Beta-Test Keys, Ingame Items, spezielle Informationen und vieles mehr! Es ist unsere Mission unsere unglaubliche Community für ihre Beiträge zu belohnen. Wenn du die Spiele so sehr liebst wie wir, werde ein Teil davon!"
+msgstr "Il Programma dei Partner permette a membri con un particolare talento all’interno della nostra community di gaming di sostenere i giochi che amano e ricevere premi in cambio. Per partecipare, rispondi ad alcune domande per spiegarci brevemente le tue abilità. A seconda del tuo profilo e delle tue abilità, ti contatteremo con un’opportunità (Quest) personalizzata. Una volta che avrai completato una Quest, potrai ricevere chiavi per beta test, oggetti di gioco, informazioni speciali e tanto altro! Farà parte del nostro lavoro sostenere la nostra fantastica community, dandovi un riconoscimento per il vostro contributo! Se ami i videogiochi quanto noi, unisciti a noi!"
 
 msgid "What skills do I need to become a Partner?" 
-msgstr "Welche Skills brauche ich um ein Partner zu werden?"
+msgstr "Di quali abilità ho bisogno per essere un Partner?"
 
 msgid "We embrace many different types of Partners: Content Creators (influencers, streamers, artists, etc), Moderators, Game Testers, Professional Gamers, Translators, Casters, Companies, and more (cosplayers, modders, any role related to gaming!). You can even choose multiple skills at once! If you’ve got skills then register on this website, fill out the registration form, and wait for opportunities to pop up." 
-msgstr "Wir begrüßen jegliche Art von Partner: Content Creator (Influencer, Streamer, Künstler), Moderatoren, Spieletester, Professionelle-Spieler, Übersetzer, Caster, Firmen und mehr! (Cosplayer, Modder, jegliche Rolle in verbund zu Gaming!) Du kannst auch mehrer Skills gleichzeitig wählen! Wenn du Skills hast, registriere dich auf der Webseite, fülle das Anmeldeformular aus und warte auf deine Chance!"
+msgstr "Noi collaboriamo con tanti diversi tipi di Partner: Creatori di contenuti (influencer, streamer, grafici, ecc.), moderatori, tester di videogiochi, giocatori professionisti, traduttori, casters, aziende e altro (cosplayer, modder, qualsiasi ruolo legato al mondo dei videogiochi!). Puoi anche selezionare più abilità contemporaneamente! Se hai almeno una di queste competenze, registrati subito, compila il modulo di registrazione e attendi che ti arrivino le prime Quest."
 
 msgid "Are there any requirements to participate?" 
-msgstr "Welche Voraussetzungen für eine Teilnahme gibt es?"
+msgstr "Ci sono dei requisiti per partecipare?"
 
 msgid "Anyone can register to the Partner Program and fill out the form. After the profile has been confirmed and approved, Partners receive personalised opportunities according to your skills. Quests for each game has a specific set of requirements and will only be available to Partners with suitable profiles." 
-msgstr "Jeder kann sich für das Partnerprogramm registrieren und das Formular ausfüllen. Nachdem dein Profil bestätigt und akzeptiert wurde, erhalten Partner personalisierte Möglichkeiten in Bezug auf ihre Skills. Quests für zugehörige Spiele haben ein Set von verschiedenen Anforderungen und werden nur Partnern zugesandt dessen Profil mit diesen übereinstimmt."
+msgstr "Chiunque può registrarsi al Programma dei Partner e compilare il modulo. Dopo che il profilo sarà stato confermato e approvato, ogni Partner riceverà opportunità personalizzate in base alle proprie capacità. Le Quest di ogni gioco hanno una lista specifica di requisiti e saranno disponibili solo per i Partner con profili compatibili."
 
 msgid "What are Quests?" 
-msgstr "Was sind Quests?"
+msgstr "Cosa sono le Quest?"
 
 msgid "Quests are opportunities we provide to our Partners. They can be sent by email or you can apply for them on the main page. Quests range from creating videos, streaming games, testing new game updates and features, playing closed beta games, writing reviews, translating or proofreading articles… the list goes on! For any questions, send a message to partners@neobricks.com. Remember to keep your profile information updated to receive the most suitable Quests. Accepted Quests are shown in your profile." 
-msgstr "Quests sind Aufgaben die wir unseren Partnern zur Verfügung stellen. Diese können per Email oder über die Hauptseite versandt werden. Quests reichen vom erstellen von Videos, über Streamen bestimmter Spiele, testen neuer Spiele / Updates / Features bis hin zu dem verfassen von Reviews, Übersetzungen oder dem Korrekturlesen von Artikeln..die Liste geht immer weiter! Bei jeglicher Art von Fragen, sende eine Nachricht an partners@neobricks.com. Vergiss nicht dein Profil stets aktuell zu halten um die bestmöglichen Quests zu erhalten."
+msgstr "Le Quest sono opportunità che forniamo ai nostri Partner. Possono essere ricevute tramite e-mail o si possono richiedere sulla pagina principale. Le Quest spaziano dalla creazione di video, streaming di videogiochi, test di nuovi aggiornamenti e funzionalità, al giocare a videogiochi in closed beta, recensioni, traduzioni o correzione di bozze e articoli... la lista continua! Per qualsiasi domanda, manda un messaggio a partners@neobricks.com. Ricordati di mantenere aggiornate le informazioni del tuo profilo per ricevere le Quest più adatte. Le Quest accettate sono mostrate nel tuo profilo."
 
 msgid "How long does a Quest last?" 
-msgstr "Wie lange dauert eine Quests?"
+msgstr "Quanto dura una Quest?"
 
 msgid "Each Quest has its own completion time specified in its details. They can last one week, one month or be periodic. Some Quests are renewable, and can be accepted more than one time. If you wish to obtain its rewards, you have to complete it within the time frame specified in each Quest’s details." 
-msgstr "Jede Quest hat eine individuelle Zeitspanne, diese findest du in den Details. Sie können eine Woche andauern, einen Monat oder periodisch wiederkehren. Einige Quests sind erneuerbar und können mehrmals angenommen werden. Wenn du die Belohnungen erhalten möchtest, müssen diese jedoch in ihrem angegebenen Zeitrahmen vollendet werden."
+msgstr "Ogni Quest ha il proprio tempo di completamento specificato nei dettagli. Le Quest possono durare una settimana, un mese o essere periodiche. Alcune Quest sono rinnovabili e possono essere accettate più di una volta. Se desideri ottenere i premi di una Quest, devi completarla entro il periodo di tempo specificato nei dettagli."
 
 msgid "What do I get as a Partner? How will I receive my rewards?" 
-msgstr "Was bekomme ich als Partner Wie erhalte ich die Belohnungen?"
+msgstr "Cosa ricevo in quanto Partner? Come ricevo le mie ricompense?"
 
 msgid "Each Quest comes with various rewards. They range from in-game items, DLC, Official Partner titles/items, special access to features on official channels, unique merchandise and even special gifts! You will have to complete a Quest in order to receive your rewards. Check the Quest details for information about rewards and how to claim them. Usually, rewards are sent via email or directly in-game. Special rewards may require additional information.All communication within the Partner Program is done via email and/ or partner channels." 
-msgstr "Jede Quests kommt mit verschiedenen Belohnungen. Diese reichen von Ingame Items, DLCs, Offizielle Partner Items/Titel, spezieller Zugang zu offiziellen Kanälen, einzigartiges Merchandise oder sogar spezielle Geschenke! Du musst eine Quest beenden um Belohnung erhalten zu können, Belohnungen werden via. Email oder direkt im Spiel vergeben. Spezielle Belohnungen benötigen eventuelle zusätzliche Informationen. Jegliche Kommunikation wird über Emails oder Partnerkanäle geschehen."
+msgstr "Ogni Quest ha le proprie ricompense. Si va da oggetti di gioco, DLC, titoli o articoli per i Partner ufficiali, accesso speciale alle funzionalità sui canali ufficiali, merchandise unico e persino regali particolari! Dovrai completare una Quest per ricevere i tuoi premi. Controlla i dettagli della missione per informazioni sui premi e su come richiederli. Di solito, i premi vengono inviati tramite e-mail o direttamente in gioco. I premi speciali potrebbero richiedere informazioni aggiuntive. Tutte le comunicazioni all'interno del Programma dei Partner vengono effettuate tramite e-mail e/o canali ufficiali dei Partner."
 
 msgid "How long does it take to be accepted as a Partner?" 
-msgstr "Wie lange dauert es bis man als Partner akzeptiert wird?"
+msgstr "Quanto tempo ci vuole per essere accettato/a come Partner?"
 
 msgid "Registration is completed as soon as you confirm your email and fill out the form, your profile will then be checked for validation. If approved, you are eligible for personalised Quests. Keep your profile updated to make sure you receive the Quests that are right for you." 
-msgstr "Die Registrierung ist abgeschlossen sobald du deine Email-Adresse bestätigt und das Formular ausgefüllt hast. Dein Profil wird anschließend überprüft, wenn dies akzeptiert wurde bist du bereit personalisierte Quests zu erhalten! Halte dein Profil aktuell um sicherzustellen die Quests zu erhalten die zu dir passen."
+msgstr "La registrazione è completa appena confermi la tua email e finisci di riempire il modulo, e il tuo profilo verrà poi controllato e validato. Se verrà approvato, potrai subito iniziare a ricevere Quest personalizzate. Mantieni aggiornato il tuo profilo per assicurarti di ricevere le Quest più adatte a te."
 
 msgid "Are there any rules about being a Partner?" 
-msgstr "Gibt es Regeln wenn man ein Partner ist?"
+msgstr "Ci sono delle regole da rispettare in quanto Partner?"
 
 msgid "We embrace the BNBR policy (Be Nice, Be Respectful!), especially for our content creators. Please take a minute to read our Policy and Terms of Service for more details about the exclusion criteria of our Program." 
-msgstr "Wir legen viel Wert auf die BNBR Regelung (Be Nice, Be Respectful!) Dies gilt besonders für unsere Content Creator. Bitte nehme dir eine Minute und lese unsere Grundregeln und Nutzungsbedingungen für weitere Details über die Ausschlusskriterien aus dem Programm."
+msgstr "Noi adottiamo la regola BNBR (Be Nice, Be Respectful!), ovvero sii cortese e rispettoso, specialmente per i nostri creatori di contenuti. Dai uno sguardo alle nostre Regole e Termini del Servizio per più dettagli riguardo i criteri di esclusione dal Programma dei Partner."
 
 msgid "You must accept the Terms & Conditions" 
-msgstr "Du musst die Allgemeinen Geschäftsbedingungen akzeptieren"
+msgstr "Devi accettare i Termini & Condizioni"
 
 msgid "You must accept the Privacy Policy" 
-msgstr "Du musst die Datenschutzbestimmungen akzeptieren"
+msgstr "Devi accettare le Regole della Privacy"
 
 msgid "You must accept our Terms & Conditions and Privacy Policy" 
-msgstr "Du musst die Allgemeinen Geschäftsbedingungen und Datenschutzbestimmungen akzeptieren"
+msgstr "Devi accettare i nostri Termini & Condizioni e le Regole della Privacy"
 
 msgid "You must accept our {1} and {2}" 
-msgstr "Du musst unsere {1} und {2} akzeptieren"
+msgstr "Devi accettare i nostri {1} e {2}"
 
 msgid "Please enter at least one special character" 
-msgstr "Bitte nutze mindestens ein Sonderzeichen"
+msgstr "Per favore inserisci almeno un carattere speciale"
 
 msgid "Please enter at least one uppercased character" 
-msgstr "Bitte nutze mindestens ein Großbuchstabe"
+msgstr "Per favore inserisci almeno una lettera maiuscola"
 
 msgid "Select at least one" 
-msgstr "Wähle mindestens eine"
+msgstr "Selezionane almeno una"
 
 msgid "Select at least one option" 
-msgstr "Wähle mindestens eine Option"
+msgstr "Seleziona almeno una opzione"
 
 msgid "No information" 
-msgstr "Keine Angabe"
+msgstr "Non specificato"
 
 msgid "No informed" 
-msgstr "Keine Angabe"
+msgstr "Non specificato"

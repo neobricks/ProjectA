@@ -1,305 +1,712 @@
 
-
-msgid "Original text will be here"
-msgstr "Translated text should be written here"
-
-
-
-
-
-msgid "Sign in"
-msgstr ""
-
-msgid "Sign up"
-msgstr ""
-
-msgid "Sign out"
-msgstr ""
-
-msgid "BECOME A PARTNER"
+msgid "BECOME A PARTNER" 
 msgstr "TORNE-SE UM PARCEIRO"
 
-msgid "Become a partner"
-msgstr "Torne-se um parceiro"
+msgid "LATEST QUESTS" 
+msgstr "MISSÕES RECENTES"
 
-msgid "Latest quests"
-msgstr "Últimas quests"
+msgid "ADVANTAGES" 
+msgstr "VANTAGENS"
 
-msgid "Advantages"
-msgstr "Vantagens"
-
-msgid "FAQ"
+msgid "FAQ" 
 msgstr "FAQ"
 
+msgid "SIGN IN" 
+msgstr "ENTRAR"
 
+msgid "SIGN UP" 
+msgstr "REGISTRAR"
 
+msgid "Become a Partner" 
+msgstr "Torne-se um Parceiro"
 
-msgid "Choose your skill"
-msgstr "Escolha sua habilidade"
+msgid "Whether you are a streamer, artist, or cosplayer, you can now partner with your favorite games and get rewarded" 
+msgstr "Sendo você um streamer, artista ou cosplayer, você pode agora ser parceiro dos seus jogos favoritos e ser recompensado"
 
-msgid "Content Creators"
+msgid "Support your favorite games" 
+msgstr "Colabore com seus jogos favoritos"
+
+msgid "The more you engage and contribute, the greater your chances to receive special rewards and contribute to the success of the games you love" 
+msgstr "Quanto mais você se empenha e contribui, maior suas chances de receber recompensas especiais e contribuir para o sucesso de jogos que você ama"
+
+msgid "Get closer to the games you love" 
+msgstr "Aproxime-se dos jogos que você ama"
+
+msgid "Become a Partner and get access to special opportunities directly from the development team" 
+msgstr "Torne-se um Parceiro e ganhe acesso a oportunidades especiais diretamente do time de desenvolvimento"
+
+msgid "Choose your skills" 
+msgstr "Escolha suas habilidades"
+
+msgid "Content Creators" 
 msgstr "Criadores de Conteúdo"
 
-msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!"
-msgstr ""
+msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!" 
+msgstr "Sendo você um Artista ou Influencer, você cria conteúdo incrível para os jogos que você joga!"
 
-msgid "Testers"
-msgstr "Testadores"
+msgid "Game Tester" 
+msgstr "Tester de jogos"
 
-msgid "Work hard, play hard, test even harder! You are the one who makes games better!"
-msgstr ""
+msgid "Testers" 
+msgstr "Testers"
 
-msgid "Moderators"
+msgid "Work hard, play hard, test even harder! You are the one who ensures games are top quality!" 
+msgstr "Trabalhe duro, jogue muito e teste ainda mais! Você é aquele que garante que os jogos sejam da melhor qualidade!"
+
+msgid "Moderators" 
 msgstr "Moderadores"
 
-msgid "Angels from the sky, you bring peace and order to salvage game communities"
-msgstr ""
+msgid "Angels from the sky, you bring peace and order to protect game communities." 
+msgstr "Anjos vindos do céu, você traz paz e ordem para proteger comunidades de jogos."
 
-msgid "Business & Corps"
-msgstr "Negócios & Cia"
+msgid "Business & Corps" 
+msgstr "Empresas & Corporações"
 
-msgid "ood corps partnering up against evil - Let’s join forces!"
-msgstr ""
+msgid "Good corps partnering against evil - Join our forces!" 
+msgstr "Boas corporações  se aliando contra o mal - Vamos unir nossas forças!"
 
-msgid "Pro-Gamers"
+msgid "Pro-Gamers" 
 msgstr "Pro-Gamers"
 
-msgid "You are the God of First Kill, the Chuck Norris of games, the Daenerys of… you get it"
-msgstr ""
+msgid "You are the God of First Kill, the Chuck Norris of games, the Daenerys of... you get it." 
+msgstr "Você é o Deus do First Kill, o Chuck Norris dos jogos, a Daenerys de... você entendeu."
 
-msgid "Casters"
-msgstr "Casters"
+msgid "Casters" 
+msgstr "Caster"
 
-msgid "Your lovely voice brings matches alive!"
-msgstr ""
+msgid "Your lovely voice brings matches alive!" 
+msgstr "Sua doce voz traz vida às partidas!"
 
-msgid "Translators"
+msgid "Translators" 
 msgstr "Tradutores"
 
-msgid "You check and translate awesooomenessss around the globe – did I wrote it right?"
-msgstr ""
+msgid "You check and translate awesomenesse around the globe - did I spell that right?" 
+msgstr "Você checa e traduz conteúda ao redor do mundo - eu escrevi isso certo?"
 
-msgid "Others"
-msgstr "Outros"
+msgid "Other" 
+msgstr "Outro"
 
-msgid "You have another special skill, so special that you have to explain it to us"
-msgstr ""
+msgid "You have another special skill, so special that you have to explain it to us." 
+msgstr "Você tem uma habilidade especial, mas tão especial que você vai ter que explicar ela para nós."
 
+msgid "Latest Quests" 
+msgstr "Missões Recentes"
 
+msgid "TESTS" 
+msgstr "Testes"
 
+msgid "TRANSLATIONS" 
+msgstr "Traduções"
 
-msgid "We are NeoBricks, an experienced game publishing partner based in Germany"
-msgstr ""
+msgid "MODERATORS" 
+msgstr "Moderadores"
 
-msgid "Contact NeoBricks"
-msgstr "Falar com NeoBricks"
+msgid "Notice" 
+msgstr "Notificações"
 
-msgid "Terms & Conditions"
-msgstr "Termos e Condições"
+msgid "Warning" 
+msgstr "Avisos"
 
-msgid "Privacy Policy"
+msgid "Grow your channel" 
+msgstr "Aumente seu Canal"
+
+msgid "Get access to closed betas, special events, and Steam Keys for your subscribers!" 
+msgstr "Conceda acesso a betas fechados, eventos especiais e Chaves da Steam para seus inscritos!"
+
+msgid "Lots of perks" 
+msgstr "Inúmeras vantagens"
+
+msgid "You can receive exclusive Partner items, in-game currency, packages, and skins!" 
+msgstr "Você pode receber itens exclusivos de Parceiros, moedas do jogo, pacotes e skins!"
+
+msgid "Role model soldier" 
+msgstr "Soldado modelo"
+
+msgid "If you love Black Squad as much as we do, support fun and safe environments, or like to help out new players... We want you!" 
+msgstr "Se você ama Black Squad tanto quanto nós amamos, apoia diversão e ambientes seguros, ou gostaria de ajudar novos jogadores... Nós queremos você!"
+
+msgid "Sign up reward" 
+msgstr "Recompensa de inscrição"
+
+msgid "Become a Partner today and receive a Black Squad Welcome Package Steam Key! *Note: Can only be redeemed once." 
+msgstr "Torne-se um Parceiro hoje e receba uma chave do Pacote de Boas-Vindas de Black Squad! *Obs: Apenas pode ser usada uma vez."
+
+msgid "Contact NeoBricks" 
+msgstr "Contate NeoBricks"
+
+msgid "Terms & Conditions" 
+msgstr "Termos & Condições"
+
+msgid "Privacy Policy" 
 msgstr "Política de Privacidade"
 
-msgid "NeoBricks on Facebook"
+msgid "NeoBricks on Facebook" 
 msgstr "NeoBricks no Facebook"
 
-msgid "Community"
-msgstr "Comunidade"
+msgid "Game page" 
+msgstr "Página do Jogo"
 
-msgid "Game page"
-msgstr ""
+msgid "Steam Discussion" 
+msgstr "Discussões na Steam"
 
-msgid "Steam Discussion"
-msgstr ""
+msgid "Discord" 
+msgstr "Discord"
 
-msgid "Discord"
-msgstr ""
+msgid "Facebook" 
+msgstr "Facebook"
 
-msgid "Facebook"
-msgstr ""
+msgid "Help Center" 
+msgstr "Centro de Suporte"
 
-msgid "Help Center"
-msgstr ""
+msgid "Email" 
+msgstr "Email"
 
+msgid "Password" 
+msgstr "Senha"
 
+msgid "Confirm password" 
+msgstr "Confirmar senha"
 
+msgid "I've read and accepted the {0} and {1}" 
+msgstr "Eu li e aceito os {0} e a {1}"
 
-msgid "Contact us"
-msgstr ""
+msgid "NeoBricks can send me newsletters with offers and news from games not related to the Partner Program" 
+msgstr "NeoBricks pode me mandar notícias com ofertas e novidades de jogos não relacionados ao Programa de Parceria"
 
-msgid "Your name"
-msgstr ""
+msgid "REGISTER" 
+msgstr "REGISTRAR"
 
-msgid "Your email address"
-msgstr ""
+msgid "Already have an account?" 
+msgstr "Já tem uma conta?"
 
-msgid "Subject"
-msgstr ""
+msgid "Sign In" 
+msgstr "Entrar"
 
-msgid "Your message"
-msgstr ""
+msgid "Sign Out" 
+msgstr "Desconectar"
 
-msgid "Reach us"
-msgstr ""
+msgid "Sign out" 
+msgstr "Desconectar"
 
-msgid "Germany"
-msgstr ""
+msgid "SIGN OUT" 
+msgstr "DESCONECTAR"
 
-msgid "Looking for support?"
-msgstr ""
+msgid "Or" 
+msgstr "Ou"
 
-msgid "Black Squad Support"
-msgstr ""
+msgid "Remember me" 
+msgstr "Lembrar-se"
 
-msgid "Black Squad Steam Discussions"
-msgstr ""
+msgid "Forgot password?" 
+msgstr "Esqueceu a senha?"
 
-msgid "Follow Us"
-msgstr ""
+msgid "Don't have an account?" 
+msgstr "Não tem uma conta?"
 
+msgid "Create an account" 
+msgstr "Crie uma conta"
 
+msgid "Reset password" 
+msgstr "Resetar senha"
 
+msgid "New password" 
+msgstr "Nova senha"
 
-msgid "Latest Quests"
-msgstr ""
+msgid "RESET PASSWORD" 
+msgstr "RESETAR SENHA"
 
-msgid "Tests"
-msgstr ""
+msgid "Our website uses cookies and similar technologies to enhance your user experience and measure site traffic. By continuing, you consent to such use." 
+msgstr "Nosso site usa Cookies e tecnologias similares para aprimorar sua experiência de usuário e medir tráfego do site. Continuar nos garante seu consenso em tal uso."
 
-msgid "Translations"
-msgstr ""
+msgid "Learn more" 
+msgstr "Saiba mais"
 
-msgid "Moderators"
-msgstr ""
+msgid "Forget password" 
+msgstr "Esqueci minha Senha"
 
-msgid "ASSIGN"
-msgstr ""
+msgid "Enter your email to reset your password." 
+msgstr "Digite seu email para atualizar sua senha."
 
-msgid "More info"
-msgstr ""
+msgid "Submit" 
+msgstr "Enviar"
 
-msgid "Sign up reward"
-msgstr ""
+msgid "Did you remember your password?" 
+msgstr "Você lembrou sua senha?"
 
-msgid "Become a Partner today and get a welcome gift"
-msgstr ""
+msgid "Partner information" 
+msgstr "Informações do Parceiro"
 
-msgid "Get giveaways and special content exclusive for Partners"
-msgstr ""
+msgid "Update" 
+msgstr "Atualizar"
 
-msgid "Sign up and receive information ahead of time so you can create awesome videos and more!"
-msgstr ""
+msgid "Name" 
+msgstr "Nome"
 
-msgid "Access to closed betas, events and keys for your subscribers"
-msgstr ""
+msgid "Surname" 
+msgstr "Sobrenome"
 
-msgid "Become a Partner today"
-msgstr ""
+msgid "Native" 
+msgstr "Nativo"
 
+msgid "Basic" 
+msgstr "Básico"
 
+msgid "Intermediate" 
+msgstr "Intermediário"
 
+msgid "Advanced" 
+msgstr "Avançado"
 
-msgid "How it works?"
-msgstr ""
+msgid "Fluent" 
+msgstr "Fluente"
 
-msgid "The Partner Program is a way for talented members of our gaming community to support the games they love and get recognized for it. First you fill out a few questions telling us about the skill or skills you master. Once we get an opportunity (Quest) that fits your profile, we contact you. Depending on the skill or skills you apply for, we can give beta test keys, in-game items, special information, etc. It is our mission to support our awesome community by rewarding them for their contributions! If you love games as much as we do, join us!"
-msgstr ""
+msgid "What languages do you speak?" 
+msgstr "Quais linguas você fala?"
 
-msgid "What do I need to become a Partner?"
-msgstr ""
+msgid "Proficiency" 
+msgstr "Proficiência"
 
-msgid "We accept different types of Partners: Content creators (influencers, artists, etc), moderators, game testers, pro-gamers, translators, casters, companies, and more (cosplayers, modders, anything related to gaming). The aspects we consider are different for each skill but if you are a talented gamer who creates original quality content or just willing to help the games you love, then you are welcome! Register on this website, fill out the form, and wait for us to contact you."
-msgstr ""
+msgid "Add another" 
+msgstr "Adicionar outro"
 
-msgid "What if I don’t meet the requirements?"
-msgstr ""
+msgid "Remove" 
+msgstr "Remover"
 
-msgid "Everyone can register for our Partner Program and fill out the form, however, opportunities (Quests) are not for everyone. For each new Quest we set specific requirements and contact only Partners with suitable profiles. Requirements differ for each Quest, so the greater your skills are, the more likely you will be contacted. If you weren’t assigned to a Quest that you wanted or have any questions in general, you can contact us in partners@neobricks.com."
-msgstr ""
+msgid "What game or games do you like to play?" 
+msgstr "Quais jogos você gosta de jogar?"
 
-msgid "How long does it take to be accepted as Partner?"
-msgstr ""
+msgid "I like to play these games" 
+msgstr "Gosto de jogar estes jogos"
 
-msgid "Registration is completed as soon as you confirm your email and fill out the form. Once you have finished the form, you are already eligible for Quests. Keep your profile updated to make sure you receive the Quests that are right for you."
-msgstr ""
+msgid "I like to play these types of games" 
+msgstr "Eu gosto de jogar esses tipos de jogos."
 
-msgid "What do I have to do as a Partner?"
-msgstr ""
+msgid "What game platform(s) do you play?" 
+msgstr "Em qual plataforma(s) você joga?"
 
-msgid "Quest’s details are sent to our Partners. Then you can decide if you would like to participate. The more you engage and contribute, the greater your chances are to receive the Quests’ special rewards. So it is important to hone your skills and continue working to reach the top! Everything in the Partner Program is optional and you can decline any Quest you want without any problems. The Partner Program is an opportunity, not a commitment."
-msgstr ""
+msgid "Do you have an in-game nickname for any of these games?" 
+msgstr "Você tem um nickname de jogo em algum desses jogos?"
 
-msgid "What do I get as a Partner?"
-msgstr ""
+msgid "Caster" 
+msgstr "Caster"
 
-msgid "Each Quest comes with various rewards. They could be in-game items, DLC, special access, features on official channels, or even a gift! You will have to complete a Quest in order to receive your reward. Pay attention to the Quests’ details for more reward information."
-msgstr ""
+msgid "Information" 
+msgstr "Informação"
 
-msgid "What are Quests?"
-msgstr ""
+msgid "information" 
+msgstr "informação"
 
-msgid "Quests are opportunities we have available for our Partners. They could range from testing new items, playing closed beta games, writing reviews, translating press releases, making a video… the list goes on! Not everyone is eligible for each Quest – you must apply for them through this website and then the Quest is assigned to Partners with compatible profiles. For example, we will not assign “Translation Quests’ to Content Creators, only for Translators."
-msgstr ""
+msgid "How do you want to be called" 
+msgstr "Como você quer ser chamado?"
 
-msgid "Am I obligated to accept and fill a Quest?"
-msgstr ""
+msgid "Your main channel(s)" 
+msgstr "Seus canais principais"
 
-msgid "No. Like side missions in a game, you can choose which Quest to attend and you can also opt out of it at any time. There is no punishment for not attending or concluding a Quest."
-msgstr ""
+msgid "Youtube" 
+msgstr "Youtube"
 
-msgid "Can I choose Quests?"
-msgstr ""
+msgid "Twitch" 
+msgstr "Twitch"
 
-msgid "Quests suitable with your profile are sent directly to you by email. If you didn’t receive the email for a Quest you want to assign, just send a message to partners@neobricks.com with the Quest you want to join. If possible, we will assign it to you 😊 Remember to keep your profile information updated to receive the best Quests from us."
-msgstr ""
+msgid "Twitter" 
+msgstr "Twitter"
 
-msgid "How will I receive my rewards?"
-msgstr ""
+msgid "Discord" 
+msgstr "Discord"
 
-msgid "Partner Program communication is done by email. Quests are sent with details about their rewards and how to claim them. Usually, we send rewards via email or directly in-game."
-msgstr ""
+msgid "Instagram" 
+msgstr "Instagram"
 
-msgid "Can I contact developers?"
-msgstr ""
+msgid "Other" 
+msgstr "Outro"
 
-msgid "Once you are a Partner, you have direct contact with us, NeoBricks. We organize and manage communication with the developers so that they can optimize their time with game improvements without losing contact with their amazing community. So, yes!"
-msgstr ""
+msgid "What game or games do you like to cast?" 
+msgstr "Quais jogos você gosta de jogar?"
 
-msgid "FAQ"
-msgstr ""
+msgid "I cast these games:" 
+msgstr "Eu transmito estes jogos:"
 
-msgid "Privacy Policy"
-msgstr ""
+msgid "I cast these types of games:" 
+msgstr "Eu transmito estes tipos de jogos:"
 
-msgid "Terms and Conditions"
-msgstr ""
+msgid "Would you like to partner for?" 
+msgstr "Você gostaria de ser um parceiro?"
 
-msgid "Welcome"
-msgstr ""
+msgid "All games" 
+msgstr "Todos os jogos"
 
-msgid "Your profile"
-msgstr ""
+msgid "Cancel" 
+msgstr "Cancelar"
 
-msgid "Partner Program"
-msgstr ""
+msgid "Name of your company" 
+msgstr "Nome da sua empresa"
 
-msgid "ACCOUNTS"
-msgstr ""
+msgid "What does your company do or sell?" 
+msgstr "O que sua empresa faz ou vende?"
 
-msgid "CHOOSE YOUR SKILL(S)"
-msgstr ""
+msgid "Preferred business contact" 
+msgstr "Contato de negócios preferido"
 
-msgid "INFORMATION"
-msgstr ""
+msgid "Phone" 
+msgstr "Telefone"
 
-msgid "TERMS"
-msgstr ""
+msgid "Skype" 
+msgstr "Skype"
 
-msgid "Email"
-msgstr ""
+msgid "What kind of opportunities are you looking for?" 
+msgstr "Que tipo de oportunidades está buscando?"
 
-msgid "Password"
-msgstr ""
+msgid "Country(ies) available for partnership" 
+msgstr "País(es) disponíveis para Parceiros"
 
-msgid "Confirm Password"
-msgstr ""
+msgid "What type of content do you create?" 
+msgstr "Que tipo de conteúdo você cria?"
+
+msgid "Streams" 
+msgstr "Streams"
+
+msgid "Gameplay" 
+msgstr "Jogabilidade"
+
+msgid "Reviews" 
+msgstr "Análises"
+
+msgid "Humor" 
+msgstr "Humor"
+
+msgid "Unboxing" 
+msgstr "Unboxing"
+
+msgid "Mods" 
+msgstr "Mods"
+
+msgid "Fanfics" 
+msgstr "Fanfics"
+
+msgid "Guides/Articles" 
+msgstr "Guias/Artigos"
+
+msgid "Events coverage" 
+msgstr "Cobertura de eventos"
+
+msgid "Lifestyle" 
+msgstr "Estilo de vida"
+
+msgid "Tutorials" 
+msgstr "Tutoriais"
+
+msgid "Other" 
+msgstr "Outro"
+
+msgid "What is your channel about?" 
+msgstr "O seu canal é sobre o que?"
+
+msgid "Games" 
+msgstr "Tecnologia"
+
+msgid "Technology" 
+msgstr "Jogos"
+
+msgid "Nerd/Geek" 
+msgstr "Tecnologia"
+
+msgid "Other" 
+msgstr "Nerd/Geek"
+
+msgid "What game or games do you talk about?" 
+msgstr ""Sobre quais jogos você fala?
+""
+
+msgid "I talk about these games:" 
+msgstr "Eu falo sobre esses jogos:"
+
+msgid "I talk about these types of games:" 
+msgstr "Eu falo sobre esses tipos de jogos:"
+
+msgid "What game platform(s) do you create content for?" 
+msgstr "Para qual plataforma(s) de jogos você cria conteúdo?"
+
+msgid "All game platforms" 
+msgstr "Todas as plataformas"
+
+msgid "PC/Mac games" 
+msgstr "Jogos de PC/Mac "
+
+msgid "Mobile games" 
+msgstr "Jogos de Celular/Dispositivos Móveis"
+
+msgid "Console games" 
+msgstr "Jogos de Console"
+
+msgid "Others" 
+msgstr "Outros"
+
+msgid "Required field" 
+msgstr "Campo obrigatório"
+
+msgid "Do you have previous experience as a moderator?" 
+msgstr "Você tem alguma experiência como moderador?"
+
+msgid "Yes" 
+msgstr "Sim"
+
+msgid "No" 
+msgstr "Não"
+
+msgid "What is your special skill or experience?" 
+msgstr "Qual é a sua habilidade especial ou experiência?"
+
+msgid "What kind of opportunities are you looking for?" 
+msgstr "Qual tipo de oportunidades você está procurando?"
+
+msgid "Pro Gamer" 
+msgstr "Pro Gamer"
+
+msgid "Moderator" 
+msgstr "Moderador"
+
+msgid "Content Creator" 
+msgstr "Criador de Conteúdo "
+
+msgid "Company" 
+msgstr "Empresa "
+
+msgid "Tester" 
+msgstr "Testador"
+
+msgid "Translator" 
+msgstr "Tradutor"
+
+msgid "I am pro at these games:" 
+msgstr "Eu sou profissional nestes jogos:"
+
+msgid "I am pro at these types of games:" 
+msgstr "Eu sou profissional nestes tipos de jogos:"
+
+msgid "What game or games do you have a lot of experience with?" 
+msgstr "Quais jogos você tem bastante experiência com?"
+
+msgid "Shooter" 
+msgstr "Shooter"
+
+msgid "MOBA" 
+msgstr "MOBA"
+
+msgid "RPG" 
+msgstr "RPG"
+
+msgid "MMORPG" 
+msgstr "MMORPG"
+
+msgid "Mobile" 
+msgstr "Mobile"
+
+msgid "Adventure" 
+msgstr "Aventura"
+
+msgid "Indie" 
+msgstr "Indie"
+
+msgid "Strategy" 
+msgstr "Estratégia"
+
+msgid "Action" 
+msgstr "Ação"
+
+msgid "Simulators" 
+msgstr "Simuladores"
+
+msgid "Puzzle" 
+msgstr "Puzzle/Quebra-cabeça"
+
+msgid "Browser" 
+msgstr "Navegador"
+
+msgid "Do you have previous experience as a tester?" 
+msgstr "Tem experiência anterior como tester?"
+
+msgid "What type of testing do you prefer?" 
+msgstr "Que tipo de teste você prefere?"
+
+msgid "Quality Assurance (QA)" 
+msgstr "Controle de qualidade (QA)"
+
+msgid "Gameplay Experience" 
+msgstr "Experiência de jogo"
+
+msgid "Do you have previous experience as a translator?" 
+msgstr "Você tem alguma experiência como um tradutor?"
+
+msgid "How would you translate this in your language?" 
+msgstr "Como você traduziria isso para sua língua?"
+
+msgid "Your skills" 
+msgstr "Suas habilidades"
+
+msgid "Select your skill(s). You can choose more than one." 
+msgstr "Selecione sua habilidade(s). Você pode selecionar mais de uma."
+
+msgid "You may have mistyped the address or the page may have moved." 
+msgstr "Você talvez digitou o endereço errado ou a página foi movida."
+
+msgid "The requested address {0} was not found on this server." 
+msgstr "O endereço requisitado {0} não foi encontrado nesse servidor."
+
+msgid "An Internal Error Has Occurred" 
+msgstr "Ocorreu Um Erro Interno"
+
+msgid "Partner Program" 
+msgstr "Programa de Parceria"
+
+msgid "Welcome" 
+msgstr "Bem-vindo"
+
+msgid "Your profile" 
+msgstr "Seu perfil"
+
+msgid "Germany" 
+msgstr "Alemanha"
+
+msgid "Reach us" 
+msgstr "Entre em contato"
+
+msgid "Send message" 
+msgstr "Mandar mensagem"
+
+msgid "Your message" 
+msgstr "Sua mensagem"
+
+msgid "Subject" 
+msgstr "Assunto"
+
+msgid "Looking for support?" 
+msgstr "Procurando por suporte?"
+
+msgid "Black Squad Support" 
+msgstr "Suporte de Black Squad"
+
+msgid "Black Squad Steam Discussions" 
+msgstr "Discussões na Steam de Black Squad"
+
+msgid "Follow us" 
+msgstr "Siga-nos"
+
+msgid "Your email address" 
+msgstr "Seu endereço de email"
+
+msgid "Your name" 
+msgstr "Seu nome"
+
+msgid "Name" 
+msgstr "Nome"
+
+msgid "Email address" 
+msgstr "Endereço de Email"
+
+msgid "Contact us" 
+msgstr "Entre em contato"
+
+msgid "Message" 
+msgstr "Mensagem"
+
+msgid "What game or games do you like to cast?" 
+msgstr "Quais jogos você gostaria de transmitir?"
+
+msgid "Become a partner" 
+msgstr "Torne-se um parceiro"
+
+msgid "Latest quests" 
+msgstr "Missões Recentes"
+
+msgid "Advantages" 
+msgstr "Vantagens"
+
+msgid "Sign in" 
+msgstr "Entrar"
+
+msgid "Sign up" 
+msgstr "Registrar"
+
+msgid "FAQ" 
+msgstr "FAQ"
+
+msgid "What is the Partner Program?" 
+msgstr "O que é o Programa para Parceiros?"
+
+msgid "The Partner Program allows talented members of our gaming community to support the games they love and get recognized for it. To participate, please fill out a few questions telling us about your skills. Depending on your profile and abilities, we will contact you with a personalised opportunity (Quest). Once you complete a Quest, you can receive beta test keys, in-game items, special information, and much more! It is our mission to support our awesome community by rewarding you for your contributions! If you love games as much as we do, join us!" 
+msgstr "O Programa para Parceiros permite membros talentosos da nossa comunidade de jogos a apoiar os jogos que eles amam e ser reconhecidos por isso. Para participar, por favor responda algumas perguntas nos contando sobre suas habilidades. Dependendo do seu perfil e habilidades, nós entraremos em contato com você com uma oportunidade personalizada (Quest). Uma vez que você complete a Quest, você pode receber uma chave de beta test, itens no jogo, informação especial, e muito mais! É nossa missão apoiar nossa maravilhosa comunidade, recompensando você por suas contribuições! Se você ama jogos o tanto quanto nós, participe!"
+
+msgid "What skills do I need to become a Partner?" 
+msgstr "Que habilidades eu preciso para me tornar um Parceiro?"
+
+msgid "We embrace many different types of Partners: Content Creators (influencers, streamers, artists, etc), Moderators, Game Testers, Professional Gamers, Translators, Casters, Companies, and more (cosplayers, modders, any role related to gaming!). You can even choose multiple skills at once! If you’ve got skills then register on this website, fill out the registration form, and wait for opportunities to pop up." 
+msgstr "Nós aceitamos muitos tipos de Parceiros: Criadores de Conteúdo (influencers, streamers, artistas, etc), Moderadores, Game Testers, Gamers Profissionais, Tradutores, Casters, Companhias e mais (cosplayers, modders, qualquer função relacionada a jogos!). You pode até escolher várias habilidades de uma vez! Se você tiver habilidades então registre-se neste website, preencha o formulário de registro e espere as oportunidades aparecerem."
+
+msgid "Are there any requirements to participate?" 
+msgstr "Existem requisitos para participar?"
+
+msgid "Anyone can register to the Partner Program and fill out the form. After the profile has been confirmed and approved, Partners receive personalised opportunities according to your skills. Quests for each game has a specific set of requirements and will only be available to Partners with suitable profiles." 
+msgstr "Qualquer um pode se registrar para o Programa para Parceiros e preencher o formulário. Depois que o perfil for confirmado e aprovado, Parceiros recebem oportunidades personalizadas de acordo com suas habilidades. Quests para cada jogo têm um conjunto específico de requisitos e só estarão disponíveis para Parceiros com perfis adequados."
+
+msgid "What are Quests?" 
+msgstr "O que são as Quests?"
+
+msgid "Quests are opportunities we provide to our Partners. They can be sent by email or you can apply for them on the main page. Quests range from creating videos, streaming games, testing new game updates and features, playing closed beta games, writing reviews, translating or proofreading articles… the list goes on! For any questions, send a message to partners@neobricks.com. Remember to keep your profile information updated to receive the most suitable Quests. Accepted Quests are shown in your profile." 
+msgstr "Quests são oportunidades que nós oferecemos para nossos Parceiros. Elas podem ser enviadas por email ou você pode se candidatar a elas na página principal. Quests variam entre criar vídeos, escrever reviews, traduzir ou revisar artigos... a lista continua! Para quaisquer dúvidas, mande uma mensagem para partners@neobricks.com. Lembre-se de manter a informação em seu perfil atualizada para receber as Quests mais adequadas. Quests aceitas são mostradas em seu perfil."
+
+msgid "How long does a Quest last?" 
+msgstr "Quanto tempo dura uma Quest?"
+
+msgid "Each Quest has its own completion time specified in its details. They can last one week, one month or be periodic. Some Quests are renewable, and can be accepted more than one time. If you wish to obtain its rewards, you have to complete it within the time frame specified in each Quest’s details." 
+msgstr "Cada Quest tem seu próprio tempo de conclusão especificada em seus detalhes. Elas podem durar uma semana, um mês ou ser periódicas. Algumas Quests são renováveis e podem ser aceitas mais de uma vez. Se você deseja obter as recompensas, você precisa completá-la dentro do prazo especificado nos detalhes de cada Quest."
+
+msgid "What do I get as a Partner? How will I receive my rewards?" 
+msgstr "O que eu ganho como um Parceiro? Como eu recebo minhas recompensas?"
+
+msgid "Each Quest comes with various rewards. They range from in-game items, DLC, Official Partner titles/items, special access to features on official channels, unique merchandise and even special gifts! You will have to complete a Quest in order to receive your rewards. Check the Quest details for information about rewards and how to claim them. Usually, rewards are sent via email or directly in-game. Special rewards may require additional information.All communication within the Partner Program is done via email and/ or partner channels." 
+msgstr "Cada Quest vem com várias recompensas. Elas variam entre itens dentro de jogos, DLC, Títulos/Itens Oficiais de Parceiros, acesso especial a recursos em canais oficiais, mercadoria original e até presentes especiais! Você terá que completar a Quest para receber suas recompensas. Verifique os detalhes da Quest para informações sobre recompensas e como reivindicá-las. Normalmente, recompensas são enviadas por email ou diretamente dentro do jogo. Recompensas especiais podem precisar de informações adicionais. Toda comunicação com o Programa de Parceiros é feita por email e/ou canais de parceiros."
+
+msgid "How long does it take to be accepted as a Partner?" 
+msgstr "Quanto demora para ser aceito como um Parceiro?"
+
+msgid "Registration is completed as soon as you confirm your email and fill out the form, your profile will then be checked for validation. If approved, you are eligible for personalised Quests. Keep your profile updated to make sure you receive the Quests that are right for you." 
+msgstr "Cadastramento é completado assim que você confirmar seu email e preencher o formulário. Seu perfil será então marcado para validação. Se aprovado, você é elegível para Quests personalizadas. Mantenha seu perfil atualizado para garantir que você receba Quests que são certas para você."
+
+msgid "Are there any rules about being a Partner?" 
+msgstr "Existem regras sobre ser um Parceiro?"
+
+msgid "We embrace the BNBR policy (Be Nice, Be Respectful!), especially for our content creators. Please take a minute to read our Policy and Terms of Service for more details about the exclusion criteria of our Program." 
+msgstr "Nós adotamos a política SLSR (Seja Legal, Seja Respeitoso!), especialmente para nossos criadores de conteúdo. Por favor reserve um minuto para ler nossa Política e Termos de Serviço para obter mais detalhes sobre os critérios de exclusão do nosso Programa."
+
+msgid "You must accept the Terms & Conditions" 
+msgstr "Você deve aceitar os Termos e Condições"
+
+msgid "You must accept the Privacy Policy" 
+msgstr "Você deve aceitar a Política de Privacidade"
+
+msgid "You must accept our Terms & Conditions and Privacy Policy" 
+msgstr "Você deve aceitar nossos Termos e Condições e Política de Privacidade"
+
+msgid "You must accept our {1} and {2}" 
+msgstr "Você precisa aceitar nosso {1} e {2}"
+
+msgid "Please enter at least one special character" 
+msgstr "Por favor insira ao menos um carácter especial"
+
+msgid "Please enter at least one uppercased character" 
+msgstr "Por favor insira ao menos uma letra maiúscula"
+
+msgid "Select at least one" 
+msgstr "Selecione pelo menos um"
+
+msgid "Select at least one option" 
+msgstr "Selecione pelo menos uma opção"
+
+msgid "No information" 
+msgstr "Sem informações"
+
+msgid "No informed" 
+msgstr "Sem informações"
+
+msgid "You must accept the Terms n Conditions"
+msgstr "Você deve aceitar os Termos & Condições"

@@ -5,7 +5,7 @@
             <span class="text-light"><?= __('information') ?></span>
             <span class="float-right">
                 <span class="text-primary fs-3 fw-400 text-required-field">
-                    * Required field
+                    * <?= __('Required field') ?>
                 </span>
                 <button type="button"
                         class="btn btn-sm text-dark btn-primary btn-update">
@@ -24,7 +24,7 @@
             <!-- username -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('How you want to be called') ?> *
+                    <?= __('How do you want to be called') ?>? *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="view py-2 px-3">
@@ -43,7 +43,7 @@
             <!-- /username -->
 
             <!-- channels -->
-            <h6 class="text-primary"> Your main channel(s): *</h6>
+            <h6 class="text-primary"><?= __('Your main channel(s)') ?>: *</h6>
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Youtube') ?>
@@ -162,18 +162,18 @@
                 <div class="col-12 col-sm-8">
                     <?php
                     $type_of_content_dummyData = [
-                        ['value' => 'streams', 'label' => 'Streams'],
-                        ['value' => 'gameplay', 'label' => 'Gameplay'],
-                        ['value' => 'reviews', 'label' => 'Reviews'],
-                        ['value' => 'humor', 'label' => 'Humor'],
-                        ['value' => 'unboxing', 'label' => 'Unboxing'],
-                        ['value' => 'mods', 'label' => 'Mods'],
-                        ['value' => 'fanfics', 'label' => 'Fanfics'],
-                        ['value' => 'guides_articles', 'label' => 'Guides/Articles'],
-                        ['value' => 'events_coverage', 'label' => 'Events coverage'],
-                        ['value' => 'lifestyle', 'label' => 'Lifestyle'],
-                        ['value' => 'tutorials', 'label' => 'Tutorials'],
-                        ['value' => 'other', 'label' => 'Other']
+                        ['value' => 'streams', 'label' => __('Streams')],
+                        ['value' => 'gameplay', 'label' => __('Gameplay')],
+                        ['value' => 'reviews', 'label' => __('Reviews')],
+                        ['value' => 'humor', 'label' => __('Humor')],
+                        ['value' => 'unboxing', 'label' => __('Unboxing')],
+                        ['value' => 'mods', 'label' => __('Mods')],
+                        ['value' => 'fanfics', 'label' => __('Fanfics')],
+                        ['value' => 'guides_articles', 'label' => __('Guides/Articles')],
+                        ['value' => 'events_coverage', 'label' => __('Events coverage')],
+                        ['value' => 'lifestyle', 'label' => __('Lifestyle')],
+                        ['value' => 'tutorials', 'label' => __('Tutorials')],
+                        ['value' => 'other', 'label' => __('Other')]
                     ];
                     ?>
 
@@ -220,10 +220,10 @@
                 <div class="col-12 col-sm-8">
                     <?php
                     $channel_about_dummyData = [
-                        ['value' => 'games', 'label' => 'Games'],
-                        ['value' => 'technology', 'label' => 'Technology'],
-                        ['value' => 'nerd_geek', 'label' => 'Nerd/Geek'],
-                        ['value' => 'other', 'label' => 'Other']
+                        ['value' => 'games', 'label' => __('Games')],
+                        ['value' => 'technology', 'label' => __('Technology')],
+                        ['value' => 'nerd_geek', 'label' => __('Nerd/Geek')],
+                        ['value' => 'other', 'label' => __('Other')]
                     ];
                     ?>
 
@@ -268,13 +268,12 @@
             <!-- games you like -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What game or games you talk about') ?>
-                    *
+                    <?= __('What game or games do you talk about?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <div class="row  pb-2">
                             <span class="col-12 text-warning">
-                                <?= __('I like to play these games:'); ?>
+                                <?= __('I talk about these games:'); ?>
                             </span>
                         <span class="col-12">
                             <div class="view py-2 px-3">
@@ -292,7 +291,7 @@
                     </div>
                     <div class="row pb-2">
                             <span class="col-12 text-warning">
-                                <?= __('I like to play these types of games:'); ?>
+                                <?= __('I talk about these types of games:'); ?>
                             </span>
                         <span class="col-12">
                             <div class="view py-2 px-3">
@@ -316,16 +315,16 @@
             <!-- platforms -->
             <div class="form-group row">
                 <label class="col-12 col-sm-4 text-primary">
-                    <?= __('What game platform(s) do create content for?') ?> *
+                    <?= __('What game platform(s) do you create content for?') ?> *
                 </label>
                 <div class="col-12 col-sm-8">
                     <?php
                     $platforms_dummyData = [
-                        ['value' => 'all_platforms', 'label' => 'All game platforms', 'inputText' => false],
-                        ['value' => 'desktop', 'label' => 'PC/Mac games', 'inputText' => false],
-                        ['value' => 'mobile', 'label' => 'Mobile games', 'inputText' => false],
-                        ['value' => 'console', 'label' => 'Console games', 'inputText' => false],
-                        ['value' => 'others', 'label' => 'Others',
+                        ['value' => 'all_platforms', 'label' => __('All game platforms'), 'inputText' => false],
+                        ['value' => 'desktop', 'label' => __('PC/Mac games'), 'inputText' => false],
+                        ['value' => 'mobile', 'label' => __('Mobile games'), 'inputText' => false],
+                        ['value' => 'console', 'label' => __('Console games'), 'inputText' => false],
+                        ['value' => 'others', 'label' => __('Others'),
                             'inputText' => true, 'placeholder' => '']
                     ];
                     ?>
@@ -399,8 +398,8 @@
                 <div class="col-12 col-sm-8">
                     <?php
                     $games_dummyData = [
-                        ['value' => 'black_squad', 'label' => 'Black Squad'],
-                        ['value' => 'all_games', 'label' => 'All Games'],
+                        ['value' => 'black_squad', 'label' => __('Black Squad')],
+                        ['value' => 'all_games', 'label' => __('All games')],
                     ];
                     ?>
                     <?php foreach ($games_dummyData as $partner_game): ?>
