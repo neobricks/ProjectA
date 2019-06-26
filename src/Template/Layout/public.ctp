@@ -97,14 +97,14 @@ if (!empty($user)) $body_class = 'logged-in';
                             } ?>
                         </span>
                         <a class="btn btn-sm text-light d-none d-sm-inline-block" href="<?= $this->Url->Build(['controller' => 'auth', 'action' => 'logout']); ?>">
-                            <?= __('Sign Out'); ?>
+                            <?= __('Sign out'); ?>
                         </a>
                     <?php else : ?>
                         <a class="btn btn-sm btn-light text-secondary rounded-0" href="javascript:void(0)" data-toggle="modal" data-target="#modalSignIn">
-                            <?= __('Sign In'); ?>
+                            <?= __('Sign in'); ?>
                         </a>
                         <a class="btn btn-sm text-light d-none d-sm-inline-block" href="javascript:void(0)" data-toggle="modal" data-target="#modalSignUp">
-                            <?= __('Sign Up'); ?>
+                            <?= __('Sign up'); ?>
                         </a>
                     <?php endif; ?>
 

@@ -39,7 +39,7 @@ msgid "Choose your skills"
 msgstr "Choisissez vos compétences"
 
 msgid "Content Creators" 
-msgstr "Créateurs de Contenu"
+msgstr "Créateur de Contenus"
 
 msgid "Whether you are an Artist or Influencer, you create awesome content for the games you play!" 
 msgstr "Que vous soyez un artiste ou un influenceur, vous créez du super contenu  pour les jeux auxquels vous jouez ! "
@@ -48,22 +48,22 @@ msgid "Game Tester"
 msgstr "Testeur de Jeu"
 
 msgid "Testers" 
-msgstr "Testeurs"
+msgstr "Testeur"
 
 msgid "Work hard, play hard, test even harder! You are the one who ensures games are top quality!" 
-msgstr "Travailler dur, s'amuser beaucoup, tester encore plus ! C'est vous qui veillez à ce que les jeux vidéo soient de la plus haute qualité !"
+msgstr "Travailler dur, s'amuser beaucoup, tester toujours plus ! C'est vous qui veillez à ce que les jeux vidéo soient de la plus haute qualité !"
 
 msgid "Moderators" 
-msgstr "Modérateurs"
+msgstr "Modérateur"
 
 msgid "Angels from the sky, you bring peace and order to protect game communities." 
-msgstr "Des Anges venus du ciel, vous apportez la paix et l'ordre pour prétéger les communautés de jeu."
+msgstr "Des Anges venus du ciel, vous apportez la paix et l'ordre pour protéger les communautés de jeu."
 
 msgid "Business & Corps" 
 msgstr "Entreprises et Sociétés"
 
 msgid "Good corps partnering against evil - Join our forces!" 
-msgstr "Les Sociétés s'associent conre le mal - Joignons nos forces!"
+msgstr "Les Sociétés s'associent contre le mal - Joignons nos forces!"
 
 msgid "Pro-Gamers" 
 msgstr "Joueur Pro"
@@ -78,7 +78,7 @@ msgid "Your lovely voice brings matches alive!"
 msgstr "Vore belle voix donne dela vie aux matchs!"
 
 msgid "Translators" 
-msgstr "Traducteurs "
+msgstr "Traducteur"
 
 msgid "You check and translate awesomenesse around the globe - did I spell that right?" 
 msgstr "Vous vérifiez et traduisez la génnialitée dans le monde entier - est-ce que j'ai bien épelé ?"
@@ -135,7 +135,7 @@ msgid "Contact NeoBricks"
 msgstr "Contacter NeoBricks"
 
 msgid "Terms & Conditions" 
-msgstr "Termes & Conditions"
+msgstr "Conditions d'utilisation"
 
 msgid "Privacy Policy" 
 msgstr "Politique de confidentialité"
@@ -162,7 +162,7 @@ msgid "Email"
 msgstr "Email"
 
 msgid "Password" 
-msgstr "Mot depasse"
+msgstr "Mot de passe"
 
 msgid "Confirm password" 
 msgstr "Confirmer mot de passe"
@@ -246,7 +246,7 @@ msgid "Surname"
 msgstr "Prénom"
 
 msgid "Native" 
-msgstr "Nationalité"
+msgstr "Langue Maternelle"
 
 msgid "Basic" 
 msgstr "Basique"
@@ -261,7 +261,7 @@ msgid "Fluent"
 msgstr "Courant"
 
 msgid "What languages do you speak?" 
-msgstr "Quelles langues parlez vous?"
+msgstr "Quelle(s) langue(s) parlez vous?"
 
 msgid "Proficiency" 
 msgstr "Compétence"
@@ -297,7 +297,7 @@ msgid "information"
 msgstr "information"
 
 msgid "How do you want to be called" 
-msgstr "Comment voulez vous être appelé?"
+msgstr "Comment voulez vous être appelé"
 
 msgid "Your main channel(s)" 
 msgstr "Vos chaînes principales"
@@ -645,7 +645,7 @@ msgid "Are there any requirements to participate?"
 msgstr "Quels sont les prérequis pour participer?"
 
 msgid "Anyone can register to the Partner Program and fill out the form. After the profile has been confirmed and approved, Partners receive personalised opportunities according to your skills. Quests for each game has a specific set of requirements and will only be available to Partners with suitable profiles." 
-msgstr "Tout le monde peut s’inscrire au Programme Partenaire et remplir le formulaire. Une fois le profil confirmé et approuvé, les Partenaires recevront des opportunités personnalisées en fonction de leur compétences. Les Quêtes pour chaque jeu ont des prérequis précises et ne seront disponibles que pour les Partenaires dont les profils correspondent."
+msgstr "Tout le monde peut s’inscrire au Programme Partenaire et remplir le formulaire. Une fois le profil confirmé et approuvé, les Partenaires recevront des opportunités personnalisées en fonction de leur compétences. Les Quêtes pour chaque jeu ont des prérequis précis et ne seront disponibles que pour les Partenaires dont les profils correspondent."
 
 msgid "What are Quests?" 
 msgstr "Que sont les Quêtes?"
@@ -675,7 +675,7 @@ msgid "Are there any rules about being a Partner?"
 msgstr "Y a t’il des règles à suivre pour être Partenaire?"
 
 msgid "We embrace the BNBR policy (Be Nice, Be Respectful!), especially for our content creators. Please take a minute to read our Policy and Terms of Service for more details about the exclusion criteria of our Program." 
-msgstr "Nous suivons la politique BNBR (Be Nice, Be Respectful! / Soyez Gentil, Soyez Respectueux), spécialement concernant nos créateurs de contenus. Veuillez prendre une minute pour lire notre Politique et Termes de Service pour voir plus de détails sur les critères d’exclusion de notre Programme Partenaire."
+msgstr "Nous suivons la politique BNBR (Be Nice, Be Respectful! / Soyez Gentil, Soyez Respectueux), spécialement concernant nos créateurs de contenus. Veuillez prendre une minute pour lire notre Politique et Conditions d'utilisation pour voir plus de détails sur les critères d’exclusion de notre Programme Partenaire."
 
 msgid "You must accept the Terms & Conditions" 
 msgstr "Vous devez accepter les Conditions d'utilisation"
@@ -704,8 +704,8 @@ msgstr "Choisir au moins une option"
 msgid "No information" 
 msgstr "Pas d'information"
 
-msgid "No informed" 
+msgid "Not informed" 
 msgstr "Pas d'information"
 
-msgid "You must accept the Terms n Conditions"
+msgid "You must accept the Terms n Conditions" 
 msgstr "Vous devez accepter nos Conditions d'utilisation et la Politique de Confidentialité"
