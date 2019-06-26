@@ -85,7 +85,7 @@
                             id="moderatorExperientYes"
                             value="1" 
                             <?= $ratioYesChecked ? "checked" : ""  ?>
-                            />
+                        />
 
                         <label class="form-radio-label custom-control-label" for="moderatorExperientYes"><?= __('Yes'); ?></label>
                     </div>
