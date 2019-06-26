@@ -321,7 +321,7 @@ msgid "Other"
 msgstr "Outro"
 
 msgid "What game or games do you like to cast?" 
-msgstr "Quais jogos você gosta de jogar?"
+msgstr "Quais jogos você gosta de transmitir?"
 
 msgid "I cast these games:" 
 msgstr "Eu transmito estes jogos:"
@@ -414,8 +414,7 @@ msgid "Other"
 msgstr "Nerd/Geek"
 
 msgid "What game or games do you talk about?" 
-msgstr ""Sobre quais jogos você fala?
-""
+msgstr "Sobre quais jogos você fala?"
 
 msgid "I talk about these games:" 
 msgstr "Eu falo sobre esses jogos:"
@@ -685,7 +684,7 @@ msgid "You must accept the Privacy Policy"
 msgstr "Você deve aceitar a Política de Privacidade"
 
 msgid "You must accept our Terms & Conditions and Privacy Policy" 
-msgstr "Você deve aceitar nossos Termos e Condições e Política de Privacidade"
+msgstr "Você deve aceitar nossos Termos e Condições e a Política de Privacidade"
 
 msgid "You must accept our {1} and {2}" 
 msgstr "Você precisa aceitar nosso {1} e {2}"
@@ -709,4 +708,4 @@ msgid "No informed"
 msgstr "Sem informações"
 
 msgid "You must accept the Terms n Conditions"
-msgstr "Você deve aceitar os Termos & Condições"
+msgstr "Você deve aceitar os Termos & Condições e a Política de Privacidade"

@@ -1,12 +1,7 @@
 
 
 msgid "You must accept the Terms n Conditions"
-msgstr "You must accept the Terms & Conditions"
-
-
-
-msgid "You must accept the Terms n Conditions"
-msgstr "You must accept the Terms & Conditions"
+msgstr "You must accept the Terms & Conditions and the Privacy Policy"
 
 
 # AuthController 

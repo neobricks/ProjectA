@@ -709,3 +709,6 @@ msgstr "Нет данных"
 
 msgid "You must accept the Terms n Conditions"
 msgstr "FUNCIONAAA"
+
+msgid "You must accept the Terms n Conditions"
+msgstr "Вы должны согласиться с нашими Сроками и Условиями и Политикой Конфиденциальности"

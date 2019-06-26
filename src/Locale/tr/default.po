@@ -704,6 +704,8 @@ msgstr "En az bir seçeneği seçin"
 msgid "No information" 
 msgstr "Bilgi verilmedi"
 
-msgid "No informed" 
+msgid "Not informed" 
 msgstr "Bilgi verilmedi"
 
+msgid "You must accept the Terms n Conditions" 
+msgstr "Şartlar ve Koşullar ile Gizlilik Politikası'nı kabul etmelisiniz"

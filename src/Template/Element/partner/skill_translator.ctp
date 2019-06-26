@@ -37,14 +37,14 @@
                 <label class="col-12 col-sm-4 text-primary">
                     <?= __('Do you have previous experience as a translator?') ?> *
                 </label>
-
                 <div class="col-12 col-sm-8">
                     <div class="form-check custom-radio form-check-inline">
                         <input class="custom-control-input" 
                             type="radio" name="translator[translatorExperient]" 
-                            id="translatorExperientYes"
+                            id="translatorExperientYes"                            
+                            value="1"
                             <?= $ratioYesChecked ? "checked" : ""  ?>
-                            value="1"/>
+                        />
 
                         <label class="form-radio-label custom-control-label" for="translatorExperientYes"><?= __('Yes'); ?></label>
                     </div>

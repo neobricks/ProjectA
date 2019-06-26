@@ -706,3 +706,6 @@ msgstr "Non specificato"
 
 msgid "No informed" 
 msgstr "Non specificato"
+
+msgid "You must accept the Terms n Conditions"
+msgstr "Devi accettare i nostri Termini & Condizioni e le Regole della Privacy"

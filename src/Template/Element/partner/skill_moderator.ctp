@@ -47,15 +47,15 @@
                     <?= __('Discord') ?>
                 </label>
                 <div class="col-12 col-sm-8">
-                <div class="view py-2 px-3">
+                    <div class="view py-2 px-3">
                         <p>
                            
                         </p>
                     </div>
-                    <div class="edit-text">
+                    <div class="edit-text flex-column">
                         <?php echo $this->Form->text('moderator[discord]', [
                             'class' => 'form-control',
-                            'placeholder' => 'Discord ID'
+                            'value' => !empty($userInfo['moderator']['discord']) ? $userInfo['moderator']['discord'] : '',
                         ]); ?>
                     </div>
                 </div>

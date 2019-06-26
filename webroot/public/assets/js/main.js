@@ -1857,7 +1857,7 @@ function initMap() {
         $("#formPartnerTranslator").validate({
             rules: {
                 'translator[translatorExperient]': { required: true },
-                'translator[translate_example]': { required: true, maxlength: 200},
+                'translator[translate_example]': { required: true, maxlength: 500},
                 'translator[partner_games][]': { required: true },
             },
             messages: {
@@ -1974,7 +1974,7 @@ function initMap() {
     $("#formPartnerOther").validate({
         rules: {
             'other[partner_games][]': { required: true },
-            'other[special_skill_text]': {required: true, maxlength: 200}
+            'other[special_skill_text]': {required: true, maxlength: 500}
         },
         messages: {
             'other[partner_games][]': {
